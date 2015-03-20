@@ -29,23 +29,60 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            this.mnuMain = new System.Windows.Forms.MenuStrip();
+            this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuHowToWork = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAboutProgram = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMain.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // mnuMain
+            // 
+            this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuHelp});
+            resources.ApplyResources(this.mnuMain, "mnuMain");
+            this.mnuMain.Name = "mnuMain";
+            // 
+            // mnuHelp
+            // 
+            this.mnuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuHowToWork,
+            this.mnuAboutProgram});
+            this.mnuHelp.Name = "mnuHelp";
+            resources.ApplyResources(this.mnuHelp, "mnuHelp");
+            // 
+            // mnuHowToWork
+            // 
+            this.mnuHowToWork.Name = "mnuHowToWork";
+            resources.ApplyResources(this.mnuHowToWork, "mnuHowToWork");
+            // 
+            // mnuAboutProgram
+            // 
+            this.mnuAboutProgram.Name = "mnuAboutProgram";
+            resources.ApplyResources(this.mnuAboutProgram, "mnuAboutProgram");
+            this.mnuAboutProgram.Click += new System.EventHandler(this.mnuAboutProgram_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Controls.Add(this.mnuMain);
+            this.MainMenuStrip = this.mnuMain;
             this.Name = "frmMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Distant Vacant.Gov.Uz";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.mnuMain.ResumeLayout(false);
+            this.mnuMain.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip mnuMain;
+        private System.Windows.Forms.ToolStripMenuItem mnuHelp;
+        private System.Windows.Forms.ToolStripMenuItem mnuHowToWork;
+        private System.Windows.Forms.ToolStripMenuItem mnuAboutProgram;
     }
 }
 

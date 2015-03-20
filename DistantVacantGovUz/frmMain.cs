@@ -14,5 +14,12 @@ namespace DistantVacantGovUz
         {
             InitializeComponent();
         }
+
+        private void mnuAboutProgram_Click(object sender, EventArgs e)
+        {
+            frmAbout fAbout = new frmAbout();
+
+            fAbout.ShowDialog();
+        }
     }
 }

@@ -12,3 +12,7 @@ D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.Pr
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.csproj.GenerateResource.Cache
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.exe
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.pdb
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmAbout.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.language.strings.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmMain.en.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.language.strings.ru-RU.resources

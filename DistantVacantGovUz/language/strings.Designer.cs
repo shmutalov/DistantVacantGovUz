@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DistantVacantGovUz.Properties {
+namespace DistantVacantGovUz.language {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace DistantVacantGovUz.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class strings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal strings() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace DistantVacantGovUz.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DistantVacantGovUz.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DistantVacantGovUz.language.strings", typeof(strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,12 +61,74 @@ namespace DistantVacantGovUz.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Launcher version: .
         /// </summary>
-        internal static System.Drawing.Bitmap logo_144 {
+        internal static string lblAppLauncherVersion {
             get {
-                object obj = ResourceManager.GetObject("logo_144", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("lblAppLauncherVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application version: .
+        /// </summary>
+        internal static string lblAppVersion {
+            get {
+                return ResourceManager.GetString("lblAppVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author: .
+        /// </summary>
+        internal static string lblAuthor {
+            get {
+                return ResourceManager.GetString("lblAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distant Vacant.Gov.Uz.
+        /// </summary>
+        internal static string lblProgramName {
+            get {
+                return ResourceManager.GetString("lblProgramName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About program....
+        /// </summary>
+        internal static string mnuAboutProgram {
+            get {
+                return ResourceManager.GetString("mnuAboutProgram", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        internal static string mnuHelp {
+            get {
+                return ResourceManager.GetString("mnuHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How to work?.
+        /// </summary>
+        internal static string mnuHowToWork {
+            get {
+                return ResourceManager.GetString("mnuHowToWork", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sherzod Mutalov.
+        /// </summary>
+        internal static string ProgramAuthor {
+            get {
+                return ResourceManager.GetString("ProgramAuthor", resourceCulture);
             }
         }
     }
