@@ -1,0 +1,14 @@
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\libcurl.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\LibCurlShim.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\DistantVacantGovUz.exe
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\DistantVacantGovUz.pdb
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\ExcelLibrary.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\HTMLparserLibDotNet20.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\LibCurlNet.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.csprojResolveAssemblyReference.cache
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmMain.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.Properties.Resources.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.csproj.GenerateResource.Cache
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.exe
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.pdb
