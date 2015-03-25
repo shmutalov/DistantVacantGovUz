@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.mnuMain = new System.Windows.Forms.MenuStrip();
+            this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPortalVacancies = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHowToWork = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAboutProgram = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,9 +41,22 @@
             // mnuMain
             // 
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuFile,
+            this.mnuPortalVacancies,
             this.mnuHelp});
             resources.ApplyResources(this.mnuMain, "mnuMain");
             this.mnuMain.Name = "mnuMain";
+            // 
+            // mnuFile
+            // 
+            this.mnuFile.Name = "mnuFile";
+            resources.ApplyResources(this.mnuFile, "mnuFile");
+            // 
+            // mnuPortalVacancies
+            // 
+            this.mnuPortalVacancies.Name = "mnuPortalVacancies";
+            resources.ApplyResources(this.mnuPortalVacancies, "mnuPortalVacancies");
+            this.mnuPortalVacancies.Click += new System.EventHandler(this.mnuPortalVacancies_Click);
             // 
             // mnuHelp
             // 
@@ -83,6 +98,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuHelp;
         private System.Windows.Forms.ToolStripMenuItem mnuHowToWork;
         private System.Windows.Forms.ToolStripMenuItem mnuAboutProgram;
+        private System.Windows.Forms.ToolStripMenuItem mnuFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuPortalVacancies;
     }
 }
 

@@ -68,11 +68,47 @@
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCaptcha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaptcha.Designer.cs">
+      <DependentUpon>frmCaptcha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClosedVacancies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClosedVacancies.Designer.cs">
+      <DependentUpon>frmClosedVacancies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditPortalVacancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditPortalVacancy.Designer.cs">
+      <DependentUpon>frmEditPortalVacancy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportPortalVacancies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportPortalVacancies.Designer.cs">
+      <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenedVacancies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenedVacancies.Designer.cs">
+      <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPortalVacancies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPortalVacancies.Designer.cs">
+      <DependentUpon>frmPortalVacancies.cs</DependentUpon>
     </Compile>
     <Compile Include="HttpRequest.cs" />
     <Compile Include="language\strings.ru-RU.Designer.cs">
@@ -90,11 +126,29 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCaptcha.resx">
+      <DependentUpon>frmCaptcha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClosedVacancies.resx">
+      <DependentUpon>frmClosedVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditPortalVacancy.resx">
+      <DependentUpon>frmEditPortalVacancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportPortalVacancies.resx">
+      <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.en.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenedVacancies.resx">
+      <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPortalVacancies.resx">
+      <DependentUpon>frmPortalVacancies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="language\strings.ru-RU.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,6 +181,10 @@
   <ItemGroup>
     <Content Include="distant.ico" />
     <None Include="images\logo-144.png" />
+    <None Include="images\refresh-32.png" />
+    <None Include="images\export-32.png" />
+    <None Include="images\edit-32.png" />
+    <None Include="images\key-32.png" />
     <Content Include="libcurl.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/assets/e65c9179/redactor.css" />
+<link rel="stylesheet" type="text/css" href="/assets/aaaca55f/jui/css/base/jquery-ui.css" />
+<script type="text/javascript" src="/assets/aaaca55f/jquery.js"></script>
+<script type="text/javascript" src="/assets/e65c9179/redactor.js"></script>
+<title>Vacant.Gov.Uz -[Beta]</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/themes/govuz/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/metro.css" rel="stylesheet" />
+    <link href="/themes/govuz/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/themes/govuz/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style_responsive.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style_default.css" rel="stylesheet" id="style_color" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/uniform/css/uniform.default.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/bootstrap-daterangepicker/daterangepicker.css" />
+    <link href="/themes/govuz/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <link href="/themes/govuz/jqvmap/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top">
+<!-- BEGIN TOP NAVIGATION BAR -->
+<div class="navbar-inner">
+<div class="container-fluid">
+<!-- BEGIN LOGO -->
+<a class="brand" href="/ru/vacancies/admin">
+    <img src="/img/logo.png" alt="logo" />
+</a>
+<!-- END LOGO -->
+
+<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+    <img src="/themes/govuz/img/menu-toggler.png" alt="" />
+</a>
+<!-- END RESPONSIVE MENU TOGGLER -->
+<!-- BEGIN TOP NAVIGATION MENU -->
+<ul class="nav pull-right" style="top:4px;">
+<!-- BEGIN LANGUAGE -->
+
+    <li>
+    <a class="brand pull-right" href="/ru/vacancies/update/408">
+        <img src="/img/ru_white.png" alt="logo" />
+    </a>
+    </li><li>
+    <a class="brand" href="/uz/vacancies/update/408">
+        <img src="/img/uz_red.png" alt="logo" />
+    </a>
+    </li>
+
+<!-- END LANGUAGE -->
+
+<!-- BEGIN INBOX DROPDOWN -->
+<!--<li class="dropdown" id="header_inbox_bar">-->
+<!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+<!--        <i class="icon-envelope-alt"></i>-->
+<!--        <span class="badge">5</span>-->
+<!--    </a>-->
+<!--    <ul class="dropdown-menu extended inbox">-->
+<!--        <li>-->
+<!--            <p>Поступило 12 новых обращении</p>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!--                <span class="photo"><img src="./assets/img/avatar2.jpg" alt="" /></span>-->
+<!--								<span class="subject">-->
+<!--								<span class="from">Lisa Wong</span>-->
+<!--								<span class="time">Just Now</span>-->
+<!--								</span>-->
+<!--								<span class="message">-->
+<!--								Vivamus sed auctor nibh congue nibh. auctor nibh-->
+<!--								auctor nibh...-->
+<!--								</span>-->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!---->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!---->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li class="external">-->
+<!--            <a href="#">Все сообщения <i class="m-icon-swapright"></i></a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</li>-->
+<!-- END INBOX DROPDOWN -->
+
+<!-- BEGIN USER LOGIN DROPDOWN -->
+<li class="dropdown user">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<!--        <img alt="" src="http://id.uz/images/users/a/--><!--/small.jpg" style="height: 30px;"/>-->
+        <span class="username">Добро пожаловать, уважаемый(ая) Дадабаев Уразали Насибалиевич</span>
+        <i class="icon-angle-down"></i>
+    </a>
+    <ul class="dropdown-menu">
+<!--        <li><a href="extra_profile.html"><i class="icon-user"></i> My Profile</a></li>-->
+<!--        <li><a href="calendar.html"><i class="icon-calendar"></i> My Calendar</a></li>-->
+<!--        <li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>-->
+<!--        <li class="divider"></li>-->
+        <li> <a href="/ru/site/logout"><i class="icon-key"></i> Выход</a></li>
+    </ul>
+</li>
+<!-- END USER LOGIN DROPDOWN -->
+</ul>
+<!-- END TOP NAVIGATION MENU -->
+</div>
+</div>
+<!-- END TOP NAVIGATION BAR -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar nav-collapse collapse">
+        <br />
+    <ul>
+        <li>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <div class="sidebar-toggler hidden-phone"></div>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        </li>
+<!--        <li>-->
+            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+<!--            <form class="sidebar-search">-->
+<!--                <div class="input-box">-->
+<!--                    <a href="javascript:;" class="remove"></a>-->
+<!--                    <input type="text" placeholder="Search..." />-->
+<!--                    <input type="button" class="submit" value=" " />-->
+<!--                </div>-->
+<!--            </form>-->
+            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+<!--        </li>-->
+    <!-- BEGIN SIDEBAR MENU -->
+        <li class="">
+                          <a href="/ru/vacancies/admin">
+                              <i class=" icon-share"></i>
+                              <span class="title">Актуальные вакансии</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/vacancies/cAdmin">
+                              <i class=" icon-ban-circle"></i>
+                              <span class="title">Неактуальные вакансии</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/request/received">
+                              <i class="icon-download-alt"></i>
+                              <span class="title">Поступившие резюме</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/request/approved">
+                              <i class="icon-check"></i>
+                              <span class="title">Принятые резюме</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/request/processed">
+                              <i class="icon-trash"></i>
+                              <span class="title">Рассмотренные резюме</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/request/reserved">
+                              <i class="icon-inbox"></i>
+                              <span class="title">Резервные кадры</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li>        </ul>
+        <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN PAGE -->
+    <div class="page-content">
+        <!-- BEGIN PAGE CONTAINER-->
+        <div class="container-fluid">
+
+
+                    <!--main-->
+                    <div class="span-19">
+	<div id="content">
+		<!---->
+<!--<h1>Update Vacancies --><!--</h1>-->
+    <!-- BEGIN PAGE HEADER-->
+<div class="row-fluid">
+    <div class="span12">
+    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+    <h3 class="page-title">
+        Редактировать вакансию				<small></small>
+    </h3>
+    <ul class="breadcrumb">
+        <li>
+            <i class="icon-home"></i>
+            <a href="/ru/vacancies/admin">Редактировать вакансию</a>
+            <i class="icon-angle-right"></i>
+        </li>
+
+    </ul>
+    <!-- END PAGE TITLE & BREADCRUMB-->
+<div class="portlet paddingless">
+<div class="portlet-title line">
+    <h4>Поля с * обязательны для заполнения </h4>
+
+</div>
+<div class="portlet-body" style="display: block;">
+<!--BEGIN TABS-->
+<form id="vacancies-form" action="/ru/vacancies/update/408" method="post"><div class="tabbable tabbable-custom">
+<!--<ul class="nav nav-tabs">
+    <li class="active"><a href="#tab_1_1" data-toggle="tab"></a></li>
+    <li class=""><a href="#tab_1_2" data-toggle="tab"></a></li>
+    <li class=""><a href="#tab_1_3" data-toggle="tab"></a></li>
+</ul>-->
+<div class="tab-content">
+    <div>
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; ">
+            <div class="scroller" >
+<!--        <div class="row-fluid">-->
+<!--                --><!--                --><!--                --><!--        </div>-->
+                <div class="row-fluid">
+                    <label for="Vacancies_name_ru" class="required">Русское наименование вакансии <span class="required">*</span></label>                    <input size="60" maxlength="255" class="span8" name="Vacancies[name_ru]" id="Vacancies_name_ru" type="text" value="Инженер-программист" />                                    </div>
+                <div class="row-fluid">
+                    <label for="Vacancies_name_uz" class="required">Узбекское наименование вакансии(латинскими буквами) <span class="required">*</span></label>                    <input size="60" maxlength="255" class="span8" name="Vacancies[name_uz]" id="Vacancies_name_uz" type="text" value="Dasturlovchi-muhandis" />                                    </div>
+
+                <div class="row-fluid">
+                    <label for="Vacancies_category_id" class="required">Категория <span class="required">*</span></label>        <!--            -->                    <select class="span5" name="Vacancies[category_id]" id="Vacancies_category_id">
+<option value="">Выберите категорию</option>
+<option value="1" selected="selected">IT / Интернет / Телеком</option>
+<option value="2">Государственная служба</option>
+<option value="3">Искусство / Культура</option>
+<option value="4">Корпоративные услуги</option>
+<option value="5">Маркетинг / Реклама / PR</option>
+<option value="6">Медиа</option>
+<option value="7">Медицина / Здравоохранение / Фармацевтика</option>
+<option value="8">Недвижимость</option>
+<option value="9">Некоммерческие организации</option>
+<option value="10">Образование / Наука</option>
+<option value="11">Полезные ископаемые / Добыча сырья</option>
+<option value="12">Промышленность</option>
+<option value="13">Развлечения / Отдых / Спорт / Красота</option>
+<option value="14">Сельское хозяйство</option>
+<option value="15">Строительство</option>
+<option value="16">Товары народного потребления</option>
+<option value="17">Торговля</option>
+<option value="18">Транспорт / Логистика / Автомобильный бизнес</option>
+<option value="19">Финансы / Банки / Инвестиции / Лизинг</option>
+<option value="20">Экология / Защита окружающей среды</option>
+<option value="21">Юридическая служба</option>
+<option value="22">Антиквариат</option>
+<option value="23">Бухгалтерия / Управленческий учет / Финансы предприятия</option>
+<option value="24">Административный персонал</option>
+<option value="25">Управление персоналом / Тренинги</option>
+<option value="26">Безопасность</option>
+<option value="27">Высший менеджмент</option>
+<option value="28">Консультирование</option>
+<option value="29">Страхование</option>
+</select>                                    </div>
+
+
+        <!--        <div class="row-fluid">-->
+        <!--                -->        <!--                -->        <!--                -->        <!--        </div>-->
+                <div class="row-fluid">
+                        <label for="Vacancies_salary" class="required">Заработная плата <span class="required">*</span></label>                        <input size="60" maxlength="100" class="span3" name="Vacancies[salary]" id="Vacancies_salary" type="text" value="по штатному расписанию" />                                        </div>
+                <div class="row-fluid">
+                        <label for="Vacancies_employment" class="required">Занятость <span class="required">*</span></label>        <!--                -->                        <select class="span5" name="Vacancies[employment]" id="Vacancies_employment">
+<option value="none">Без разницы</option>
+<option value="full" selected="selected">Полная</option>
+<option value="part">Неполная</option>
+<option value="sov">По совместительству</option>
+<option value="freelance">Фриланс</option>
+</select>                                        </div>
+                <div class="row-fluid">
+                        <label for="Vacancies_gender">Пол</label>        <!--                -->                    <select class="span5" name="Vacancies[gender]" id="Vacancies_gender">
+<option value="N" selected="selected">Без разницы</option>
+<option value="M">Мужской</option>
+<option value="F">Женский</option>
+</select>                                        </div>
+                <div class="row-fluid">
+                    <label for="Vacancies_exp_period" class="required">Необходимый стаж <span class="required">*</span></label>                    <select class="span5" name="Vacancies[exp_period]" id="Vacancies_exp_period">
+<option value="none" selected="selected">Без разницы</option>
+<option value="one year">От одного года</option>
+<option value="two years">От двух лет</option>
+<option value="tree years">От трех лет</option>
+<option value="five etc">Пять и более лет</option>
+</select>                                    </div>
+                <div class="row-fluid">
+                    <label for="Vacancies_education" class="required">Образование <span class="required">*</span></label>                    <select class="span5" name="Vacancies[education]" id="Vacancies_education">
+<option value="none">Без разницы</option>
+<option value="school">Среднее</option>
+<option value="college">Среднее специальное</option>
+<option value="half high">Неоконченное высшее</option>
+<option value="high" selected="selected">Высшее</option>
+</select>                                    </div>
+
+                <div class="row-fluid">
+                    <label for="Vacancies_exp_date" class="required">Действителен до <span class="required">*</span></label>                    <input class="span5" id="Vacancies_exp_date" name="Vacancies[exp_date]" type="text" value="2015-04-19" />                                    </div>
+
+                <div class="row-fluid">
+                    <label for="Vacancies_status" class="required">Status <span class="required">*</span></label>                    <select class="span5" name="Vacancies[status]" id="Vacancies_status">
+<option value="open">Актуальный</option>
+<option value="closed" selected="selected">Неактуальный</option>
+</select>                                    </div>
+
+
+            </div>
+            <div class="slimScrollBar ui-draggable" style="background-color: rgb(161, 178, 189); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; z-index: 99; right: 1px; height: 133.4920634920635px; background-position: initial initial; background-repeat: initial initial;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background-color: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px; background-position: initial initial; background-repeat: initial initial;"></div>
+        </div>
+    </div>
+
+    <div>
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;">
+            <div class="scroller" >
+
+                <div class="row-fluid">
+                    <label for="Vacancies_department_ru" class="required">Отдел / Подразделение на русском <span class="required">*</span></label>                    <input size="60" maxlength="255" class="span8" name="Vacancies[department_ru]" id="Vacancies_department_ru" type="text" value="Служба автоматизированной системы управления технологическим процессом, медная обогатительная фабрика" />                                    </div>
+
+                <div class="row-fluid">
+                    <label for="Vacancies_department_uz" class="required">Отдел / Подразделение на узбекском <span class="required">*</span></label>                    <input size="60" maxlength="255" class="span8" name="Vacancies[department_uz]" id="Vacancies_department_uz" type="text" value="Texnologik jarayonlarni boshqaruvning avtomatlashtirilgan tarmoqlar hizmati, mis boyitish fabrikasi" />                                    </div>
+
+                <div class="row-fluid">
+                    <label for="Vacancies_specialization_ru" class="required">Специализация на русском <span class="required">*</span></label>                    <textarea rows="6" cols="50" class="redactor" name="Vacancies[specialization_ru]" id="Vacancies_specialization_ru">1. Обеспечение надежной работы эксплуатируемого программного обеспечения;
+ 2. Обеспечение выполнения плана работ сектора программирования;
+ 3. Постоянное усовершенствование алгоритмов управления технологическими процессами, алгоритмов технико-экономических показателей</textarea>                                    </div>
+
+                <div class="row-fluid">
+                    <label for="Vacancies_specialization_uz" class="required">Специализация на узбекском <span class="required">*</span></label>                    <textarea rows="6" cols="50" class="redactor" name="Vacancies[specialization_uz]" id="Vacancies_specialization_uz">1. Foydalanilayotgan dastur ta&#039;minoti bo&#039;yicha ishonchli ishlashni ta&#039;minlash;
+ 2. Dasturlash sektori bo&#039;yicha belgilagan rejadaga ishlarni amalga oshirishni ta&#039;minlash;
+ 3. Texnologik jaroyonlarning algoritmlarini va texnik-iqtisodiy algoritmlarini takomillashtirish</textarea>                                    </div>
+                <br>
+        <!--        <div class="row-fluid">-->
+        <!--            -->        <!--            -->        <!--            -->        <!--        </div>-->
+
+                <div class="row-fluid">
+                    <label for="Vacancies_requarements_ru" class="required">Требования на русском <span class="required">*</span></label>                    <textarea rows="6" cols="50" class="redactor" name="Vacancies[requarements_ru]" id="Vacancies_requarements_ru">1. Знание Правил техники безопасности и промышленной санитарии;
+ 2. Знание программного обеспечения по системе управления технологическим процессом и расчету технико-экономических задач</textarea>                                    </div>
+
+                <div class="row-fluid">
+                    <label for="Vacancies_requarements_uz" class="required">Требования на узбекском <span class="required">*</span></label>                    <textarea rows="6" cols="50" class="redactor" name="Vacancies[requarements_uz]" id="Vacancies_requarements_uz">1.Texnika havfsizligi va sanoat sanitariya qoidalarini bilish;
+ 2. Texnologik jarayonlarning boshqaruv tizimi va texik-iqtisodiy hisoblar bo&#039;yicha dasturiy ta&#039;minlash bilimlariga ega bo&#039;lish</textarea>                                    </div>
+
+                <br>
+                <div class="row-fluid">
+                    <label for="Vacancies_information_ru">Дополнительная информация на русском</label>                    <textarea rows="6" cols="50" class="redactor" name="Vacancies[information_ru]" id="Vacancies_information_ru"></textarea>                                    </div>
+
+                <div class="row-fluid">
+                    <label for="Vacancies_information_uz">Дополнительная информация на узбекском</label>                    <textarea rows="6" cols="50" class="redactor" name="Vacancies[information_uz]" id="Vacancies_information_uz"></textarea>                                    </div>
+
+                <div class="row-fluid">
+                                            <div class="requirements">Введите надпись на изображении<span class="required">*</span></div>
+                        <div>
+                            <img id="yw1" src="/ru/vacancies/captcha?v=550fc9274f809" alt="" /><br/><br/>
+                            <input name="Vacancies[verifyCode]" id="Vacancies_verifyCode" type="text" />                        </div>
+                        <div class="hint">Символы не чувствительны к регистру.</div>
+                                    </div>
+            </div>
+            <div class="slimScrollBar ui-draggable" style="background-color: rgb(161, 178, 189); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; z-index: 99; right: 1px; background-position: initial initial; background-repeat: initial initial;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; background-color: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px; background-position: initial initial; background-repeat: initial initial;"></div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+<!--END TABS-->
+
+
+    <button type="submit" class="btn blue" > Сохранить</button>
+
+</form></div>
+</div>    </div>
+</div>
+<!-- END PAGE HEADER-->	</div><!-- content -->
+</div>
+<div class="span-5 last">
+	<div id="sidebar">
+		</div><!-- sidebar -->
+</div>
+                    <!--main-->
+
+        </div>
+        <!-- END PAGE CONTAINER-->
+    </div>
+    <!-- END PAGE -->
+
+</div>
+<!-- END CONTAINER -->
+
+
+
+
+<!-- BEGIN FOOTER -->
+<div class="footer">
+    2013 &copy; UZINFOCOM.
+    <div class="span pull-right">
+        <span class="go-top"><i class="icon-angle-up"></i></span>
+    </div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS -->
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- <script src="/themes/govuz/js/jquery-1.8.3.min.js"></script> -->
+<!--[if lt IE 9]>
+<script src="/themes/govuz/js/excanvas.js"></script>
+<script src="/themes/govuz/js/respond.js"></script>
+<![endif]-->
+<script src="/themes/govuz/breakpoints/breakpoints.js"></script>
+<script src="/themes/govuz/bootstrap/js/bootstrap.min.js"></script>
+<script src="/themes/govuz/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/themes/govuz/js/jquery.cookie.js"></script>
+<script src="/themes/govuz/js/additions.js"></script>
+
+
+<!-- END JAVASCRIPTS -->
+
+<script type="text/javascript" src="/assets/aaaca55f/jui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/assets/aaaca55f/jui/js/jquery-ui-i18n.min.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+jQuery('.redactor').redactor({'iframe':false,'autoresize':false,'focus':true,'minHeight':80});
+jQuery('#Vacancies_exp_date').datepicker(jQuery.extend({showMonthAfterYear:false},jQuery.datepicker.regional['ru'],{'regional':'ru','dateFormat':'yy-mm-dd','minDate':'-365','maxDate':'730','changeMonth':true,'changeYear':true,'yearRange':'-2:+3'}));
+jQuery('#yw1').after("<a id=\"yw1_button\" href=\"\/ru\/vacancies\/captcha?refresh=1\">\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u043d\u043e\u0432\u044b\u0439 \u043a\u043e\u0434<\/a>");
+jQuery(document).on('click', '#yw1_button', function(){
+	jQuery.ajax({
+		url: "\/ru\/vacancies\/captcha?refresh=1",
+		dataType: 'json',
+		cache: false,
+		success: function(data) {
+			jQuery('#yw1').attr('src', data['url']);
+			jQuery('body').data('captcha.hash', [data['hash1'], data['hash2']]);
+		}
+	});
+	return false;
+});
+
+});
+/*]]>*/
+</script>
+</body>
+<!-- END BODY -->
+</html>

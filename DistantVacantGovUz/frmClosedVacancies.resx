@@ -117,21 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="refresh_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\refresh-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolBtnExportVacancies.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
-  <data name="logo_144" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\logo-144.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="export_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\export-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="edit_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\edit-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="key_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\key-32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADFpTR5xaU0+MWlNPDFpTTwxaU08MWlNPDFpTTuxaU02sWlNNnFpTTZxaU02sWl
+        NNjFpTRwAAAAAAAAAADFpTRwxaU0NMWlNMjFpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU04AAAAAAAAAAAxaU0/8WlNL7FpTQpxaU0xMWlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNN0AAAAAAAAAAMWlNO3FpTT/xaU0ucWlNCnFpTTExaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTTfAAAAAAAAAADFpTToxaU0/8WlNP/FpTS6xaU0KsWlNMTFpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU04gAAAAAAAAAAxaU06cWlNP/FpTT/xaU0/8WlNLrFpTQqxaU0xMWl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNOIAAAAAAAAAAMWlNOjFpTT/xaU0/8WlNP/FpTT/xaU0usWl
+        NCrFpTTExaU0/8WlNP/FpTT/xaU0/8WlNP/FpTTiAAAAAAAAAADFpTTixaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTS6xaU0K8WlNMTFpTT/xaU0/8WlNP/FpTT/xaU06QAAAAAAAAAAxaU04sWlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNLrFpTQrxaU0xMWlNP/FpTT/xaU0/8WlNOkAAAAAAAAAAMWlNOLFpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0usWlNCvFpTTExaU0/8WlNP/FpTTpAAAAAAAAAADFpTTexaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTS6xaU0K8WlNMTFpTT/xaU07QAAAAAAAAAAxaU03cWl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNLvFpTQrxaU0yMWlNP8AAAAAAAAAAMWl
+        NN/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0wcWlNDbFpTR8AAAAAAAA
+        AADFpTRvxaU018WlNNrFpTTZxaU02cWlNNjFpTTgxaU08MWlNPDFpTTwxaU08MWlNPjFpTRxAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//8AAMABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIAB
+        AACAAwAA//8AAA==
+</value>
   </data>
 </root>

@@ -14,5 +14,15 @@ D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.ex
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.pdb
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmAbout.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.language.strings.resources
-D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmMain.en.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.language.strings.ru-RU.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\en\DistantVacantGovUz.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\ru-RU\DistantVacantGovUz.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmCaptcha.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmEditPortalVacancy.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\en\DistantVacantGovUz.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\ru-RU\DistantVacantGovUz.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmMain.en.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmClosedVacancies.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmOpenedVacancies.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmPortalVacancies.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmImportPortalVacancies.resources

@@ -13,13 +13,21 @@ namespace DistantVacantGovUz
         public frmMain()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
         }
 
         private void mnuAboutProgram_Click(object sender, EventArgs e)
         {
             frmAbout fAbout = new frmAbout();
-
+            
             fAbout.ShowDialog();
+        }
+
+        private void mnuPortalVacancies_Click(object sender, EventArgs e)
+        {
+            frmPortalVacancies fPortal = new frmPortalVacancies();
+
+            fPortal.Show();
         }
     }
 }

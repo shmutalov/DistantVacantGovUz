@@ -10,7 +10,8 @@ namespace DistantVacantGovUz
     public enum VACANCY_STATUS
     {
         OPEN = 0, // open
-        CLOSED // closed
+        CLOSED = 1, // closed
+        UNKNOWN = -1
     }
 
     /// <summary>
@@ -46,7 +47,8 @@ namespace DistantVacantGovUz
         BEZOPASNOST = 26,
         VISSHIY_MENEDJMENT = 27,
         KONSULTIROVANIYE = 28,
-        STRAXOVANIYE = 29
+        STRAXOVANIYE = 29,
+        UNKNOWN = -1
     }
 
     /// <summary>
@@ -58,7 +60,8 @@ namespace DistantVacantGovUz
         FULL = 1, // "full"
         PART = 2, // "part"
         FREELANCE = 3, // "freelance"
-        COMBINED = 4 // "sov"
+        COMBINED = 4, // "sov"
+        UNKNOWN = -1
     }
 
     /// <summary>
@@ -69,6 +72,7 @@ namespace DistantVacantGovUz
         NO_MATTER = 0, // "N"
         MALE = 1,  // "M"
         FEMALE = 2, // "F"
+        UNKNOWN = -1 // WTF?
     }
 
     /// <summary>
@@ -83,6 +87,7 @@ namespace DistantVacantGovUz
         //FOUR_YEARS = 4, // "four years"
         //FIVE_AND_MORE_YEARS = 5, // "five etc"
         FIVE_AND_MORE_YEARS = 4, // "five etc"
+        UNKNOWN = -1
     }
 
     /// <summary>
@@ -95,6 +100,7 @@ namespace DistantVacantGovUz
         SPECIAL_MEDIUM = 2, // "college"
         HIGH_NOT_ENDED = 3, // "half high"
         HIGH = 4, //"high"
+        UNKNOWN = -1
     }
 
     /// <summary>
@@ -295,7 +301,7 @@ namespace DistantVacantGovUz
                 case "closed":
                     return VACANCY_STATUS.CLOSED;
                 default:
-                    return VACANCY_STATUS.CLOSED;
+                    return VACANCY_STATUS.UNKNOWN;
             }
         }
 
@@ -334,6 +340,73 @@ namespace DistantVacantGovUz
                 case VACANCY_CATEGORY.STRAXOVANIYE: return 29;
                 default:
                     return 0;
+            }
+        }
+
+        public static VACANCY_CATEGORY CategoryIdFromOptionValue(string c)
+        {
+            switch (c)
+            {
+                case "1":
+                    return VACANCY_CATEGORY.IT_INTERNET_TELEKOM;
+                case "2":
+                    return VACANCY_CATEGORY.GOSUDARSTVENNAYA_SLUJBA;
+                case "3":
+                    return VACANCY_CATEGORY.ISKUSSTVO_KULTURA;
+                case "4":
+                    return VACANCY_CATEGORY.KORPORATIVNIYE_USLUGI;
+                case "5":
+                    return VACANCY_CATEGORY.MARKETING_REKLAMA;
+                case "6":
+                    return VACANCY_CATEGORY.MEDIA;
+                case "7":
+                    return VACANCY_CATEGORY.MEDICINA_ZDRAVOOXRANENIYE_FARMACEVTIKA;
+                case "8":
+                    return VACANCY_CATEGORY.NEDVIJIMOST;
+                case "9":
+                    return VACANCY_CATEGORY.NEKOMMERCHESKIYE_ORGANIZACII;
+                case "10":
+                    return VACANCY_CATEGORY.OBRAZOVANIYE_NAUKA;
+                case "11":
+                    return VACANCY_CATEGORY.POLEZNIYE_ISKOPAYEMIYE_DOBICHA_SIRYA;
+                case "12":
+                    return VACANCY_CATEGORY.PROMISHLENNOST;
+                case "13":
+                    return VACANCY_CATEGORY.RAZVLECHENIYA_OTDIX_SPORT_KRASOTA;
+                case "14":
+                    return VACANCY_CATEGORY.SELSKOYE_XOZYAYSTVO;
+                case "15":
+                    return VACANCY_CATEGORY.STROITELSTVO;
+                case "16":
+                    return VACANCY_CATEGORY.TOVARI_NARODNOGO_POTREBLENIYA;
+                case "17":
+                    return VACANCY_CATEGORY.TORGOVLYA;
+                case "18":
+                    return VACANCY_CATEGORY.TRANSPORT_LOGISTIKA_AVTOMOBILNIY_BIZNES;
+                case "19":
+                    return VACANCY_CATEGORY.FINANSI_BANKI_INVESTICII_LIZING;
+                case "20":
+                    return VACANCY_CATEGORY.EKOLOGIYA_ZASHITA_OKRUJAYUSHEY_SREDI;
+                case "21":
+                    return VACANCY_CATEGORY.YURIDICHESKAYA_SLUJBA;
+                case "22":
+                    return VACANCY_CATEGORY.ANTIKVARIAT;
+                case "23":
+                    return VACANCY_CATEGORY.BUXGALTERIYA_UPRAVLENCHESKIY_UCHET_FINANSI_PREDPRIYATIYA;
+                case "24":
+                    return VACANCY_CATEGORY.ADMINISTRATIVNIY_PERSONAL;
+                case "25":
+                    return VACANCY_CATEGORY.UPRAVLENIYE_PERSONALOM_TRENINGI;
+                case "26":
+                    return VACANCY_CATEGORY.BEZOPASNOST;
+                case "27":
+                    return VACANCY_CATEGORY.VISSHIY_MENEDJMENT;
+                case "28":
+                    return VACANCY_CATEGORY.KONSULTIROVANIYE;
+                case "29":
+                    return VACANCY_CATEGORY.STRAXOVANIYE;
+                default:
+                    return VACANCY_CATEGORY.UNKNOWN;
             }
         }
 
@@ -428,6 +501,21 @@ namespace DistantVacantGovUz
             }
         }
 
+        public static VACANCY_GENDER GenderFromOptionValue(string g)
+        {
+            switch (g)
+            {
+                case "N":
+                    return VACANCY_GENDER.NO_MATTER;
+                case "M":
+                    return VACANCY_GENDER.MALE;
+                case "F":
+                    return VACANCY_GENDER.FEMALE;
+                default:
+                    return VACANCY_GENDER.UNKNOWN;
+            }
+        }
+
         public static string GenderFromIdRu(VACANCY_GENDER g)
         {
             switch (g)
@@ -474,6 +562,25 @@ namespace DistantVacantGovUz
                     return "sov";
                 default:
                     return "";
+            }
+        }
+
+        public static VACANCY_EMPLOYMENT EmploymentIdFromOptionValue(string e)
+        {
+            switch (e)
+            {
+                case "none":
+                    return VACANCY_EMPLOYMENT.NO_MATTER;
+                case "full":
+                    return VACANCY_EMPLOYMENT.FULL;
+                case "part":
+                    return VACANCY_EMPLOYMENT.PART;
+                case "freelance":
+                    return VACANCY_EMPLOYMENT.FREELANCE;
+                case "sov":
+                    return VACANCY_EMPLOYMENT.COMBINED;
+                default:
+                    return VACANCY_EMPLOYMENT.UNKNOWN;
             }
         }
 
@@ -536,6 +643,25 @@ namespace DistantVacantGovUz
             }
         }
 
+        public static VACANCY_EXPERIENCE ExperienceIdFromOptionValue(string e)
+        {
+            switch (e)
+            {
+                case "none":
+                    return VACANCY_EXPERIENCE.NO_MATTER;
+                case "one year":
+                    return VACANCY_EXPERIENCE.ONE_YEAR;
+                case "two years":
+                    return VACANCY_EXPERIENCE.TWO_YEARS;
+                case "three years":
+                    return VACANCY_EXPERIENCE.THREE_YEARS;
+                case "five etc":
+                    return VACANCY_EXPERIENCE.FIVE_AND_MORE_YEARS;
+                default:
+                    return VACANCY_EXPERIENCE.UNKNOWN;
+            }
+        }
+
         public static string ExperienceFromIdRu(VACANCY_EXPERIENCE e)
         {
             switch (e)
@@ -594,6 +720,25 @@ namespace DistantVacantGovUz
                     return "high";
                 default:
                     return "";
+            }
+        }
+
+        public static VACANCY_EDUCATION_LEVEL EducationIdFromOptionValue(string e)
+        {
+            switch (e)
+            {
+                case "none":
+                    return VACANCY_EDUCATION_LEVEL.NO_MATTER;
+                case "school":
+                    return VACANCY_EDUCATION_LEVEL.MEDIUM;
+                case "college":
+                    return VACANCY_EDUCATION_LEVEL.SPECIAL_MEDIUM;
+                case "half high":
+                    return VACANCY_EDUCATION_LEVEL.HIGH_NOT_ENDED;
+                case "high":
+                    return VACANCY_EDUCATION_LEVEL.HIGH;
+                default:
+                    return VACANCY_EDUCATION_LEVEL.UNKNOWN;
             }
         }
 

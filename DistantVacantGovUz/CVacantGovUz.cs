@@ -45,6 +45,11 @@ namespace DistantVacantGovUz
         /// </summary>
         private HttpRequest http;
 
+        /// <summary>
+        /// Класс для парсинга HTML-данных
+        /// </summary>
+        private HTMLparser parser;
+
         //private string strIDUzLoginUrl = @"http://www.id.uz/users/login/authenticate?token=";
         //private string strVacantGovUzLoginUrl = @"http://vacant.gov.uz/site/login";
         private string strLoginUrl;
@@ -179,6 +184,20 @@ namespace DistantVacantGovUz
         public CVacantGovUz()
         {
             http = new HttpRequest();
+
+            parser = new HTMLparser();
+
+            // parser parameters
+            parser.bAutoKeepComments = false;
+            parser.bAutoKeepScripts = false;
+            parser.bAutoMarkClosedTagsWithParamsAsOpen = true;
+            parser.bCompressWhiteSpaceBeforeTag = true;
+            parser.bKeepRawHTML = false;
+            parser.bDecodeEntities = true;
+            parser.bDecodeMiniEntities = true;
+            parser.InitMiniEntities();
+            
+            parser.SetEncoding(Encoding.UTF8);
         }
 
         /// <summary>
@@ -380,155 +399,271 @@ namespace DistantVacantGovUz
                 return false;
         }
 
-        /// <summary>
-        /// Получить данные вакансии по её номеру
-        /// </summary>
-        /// <param name="p_vac_id">Номер вакансии</param>
-        /// <returns>Возвратит класс CVacancy</returns>
         public CVacancy GetVacancy(int p_vac_id)
         {
+            bIsLogged = true;
+
             if (bIsLogged)
             {
                 CVacancy v = null;
-                string page = http.GetUrl(strEditVacancyUrl + @"/" + p_vac_id.ToString());
+
+                // test
+                string page = null;
+                byte[] htmlData;
+
+                /*FileStream reader;
+
+                using (reader = new FileStream(Program.GetApplicationDirectory() + "\\" + "408.htm", FileMode.Open))
+                {
+                    htmlData = new byte[reader.Length];
+
+                    reader.Read(htmlData, 0, (int)reader.Length);
+                }*/
+
+                TextReader reader;
+                using (reader = new StreamReader(Program.GetApplicationDirectory() + "\\" + "408.htm", Encoding.UTF8))
+                {
+                    try
+                    {
+                        page = reader.ReadToEnd();
+                    }
+                    catch (Exception ex)
+                    {
+                        page = "";
+                    }
+                }
 
                 if (page.IndexOf(@"Редактировать вакансию") > 0)
+                //if (true)
                 {
-                    //HTMLparser parser = new HTMLparser(page);
+                    parser.Init(Encoding.UTF8.GetBytes(page));
+                    //parser.Init(htmlData);
+                    parser.SetEncoding(Encoding.UTF8);
 
-                    HtmlAgilityPack.HtmlNode.ElementsFlags.Remove("option");
-                    HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
-                    html.LoadHtml(page);
+                    HTMLchunk chunk = null;
+                    HTMLchunk o_chunk = null;
+                    HTMLchunk t_chunk = null;
 
-                    int i = 0;
-                    HtmlAgilityPack.HtmlNodeCollection nodes;
-                    int iCategoryId = 0;
+                    // input box
+                    string Vacancies_name_ru = "";
+                    string Vacancies_name_uz = "";
+                    string Vacancies_salary = "";
+                    string Vacancies_exp_date = "";
+                    string Vacancies_department_ru = "";
+                    string Vacancies_department_uz = "";
 
-                    nodes = html.GetElementbyId(@"Vacancies_category_id").ChildNodes;
+                    // option
+                    string Vacancies_category_id = "";
+                    string Vacancies_employment = "";
+                    string Vacancies_gender = "";
+                    string Vacancies_exp_period = "";
+                    string Vacancies_education = "";
+                    string Vacancies_status = "";
 
-                    i = 0;
+                    // textarea
+                    string Vacancies_specialization_ru = "";
+                    string Vacancies_specialization_uz = "";
+                    string Vacancies_requarements_ru = "";
+                    string Vacancies_requarements_uz = "";
+                    string Vacancies_information_ru = "";
+                    string Vacancies_information_uz = "";
 
-                    foreach (HtmlNode node in nodes)
+                    while ((chunk = parser.ParseNext()) != null)
                     {
-                        if (node.Attributes["selected"] != null)
+                        switch (chunk.oType)
                         {
-                            iCategoryId = i;
-                            break;
+                            case HTMLchunkType.OpenTag:
+                                switch (chunk.sTag)
+                                {
+                                    case "input":
+                                        switch (chunk.GetParamValue("id"))
+                                        {
+                                            case "Vacancies_name_ru":
+                                                Vacancies_name_ru = chunk.GetParamValue("value");
+                                                break;
+                                            case "Vacancies_name_uz":
+                                                Vacancies_name_uz = chunk.GetParamValue("value");
+                                                break;
+                                            case "Vacancies_salary":
+                                                Vacancies_salary = chunk.GetParamValue("value");
+                                                break;
+                                            case "Vacancies_exp_date":
+                                                Vacancies_exp_date = chunk.GetParamValue("value");
+                                                break;
+                                            case "Vacancies_department_ru":
+                                                Vacancies_department_ru = chunk.GetParamValue("value");
+                                                break;
+                                            case "Vacancies_department_uz":
+                                                Vacancies_department_uz = chunk.GetParamValue("value");
+                                                break;
+                                            default:
+                                                continue;
+                                        }
+                                        break;
+                                    case "select":
+                                        switch (chunk.GetParamValue("id"))
+                                        {
+                                            case "Vacancies_category_id":
+                                                while ((o_chunk = parser.ParseNextTag()).sTag == "option")
+                                                {
+                                                    if (o_chunk.GetParamValue("selected") == "selected")
+                                                    {
+                                                        Vacancies_category_id = o_chunk.GetParamValue("value");
+                                                        break;
+                                                    }
+                                                }
+                                                break;
+                                            case "Vacancies_employment":
+                                                while ((o_chunk = parser.ParseNextTag()).sTag == "option")
+                                                {
+                                                    if (o_chunk.GetParamValue("selected") == "selected")
+                                                    {
+                                                        Vacancies_employment = o_chunk.GetParamValue("value");
+                                                        break;
+                                                    }
+                                                }
+                                                break;
+                                            case "Vacancies_gender":
+                                                while ((o_chunk = parser.ParseNextTag()).sTag == "option")
+                                                {
+                                                    if (o_chunk.GetParamValue("selected") == "selected")
+                                                    {
+                                                        Vacancies_gender = o_chunk.GetParamValue("value");
+                                                        break;
+                                                    }
+                                                }
+                                                break;
+                                            case "Vacancies_exp_period":
+                                                while ((o_chunk = parser.ParseNextTag()).sTag == "option")
+                                                {
+                                                    if (o_chunk.GetParamValue("selected") == "selected")
+                                                    {
+                                                        Vacancies_exp_period = o_chunk.GetParamValue("value");
+                                                        break;
+                                                    }
+                                                }
+                                                break;
+                                            case "Vacancies_education":
+                                                while ((o_chunk = parser.ParseNextTag()).sTag == "option")
+                                                {
+                                                    if (o_chunk.GetParamValue("selected") == "selected")
+                                                    {
+                                                        Vacancies_education = o_chunk.GetParamValue("value");
+                                                        break;
+                                                    }
+                                                }
+                                                break;
+                                            case "Vacancies_status":
+                                                while ((o_chunk = parser.ParseNextTag()).sTag == "option")
+                                                {
+                                                    if (o_chunk.GetParamValue("selected") == "selected")
+                                                    {
+                                                        Vacancies_status = o_chunk.GetParamValue("value");
+                                                        break;
+                                                    }
+                                                }
+                                                break;
+                                            default:
+                                                continue;
+                                        }
+                                        break;
+                                    case "textarea":
+                                        switch (chunk.GetParamValue("id"))
+                                        {
+                                            case "Vacancies_specialization_ru":
+                                                t_chunk = parser.ParseNext();
+
+                                                if (t_chunk.oType == HTMLchunkType.Text)
+                                                {
+                                                    Vacancies_specialization_ru = t_chunk.oHTML;
+                                                }
+                                                break;
+                                            case "Vacancies_specialization_uz":
+                                                t_chunk = parser.ParseNext();
+
+                                                if (t_chunk.oType == HTMLchunkType.Text)
+                                                {
+                                                    Vacancies_specialization_uz = t_chunk.oHTML;
+                                                }
+                                                break;
+                                            case "Vacancies_requarements_ru":
+                                                t_chunk = parser.ParseNext();
+
+                                                if (t_chunk.oType == HTMLchunkType.Text)
+                                                {
+                                                    Vacancies_requarements_ru = t_chunk.oHTML;
+                                                }
+                                                break;
+                                            case "Vacancies_requarements_uz":
+                                                t_chunk = parser.ParseNext();
+
+                                                if (t_chunk.oType == HTMLchunkType.Text)
+                                                {
+                                                    Vacancies_requarements_uz = t_chunk.oHTML;
+                                                }
+                                                break;
+                                            case "Vacancies_information_ru":
+                                                t_chunk = parser.ParseNext();
+
+                                                if (t_chunk.oType == HTMLchunkType.Text)
+                                                {
+                                                    Vacancies_information_ru = t_chunk.oHTML;
+                                                }
+                                                break;
+                                            case "Vacancies_information_uz":
+                                                t_chunk = parser.ParseNext();
+
+                                                if (t_chunk.oType == HTMLchunkType.Text)
+                                                {
+                                                    Vacancies_information_uz = t_chunk.oHTML;
+                                                }
+                                                break;
+                                            default:
+                                                continue;
+                                        }
+                                        break;
+                                    default:
+                                        continue;
+                                }
+
+                                break;
+                            case HTMLchunkType.CloseTag:
+                                continue;
+                            case HTMLchunkType.Text:
+                                continue;
+                            case HTMLchunkType.Comment:
+                                continue;
+                            case HTMLchunkType.Script:
+                                continue;
                         }
-
-                        if (node.Name == "option")
-                            i++;
                     }
 
-                    int iEmployment = 0;
-
-                    nodes = html.GetElementbyId(@"Vacancies_employment").ChildNodes;
-
-                    i = 0;
-
-                    foreach (HtmlNode node in nodes)
-                    {
-                        if (node.Attributes["selected"] != null)
-                        {
-                            iEmployment = i;
-                            break;
-                        }
-
-                        if (node.Name == "option")
-                            i++;
-                    }
-
-                    int iGender = 0;
-
-                    nodes = html.GetElementbyId(@"Vacancies_gender").ChildNodes;
-
-                    i = 0;
-
-                    foreach (HtmlNode node in nodes)
-                    {
-                        if (node.Attributes["selected"] != null)
-                        {
-                            iGender = i;
-                            break;
-                        }
-
-                        if (node.Name == "option")
-                            i++;
-                    }
-
-                    int iExperience = 0;
-
-                    nodes = html.GetElementbyId(@"Vacancies_exp_period").ChildNodes;
-
-                    i = 0;
-
-                    foreach (HtmlNode node in nodes)
-                    {
-                        if (node.Attributes["selected"] != null)
-                        {
-                            iExperience = i;
-                            break;
-                        }
-
-                        if (node.Name == "option")
-                            i++;
-                    }
-
-                    int iEducation = 0;
-
-                    nodes = html.GetElementbyId(@"Vacancies_education").ChildNodes;
-
-                    i = 0;
-
-                    foreach (HtmlNode node in nodes)
-                    {
-                        if (node.Attributes["selected"] != null)
-                        {
-                            iEducation = i;
-                            break;
-                        }
-
-                        if (node.Name == "option")
-                            i++;
-                    }
-
-                    VACANCY_STATUS iStatus = VACANCY_STATUS.CLOSED;
-
-                    nodes = html.GetElementbyId(@"Vacancies_status").ChildNodes;
-
-                    foreach (HtmlNode node in nodes)
-                    {
-                        if (node.Attributes["selected"] != null)
-                            //iStatus = node.GetAttributeValue("value", 0);
-                            iStatus = CVacancy.StatusIdFromValue(node.GetAttributeValue("value", "closed"));
-                    }
-
-                    HtmlNode n = html.GetElementbyId(@"Vacancies_specialization_ru");
-                    string s13 = html.GetElementbyId(@"Vacancies_specialization_ru").GetAttributeValue("value", "<empty>");
-                    string s15 = html.GetElementbyId(@"Vacancies_specialization_uz").GetAttributeValue("value", "<empty>");
-                    string s16 = html.GetElementbyId(@"Vacancies_requarements_ru").GetAttributeValue("value", "<empty>");
-                    string s17 = html.GetElementbyId(@"Vacancies_requarements_uz").GetAttributeValue("value", "<empty>");
-                    string s18 = html.GetElementbyId(@"Vacancies_information_ru").GetAttributeValue("value", "<empty>");
-                    string s19 = html.GetElementbyId(@"Vacancies_information_uz").GetAttributeValue("value", "<empty>");
-
-                    v = new CVacancy(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_name_ru").GetAttributeValue("value", ""))
-                            , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_name_uz").GetAttributeValue("value", ""))
-                            , (VACANCY_CATEGORY)iCategoryId
-                            , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_salary").GetAttributeValue("value", ""))
-                            , (VACANCY_EMPLOYMENT)iEmployment
-                            , (VACANCY_GENDER)iGender
-                            , (VACANCY_EXPERIENCE)iExperience
-                            , (VACANCY_EDUCATION_LEVEL)iEducation
-                            , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_exp_date").GetAttributeValue("value", ""))
-                            , iStatus
-                            , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_department_ru").GetAttributeValue("value", ""))
-                            , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_department_uz").GetAttributeValue("value", ""))
+                    v = new CVacancy(HttpUtility.HtmlDecode(Vacancies_name_ru)
+                            , HttpUtility.HtmlDecode(Vacancies_name_uz)
+                            , CVacancy.CategoryIdFromOptionValue(Vacancies_category_id)
+                            , HttpUtility.HtmlDecode(Vacancies_salary)
+                            , CVacancy.EmploymentIdFromOptionValue(Vacancies_employment)
+                            , CVacancy.GenderFromOptionValue(Vacancies_gender)
+                            , CVacancy.ExperienceIdFromOptionValue(Vacancies_exp_period)
+                            , CVacancy.EducationIdFromOptionValue(Vacancies_education)
+                            , HttpUtility.HtmlDecode(Vacancies_exp_date)
+                            , CVacancy.StatusIdFromValue(Vacancies_status)
+                            , HttpUtility.HtmlDecode(Vacancies_department_ru)
+                            , HttpUtility.HtmlDecode(Vacancies_department_uz)
+                            , HttpUtility.HtmlDecode(Vacancies_specialization_ru)
+                            , HttpUtility.HtmlDecode(Vacancies_specialization_uz)
+                            , HttpUtility.HtmlDecode(Vacancies_requarements_ru)
+                            , HttpUtility.HtmlDecode(Vacancies_requarements_uz)
+                            , HttpUtility.HtmlDecode(Vacancies_information_ru)
+                            , HttpUtility.HtmlDecode(Vacancies_information_uz)
+                            /*
                             , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_specialization_ru").InnerHtml))
                             , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_specialization_uz").InnerHtml))
                             , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_requarements_ru").InnerHtml))
                             , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_requarements_uz").InnerHtml))
                             , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_information_ru").InnerHtml))
                             , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_information_uz").InnerHtml))
+                             * */
                         );
 
                     v.strPortalVacID = p_vac_id.ToString();
@@ -541,6 +676,168 @@ namespace DistantVacantGovUz
 
             return null;
         }
+
+        /// <summary>
+        /// Получить данные вакансии по её номеру
+        /// </summary>
+        /// <param name="p_vac_id">Номер вакансии</param>
+        /// <returns>Возвратит класс CVacancy</returns>
+        //public CVacancy GetVacancy(int p_vac_id)
+        //{
+        //    if (bIsLogged)
+        //    {
+        //        CVacancy v = null;
+        //        string page = http.GetUrl(strEditVacancyUrl + @"/" + p_vac_id.ToString());
+
+        //        if (page.IndexOf(@"Редактировать вакансию") > 0)
+        //        {
+        //            //HTMLparser parser = new HTMLparser(page);
+
+        //            HtmlAgilityPack.HtmlNode.ElementsFlags.Remove("option");
+        //            HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
+        //            html.LoadHtml(page);
+
+        //            int i = 0;
+        //            HtmlAgilityPack.HtmlNodeCollection nodes;
+        //            int iCategoryId = 0;
+
+        //            nodes = html.GetElementbyId(@"Vacancies_category_id").ChildNodes;
+
+        //            i = 0;
+
+        //            foreach (HtmlNode node in nodes)
+        //            {
+        //                if (node.Attributes["selected"] != null)
+        //                {
+        //                    iCategoryId = i;
+        //                    break;
+        //                }
+
+        //                if (node.Name == "option")
+        //                    i++;
+        //            }
+
+        //            int iEmployment = 0;
+
+        //            nodes = html.GetElementbyId(@"Vacancies_employment").ChildNodes;
+
+        //            i = 0;
+
+        //            foreach (HtmlNode node in nodes)
+        //            {
+        //                if (node.Attributes["selected"] != null)
+        //                {
+        //                    iEmployment = i;
+        //                    break;
+        //                }
+
+        //                if (node.Name == "option")
+        //                    i++;
+        //            }
+
+        //            int iGender = 0;
+
+        //            nodes = html.GetElementbyId(@"Vacancies_gender").ChildNodes;
+
+        //            i = 0;
+
+        //            foreach (HtmlNode node in nodes)
+        //            {
+        //                if (node.Attributes["selected"] != null)
+        //                {
+        //                    iGender = i;
+        //                    break;
+        //                }
+
+        //                if (node.Name == "option")
+        //                    i++;
+        //            }
+
+        //            int iExperience = 0;
+
+        //            nodes = html.GetElementbyId(@"Vacancies_exp_period").ChildNodes;
+
+        //            i = 0;
+
+        //            foreach (HtmlNode node in nodes)
+        //            {
+        //                if (node.Attributes["selected"] != null)
+        //                {
+        //                    iExperience = i;
+        //                    break;
+        //                }
+
+        //                if (node.Name == "option")
+        //                    i++;
+        //            }
+
+        //            int iEducation = 0;
+
+        //            nodes = html.GetElementbyId(@"Vacancies_education").ChildNodes;
+
+        //            i = 0;
+
+        //            foreach (HtmlNode node in nodes)
+        //            {
+        //                if (node.Attributes["selected"] != null)
+        //                {
+        //                    iEducation = i;
+        //                    break;
+        //                }
+
+        //                if (node.Name == "option")
+        //                    i++;
+        //            }
+
+        //            VACANCY_STATUS iStatus = VACANCY_STATUS.CLOSED;
+
+        //            nodes = html.GetElementbyId(@"Vacancies_status").ChildNodes;
+
+        //            foreach (HtmlNode node in nodes)
+        //            {
+        //                if (node.Attributes["selected"] != null)
+        //                    //iStatus = node.GetAttributeValue("value", 0);
+        //                    iStatus = CVacancy.StatusIdFromValue(node.GetAttributeValue("value", "closed"));
+        //            }
+
+        //            HtmlNode n = html.GetElementbyId(@"Vacancies_specialization_ru");
+        //            string s13 = html.GetElementbyId(@"Vacancies_specialization_ru").GetAttributeValue("value", "<empty>");
+        //            string s15 = html.GetElementbyId(@"Vacancies_specialization_uz").GetAttributeValue("value", "<empty>");
+        //            string s16 = html.GetElementbyId(@"Vacancies_requarements_ru").GetAttributeValue("value", "<empty>");
+        //            string s17 = html.GetElementbyId(@"Vacancies_requarements_uz").GetAttributeValue("value", "<empty>");
+        //            string s18 = html.GetElementbyId(@"Vacancies_information_ru").GetAttributeValue("value", "<empty>");
+        //            string s19 = html.GetElementbyId(@"Vacancies_information_uz").GetAttributeValue("value", "<empty>");
+
+        //            v = new CVacancy(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_name_ru").GetAttributeValue("value", ""))
+        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_name_uz").GetAttributeValue("value", ""))
+        //                    , (VACANCY_CATEGORY)iCategoryId
+        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_salary").GetAttributeValue("value", ""))
+        //                    , (VACANCY_EMPLOYMENT)iEmployment
+        //                    , (VACANCY_GENDER)iGender
+        //                    , (VACANCY_EXPERIENCE)iExperience
+        //                    , (VACANCY_EDUCATION_LEVEL)iEducation
+        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_exp_date").GetAttributeValue("value", ""))
+        //                    , iStatus
+        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_department_ru").GetAttributeValue("value", ""))
+        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_department_uz").GetAttributeValue("value", ""))
+        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_specialization_ru").InnerHtml))
+        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_specialization_uz").InnerHtml))
+        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_requarements_ru").InnerHtml))
+        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_requarements_uz").InnerHtml))
+        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_information_ru").InnerHtml))
+        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_information_uz").InnerHtml))
+        //                );
+
+        //            v.strPortalVacID = p_vac_id.ToString();
+
+        //            return v;
+        //        }
+        //        else
+        //            return null;
+        //    }
+
+        //    return null;
+        //}
 
         /// <summary>
         /// Изменение статуса вакансии
@@ -577,233 +874,233 @@ namespace DistantVacantGovUz
         /// Получение списка открытых (актуальных) вакансий
         /// </summary>
         /// <returns></returns>
-        public List<CVacancyListElement> GetActualVacancies()
-        {
-            if (bIsLogged)
-            {
-                List<CVacancyListElement> vacs = null;
+        //public List<CVacancyListElement> GetActualVacancies()
+        //{
+        //    if (bIsLogged)
+        //    {
+        //        List<CVacancyListElement> vacs = null;
 
-                string page = http.GetUrl(strOpenedUrl);
+        //        string page = http.GetUrl(strOpenedUrl);
 
-                // Проверка количество страниц с вакансиями
-                if (page.IndexOf("<div class=\"pagination\">") > 0)
-                {
-                    string strNextPageUrl = "";
-                    bool lastPage = false;
+        //        // Проверка количество страниц с вакансиями
+        //        if (page.IndexOf("<div class=\"pagination\">") > 0)
+        //        {
+        //            string strNextPageUrl = "";
+        //            bool lastPage = false;
 
-                    while (!lastPage)
-                    {
-                        if (page.IndexOf("<li class=\"next\">") > 0)
-                            lastPage = false;
-                        else
-                            lastPage = true;
+        //            while (!lastPage)
+        //            {
+        //                if (page.IndexOf("<li class=\"next\">") > 0)
+        //                    lastPage = false;
+        //                else
+        //                    lastPage = true;
 
-                        HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
-                        html.LoadHtml(page);
+        //                HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
+        //                html.LoadHtml(page);
 
-                        HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
+        //                HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
 
-                        HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
+        //                HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
 
-                        int i = 0;
+        //                int i = 0;
 
-                        foreach (HtmlAgilityPack.HtmlNode el in table_data)
-                        {
-                            if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
-                            {
-                                i++;
+        //                foreach (HtmlAgilityPack.HtmlNode el in table_data)
+        //                {
+        //                    if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
+        //                    {
+        //                        i++;
 
-                                if (i == 1)
-                                {
-                                    if (vacs == null)
-                                        vacs = new List<CVacancyListElement>();
-                                }
+        //                        if (i == 1)
+        //                        {
+        //                            if (vacs == null)
+        //                                vacs = new List<CVacancyListElement>();
+        //                        }
 
-                                int iVacID = int.Parse(el.ChildNodes[1].InnerText);
-                                string strVacDescription = el.ChildNodes[2].InnerText;
+        //                        int iVacID = int.Parse(el.ChildNodes[1].InnerText);
+        //                        string strVacDescription = el.ChildNodes[2].InnerText;
 
-                                vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
-                            }
-                        }
+        //                        vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
+        //                    }
+        //                }
 
-                        HtmlNode paginator_node = html.GetElementbyId("yw0");
+        //                HtmlNode paginator_node = html.GetElementbyId("yw0");
 
-                        foreach (HtmlNode li in paginator_node.ChildNodes)
-                        {
-                            if (li.Name == "li")
-                            {
-                                if (li.GetAttributeValue("class", "other") == "next")
-                                {
-                                    strNextPageUrl = li.ChildNodes[0].GetAttributeValue("href", "");
+        //                foreach (HtmlNode li in paginator_node.ChildNodes)
+        //                {
+        //                    if (li.Name == "li")
+        //                    {
+        //                        if (li.GetAttributeValue("class", "other") == "next")
+        //                        {
+        //                            strNextPageUrl = li.ChildNodes[0].GetAttributeValue("href", "");
 
-                                    if (strNextPageUrl != "")
-                                        strNextPageUrl = strVacantUrl + strNextPageUrl;
+        //                            if (strNextPageUrl != "")
+        //                                strNextPageUrl = strVacantUrl + strNextPageUrl;
 
-                                    break;
-                                }
-                                else
-                                    continue;
-                            }
-                        }
+        //                            break;
+        //                        }
+        //                        else
+        //                            continue;
+        //                    }
+        //                }
 
-                        if (lastPage || (strNextPageUrl == ""))
-                            break;
+        //                if (lastPage || (strNextPageUrl == ""))
+        //                    break;
 
-                        page = http.GetUrl(strNextPageUrl);
-                    }
-                }
-                else
-                {
-                    HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
-                    html.LoadHtml(page);
+        //                page = http.GetUrl(strNextPageUrl);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
+        //            html.LoadHtml(page);
 
-                    HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
+        //            HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
 
-                    HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
+        //            HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
 
-                    int i = 0;
+        //            int i = 0;
                     
 
-                    foreach (HtmlAgilityPack.HtmlNode el in table_data)
-                    {
-                        if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
-                        {
-                            i++;
+        //            foreach (HtmlAgilityPack.HtmlNode el in table_data)
+        //            {
+        //                if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
+        //                {
+        //                    i++;
 
-                            if (i == 1)
-                            {
-                                vacs = new List<CVacancyListElement>();
-                            }
+        //                    if (i == 1)
+        //                    {
+        //                        vacs = new List<CVacancyListElement>();
+        //                    }
 
-                            int iVacID = int.Parse(el.ChildNodes[1].InnerText);
-                            string strVacDescription = el.ChildNodes[2].InnerText;
+        //                    int iVacID = int.Parse(el.ChildNodes[1].InnerText);
+        //                    string strVacDescription = el.ChildNodes[2].InnerText;
 
-                            vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
-                        }
-                    }
-                }
+        //                    vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
+        //                }
+        //            }
+        //        }
 
-                return vacs;
-            }
-            else
-                return null;
-        }
+        //        return vacs;
+        //    }
+        //    else
+        //        return null;
+        //}
 
         /// <summary>
         /// Получение списка закрытых (не актуальных) вакансий
         /// </summary>
         /// <returns></returns>
-        public List<CVacancyListElement> GetClosedVacancies()
-        {
-            if (bIsLogged)
-            {
-                List<CVacancyListElement> vacs = null;
+        //public List<CVacancyListElement> GetClosedVacancies()
+        //{
+        //    if (bIsLogged)
+        //    {
+        //        List<CVacancyListElement> vacs = null;
 
-                string page = http.GetUrl(strClosedUrl);
+        //        string page = http.GetUrl(strClosedUrl);
 
-                // Проверка количество страниц с вакансиями
-                if (page.IndexOf("<div class=\"pagination\">") > 0)
-                {
-                    string strNextPageUrl = "";
-                    bool lastPage = false;
+        //        // Проверка количество страниц с вакансиями
+        //        if (page.IndexOf("<div class=\"pagination\">") > 0)
+        //        {
+        //            string strNextPageUrl = "";
+        //            bool lastPage = false;
 
-                    while (!lastPage)
-                    {
-                        if (page.IndexOf("<li class=\"next\">") > 0)
-                            lastPage = false;
-                        else
-                            lastPage = true;
+        //            while (!lastPage)
+        //            {
+        //                if (page.IndexOf("<li class=\"next\">") > 0)
+        //                    lastPage = false;
+        //                else
+        //                    lastPage = true;
 
-                        HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
-                        html.LoadHtml(page);
+        //                HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
+        //                html.LoadHtml(page);
 
-                        HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
+        //                HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
 
-                        HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
+        //                HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
 
-                        int i = 0;
+        //                int i = 0;
 
-                        foreach (HtmlAgilityPack.HtmlNode el in table_data)
-                        {
-                            if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
-                            {
-                                i++;
+        //                foreach (HtmlAgilityPack.HtmlNode el in table_data)
+        //                {
+        //                    if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
+        //                    {
+        //                        i++;
 
-                                if (i == 1)
-                                {
-                                    if (vacs == null)
-                                        vacs = new List<CVacancyListElement>();
-                                }
+        //                        if (i == 1)
+        //                        {
+        //                            if (vacs == null)
+        //                                vacs = new List<CVacancyListElement>();
+        //                        }
 
-                                int iVacID = int.Parse(el.ChildNodes[1].InnerText);
-                                string strVacDescription = el.ChildNodes[2].InnerText;
+        //                        int iVacID = int.Parse(el.ChildNodes[1].InnerText);
+        //                        string strVacDescription = el.ChildNodes[2].InnerText;
 
-                                vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
-                            }
-                        }
+        //                        vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
+        //                    }
+        //                }
 
-                        HtmlNode paginator_node = html.GetElementbyId("yw0");
+        //                HtmlNode paginator_node = html.GetElementbyId("yw0");
 
-                        foreach (HtmlNode li in paginator_node.ChildNodes)
-                        {
-                            if (li.Name == "li")
-                            {
-                                if (li.GetAttributeValue("class", "other") == "next")
-                                {
-                                    strNextPageUrl = li.ChildNodes[0].GetAttributeValue("href", "");
+        //                foreach (HtmlNode li in paginator_node.ChildNodes)
+        //                {
+        //                    if (li.Name == "li")
+        //                    {
+        //                        if (li.GetAttributeValue("class", "other") == "next")
+        //                        {
+        //                            strNextPageUrl = li.ChildNodes[0].GetAttributeValue("href", "");
 
-                                    if (strNextPageUrl != "")
-                                        strNextPageUrl = strVacantUrl + strNextPageUrl;
+        //                            if (strNextPageUrl != "")
+        //                                strNextPageUrl = strVacantUrl + strNextPageUrl;
 
-                                    break;
-                                }
-                                else
-                                    continue;
-                            }
-                        }
+        //                            break;
+        //                        }
+        //                        else
+        //                            continue;
+        //                    }
+        //                }
 
-                        if (lastPage || (strNextPageUrl == ""))
-                            break;
+        //                if (lastPage || (strNextPageUrl == ""))
+        //                    break;
 
-                        page = http.GetUrl(strNextPageUrl);
-                    }
-                }
-                else
-                {
-                    HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
-                    html.LoadHtml(page);
+        //                page = http.GetUrl(strNextPageUrl);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
+        //            html.LoadHtml(page);
 
-                    HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
+        //            HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
 
-                    HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
+        //            HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
 
-                    int i = 0;
+        //            int i = 0;
 
 
-                    foreach (HtmlAgilityPack.HtmlNode el in table_data)
-                    {
-                        if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
-                        {
-                            i++;
+        //            foreach (HtmlAgilityPack.HtmlNode el in table_data)
+        //            {
+        //                if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
+        //                {
+        //                    i++;
 
-                            if (i == 1)
-                            {
-                                vacs = new List<CVacancyListElement>();
-                            }
+        //                    if (i == 1)
+        //                    {
+        //                        vacs = new List<CVacancyListElement>();
+        //                    }
 
-                            int iVacID = int.Parse(el.ChildNodes[1].InnerText);
-                            string strVacDescription = el.ChildNodes[2].InnerText;
+        //                    int iVacID = int.Parse(el.ChildNodes[1].InnerText);
+        //                    string strVacDescription = el.ChildNodes[2].InnerText;
 
-                            vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
-                        }
-                    }
-                }
+        //                    vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
+        //                }
+        //            }
+        //        }
 
-                return vacs;
-            }
-            else
-                return null;
-        }
+        //        return vacs;
+        //    }
+        //    else
+        //        return null;
+        //}
 
         /// <summary>
         /// Метод обращяется к серверу для генерации нового изображения с капчей
