@@ -409,7 +409,6 @@ namespace DistantVacantGovUz
 
                 // test
                 string page = null;
-                byte[] htmlData;
 
                 /*FileStream reader;
 
@@ -678,168 +677,6 @@ namespace DistantVacantGovUz
         }
 
         /// <summary>
-        /// Получить данные вакансии по её номеру
-        /// </summary>
-        /// <param name="p_vac_id">Номер вакансии</param>
-        /// <returns>Возвратит класс CVacancy</returns>
-        //public CVacancy GetVacancy(int p_vac_id)
-        //{
-        //    if (bIsLogged)
-        //    {
-        //        CVacancy v = null;
-        //        string page = http.GetUrl(strEditVacancyUrl + @"/" + p_vac_id.ToString());
-
-        //        if (page.IndexOf(@"Редактировать вакансию") > 0)
-        //        {
-        //            //HTMLparser parser = new HTMLparser(page);
-
-        //            HtmlAgilityPack.HtmlNode.ElementsFlags.Remove("option");
-        //            HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
-        //            html.LoadHtml(page);
-
-        //            int i = 0;
-        //            HtmlAgilityPack.HtmlNodeCollection nodes;
-        //            int iCategoryId = 0;
-
-        //            nodes = html.GetElementbyId(@"Vacancies_category_id").ChildNodes;
-
-        //            i = 0;
-
-        //            foreach (HtmlNode node in nodes)
-        //            {
-        //                if (node.Attributes["selected"] != null)
-        //                {
-        //                    iCategoryId = i;
-        //                    break;
-        //                }
-
-        //                if (node.Name == "option")
-        //                    i++;
-        //            }
-
-        //            int iEmployment = 0;
-
-        //            nodes = html.GetElementbyId(@"Vacancies_employment").ChildNodes;
-
-        //            i = 0;
-
-        //            foreach (HtmlNode node in nodes)
-        //            {
-        //                if (node.Attributes["selected"] != null)
-        //                {
-        //                    iEmployment = i;
-        //                    break;
-        //                }
-
-        //                if (node.Name == "option")
-        //                    i++;
-        //            }
-
-        //            int iGender = 0;
-
-        //            nodes = html.GetElementbyId(@"Vacancies_gender").ChildNodes;
-
-        //            i = 0;
-
-        //            foreach (HtmlNode node in nodes)
-        //            {
-        //                if (node.Attributes["selected"] != null)
-        //                {
-        //                    iGender = i;
-        //                    break;
-        //                }
-
-        //                if (node.Name == "option")
-        //                    i++;
-        //            }
-
-        //            int iExperience = 0;
-
-        //            nodes = html.GetElementbyId(@"Vacancies_exp_period").ChildNodes;
-
-        //            i = 0;
-
-        //            foreach (HtmlNode node in nodes)
-        //            {
-        //                if (node.Attributes["selected"] != null)
-        //                {
-        //                    iExperience = i;
-        //                    break;
-        //                }
-
-        //                if (node.Name == "option")
-        //                    i++;
-        //            }
-
-        //            int iEducation = 0;
-
-        //            nodes = html.GetElementbyId(@"Vacancies_education").ChildNodes;
-
-        //            i = 0;
-
-        //            foreach (HtmlNode node in nodes)
-        //            {
-        //                if (node.Attributes["selected"] != null)
-        //                {
-        //                    iEducation = i;
-        //                    break;
-        //                }
-
-        //                if (node.Name == "option")
-        //                    i++;
-        //            }
-
-        //            VACANCY_STATUS iStatus = VACANCY_STATUS.CLOSED;
-
-        //            nodes = html.GetElementbyId(@"Vacancies_status").ChildNodes;
-
-        //            foreach (HtmlNode node in nodes)
-        //            {
-        //                if (node.Attributes["selected"] != null)
-        //                    //iStatus = node.GetAttributeValue("value", 0);
-        //                    iStatus = CVacancy.StatusIdFromValue(node.GetAttributeValue("value", "closed"));
-        //            }
-
-        //            HtmlNode n = html.GetElementbyId(@"Vacancies_specialization_ru");
-        //            string s13 = html.GetElementbyId(@"Vacancies_specialization_ru").GetAttributeValue("value", "<empty>");
-        //            string s15 = html.GetElementbyId(@"Vacancies_specialization_uz").GetAttributeValue("value", "<empty>");
-        //            string s16 = html.GetElementbyId(@"Vacancies_requarements_ru").GetAttributeValue("value", "<empty>");
-        //            string s17 = html.GetElementbyId(@"Vacancies_requarements_uz").GetAttributeValue("value", "<empty>");
-        //            string s18 = html.GetElementbyId(@"Vacancies_information_ru").GetAttributeValue("value", "<empty>");
-        //            string s19 = html.GetElementbyId(@"Vacancies_information_uz").GetAttributeValue("value", "<empty>");
-
-        //            v = new CVacancy(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_name_ru").GetAttributeValue("value", ""))
-        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_name_uz").GetAttributeValue("value", ""))
-        //                    , (VACANCY_CATEGORY)iCategoryId
-        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_salary").GetAttributeValue("value", ""))
-        //                    , (VACANCY_EMPLOYMENT)iEmployment
-        //                    , (VACANCY_GENDER)iGender
-        //                    , (VACANCY_EXPERIENCE)iExperience
-        //                    , (VACANCY_EDUCATION_LEVEL)iEducation
-        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_exp_date").GetAttributeValue("value", ""))
-        //                    , iStatus
-        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_department_ru").GetAttributeValue("value", ""))
-        //                    , HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_department_uz").GetAttributeValue("value", ""))
-        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_specialization_ru").InnerHtml))
-        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_specialization_uz").InnerHtml))
-        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_requarements_ru").InnerHtml))
-        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_requarements_uz").InnerHtml))
-        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_information_ru").InnerHtml))
-        //                    , ClearString(HttpUtility.HtmlDecode(html.GetElementbyId(@"Vacancies_information_uz").InnerHtml))
-        //                );
-
-        //            v.strPortalVacID = p_vac_id.ToString();
-
-        //            return v;
-        //        }
-        //        else
-        //            return null;
-        //    }
-
-        //    return null;
-        //}
-
-        /// <summary>
         /// Изменение статуса вакансии
         /// </summary>
         /// <param name="p_iVacancyID">Идентификатор вакансии</param>
@@ -869,6 +706,137 @@ namespace DistantVacantGovUz
             else
                 return false;
         }
+
+        /// <summary>
+        /// Получение списка открытых (актуальных) вакансий
+        /// </summary>
+        /// <returns></returns>
+        /*public List<CVacancyListElement> GetActualVacancies()
+        {
+            bIsLogged = true;
+
+            if (bIsLogged)
+            {
+                List<CVacancyListElement> vacs = null;
+
+                string page = null;
+
+                TextReader reader;
+                using (reader = new StreamReader(Program.GetApplicationDirectory() + "\\" + "408.htm", Encoding.UTF8))
+                {
+                    try
+                    {
+                        page = reader.ReadToEnd();
+                    }
+                    catch (Exception ex)
+                    {
+                        page = "";
+                    }
+                }
+
+                // Проверка количество страниц с вакансиями
+                if (page.IndexOf("<div class=\"pagination\">") > 0)
+                {
+                    string strNextPageUrl = "";
+                    bool lastPage = false;
+
+                    while (!lastPage)
+                    {
+                        if (page.IndexOf("<li class=\"next\">") > 0)
+                            lastPage = false;
+                        else
+                            lastPage = true;
+
+                        HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
+                        html.LoadHtml(page);
+
+                        HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
+
+                        HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
+
+                        int i = 0;
+
+                        foreach (HtmlAgilityPack.HtmlNode el in table_data)
+                        {
+                            if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
+                            {
+                                i++;
+
+                                if (i == 1)
+                                {
+                                    if (vacs == null)
+                                        vacs = new List<CVacancyListElement>();
+                                }
+
+                                int iVacID = int.Parse(el.ChildNodes[1].InnerText);
+                                string strVacDescription = el.ChildNodes[2].InnerText;
+
+                                vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
+                            }
+                        }
+
+                        HtmlNode paginator_node = html.GetElementbyId("yw0");
+
+                        foreach (HtmlNode li in paginator_node.ChildNodes)
+                        {
+                            if (li.Name == "li")
+                            {
+                                if (li.GetAttributeValue("class", "other") == "next")
+                                {
+                                    strNextPageUrl = li.ChildNodes[0].GetAttributeValue("href", "");
+
+                                    if (strNextPageUrl != "")
+                                        strNextPageUrl = strVacantUrl + strNextPageUrl;
+
+                                    break;
+                                }
+                                else
+                                    continue;
+                            }
+                        }
+
+                        if (lastPage || (strNextPageUrl == ""))
+                            break;
+
+                        page = http.GetUrl(strNextPageUrl);
+                    }
+                }
+                else
+                {
+                    HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
+                    html.LoadHtml(page);
+
+                    HtmlAgilityPack.HtmlNode div_summary = html.GetElementbyId("request-grid");
+
+                    HtmlAgilityPack.HtmlNodeCollection table_data = div_summary.SelectNodes(@"//tr");
+
+                    int i = 0;
+
+
+                    foreach (HtmlAgilityPack.HtmlNode el in table_data)
+                    {
+                        if ((el.GetAttributeValue("class", "") == "odd") || (el.GetAttributeValue("class", "") == "even"))
+                        {
+                            i++;
+
+                            if (i == 1)
+                            {
+                                vacs = new List<CVacancyListElement>();
+                            }
+
+                            int iVacID = int.Parse(el.ChildNodes[1].InnerText);
+                            string strVacDescription = el.ChildNodes[2].InnerText;
+
+                            vacs.Add(new CVacancyListElement(iVacID, strVacDescription));
+                        }
+                    }
+                }
+
+                return vacs;
+            }
+            else
+                return null;
+        }*/
 
         /// <summary>
         /// Получение списка открытых (актуальных) вакансий
@@ -985,6 +953,180 @@ namespace DistantVacantGovUz
         //    else
         //        return null;
         //}
+
+        /// <summary>
+        /// Получение списка закрытых (не актуальных) вакансий
+        /// </summary>
+        /// <returns></returns>
+        public List<CVacancyListElement> GetClosedVacancies()
+        {
+            bIsLogged = true;
+
+            if (bIsLogged)
+            {
+                List<CVacancyListElement> vacs = null;
+
+                //string page = http.GetUrl(strClosedUrl);
+                string page = null;
+
+                TextReader reader;
+                using (reader = new StreamReader(Program.GetApplicationDirectory() + "\\" + "closed.htm", Encoding.UTF8))
+                {
+                    try
+                    {
+                        page = reader.ReadToEnd();
+                    }
+                    catch (Exception ex)
+                    {
+                        page = "";
+                    }
+                }
+
+                vacs = new List<CVacancyListElement>();
+
+                // Проверка количество страниц с вакансиями
+                if (page.IndexOf("<div class=\"pagination\">") > 0)
+                {
+                    string strNextPageUrl = "";
+                    bool lastPage = false;
+
+                    while (!lastPage)
+                    {
+                        if (page.IndexOf("<li class=\"next\">") > 0)
+                            lastPage = false;
+                        else
+                            lastPage = true;
+
+                        parser.Init(Encoding.UTF8.GetBytes(page));
+                        parser.SetEncoding(Encoding.UTF8);
+
+                        HTMLchunk chunk;
+                        HTMLchunk tr_chunk;
+                        HTMLchunk td_chunk;
+                        HTMLchunk li_chunk;
+
+                        string sVacancyId = "";
+                        string sVacancyDescription = "";
+
+                        while ((chunk = parser.ParseNext()) != null)
+                        {
+                            switch (chunk.sTag)
+                            {
+                                case "tbody":
+                                    while ((tr_chunk = parser.ParseNextTag()) != null && tr_chunk.sTag=="tr") 
+                                    {
+                                        // VAC ID
+                                        td_chunk = parser.ParseNextTag(); // td open
+                                        //td_chunk = parser.ParseNext(); 
+                                        td_chunk = parser.ParseNext();
+                                        sVacancyId = td_chunk.oHTML;
+                                        td_chunk = parser.ParseNext(); // td close
+
+                                        // VAC DESC
+                                        td_chunk = parser.ParseNextTag(); // td open
+                                        td_chunk = parser.ParseNext();
+                                        sVacancyDescription = td_chunk.oHTML;
+                                        td_chunk = parser.ParseNextTag(); // td close
+
+                                        td_chunk = parser.ParseNextTag(); // td open
+                                        td_chunk = parser.ParseNextTag(); // a open
+                                        td_chunk = parser.ParseNextTag(); // a close
+                                        td_chunk = parser.ParseNextTag(); // td close
+
+                                        td_chunk = parser.ParseNextTag(); // tr close
+
+                                        vacs.Add(new CVacancyListElement(int.Parse(sVacancyId), sVacancyDescription));
+                                    }
+                                    break;
+                                case "ul":
+                                    if (chunk.GetParamValue("id") == "yw0")
+                                    {
+                                        while ((li_chunk = parser.ParseNextTag()) != null && li_chunk.sTag == "li")
+                                        {
+                                            if (li_chunk.GetParamValue("class") == "next")
+                                            {
+                                                HTMLchunk a_chunk = parser.ParseNextTag();
+
+                                                if (a_chunk.sTag == "a")
+                                                    strNextPageUrl = a_chunk.GetParamValue("href");
+
+                                                if (strNextPageUrl != "")
+                                                    strNextPageUrl = strVacantUrl + strNextPageUrl;
+
+                                                a_chunk = parser.ParseNextTag();
+                                            }
+                                            else
+                                            {
+                                                li_chunk = parser.ParseNextTag();
+                                                li_chunk = parser.ParseNextTag();
+                                            }
+
+                                            li_chunk = parser.ParseNextTag();
+                                        }
+                                    }
+                                    else
+                                        continue;
+                                    break;
+                            }
+                        }
+
+                        //if (lastPage || (strNextPageUrl == ""))
+                            break;
+
+                        page = http.GetUrl(strNextPageUrl);
+                    }
+                }
+                else
+                {
+                    parser.Init(Encoding.UTF8.GetBytes(page));
+                    parser.SetEncoding(Encoding.UTF8);
+
+                    HTMLchunk chunk;
+                    HTMLchunk tr_chunk;
+                    HTMLchunk td_chunk;
+
+                    string sVacancyId = "";
+                    string sVacancyDescription = "";
+
+                    while ((chunk = parser.ParseNext()) != null)
+                    {
+                        switch (chunk.sTag)
+                        {
+                            case "tbody":
+                                while ((tr_chunk = parser.ParseNextTag()) != null && tr_chunk.sTag == "tr")
+                                {
+                                    // VAC ID
+                                    td_chunk = parser.ParseNextTag(); // td open
+                                    //td_chunk = parser.ParseNext(); 
+                                    td_chunk = parser.ParseNext();
+                                    sVacancyId = td_chunk.oHTML;
+                                    td_chunk = parser.ParseNext(); // td close
+
+                                    // VAC DESC
+                                    td_chunk = parser.ParseNextTag(); // td open
+                                    td_chunk = parser.ParseNext();
+                                    sVacancyDescription = td_chunk.oHTML;
+                                    td_chunk = parser.ParseNextTag(); // td close
+
+                                    td_chunk = parser.ParseNextTag(); // td open
+                                    td_chunk = parser.ParseNextTag(); // a open
+                                    td_chunk = parser.ParseNextTag(); // a close
+                                    td_chunk = parser.ParseNextTag(); // td close
+
+                                    td_chunk = parser.ParseNextTag(); // tr close
+
+                                    vacs.Add(new CVacancyListElement(int.Parse(sVacancyId), sVacancyDescription));
+                                }
+                                break;
+                        }
+                    }
+                }
+
+                return vacs;
+            }
+            else
+                return null;
+        }
 
         /// <summary>
         /// Получение списка закрытых (не актуальных) вакансий

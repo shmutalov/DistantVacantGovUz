@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/assets/aaaca55f/jquery.js"></script>
+<script type="text/javascript" src="/assets/aaaca55f/jquery.ba-bbq.js"></script>
+<title>Vacant.Gov.Uz -[Beta]</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/themes/govuz/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/metro.css" rel="stylesheet" />
+    <link href="/themes/govuz/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/themes/govuz/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style_responsive.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style_default.css" rel="stylesheet" id="style_color" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/uniform/css/uniform.default.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/bootstrap-daterangepicker/daterangepicker.css" />
+    <link href="/themes/govuz/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <link href="/themes/govuz/jqvmap/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top">
+<!-- BEGIN TOP NAVIGATION BAR -->
+<div class="navbar-inner">
+<div class="container-fluid">
+<!-- BEGIN LOGO -->
+<a class="brand" href="/ru/vacancies/admin">
+    <img src="/img/logo.png" alt="logo" />
+</a>
+<!-- END LOGO -->
+
+<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+    <img src="/themes/govuz/img/menu-toggler.png" alt="" />
+</a>
+<!-- END RESPONSIVE MENU TOGGLER -->
+<!-- BEGIN TOP NAVIGATION MENU -->
+<ul class="nav pull-right" style="top:4px;">
+<!-- BEGIN LANGUAGE -->
+
+    <li>
+    <a class="brand pull-right" href="/ru/vacancies/cAdmin">
+        <img src="/img/ru_white.png" alt="logo" />
+    </a>
+    </li><li>
+    <a class="brand" href="/uz/vacancies/cAdmin">
+        <img src="/img/uz_red.png" alt="logo" />
+    </a>
+    </li>
+
+<!-- END LANGUAGE -->
+
+<!-- BEGIN INBOX DROPDOWN -->
+<!--<li class="dropdown" id="header_inbox_bar">-->
+<!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+<!--        <i class="icon-envelope-alt"></i>-->
+<!--        <span class="badge">5</span>-->
+<!--    </a>-->
+<!--    <ul class="dropdown-menu extended inbox">-->
+<!--        <li>-->
+<!--            <p>Поступило 12 новых обращении</p>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!--                <span class="photo"><img src="./assets/img/avatar2.jpg" alt="" /></span>-->
+<!--								<span class="subject">-->
+<!--								<span class="from">Lisa Wong</span>-->
+<!--								<span class="time">Just Now</span>-->
+<!--								</span>-->
+<!--								<span class="message">-->
+<!--								Vivamus sed auctor nibh congue nibh. auctor nibh-->
+<!--								auctor nibh...-->
+<!--								</span>-->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!---->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!---->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li class="external">-->
+<!--            <a href="#">Все сообщения <i class="m-icon-swapright"></i></a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</li>-->
+<!-- END INBOX DROPDOWN -->
+
+<!-- BEGIN USER LOGIN DROPDOWN -->
+<li class="dropdown user">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<!--        <img alt="" src="http://id.uz/images/users/a/--><!--/small.jpg" style="height: 30px;"/>-->
+        <span class="username">Добро пожаловать, уважаемый(ая) Дадабаев Уразали Насибалиевич</span>
+        <i class="icon-angle-down"></i>
+    </a>
+    <ul class="dropdown-menu">
+<!--        <li><a href="extra_profile.html"><i class="icon-user"></i> My Profile</a></li>-->
+<!--        <li><a href="calendar.html"><i class="icon-calendar"></i> My Calendar</a></li>-->
+<!--        <li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>-->
+<!--        <li class="divider"></li>-->
+        <li> <a href="/ru/site/logout"><i class="icon-key"></i> Выход</a></li>
+    </ul>
+</li>
+<!-- END USER LOGIN DROPDOWN -->
+</ul>
+<!-- END TOP NAVIGATION MENU -->
+</div>
+</div>
+<!-- END TOP NAVIGATION BAR -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar nav-collapse collapse">
+        <br />
+    <ul>
+        <li>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <div class="sidebar-toggler hidden-phone"></div>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        </li>
+<!--        <li>-->
+            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+<!--            <form class="sidebar-search">-->
+<!--                <div class="input-box">-->
+<!--                    <a href="javascript:;" class="remove"></a>-->
+<!--                    <input type="text" placeholder="Search..." />-->
+<!--                    <input type="button" class="submit" value=" " />-->
+<!--                </div>-->
+<!--            </form>-->
+            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+<!--        </li>-->
+    <!-- BEGIN SIDEBAR MENU -->
+        <li class="">
+                          <a href="/ru/vacancies/admin">
+                              <i class=" icon-share"></i>
+                              <span class="title">Актуальные вакансии</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="active">
+                          <a href="/ru/vacancies/cAdmin">
+                              <i class=" icon-ban-circle"></i>
+                              <span class="title">Неактуальные вакансии</span>
+                              <span class="selected"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/request/received">
+                              <i class="icon-download-alt"></i>
+                              <span class="title">Поступившие резюме</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/request/approved">
+                              <i class="icon-check"></i>
+                              <span class="title">Принятые резюме</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/request/processed">
+                              <i class="icon-trash"></i>
+                              <span class="title">Рассмотренные резюме</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/ru/request/reserved">
+                              <i class="icon-inbox"></i>
+                              <span class="title">Резервные кадры</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li>        </ul>
+        <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN PAGE -->
+    <div class="page-content">
+        <!-- BEGIN PAGE CONTAINER-->
+        <div class="container-fluid">
+
+
+                    <!--main-->
+                    <div class="span-19">
+	<div id="content">
+		
+
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                Неактуальные вакансии				<small></small>
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <i class="icon-home"></i>
+                    <a href="/ru/vacancies/cadmin">Неактуальные вакансии</a>
+                    <i class="icon-angle-right"></i>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+
+<div id="request-grid" class="grid-view">
+<div class="summary"></div>
+<table class="table table-striped table-bordered table-advance table">
+<thead>
+<tr>
+<th id="request-grid_c0"><a class="sort-link" href="/ru/vacancies/cAdmin?Vacancies_sort=id">Номер<span class="caret"></span></a></th><th id="request-grid_c1"><a class="sort-link" href="/ru/vacancies/cAdmin?Vacancies_sort=name_ru">Русское наименование вакансии<span class="caret"></span></a></th><th class="button-column" id="request-grid_c2">&nbsp;</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>408</td><td>Инженер-программист</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/408">Редактировать</a></td></tr>
+<tr class="even">
+<td>411</td><td>Экономист по труду и планированию производства 1 категории</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/411">Редактировать</a></td></tr>
+<tr class="odd">
+<td>414</td><td>Диспетчер     </td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/414">Редактировать</a></td></tr>
+<tr class="even">
+<td>415</td><td>Сметчик  </td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/415">Редактировать</a></td></tr>
+<tr class="odd">
+<td>418</td><td>Нормировщик горный </td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/418">Редактировать</a></td></tr>
+<tr class="even">
+<td>419</td><td>Инженер по организации и нормированию труда 1 категории</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/419">Редактировать</a></td></tr>
+<tr class="odd">
+<td>420</td><td>Старший техник-маркшейдер </td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/420">Редактировать</a></td></tr>
+<tr class="even">
+<td>421</td><td>Ведущий геолог</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/421">Редактировать</a></td></tr>
+<tr class="odd">
+<td>422</td><td>Техник-геолог</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/422">Редактировать</a></td></tr>
+<tr class="even">
+<td>423</td><td>Геолог  1 категории</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Редактировать" href="/ru/vacancies/update/423">Редактировать</a></td></tr>
+</tbody>
+</table>
+<div class="pagination"><ul id="yw0" class="yiiPager"><li class="previous disabled"><a href="/ru/vacancies/cAdmin">&larr;</a></li>
+<li class=" active"><a href="/ru/vacancies/cAdmin">1</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=2">2</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=3">3</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=4">4</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=5">5</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=6">6</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=7">7</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=8">8</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=9">9</a></li>
+<li class=""><a href="/ru/vacancies/cAdmin?Vacancies_page=10">10</a></li>
+<li class="next"><a href="/ru/vacancies/cAdmin?Vacancies_page=2">&rarr;</a></li></ul></div><div class="keys" style="display:none" title="/ru/vacancies/cAdmin"><span>408</span><span>411</span><span>414</span><span>415</span><span>418</span><span>419</span><span>420</span><span>421</span><span>422</span><span>423</span></div>
+</div>	</div><!-- content -->
+</div>
+<div class="span-5 last">
+	<div id="sidebar">
+		</div><!-- sidebar -->
+</div>
+                    <!--main-->
+
+        </div>
+        <!-- END PAGE CONTAINER-->
+    </div>
+    <!-- END PAGE -->
+
+</div>
+<!-- END CONTAINER -->
+
+
+
+
+<!-- BEGIN FOOTER -->
+<div class="footer">
+    2013 &copy; UZINFOCOM.
+    <div class="span pull-right">
+        <span class="go-top"><i class="icon-angle-up"></i></span>
+    </div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS -->
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- <script src="/themes/govuz/js/jquery-1.8.3.min.js"></script> -->
+<!--[if lt IE 9]>
+<script src="/themes/govuz/js/excanvas.js"></script>
+<script src="/themes/govuz/js/respond.js"></script>
+<![endif]-->
+<script src="/themes/govuz/breakpoints/breakpoints.js"></script>
+<script src="/themes/govuz/bootstrap/js/bootstrap.min.js"></script>
+<script src="/themes/govuz/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/themes/govuz/js/jquery.cookie.js"></script>
+<script src="/themes/govuz/js/additions.js"></script>
+
+
+<!-- END JAVASCRIPTS -->
+
+<script type="text/javascript" src="/assets/31b48b53/gridview/jquery.yiigridview.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+
+$('.search-button').click(function(){
+	$('.search-form').toggle();
+	return false;
+});
+$('.search-form form').submit(function(){
+	$('#vacancies-grid').yiiGridView('update', {
+		data: $(this).serialize()
+	});
+	return false;
+});
+
+jQuery('#request-grid').yiiGridView({'ajaxUpdate':false,'ajaxVar':'ajax','pagerClass':'pagination','loadingClass':'grid-view-loading','filterClass':'filters','tableClass':'table table-striped table-bordered table-advance table','selectableRows':1,'enableHistory':false,'updateSelector':'{page}, {sort}','filterSelector':'{filter}','pageVar':'Vacancies_page','selectionChanged':function(id){window.location='/ru/requestview/' + $.fn.yiiGridView.getSelection(id);}});
+});
+/*]]>*/
+</script>
+</body>
+<!-- END BODY -->
+</html>
