@@ -41,7 +41,7 @@
             // 
             this.btnOk.Location = new System.Drawing.Point(255, 103);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 20);
+            this.btnOk.Size = new System.Drawing.Size(75, 26);
             this.btnOk.TabIndex = 10;
             this.btnOk.Text = "ОК";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -107,11 +107,14 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblUserName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPortalLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login to portal";
+            this.Load += new System.EventHandler(this.frmPortalLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

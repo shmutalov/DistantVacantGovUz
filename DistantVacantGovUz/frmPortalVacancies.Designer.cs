@@ -39,17 +39,17 @@
             this.mnuImportToPortal = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindowCloseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindowLayout = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuWindowLayoutTileH = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuWindowLayoutTileV = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuWindowLayoutCascade = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindowLayoutArrangeIcons = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuWindowLayoutCascade = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowLayoutTileH = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowLayoutTileV = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowOpenOpenedVacs = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuWindowOpenClosedVacs = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindowShowAll = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindowHideAll = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuWindowOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuWindowOpenClosedVacs = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuWindowOpenOpenedVacs = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,19 +78,19 @@
             // mnuLogin
             // 
             this.mnuLogin.Name = "mnuLogin";
-            this.mnuLogin.Size = new System.Drawing.Size(152, 22);
+            this.mnuLogin.Size = new System.Drawing.Size(115, 22);
             this.mnuLogin.Text = "Log in";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(112, 6);
             // 
             // mnuLogout
             // 
             this.mnuLogout.Enabled = false;
             this.mnuLogout.Name = "mnuLogout";
-            this.mnuLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuLogout.Size = new System.Drawing.Size(115, 22);
             this.mnuLogout.Text = "Log out";
             // 
             // mnuTools
@@ -136,8 +136,27 @@
             this.mnuWindowLayoutTileH,
             this.mnuWindowLayoutTileV});
             this.mnuWindowLayout.Name = "mnuWindowLayout";
-            this.mnuWindowLayout.Size = new System.Drawing.Size(152, 22);
+            this.mnuWindowLayout.Size = new System.Drawing.Size(120, 22);
             this.mnuWindowLayout.Text = "Layout";
+            // 
+            // mnuWindowLayoutArrangeIcons
+            // 
+            this.mnuWindowLayoutArrangeIcons.Name = "mnuWindowLayoutArrangeIcons";
+            this.mnuWindowLayoutArrangeIcons.Size = new System.Drawing.Size(151, 22);
+            this.mnuWindowLayoutArrangeIcons.Text = "Arrange Icons";
+            this.mnuWindowLayoutArrangeIcons.Click += new System.EventHandler(this.mnuWindowLayoutArrangeIcons_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(148, 6);
+            // 
+            // mnuWindowLayoutCascade
+            // 
+            this.mnuWindowLayoutCascade.Name = "mnuWindowLayoutCascade";
+            this.mnuWindowLayoutCascade.Size = new System.Drawing.Size(151, 22);
+            this.mnuWindowLayoutCascade.Text = "Cascade";
+            this.mnuWindowLayoutCascade.Click += new System.EventHandler(this.mnuWindowLayoutCascade_Click);
             // 
             // mnuWindowLayoutTileH
             // 
@@ -153,54 +172,21 @@
             this.mnuWindowLayoutTileV.Text = "Tile Vertical";
             this.mnuWindowLayoutTileV.Click += new System.EventHandler(this.mnuWindowLayoutTileV_Click);
             // 
-            // mnuWindowLayoutCascade
-            // 
-            this.mnuWindowLayoutCascade.Name = "mnuWindowLayoutCascade";
-            this.mnuWindowLayoutCascade.Size = new System.Drawing.Size(151, 22);
-            this.mnuWindowLayoutCascade.Text = "Cascade";
-            this.mnuWindowLayoutCascade.Click += new System.EventHandler(this.mnuWindowLayoutCascade_Click);
-            // 
-            // mnuWindowLayoutArrangeIcons
-            // 
-            this.mnuWindowLayoutArrangeIcons.Name = "mnuWindowLayoutArrangeIcons";
-            this.mnuWindowLayoutArrangeIcons.Size = new System.Drawing.Size(151, 22);
-            this.mnuWindowLayoutArrangeIcons.Text = "Arrange Icons";
-            this.mnuWindowLayoutArrangeIcons.Click += new System.EventHandler(this.mnuWindowLayoutArrangeIcons_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(148, 6);
-            // 
-            // mnuWindowShowAll
-            // 
-            this.mnuWindowShowAll.Name = "mnuWindowShowAll";
-            this.mnuWindowShowAll.Size = new System.Drawing.Size(152, 22);
-            this.mnuWindowShowAll.Text = "Show All";
-            this.mnuWindowShowAll.Click += new System.EventHandler(this.mnuWindowShowAll_Click);
-            // 
-            // mnuWindowHideAll
-            // 
-            this.mnuWindowHideAll.Name = "mnuWindowHideAll";
-            this.mnuWindowHideAll.Size = new System.Drawing.Size(152, 22);
-            this.mnuWindowHideAll.Text = "Hide All";
-            this.mnuWindowHideAll.Click += new System.EventHandler(this.mnuWindowHideAll_Click);
-            // 
-            // closeAllToolStripMenuItem
-            // 
-            this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.closeAllToolStripMenuItem.Text = "Close All";
-            this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.closeAllToolStripMenuItem_Click);
-            // 
             // mnuWindowOpen
             // 
             this.mnuWindowOpen.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuWindowOpenOpenedVacs,
             this.mnuWindowOpenClosedVacs});
             this.mnuWindowOpen.Name = "mnuWindowOpen";
-            this.mnuWindowOpen.Size = new System.Drawing.Size(152, 22);
+            this.mnuWindowOpen.Size = new System.Drawing.Size(120, 22);
             this.mnuWindowOpen.Text = "Open";
+            // 
+            // mnuWindowOpenOpenedVacs
+            // 
+            this.mnuWindowOpenOpenedVacs.Name = "mnuWindowOpenOpenedVacs";
+            this.mnuWindowOpenOpenedVacs.Size = new System.Drawing.Size(171, 22);
+            this.mnuWindowOpenOpenedVacs.Text = "Opened Vacancies";
+            this.mnuWindowOpenOpenedVacs.Click += new System.EventHandler(this.mnuWindowOpenOpenedVacs_Click);
             // 
             // mnuWindowOpenClosedVacs
             // 
@@ -209,12 +195,26 @@
             this.mnuWindowOpenClosedVacs.Text = "Closed Vacancies";
             this.mnuWindowOpenClosedVacs.Click += new System.EventHandler(this.mnuWindowOpenClosedVacs_Click);
             // 
-            // mnuWindowOpenOpenedVacs
+            // mnuWindowShowAll
             // 
-            this.mnuWindowOpenOpenedVacs.Name = "mnuWindowOpenOpenedVacs";
-            this.mnuWindowOpenOpenedVacs.Size = new System.Drawing.Size(171, 22);
-            this.mnuWindowOpenOpenedVacs.Text = "Opened Vacancies";
-            this.mnuWindowOpenOpenedVacs.Click += new System.EventHandler(this.mnuWindowOpenOpenedVacs_Click);
+            this.mnuWindowShowAll.Name = "mnuWindowShowAll";
+            this.mnuWindowShowAll.Size = new System.Drawing.Size(120, 22);
+            this.mnuWindowShowAll.Text = "Show All";
+            this.mnuWindowShowAll.Click += new System.EventHandler(this.mnuWindowShowAll_Click);
+            // 
+            // mnuWindowHideAll
+            // 
+            this.mnuWindowHideAll.Name = "mnuWindowHideAll";
+            this.mnuWindowHideAll.Size = new System.Drawing.Size(120, 22);
+            this.mnuWindowHideAll.Text = "Hide All";
+            this.mnuWindowHideAll.Click += new System.EventHandler(this.mnuWindowHideAll_Click);
+            // 
+            // closeAllToolStripMenuItem
+            // 
+            this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
+            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.closeAllToolStripMenuItem.Text = "Close All";
+            this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.closeAllToolStripMenuItem_Click);
             // 
             // frmPortalVacancies
             // 
@@ -227,7 +227,6 @@
             this.Name = "frmPortalVacancies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vacancies on portal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPortalVacancies_Load);
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();

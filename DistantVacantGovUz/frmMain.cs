@@ -29,5 +29,20 @@ namespace DistantVacantGovUz
 
             fPortal.Show();
         }
+
+        private void mnuFileSettings_Click(object sender, EventArgs e)
+        {
+            frmSettings f = new frmSettings();
+
+            f.ShowDialog();
+        }
+
+        private void mnuFileCreateNew_Click(object sender, EventArgs e)
+        {
+            frmLocalDocument f = new frmLocalDocument();
+            f.MdiParent = this;
+
+            f.Show();
+        }
     }
 }

@@ -71,5 +71,10 @@ namespace DistantVacantGovUz
                 }
             }
         }
+
+        private void frmPortalLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
