@@ -101,6 +101,7 @@
             this.toolBtnRefreshVacancies.Size = new System.Drawing.Size(82, 36);
             this.toolBtnRefreshVacancies.Text = "Refresh";
             this.toolBtnRefreshVacancies.ToolTipText = "Refresh vacancies list";
+            this.toolBtnRefreshVacancies.Click += new System.EventHandler(this.toolBtnRefreshVacancies_Click);
             // 
             // toolStripSeparator1
             // 

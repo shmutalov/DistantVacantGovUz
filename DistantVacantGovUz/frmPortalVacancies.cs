@@ -20,15 +20,24 @@ namespace DistantVacantGovUz
 
         private void frmPortalVacancies_Load(object sender, EventArgs e)
         {
-            fOpened = new frmOpenedVacancies();
-            fOpened.MdiParent = this;
-            fOpened.Show();
+            frmPortalLogin fLogin = new frmPortalLogin();
 
-            fClosed = new frmClosedVacancies();
-            fClosed.MdiParent = this;
-            fClosed.Show();
+            if (fLogin.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                fOpened = new frmOpenedVacancies();
+                fOpened.MdiParent = this;
+                fOpened.Show();
 
-            this.LayoutMdi(MdiLayout.TileVertical);
+                fClosed = new frmClosedVacancies();
+                fClosed.MdiParent = this;
+                fClosed.Show();
+
+                this.LayoutMdi(MdiLayout.TileVertical);
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void mnuWindowLayoutArrangeIcons_Click(object sender, EventArgs e)

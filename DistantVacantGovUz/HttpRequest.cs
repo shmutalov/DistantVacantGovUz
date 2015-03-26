@@ -31,6 +31,16 @@ namespace DistantVacantGovUz
         List<byte[]> bytes = new List<byte[]>();
 
         string strDebug;
+        string strLastError;
+
+        /// <summary>
+        /// Получение последнего сообщения ошибки
+        /// </summary>
+        /// <returns>Строка с описанием ошибки</returns>
+        public string GetLastErrorMessage()
+        {
+            return strLastError;
+        }
 
         /// <summary>
         /// Включить проксификацию запросов
@@ -92,6 +102,7 @@ namespace DistantVacantGovUz
         public void DebugFunction(CURLINFOTYPE infoType, string message, object extraData)
         {
             strDebug += message;
+            strLastError = message;
         }
 
         /// <summary>

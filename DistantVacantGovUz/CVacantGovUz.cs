@@ -201,6 +201,15 @@ namespace DistantVacantGovUz
         }
 
         /// <summary>
+        /// Получение последнего сообщения ошибки
+        /// </summary>
+        /// <returns>Строка с описанием ошибки</returns>
+        public string GetLastErrorMessage()
+        {
+            return http.GetLastErrorMessage();
+        }
+
+        /// <summary>
         /// Установка значений прокси-сервера
         /// </summary>
         /// <param name="p_strProxyHost">Адрес прокси-сервера</param>

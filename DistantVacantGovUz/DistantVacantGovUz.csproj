@@ -104,6 +104,12 @@
     <Compile Include="frmOpenedVacancies.Designer.cs">
       <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPortalLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPortalLogin.Designer.cs">
+      <DependentUpon>frmPortalLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPortalVacancies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOpenedVacancies.resx">
       <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPortalLogin.resx">
+      <DependentUpon>frmPortalLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPortalVacancies.resx">
       <DependentUpon>frmPortalVacancies.cs</DependentUpon>
