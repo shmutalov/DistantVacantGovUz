@@ -103,12 +103,13 @@ namespace DistantVacantGovUz
             Curl.GlobalInit((int)CURLinitFlag.CURL_GLOBAL_ALL);
             _curl = new Easy();
 
-            // Утсановка загаловков запроса по-умолчанию
+            // Установка загаловков запроса по-умолчанию
             _curl.SetOpt(CURLoption.CURLOPT_USERAGENT, "Mozilla/4.0");
             _curl.SetOpt(CURLoption.CURLOPT_AUTOREFERER, 1);
             _curl.SetOpt(CURLoption.CURLOPT_FOLLOWLOCATION, 1);
             _curl.SetOpt(CURLoption.CURLOPT_SSL_VERIFYPEER, false);
-            _curl.SetOpt(CURLoption.CURLOPT_COOKIEJAR, Environment.CurrentDirectory + @"\" + "cookie.txt");
+            //_curl.SetOpt(CURLoption.CURLOPT_COOKIEJAR, Environment.CurrentDirectory + @"\" + "cookie.txt");
+            _curl.SetOpt(CURLoption.CURLOPT_COOKIEJAR, Program.GetApplicationDirectory() + @"\" + "cookie.txt");
             _curl.SetOpt(CURLoption.CURLOPT_TIMEOUT, 30);
 
             // Назначение внутренних служебных функций cURL

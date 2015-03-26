@@ -229,7 +229,8 @@ namespace DistantVacantGovUz
             this.strVacUserName = p_strUserName;
             this.strVacPassword = p_strPassword;
 
-            strLoginUrl = @"https://www.id.uz/openid/authenticate?openid.return_to=http%3A%2F%2Fvacant.gov.uz%2Fsite%2Flogin%3Fopenid.claimed_id%3Dhttp%3A%2F%2F" + Uri.EscapeDataString(strVacUserName) + ".id.uz%2F&openid.mode=checkid_setup&openid.identity=https%3A%2F%2Fokboss.id.uz%2F&openid.trust_root=http%3A%2F%2Fvacant.gov.uz&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.sreg.required=nickname%2Cemail%2Cphone%2Cfullname%2Cpublic_id%2Cstatus";
+            // FIXED BUG: url corrected
+            strLoginUrl = @"https://www.id.uz/openid/authenticate?openid.return_to=http%3A%2F%2Fvacant.gov.uz%2Fsite%2Flogin%3Fopenid.claimed_id%3Dhttp%3A%2F%2F" + Uri.EscapeDataString(strVacUserName) + ".id.uz%2F&openid.mode=checkid_setup&openid.identity=https%3A%2F%2F" + Uri.EscapeDataString(strVacUserName) + ".id.uz%2F&openid.trust_root=http%3A%2F%2Fvacant.gov.uz&openid.ns.sreg=http%3A%2F%2Fopenid.net%2Fextensions%2Fsreg%2F1.1&openid.sreg.required=nickname%2Cemail%2Cphone%2Cfullname%2Cpublic_id%2Cstatus";
 
             string post_data = @"password=" + Uri.EscapeDataString(this.strVacPassword);
 
@@ -408,29 +409,7 @@ namespace DistantVacantGovUz
                 CVacancy v = null;
 
                 // test
-                string page = null;
-
-                /*FileStream reader;
-
-                using (reader = new FileStream(Program.GetApplicationDirectory() + "\\" + "408.htm", FileMode.Open))
-                {
-                    htmlData = new byte[reader.Length];
-
-                    reader.Read(htmlData, 0, (int)reader.Length);
-                }*/
-
-                TextReader reader;
-                using (reader = new StreamReader(Program.GetApplicationDirectory() + "\\" + "408.htm", Encoding.UTF8))
-                {
-                    try
-                    {
-                        page = reader.ReadToEnd();
-                    }
-                    catch (Exception ex)
-                    {
-                        page = "";
-                    }
-                }
+                string page = http.GetUrl(strEditVacancyUrl + "/" + p_vac_id.ToString());
 
                 if (page.IndexOf(@"Редактировать вакансию") > 0)
                 //if (true)
