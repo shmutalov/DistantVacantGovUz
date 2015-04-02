@@ -39,13 +39,22 @@
             this.txtProxyHost = new System.Windows.Forms.TextBox();
             this.lblProxyHost = new System.Windows.Forms.Label();
             this.chkUseProxy = new System.Windows.Forms.CheckBox();
+            this.grpUpdates = new System.Windows.Forms.GroupBox();
+            this.chkEnableUpdates = new System.Windows.Forms.CheckBox();
+            this.lblUpdateServer = new System.Windows.Forms.Label();
+            this.txtUpdateServer = new System.Windows.Forms.TextBox();
+            this.grpInterface = new System.Windows.Forms.GroupBox();
+            this.lblLanguage = new System.Windows.Forms.Label();
+            this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.grpConnection.SuspendLayout();
+            this.grpUpdates.SuspendLayout();
+            this.grpInterface.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(308, 159);
+            this.btnSave.Location = new System.Drawing.Point(308, 298);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(142, 31);
             this.btnSave.TabIndex = 7;
@@ -66,9 +75,9 @@
             this.grpConnection.Controls.Add(this.txtProxyHost);
             this.grpConnection.Controls.Add(this.lblProxyHost);
             this.grpConnection.Controls.Add(this.chkUseProxy);
-            this.grpConnection.Location = new System.Drawing.Point(12, 12);
+            this.grpConnection.Location = new System.Drawing.Point(12, 153);
             this.grpConnection.Name = "grpConnection";
-            this.grpConnection.Size = new System.Drawing.Size(438, 138);
+            this.grpConnection.Size = new System.Drawing.Size(438, 136);
             this.grpConnection.TabIndex = 6;
             this.grpConnection.TabStop = false;
             this.grpConnection.Text = "Connection";
@@ -151,11 +160,85 @@
             this.chkUseProxy.UseVisualStyleBackColor = true;
             this.chkUseProxy.CheckedChanged += new System.EventHandler(this.chkUseProxy_CheckedChanged);
             // 
+            // grpUpdates
+            // 
+            this.grpUpdates.Controls.Add(this.txtUpdateServer);
+            this.grpUpdates.Controls.Add(this.lblUpdateServer);
+            this.grpUpdates.Controls.Add(this.chkEnableUpdates);
+            this.grpUpdates.Location = new System.Drawing.Point(12, 73);
+            this.grpUpdates.Name = "grpUpdates";
+            this.grpUpdates.Size = new System.Drawing.Size(438, 74);
+            this.grpUpdates.TabIndex = 8;
+            this.grpUpdates.TabStop = false;
+            this.grpUpdates.Text = "Updates";
+            // 
+            // chkEnableUpdates
+            // 
+            this.chkEnableUpdates.AutoSize = true;
+            this.chkEnableUpdates.Location = new System.Drawing.Point(6, 19);
+            this.chkEnableUpdates.Name = "chkEnableUpdates";
+            this.chkEnableUpdates.Size = new System.Drawing.Size(113, 17);
+            this.chkEnableUpdates.TabIndex = 0;
+            this.chkEnableUpdates.Text = "Check for updates";
+            this.chkEnableUpdates.UseVisualStyleBackColor = true;
+            this.chkEnableUpdates.CheckedChanged += new System.EventHandler(this.chkEnableUpdates_CheckedChanged);
+            // 
+            // lblUpdateServer
+            // 
+            this.lblUpdateServer.Location = new System.Drawing.Point(9, 41);
+            this.lblUpdateServer.Name = "lblUpdateServer";
+            this.lblUpdateServer.Size = new System.Drawing.Size(90, 20);
+            this.lblUpdateServer.TabIndex = 1;
+            this.lblUpdateServer.Text = "Update server";
+            this.lblUpdateServer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtUpdateServer
+            // 
+            this.txtUpdateServer.Location = new System.Drawing.Point(105, 42);
+            this.txtUpdateServer.Name = "txtUpdateServer";
+            this.txtUpdateServer.Size = new System.Drawing.Size(322, 20);
+            this.txtUpdateServer.TabIndex = 2;
+            // 
+            // grpInterface
+            // 
+            this.grpInterface.Controls.Add(this.cmbLanguage);
+            this.grpInterface.Controls.Add(this.lblLanguage);
+            this.grpInterface.Location = new System.Drawing.Point(12, 12);
+            this.grpInterface.Name = "grpInterface";
+            this.grpInterface.Size = new System.Drawing.Size(438, 55);
+            this.grpInterface.TabIndex = 9;
+            this.grpInterface.TabStop = false;
+            this.grpInterface.Text = "Interface";
+            // 
+            // lblLanguage
+            // 
+            this.lblLanguage.Location = new System.Drawing.Point(6, 19);
+            this.lblLanguage.Name = "lblLanguage";
+            this.lblLanguage.Size = new System.Drawing.Size(93, 20);
+            this.lblLanguage.TabIndex = 0;
+            this.lblLanguage.Text = "Language";
+            this.lblLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbLanguage
+            // 
+            this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLanguage.FormattingEnabled = true;
+            this.cmbLanguage.Items.AddRange(new object[] {
+            "Русский",
+            "O\'zbekcha",
+            "English"});
+            this.cmbLanguage.Location = new System.Drawing.Point(105, 19);
+            this.cmbLanguage.Name = "cmbLanguage";
+            this.cmbLanguage.Size = new System.Drawing.Size(322, 21);
+            this.cmbLanguage.TabIndex = 1;
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 202);
+            this.ClientSize = new System.Drawing.Size(462, 341);
+            this.Controls.Add(this.grpInterface);
+            this.Controls.Add(this.grpUpdates);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.grpConnection);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -164,6 +247,9 @@
             this.Load += new System.EventHandler(this.frmSettings_Load);
             this.grpConnection.ResumeLayout(false);
             this.grpConnection.PerformLayout();
+            this.grpUpdates.ResumeLayout(false);
+            this.grpUpdates.PerformLayout();
+            this.grpInterface.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -181,5 +267,12 @@
         private System.Windows.Forms.TextBox txtProxyHost;
         private System.Windows.Forms.Label lblProxyHost;
         private System.Windows.Forms.CheckBox chkUseProxy;
+        private System.Windows.Forms.GroupBox grpUpdates;
+        private System.Windows.Forms.TextBox txtUpdateServer;
+        private System.Windows.Forms.Label lblUpdateServer;
+        private System.Windows.Forms.CheckBox chkEnableUpdates;
+        private System.Windows.Forms.GroupBox grpInterface;
+        private System.Windows.Forms.ComboBox cmbLanguage;
+        private System.Windows.Forms.Label lblLanguage;
     }
 }

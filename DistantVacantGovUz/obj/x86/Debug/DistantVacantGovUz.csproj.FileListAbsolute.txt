@@ -28,3 +28,12 @@ D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.fr
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmPortalLogin.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmSettings.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmLocalDocument.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\ru\DistantVacantGovUz.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\uz\DistantVacantGovUz.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmMain.ru-RU.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmMain.ru.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmMain.uz.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\ru\DistantVacantGovUz.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\uz\DistantVacantGovUz.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.csprojResolveAssemblyReference.cache
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmLoading.resources

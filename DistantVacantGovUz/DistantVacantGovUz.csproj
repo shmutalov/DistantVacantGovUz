@@ -61,6 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CVacancy.cs" />
+    <Compile Include="CVacancyDocumentPreloader.cs" />
+    <Compile Include="CVacancyFileType.cs" />
+    <Compile Include="CVacancyPortalPreloader.cs" />
+    <Compile Include="CVacancyReports.cs" />
     <Compile Include="CVacantGovUz.cs" />
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
@@ -91,6 +95,12 @@
     </Compile>
     <Compile Include="frmImportPortalVacancies.Designer.cs">
       <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLocalDocument.cs">
       <SubType>Form</SubType>
@@ -156,6 +166,9 @@
     <EmbeddedResource Include="frmImportPortalVacancies.resx">
       <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLocalDocument.resx">
       <DependentUpon>frmLocalDocument.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +176,15 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.ru-RU.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.ru.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.uz.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOpenedVacancies.resx">
@@ -216,6 +238,15 @@
     <None Include="images\check-grey-32.png" />
     <None Include="images\browse-32.png" />
     <None Include="images\import-32.bmp" />
+    <None Include="images\save-32.bmp" />
+    <None Include="images\add_32.png" />
+    <None Include="images\redo_32.png" />
+    <None Include="images\undo_32.png" />
+    <None Include="images\delete-32.png" />
+    <None Include="images\pdf-doc.png" />
+    <None Include="images\report-32.png" />
+    <None Include="images\xls-doc.png" />
+    <None Include="images\loading.GIF" />
     <Content Include="libcurl.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -25,6 +25,11 @@ namespace DistantVacantGovUz
         public static string strProxyUser = "";
         public static string strProxyPassword = "";
 
+        public static string strUpdateServer = @"";
+        public static bool bCheckForUpdates = true;
+
+        public static string strLanguage = "en";
+
         // включить использование прокси
         public static void EnableProxy()
         {
@@ -47,8 +52,10 @@ namespace DistantVacantGovUz
         public static void SaveSettings()
         {
             XmlDocument xml = new XmlDocument();
+            
             XmlElement root = xml.CreateElement("settings");
             xml.AppendChild(root);
+            xml.InsertBefore(xml.CreateXmlDeclaration("1.0", "UTF-8", "yes"), root);
 
             XmlElement el;
 
@@ -74,6 +81,21 @@ namespace DistantVacantGovUz
 
             el = xml.CreateElement("ProxyPassword");
             el.SetAttribute("value", strProxyPassword);
+
+            root.AppendChild(el);
+
+            el = xml.CreateElement("CheckForUpdates");
+            el.SetAttribute("value", (bCheckForUpdates) ? "True" : "False");
+
+            root.AppendChild(el);
+
+            el = xml.CreateElement("UpdateServer");
+            el.SetAttribute("value", strUpdateServer);
+
+            root.AppendChild(el);
+
+            el = xml.CreateElement("Language");
+            el.SetAttribute("value", strLanguage);
 
             root.AppendChild(el);
 
@@ -132,12 +154,32 @@ namespace DistantVacantGovUz
                         strProxyPassword = n.GetAttribute("value");
                         continue;
                     }
+
+                    if (n.Name == "CheckForUpdates")
+                    {
+                        bCheckForUpdates = (n.GetAttribute("value") == "True") ? true : false;
+                        continue;
+                    }
+
+                    if (n.Name == "UpdateServer")
+                    {
+                        strUpdateServer = n.GetAttribute("value");
+                        continue;
+                    }
+
+                    if (n.Name == "Language")
+                    {
+                        strLanguage = n.GetAttribute("value");
+                        continue;
+                    }
                 }
 
                 if (bUseProxy)
                 {
                     EnableProxy();
                 }
+
+                Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(strLanguage);
             }
             catch (Exception ex)
             {
@@ -359,7 +401,7 @@ namespace DistantVacantGovUz
         static void Main()
         {
             vac = new CVacantGovUz();
-
+            
             LoadSettings();
             //UpdateLauncher();
 

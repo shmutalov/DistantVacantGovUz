@@ -30,19 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClosedVacancies));
             this.toolbar = new System.Windows.Forms.ToolStrip();
+            this.toolBtnRefreshVacancies = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolBtnExportVacancies = new System.Windows.Forms.ToolStripButton();
+            this.toolBtnChangeStatus = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolBtnEditVacancy = new System.Windows.Forms.ToolStripButton();
+            this.toolBtnCheckAll = new System.Windows.Forms.ToolStripButton();
+            this.toolBtnUncheckAll = new System.Windows.Forms.ToolStripButton();
             this.lstVacancies = new System.Windows.Forms.ListView();
             this.clmnCheckbox = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnVacSequenceNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnVacPortalNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnVacDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.toolBtnRefreshVacancies = new System.Windows.Forms.ToolStripButton();
-            this.toolBtnExportVacancies = new System.Windows.Forms.ToolStripButton();
-            this.toolBtnChangeStatus = new System.Windows.Forms.ToolStripButton();
-            this.toolBtnEditVacancy = new System.Windows.Forms.ToolStripButton();
-            this.toolBtnCheckAll = new System.Windows.Forms.ToolStripButton();
-            this.toolBtnUncheckAll = new System.Windows.Forms.ToolStripButton();
+            this.workerRefreshVacancyList = new System.ComponentModel.BackgroundWorker();
             this.toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,56 +66,6 @@
             this.toolbar.Text = "toolStrip1";
             this.toolbar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolbar_ItemClicked);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // lstVacancies
-            // 
-            this.lstVacancies.CheckBoxes = true;
-            this.lstVacancies.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clmnCheckbox,
-            this.clmnVacSequenceNumber,
-            this.clmnVacPortalNumber,
-            this.clmnVacDescription});
-            this.lstVacancies.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstVacancies.FullRowSelect = true;
-            this.lstVacancies.GridLines = true;
-            this.lstVacancies.Location = new System.Drawing.Point(0, 39);
-            this.lstVacancies.MultiSelect = false;
-            this.lstVacancies.Name = "lstVacancies";
-            this.lstVacancies.Size = new System.Drawing.Size(584, 512);
-            this.lstVacancies.TabIndex = 1;
-            this.lstVacancies.UseCompatibleStateImageBehavior = false;
-            this.lstVacancies.View = System.Windows.Forms.View.Details;
-            // 
-            // clmnCheckbox
-            // 
-            this.clmnCheckbox.Text = "";
-            this.clmnCheckbox.Width = 32;
-            // 
-            // clmnVacSequenceNumber
-            // 
-            this.clmnVacSequenceNumber.Text = "#";
-            this.clmnVacSequenceNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.clmnVacSequenceNumber.Width = 64;
-            // 
-            // clmnVacPortalNumber
-            // 
-            this.clmnVacPortalNumber.Text = "ID";
-            this.clmnVacPortalNumber.Width = 96;
-            // 
-            // clmnVacDescription
-            // 
-            this.clmnVacDescription.Text = "Description";
-            this.clmnVacDescription.Width = 400;
-            // 
             // toolBtnRefreshVacancies
             // 
             this.toolBtnRefreshVacancies.Image = global::DistantVacantGovUz.Properties.Resources.refresh_32;
@@ -125,6 +76,11 @@
             this.toolBtnRefreshVacancies.Text = "Refresh";
             this.toolBtnRefreshVacancies.ToolTipText = "Refresh vacancies list";
             this.toolBtnRefreshVacancies.Click += new System.EventHandler(this.toolBtnRefreshVacancies_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
             // toolBtnExportVacancies
             // 
@@ -145,6 +101,11 @@
             this.toolBtnChangeStatus.Size = new System.Drawing.Size(118, 36);
             this.toolBtnChangeStatus.Text = "Change status";
             this.toolBtnChangeStatus.ToolTipText = "Change checked vacancies status";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
             // 
             // toolBtnEditVacancy
             // 
@@ -177,6 +138,52 @@
             this.toolBtnUncheckAll.Text = "Uncheck All";
             this.toolBtnUncheckAll.ToolTipText = "Uncheck all vacancies";
             this.toolBtnUncheckAll.Click += new System.EventHandler(this.toolBtnUncheckAll_Click);
+            // 
+            // lstVacancies
+            // 
+            this.lstVacancies.CheckBoxes = true;
+            this.lstVacancies.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmnCheckbox,
+            this.clmnVacSequenceNumber,
+            this.clmnVacPortalNumber,
+            this.clmnVacDescription});
+            this.lstVacancies.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstVacancies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lstVacancies.FullRowSelect = true;
+            this.lstVacancies.GridLines = true;
+            this.lstVacancies.Location = new System.Drawing.Point(0, 39);
+            this.lstVacancies.MultiSelect = false;
+            this.lstVacancies.Name = "lstVacancies";
+            this.lstVacancies.Size = new System.Drawing.Size(584, 512);
+            this.lstVacancies.TabIndex = 1;
+            this.lstVacancies.UseCompatibleStateImageBehavior = false;
+            this.lstVacancies.View = System.Windows.Forms.View.Details;
+            // 
+            // clmnCheckbox
+            // 
+            this.clmnCheckbox.Text = "";
+            this.clmnCheckbox.Width = 32;
+            // 
+            // clmnVacSequenceNumber
+            // 
+            this.clmnVacSequenceNumber.Text = "#";
+            this.clmnVacSequenceNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.clmnVacSequenceNumber.Width = 64;
+            // 
+            // clmnVacPortalNumber
+            // 
+            this.clmnVacPortalNumber.Text = "ID";
+            this.clmnVacPortalNumber.Width = 96;
+            // 
+            // clmnVacDescription
+            // 
+            this.clmnVacDescription.Text = "Description";
+            this.clmnVacDescription.Width = 400;
+            // 
+            // workerRefreshVacancyList
+            // 
+            this.workerRefreshVacancyList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.workerRefreshVacancyList_DoWork);
+            this.workerRefreshVacancyList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.workerRefreshVacancyList_RunWorkerCompleted);
             // 
             // frmClosedVacancies
             // 
@@ -212,5 +219,6 @@
         private System.Windows.Forms.ColumnHeader clmnCheckbox;
         private System.Windows.Forms.ToolStripButton toolBtnCheckAll;
         private System.Windows.Forms.ToolStripButton toolBtnUncheckAll;
+        private System.ComponentModel.BackgroundWorker workerRefreshVacancyList;
     }
 }

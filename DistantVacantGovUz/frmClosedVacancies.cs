@@ -19,9 +19,16 @@ namespace DistantVacantGovUz
         {
             lstVacancies.Items.Clear();
 
-            List<CVacancyListElement> vacs = Program.vac.GetClosedVacancies();
+            frmLoading fLoading = new frmLoading();
 
-            int i = 1;
+            //vacs = Program.vac.GetClosedVacancies();
+            CVacancyPortalPreloader preloader = new CVacancyPortalPreloader(fLoading, VACANCY_STATUS.CLOSED);
+            workerRefreshVacancyList.RunWorkerAsync(preloader);
+
+            fLoading.SetOperationName(this.Text);
+            fLoading.ShowDialog();
+
+            /*int i = 1;
 
             foreach (CVacancyListElement v in vacs)
             {
@@ -31,7 +38,7 @@ namespace DistantVacantGovUz
                 li.SubItems.Add(v.strDescription);
 
                 i++;
-            }
+            }*/
         }
 
         private void toolBtnRefreshVacancies_Click(object sender, EventArgs e)
@@ -46,6 +53,7 @@ namespace DistantVacantGovUz
 
         private void frmClosedVacancies_Load(object sender, EventArgs e)
         {
+            this.Show();
             RefreshVacancyList();
         }
 
@@ -63,6 +71,34 @@ namespace DistantVacantGovUz
             {
                 lstVacancies.Items[i].Checked = false;
             }
+        }
+
+        private void workerRefreshVacancyList_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker wrkr = (BackgroundWorker)sender;
+            CVacancyPortalPreloader preldr = (CVacancyPortalPreloader)e.Argument;
+
+            preldr.DoWork(wrkr, e);
+        }
+
+        private void workerRefreshVacancyList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            CVacancyPortalPreloader preldr = (CVacancyPortalPreloader)e.Result;
+            List<CVacancyListElement> vacs = preldr.GetVacancyList();
+
+            int i = 1;
+
+            foreach (CVacancyListElement v in vacs)
+            {
+                ListViewItem li = lstVacancies.Items.Add("");
+                li.SubItems.Add(i.ToString());
+                li.SubItems.Add(v.iID.ToString());
+                li.SubItems.Add(v.strDescription);
+
+                i++;
+            }
+
+            preldr.GetLoadingForm().Close();
         }
     }
 }
