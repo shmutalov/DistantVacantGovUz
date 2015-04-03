@@ -48,6 +48,9 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>libraries\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>libraries\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="LibCurlNet">
       <HintPath>libraries\LibCurlNet.dll</HintPath>
     </Reference>
@@ -60,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CReportVisaItem.cs" />
     <Compile Include="CVacancy.cs" />
     <Compile Include="CVacancyDocumentPreloader.cs" />
     <Compile Include="CVacancyFileType.cs" />

@@ -43,6 +43,13 @@ namespace DistantVacantGovUz
         public int i_education_id;
         public int i_portal_vacancy_id;
 
+        // helper ids converted to enum
+        public VACANCY_CATEGORY e_category_id;
+        public VACANCY_EMPLOYMENT e_employment_id;
+        public VACANCY_GENDER e_gender_id;
+        public VACANCY_EXPERIENCE e_experience_id;
+        public VACANCY_EDUCATION_LEVEL e_education_id;
+
         private bool valide;
 
         public bool IsValid()
@@ -116,6 +123,12 @@ namespace DistantVacantGovUz
             i_education_id = 0;
             i_portal_vacancy_id = 0;
 
+            e_category_id = VACANCY_CATEGORY.UNKNOWN;
+            e_education_id = VACANCY_EDUCATION_LEVEL.UNKNOWN;
+            e_employment_id = VACANCY_EMPLOYMENT.UNKNOWN;
+            e_experience_id = VACANCY_EXPERIENCE.UNKNOWN;
+            e_gender_id = VACANCY_GENDER.UNKNOWN;
+
             // is valide?
             valide = false;
         }
@@ -176,13 +189,24 @@ namespace DistantVacantGovUz
             this.education_id = education_id;
             this.portal_vacancy_id = portal_vacancy_id;
 
-            // helper ids converted to int
-            try { i_category_id = int.Parse( this.category_id ); } catch { }
-            try { i_employment_id = int.Parse( this.employment_id );} catch { }
-            try { i_gender_id = int.Parse( this.gender_id );} catch { }
-            try { i_experience_id = int.Parse( this.experience_id );} catch { }
-            try { i_education_id = int.Parse( this.education_id );} catch { }
+            // helper ids converted to int and enum
+            try { i_category_id = int.Parse(this.category_id); e_category_id = (VACANCY_CATEGORY)i_category_id; }
+            catch { }
+            try { i_employment_id = int.Parse(this.employment_id); e_employment_id = (VACANCY_EMPLOYMENT)i_employment_id; }
+            catch { }
+            try { i_gender_id = int.Parse(this.gender_id); e_gender_id = (VACANCY_GENDER)i_gender_id; }
+            catch { }
+            try { i_experience_id = int.Parse(this.experience_id); e_experience_id = (VACANCY_EXPERIENCE)i_experience_id; }
+            catch { }
+            try { i_education_id = int.Parse(this.education_id); e_education_id = (VACANCY_EDUCATION_LEVEL)i_education_id; }
+            catch { }
             try { i_portal_vacancy_id = int.Parse( this.portal_vacancy_id ); } catch { }
+
+            e_category_id = VACANCY_CATEGORY.UNKNOWN;
+            e_education_id = VACANCY_EDUCATION_LEVEL.UNKNOWN;
+            e_employment_id = VACANCY_EMPLOYMENT.UNKNOWN;
+            e_experience_id = VACANCY_EXPERIENCE.UNKNOWN;
+            e_gender_id = VACANCY_GENDER.UNKNOWN;
         }
     }
 
