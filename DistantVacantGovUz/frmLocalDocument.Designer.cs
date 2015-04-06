@@ -98,7 +98,7 @@
             this.toolbar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolbar.Location = new System.Drawing.Point(0, 0);
             this.toolbar.Name = "toolbar";
-            this.toolbar.Size = new System.Drawing.Size(1060, 39);
+            this.toolbar.Size = new System.Drawing.Size(892, 39);
             this.toolbar.TabIndex = 0;
             this.toolbar.Text = "toolStrip1";
             // 
@@ -141,7 +141,7 @@
             this.toolBtnReportPdf.Image = global::DistantVacantGovUz.Properties.Resources.pdf_doc;
             this.toolBtnReportPdf.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportPdf.Name = "toolBtnReportPdf";
-            this.toolBtnReportPdf.Size = new System.Drawing.Size(127, 54);
+            this.toolBtnReportPdf.Size = new System.Drawing.Size(184, 54);
             this.toolBtnReportPdf.Text = "PDF";
             // 
             // toolBtnReportPdfPrintVersionRu
@@ -149,12 +149,14 @@
             this.toolBtnReportPdfPrintVersionRu.Name = "toolBtnReportPdfPrintVersionRu";
             this.toolBtnReportPdfPrintVersionRu.Size = new System.Drawing.Size(166, 22);
             this.toolBtnReportPdfPrintVersionRu.Text = "Print version (RU)";
+            this.toolBtnReportPdfPrintVersionRu.Click += new System.EventHandler(this.toolBtnReportPdfPrintVersionRu_Click);
             // 
             // toolBtnReportPdfPrintVersionUz
             // 
             this.toolBtnReportPdfPrintVersionUz.Name = "toolBtnReportPdfPrintVersionUz";
             this.toolBtnReportPdfPrintVersionUz.Size = new System.Drawing.Size(166, 22);
             this.toolBtnReportPdfPrintVersionUz.Text = "Print version (UZ)";
+            this.toolBtnReportPdfPrintVersionUz.Click += new System.EventHandler(this.toolBtnReportPdfPrintVersionUz_Click);
             // 
             // toolBtnReportXls
             // 
@@ -164,7 +166,7 @@
             this.toolBtnReportXls.Image = global::DistantVacantGovUz.Properties.Resources.xls_doc;
             this.toolBtnReportXls.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportXls.Name = "toolBtnReportXls";
-            this.toolBtnReportXls.Size = new System.Drawing.Size(127, 54);
+            this.toolBtnReportXls.Size = new System.Drawing.Size(184, 54);
             this.toolBtnReportXls.Text = "XLS";
             // 
             // toolBtnReportXlsPrintVersionRu
@@ -172,12 +174,14 @@
             this.toolBtnReportXlsPrintVersionRu.Name = "toolBtnReportXlsPrintVersionRu";
             this.toolBtnReportXlsPrintVersionRu.Size = new System.Drawing.Size(166, 22);
             this.toolBtnReportXlsPrintVersionRu.Text = "Print version (RU)";
+            this.toolBtnReportXlsPrintVersionRu.Click += new System.EventHandler(this.toolBtnReportXlsPrintVersionRu_Click);
             // 
             // toolBtnReportXlsPrintVersionUz
             // 
             this.toolBtnReportXlsPrintVersionUz.Name = "toolBtnReportXlsPrintVersionUz";
             this.toolBtnReportXlsPrintVersionUz.Size = new System.Drawing.Size(166, 22);
             this.toolBtnReportXlsPrintVersionUz.Text = "Print version (UZ)";
+            this.toolBtnReportXlsPrintVersionUz.Click += new System.EventHandler(this.toolBtnReportXlsPrintVersionUz_Click);
             // 
             // toolStripSeparator1
             // 
@@ -192,6 +196,7 @@
             this.toolBtnAdd.Name = "toolBtnAdd";
             this.toolBtnAdd.Size = new System.Drawing.Size(65, 36);
             this.toolBtnAdd.Text = "Add";
+            this.toolBtnAdd.Click += new System.EventHandler(this.toolBtnAdd_Click);
             // 
             // toolBtnImportFromFile
             // 
@@ -201,6 +206,7 @@
             this.toolBtnImportFromFile.Name = "toolBtnImportFromFile";
             this.toolBtnImportFromFile.Size = new System.Drawing.Size(79, 36);
             this.toolBtnImportFromFile.Text = "Import";
+            this.toolBtnImportFromFile.Click += new System.EventHandler(this.toolBtnImportFromFile_Click);
             // 
             // toolStripSeparator2
             // 
@@ -272,6 +278,7 @@
             this.toolBtnDeleteChecked.Name = "toolBtnDeleteChecked";
             this.toolBtnDeleteChecked.Size = new System.Drawing.Size(76, 36);
             this.toolBtnDeleteChecked.Text = "Delete";
+            this.toolBtnDeleteChecked.Click += new System.EventHandler(this.toolBtnDeleteChecked_Click);
             // 
             // lstVacancies
             // 
@@ -306,11 +313,13 @@
             this.lstVacancies.HideSelection = false;
             this.lstVacancies.Location = new System.Drawing.Point(0, 42);
             this.lstVacancies.Name = "lstVacancies";
-            this.lstVacancies.Size = new System.Drawing.Size(1060, 474);
+            this.lstVacancies.Size = new System.Drawing.Size(892, 474);
             this.lstVacancies.TabIndex = 1;
             this.lstVacancies.UseCompatibleStateImageBehavior = false;
             this.lstVacancies.View = System.Windows.Forms.View.Details;
             this.lstVacancies.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lstVacancies_ItemChecked);
+            this.lstVacancies.SelectedIndexChanged += new System.EventHandler(this.lstVacancies_SelectedIndexChanged);
+            this.lstVacancies.DoubleClick += new System.EventHandler(this.lstVacancies_DoubleClick);
             // 
             // clmnCheckbox
             // 
@@ -405,7 +414,7 @@
             this.stsSelectedItems});
             this.status.Location = new System.Drawing.Point(0, 519);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(1060, 22);
+            this.status.Size = new System.Drawing.Size(892, 22);
             this.status.TabIndex = 2;
             this.status.Text = "statusStrip1";
             // 
@@ -419,7 +428,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 541);
+            this.ClientSize = new System.Drawing.Size(892, 541);
             this.Controls.Add(this.status);
             this.Controls.Add(this.lstVacancies);
             this.Controls.Add(this.toolbar);

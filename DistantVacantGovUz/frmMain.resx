@@ -121,30 +121,26 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="mnuMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="mnuFileCreateNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
   </data>
-  <data name="mnuMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1011, 24</value>
+  <data name="mnuFileCreateNew.Text" xml:space="preserve">
+    <value>New</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="mnuMain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="mnuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
   </data>
-  <data name="mnuMain.Text" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="mnuFileOpen.Text" xml:space="preserve">
+    <value>Open</value>
   </data>
-  <data name="&gt;&gt;mnuMain.Name" xml:space="preserve">
-    <value>mnuMain</value>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 6</value>
   </data>
-  <data name="&gt;&gt;mnuMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="mnuFileSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
   </data>
-  <data name="&gt;&gt;mnuMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mnuMain.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="mnuFileSettings.Text" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="mnuFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
@@ -152,44 +148,11 @@
   <data name="mnuFile.Text" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="mnuFileCreateNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="mnuFileCreateNew.Text" xml:space="preserve">
-    <value>New</value>
-  </data>
-  <data name="mnuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="mnuFileOpen.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
-  </data>
-  <data name="mnuFileSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="mnuFileSettings.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
   <data name="mnuPortalVacancies.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 20</value>
   </data>
   <data name="mnuPortalVacancies.Text" xml:space="preserve">
     <value>Portal vacancies</value>
-  </data>
-  <data name="mnuWindowCloseAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 20</value>
-  </data>
-  <data name="mnuWindowCloseAll.Text" xml:space="preserve">
-    <value>Window</value>
-  </data>
-  <data name="mnuWindowLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="mnuWindowLayout.Text" xml:space="preserve">
-    <value>Layout</value>
   </data>
   <data name="mnuWindowLayoutArrangeIcons.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 22</value>
@@ -218,29 +181,35 @@
   <data name="mnuWindowLayoutTileV.Text" xml:space="preserve">
     <value>Tile Vertical</value>
   </data>
+  <data name="mnuWindowLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="mnuWindowLayout.Text" xml:space="preserve">
+    <value>Layout</value>
+  </data>
   <data name="mnuWindowShowAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>120, 22</value>
   </data>
   <data name="mnuWindowShowAll.Text" xml:space="preserve">
     <value>Show All</value>
   </data>
   <data name="mnuWindowHideAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>120, 22</value>
   </data>
   <data name="mnuWindowHideAll.Text" xml:space="preserve">
     <value>Hide All</value>
   </data>
   <data name="closeAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>120, 22</value>
   </data>
   <data name="closeAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Close All</value>
   </data>
-  <data name="mnuHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+  <data name="mnuWindowCloseAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
   </data>
-  <data name="mnuHelp.Text" xml:space="preserve">
-    <value>Help</value>
+  <data name="mnuWindowCloseAll.Text" xml:space="preserve">
+    <value>Window</value>
   </data>
   <data name="mnuHowToWork.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 22</value>
@@ -253,6 +222,37 @@
   </data>
   <data name="mnuAboutProgram.Text" xml:space="preserve">
     <value>About program...</value>
+  </data>
+  <data name="mnuHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="mnuHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="mnuMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mnuMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1011, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mnuMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mnuMain.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;mnuMain.Name" xml:space="preserve">
+    <value>mnuMain</value>
+  </data>
+  <data name="&gt;&gt;mnuMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mnuMain.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="worker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>121, 17</value>

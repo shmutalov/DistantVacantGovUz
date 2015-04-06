@@ -54,6 +54,9 @@
     <Reference Include="LibCurlNet">
       <HintPath>libraries\LibCurlNet.dll</HintPath>
     </Reference>
+    <Reference Include="NPOI">
+      <HintPath>libraries\NPOI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -69,6 +72,7 @@
     <Compile Include="CVacancyFileType.cs" />
     <Compile Include="CVacancyPortalPreloader.cs" />
     <Compile Include="CVacancyReports.cs" />
+    <Compile Include="CVacancyUtil.cs" />
     <Compile Include="CVacantGovUz.cs" />
     <Compile Include="frmAbout.cs">
       <SubType>Form</SubType>
@@ -136,6 +140,24 @@
     <Compile Include="frmPortalVacancies.Designer.cs">
       <DependentUpon>frmPortalVacancies.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRptPrintVersionAddVisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptPrintVersionAddVisa.Designer.cs">
+      <DependentUpon>frmRptPrintVersionAddVisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptPrintVersionEditVisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptPrintVersionEditVisa.Designer.cs">
+      <DependentUpon>frmRptPrintVersionEditVisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptPrintVersionSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptPrintVersionSettings.Designer.cs">
+      <DependentUpon>frmRptPrintVersionSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +221,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPortalVacancies.resx">
       <DependentUpon>frmPortalVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptPrintVersionAddVisa.resx">
+      <DependentUpon>frmRptPrintVersionAddVisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptPrintVersionEditVisa.resx">
+      <DependentUpon>frmRptPrintVersionEditVisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptPrintVersionSettings.resx">
+      <DependentUpon>frmRptPrintVersionSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>

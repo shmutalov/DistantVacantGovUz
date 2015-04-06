@@ -74,15 +74,6 @@ namespace DistantVacantGovUz
 
                 fLoading.SetOperationName(ofd.FileName);
                 fLoading.ShowDialog();
-
-                /*if (vacancyList != null)
-                {
-                    frmLocalDocument f = new frmLocalDocument();
-                    f.MdiParent = this;
-                    f.SetDocument(ofd.FileName, vacancyList);
-
-                    f.Show();
-                }*/
             }
         }
 
