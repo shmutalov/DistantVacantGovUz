@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using ExcelLibrary.SpreadSheet;
-
-using NPOI.HSSF.Model;
-using NPOI.HSSF.UserModel;
 
 namespace DistantVacantGovUz
 {
@@ -240,15 +236,14 @@ namespace DistantVacantGovUz
                     {
                         reader.BaseStream.Seek(0, SeekOrigin.Begin);
 
-                        //HSSFWorkbook xlWb = new HSSFWorkbook(reader.BaseStream);
-                        Workbook xlWb = Workbook.Load(reader.BaseStream);
-                        Worksheet xlSheet = xlWb.Worksheets[0];
+                        NPOI.HSSF.UserModel.HSSFWorkbook xlWb = new NPOI.HSSF.UserModel.HSSFWorkbook(reader.BaseStream);
+                        NPOI.HSSF.UserModel.HSSFSheet xlSheet = (NPOI.HSSF.UserModel.HSSFSheet)xlWb.GetSheetAt(0);
 
-                        if (xlSheet.Cells[0, 23].StringValue == "PORTAL_VAC_ID")
+                        if (xlSheet.GetRow(0).GetCell(23) != null && xlSheet.GetRow(0).GetCell(23).StringCellValue == "PORTAL_VAC_ID")
                         {
                             ver = VACANCY_FILE_VERSION.VERSION_2;
                         }
-                        else if (xlSheet.Cells[0, 22].StringValue == "EDU_ID")
+                        else if (xlSheet.GetRow(0).GetCell(22) != null && xlSheet.GetRow(0).GetCell(22).StringCellValue == "EDU_ID")
                         {
                             ver = VACANCY_FILE_VERSION.VERSION_1;
                         }
@@ -265,25 +260,23 @@ namespace DistantVacantGovUz
                     // 50 4B 03 = xlsx version (unsupported for now by ExcelLibrary)
                     else if (bytes[0] == 0x50 && bytes[1] == 0x4B && bytes[2] == 0x03)
                     {
-                        /*reader.BaseStream.Seek(0, SeekOrigin.Begin);
+                        reader.BaseStream.Seek(0, SeekOrigin.Begin);
 
-                        Workbook xlWb = Workbook.Load(reader.BaseStream);
-                        Worksheet xlSheet = xlWb.Worksheets[0];
+                        NPOI.XSSF.UserModel.XSSFWorkbook xlWb = new NPOI.XSSF.UserModel.XSSFWorkbook(reader.BaseStream);
+                        NPOI.XSSF.UserModel.XSSFSheet xlSheet = (NPOI.XSSF.UserModel.XSSFSheet)xlWb.GetSheetAt(0);
 
-                        if (xlSheet.Cells[0, 23].StringValue == "PORTAL_VAC_ID")
+                        if (xlSheet.GetRow(0).GetCell(23) != null && xlSheet.GetRow(0).GetCell(23).StringCellValue == "PORTAL_VAC_ID")
                         {
                             ver = VACANCY_FILE_VERSION.VERSION_2;
                         }
-                        else if (xlSheet.Cells[0, 22].StringValue == "EDU_ID")
+                        else if (xlSheet.GetRow(0).GetCell(22) != null && xlSheet.GetRow(0).GetCell(22).StringCellValue == "EDU_ID")
                         {
                             ver = VACANCY_FILE_VERSION.VERSION_1;
                         }
                         else
                         {
                             ver = VACANCY_FILE_VERSION.UNKNOWN;
-                        }*/
-
-                        ver = VACANCY_FILE_VERSION.UNKNOWN;
+                        }
                     }
                     else
                     {
@@ -321,91 +314,48 @@ namespace DistantVacantGovUz
             return false;
         }
 
-        private static List<CVacancyItem> _OpenFileVer1(string fileName)
-        {
-            Workbook xlWb = Workbook.Load(fileName);
-            Worksheet xlSheet = xlWb.Worksheets[0];
-
-            List<CVacancyItem> ret = new List<CVacancyItem>();
-
-            int i = 0;
-
-            while (!xlSheet.Cells[i, 0].IsEmpty)
-            {
-                if (i > 1)
-                {
-                    ret.Add(new CVacancyItem(
-                                xlSheet.Cells[i, 0].StringValue
-                                , xlSheet.Cells[i, 1].StringValue
-                                , xlSheet.Cells[i, 2].StringValue
-                                , xlSheet.Cells[i, 3].StringValue
-                                , xlSheet.Cells[i, 4].StringValue
-                                , xlSheet.Cells[i, 5].StringValue
-                                , xlSheet.Cells[i, 6].StringValue
-                                , xlSheet.Cells[i, 7].StringValue
-                                , xlSheet.Cells[i, 8].StringValue
-                                , xlSheet.Cells[i, 9].StringValue
-                                , xlSheet.Cells[i, 10].StringValue
-                                , xlSheet.Cells[i, 11].StringValue
-                                , xlSheet.Cells[i, 12].StringValue
-                                , xlSheet.Cells[i, 13].StringValue
-                                , xlSheet.Cells[i, 14].StringValue
-                                , xlSheet.Cells[i, 15].StringValue
-                                , xlSheet.Cells[i, 16].StringValue
-                                , xlSheet.Cells[i, 17].StringValue
-                                , xlSheet.Cells[i, 18].StringValue
-                                , xlSheet.Cells[i, 19].StringValue
-                                , xlSheet.Cells[i, 20].StringValue
-                                , xlSheet.Cells[i, 21].StringValue
-                                , xlSheet.Cells[i, 22].StringValue
-                                , "0"
-                            )
-                        );
-                }
-                
-                i++;
-            }
-
-            return ret;
-        }
-
         private static List<CVacancyItem> OpenFileVer1(string fileName)
         {
-            Workbook xlWb = Workbook.Load(fileName);
-            Worksheet xlSheet = xlWb.Worksheets[0];
+            NPOI.SS.UserModel.IWorkbook xlWb;
+            NPOI.SS.UserModel.ISheet xlSheet;
 
+            xlWb = NPOI.SS.UserModel.WorkbookFactory.Create(fileName);
+
+            xlSheet = xlWb.GetSheetAt(0);
+            
             List<CVacancyItem> ret = new List<CVacancyItem>();
 
             int i = 0;
 
-            while (!xlSheet.Cells[i, 0].IsEmpty)
+            //while (!xlSheet.Cells[i, 0].IsEmpty)
+            while (!(xlSheet.GetRow(i) == null))
             {
                 if (i > 1)
                 {
                     ret.Add(new CVacancyItem(
-                                xlSheet.Cells[i, 0].StringValue
-                                , xlSheet.Cells[i, 1].StringValue
-                                , xlSheet.Cells[i, 2].StringValue
-                                , xlSheet.Cells[i, 3].StringValue
-                                , xlSheet.Cells[i, 4].StringValue
-                                , xlSheet.Cells[i, 5].StringValue
-                                , xlSheet.Cells[i, 6].StringValue
-                                , xlSheet.Cells[i, 7].StringValue
-                                , xlSheet.Cells[i, 8].StringValue
-                                , xlSheet.Cells[i, 9].StringValue
-                                , xlSheet.Cells[i, 10].StringValue
-                                , xlSheet.Cells[i, 11].StringValue
-                                , xlSheet.Cells[i, 12].StringValue
-                                , xlSheet.Cells[i, 13].StringValue
-                                , xlSheet.Cells[i, 14].StringValue
-                                , xlSheet.Cells[i, 15].StringValue
-                                , xlSheet.Cells[i, 16].StringValue
-                                , xlSheet.Cells[i, 17].StringValue
-                                , xlSheet.Cells[i, 18].StringValue
-                                , xlSheet.Cells[i, 19].StringValue
-                                , xlSheet.Cells[i, 20].StringValue
-                                , xlSheet.Cells[i, 21].StringValue
-                                , xlSheet.Cells[i, 22].StringValue
+                                xlSheet.GetRow(i).GetCell(0).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(1).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(2).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(3).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(4).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(5).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(6).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(7).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(8).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(9).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(10).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(11).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(12).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(13).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(14).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(15).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(16).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(17).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(18).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(19).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(20).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(21).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(22).StringCellValue
                                 , "0"
                             )
                         );
@@ -419,42 +369,47 @@ namespace DistantVacantGovUz
 
         private static List<CVacancyItem> OpenFileVer2(string fileName)
         {
-            Workbook xlWb = Workbook.Load(fileName);
-            Worksheet xlSheet = xlWb.Worksheets[0];
+            NPOI.SS.UserModel.IWorkbook xlWb;
+            NPOI.SS.UserModel.ISheet xlSheet;
+
+            xlWb = NPOI.SS.UserModel.WorkbookFactory.Create(fileName);
+
+            xlSheet = xlWb.GetSheetAt(0);
 
             List<CVacancyItem> ret = new List<CVacancyItem>();
 
             int i = 0;
 
-            while (!xlSheet.Cells[i, 0].IsEmpty)
+            //while (!xlSheet.Cells[i, 0].IsEmpty)
+            while (!(xlSheet.GetRow(i) == null))
             {
                 if (i > 1)
                 {
                     ret.Add(new CVacancyItem(
-                                xlSheet.Cells[i, 0].StringValue
-                                , xlSheet.Cells[i, 1].StringValue
-                                , xlSheet.Cells[i, 2].StringValue
-                                , xlSheet.Cells[i, 3].StringValue
-                                , xlSheet.Cells[i, 4].StringValue
-                                , xlSheet.Cells[i, 5].StringValue
-                                , xlSheet.Cells[i, 6].StringValue
-                                , xlSheet.Cells[i, 7].StringValue
-                                , xlSheet.Cells[i, 8].StringValue
-                                , xlSheet.Cells[i, 9].StringValue
-                                , xlSheet.Cells[i, 10].StringValue
-                                , xlSheet.Cells[i, 11].StringValue
-                                , xlSheet.Cells[i, 12].StringValue
-                                , xlSheet.Cells[i, 13].StringValue
-                                , xlSheet.Cells[i, 14].StringValue
-                                , xlSheet.Cells[i, 15].StringValue
-                                , xlSheet.Cells[i, 16].StringValue
-                                , xlSheet.Cells[i, 17].StringValue
-                                , xlSheet.Cells[i, 18].StringValue
-                                , xlSheet.Cells[i, 19].StringValue
-                                , xlSheet.Cells[i, 20].StringValue
-                                , xlSheet.Cells[i, 21].StringValue
-                                , xlSheet.Cells[i, 22].StringValue
-                                , xlSheet.Cells[i, 23].StringValue
+                                xlSheet.GetRow(i).GetCell(0).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(1).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(2).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(3).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(4).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(5).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(6).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(7).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(8).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(9).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(10).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(11).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(12).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(13).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(14).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(15).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(16).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(17).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(18).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(19).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(20).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(21).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(22).StringCellValue
+                                , xlSheet.GetRow(i).GetCell(23).StringCellValue
                             )
                         );
                 }

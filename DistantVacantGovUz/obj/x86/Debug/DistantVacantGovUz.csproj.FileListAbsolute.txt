@@ -2,7 +2,6 @@ D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\libcurl.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\LibCurlShim.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\DistantVacantGovUz.exe
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\DistantVacantGovUz.pdb
-D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\ExcelLibrary.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\HTMLparserLibDotNet20.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\LibCurlNet.dll
@@ -42,3 +41,6 @@ D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.fr
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmRptPrintVersionEditVisa.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmRptPrintVersionSettings.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\NPOI.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\NPOI.OOXML.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\NPOI.OpenXml4Net.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\NPOI.OpenXmlFormats.dll

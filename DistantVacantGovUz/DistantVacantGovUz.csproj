@@ -39,9 +39,6 @@
     <ApplicationIcon>distant.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExcelLibrary">
-      <HintPath>libraries\ExcelLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="HTMLparserLibDotNet20">
       <HintPath>libraries\HTMLparserLibDotNet20.dll</HintPath>
     </Reference>
@@ -56,6 +53,16 @@
     </Reference>
     <Reference Include="NPOI">
       <HintPath>libraries\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>libraries\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>libraries\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libraries\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
