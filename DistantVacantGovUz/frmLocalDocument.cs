@@ -15,6 +15,7 @@ namespace DistantVacantGovUz
         private string documentFileName = "";
         private string documentFileNameWithOutExtension = "";
 
+        private bool isNewDocument = false;
         private bool bIsDirty = false;
 
         private bool isDirty
@@ -32,11 +33,14 @@ namespace DistantVacantGovUz
             }
         }
 
-        private List<CVacancyItem> initialVacancyList;
-        
+        private List<CVacancyItem> workingVacancyList;
+        private List<CVacancyItem> oldVacancyList;
+
         public frmLocalDocument()
         {
             InitializeComponent();
+
+            oldVacancyList = new List<CVacancyItem>();
         }
 
         private void UpdateVacancyList()
@@ -45,34 +49,34 @@ namespace DistantVacantGovUz
 
             bool c = true;
 
-            for (int i = 0; i < initialVacancyList.Count; i++ )
+            for (int i = 0; i < workingVacancyList.Count; i++)
             {
-                initialVacancyList[i].seqNum = (i + 1).ToString();
+                workingVacancyList[i].seqNum = (i + 1).ToString();
 
                 ListViewItem li = lstVacancies.Items.Add("");
-                li.SubItems.Add(initialVacancyList[i].seqNum);
-                li.SubItems.Add((initialVacancyList[i].i_portal_vacancy_id == 0) ? "" : initialVacancyList[i].portal_vacancy_id);
-                li.SubItems.Add(initialVacancyList[i].description_ru);
-                li.SubItems.Add(initialVacancyList[i].description_uz);
-                li.SubItems.Add((initialVacancyList[i].i_category_id == 0) ? "" : initialVacancyList[i].category);
-                li.SubItems.Add(initialVacancyList[i].salary);
-                li.SubItems.Add((initialVacancyList[i].i_employment_id == 0) ? "" : initialVacancyList[i].employment);
-                li.SubItems.Add((initialVacancyList[i].i_gender_id == 0) ? "" : initialVacancyList[i].gender);
-                li.SubItems.Add((initialVacancyList[i].i_experience_id == 0) ? "" : initialVacancyList[i].experience);
-                li.SubItems.Add((initialVacancyList[i].i_education_id == 0) ? "" : initialVacancyList[i].education);
-                li.SubItems.Add(initialVacancyList[i].expire_date);
-                li.SubItems.Add(initialVacancyList[i].department_ru);
-                li.SubItems.Add(initialVacancyList[i].specialization_ru);
-                li.SubItems.Add(initialVacancyList[i].requirements_ru);
-                li.SubItems.Add(initialVacancyList[i].information_ru);
-                li.SubItems.Add(initialVacancyList[i].department_uz);
-                li.SubItems.Add(initialVacancyList[i].specialization_uz);
-                li.SubItems.Add(initialVacancyList[i].requirements_uz);
-                li.SubItems.Add(initialVacancyList[i].information_uz);
+                li.SubItems.Add(workingVacancyList[i].seqNum);
+                li.SubItems.Add((workingVacancyList[i].i_portal_vacancy_id == 0) ? "" : workingVacancyList[i].portal_vacancy_id);
+                li.SubItems.Add(workingVacancyList[i].description_ru);
+                li.SubItems.Add(workingVacancyList[i].description_uz);
+                li.SubItems.Add((workingVacancyList[i].i_category_id == 0) ? "" : workingVacancyList[i].category);
+                li.SubItems.Add(workingVacancyList[i].salary);
+                li.SubItems.Add((workingVacancyList[i].i_employment_id == 0) ? "" : workingVacancyList[i].employment);
+                li.SubItems.Add((workingVacancyList[i].i_gender_id == 0) ? "" : workingVacancyList[i].gender);
+                li.SubItems.Add((workingVacancyList[i].i_experience_id == 0) ? "" : workingVacancyList[i].experience);
+                li.SubItems.Add((workingVacancyList[i].i_education_id == 0) ? "" : workingVacancyList[i].education);
+                li.SubItems.Add(workingVacancyList[i].expire_date);
+                li.SubItems.Add(workingVacancyList[i].department_ru);
+                li.SubItems.Add(workingVacancyList[i].specialization_ru);
+                li.SubItems.Add(workingVacancyList[i].requirements_ru);
+                li.SubItems.Add(workingVacancyList[i].information_ru);
+                li.SubItems.Add(workingVacancyList[i].department_uz);
+                li.SubItems.Add(workingVacancyList[i].specialization_uz);
+                li.SubItems.Add(workingVacancyList[i].requirements_uz);
+                li.SubItems.Add(workingVacancyList[i].information_uz);
 
                 c = !c;
 
-                if (initialVacancyList[i].IsValid())
+                if (workingVacancyList[i].IsValid())
                     li.BackColor = (c) ? Color.White : Color.AliceBlue;
                 else
                     li.BackColor = Color.LightCoral;
@@ -87,11 +91,13 @@ namespace DistantVacantGovUz
         public void SetDocument(string documentName)
         {
             isDirty = false;
+            isNewDocument = true;
+
             this.documentName = documentName;
             this.documentFileName = documentName;
             this.documentFileNameWithOutExtension = documentName;
 
-            initialVacancyList = new List<CVacancyItem>();
+            workingVacancyList = new List<CVacancyItem>();
 
             this.Text = this.documentName + " - " + "Local Vacancies";
 
@@ -101,11 +107,13 @@ namespace DistantVacantGovUz
         public void SetDocument(string documentFileName, List<CVacancyItem> vacancyList)
         {
             isDirty = false;
+            isNewDocument = false;
+
             this.documentFileName = documentFileName;
             this.documentName = Path.GetFileName(documentFileName);
             this.documentFileNameWithOutExtension = documentFileName.Substring(0, documentFileName.Length - 4);
 
-            this.initialVacancyList = vacancyList;
+            this.workingVacancyList = vacancyList;
 
             this.Text = this.documentName + " - " + "Local Vacancies";
 
@@ -114,9 +122,9 @@ namespace DistantVacantGovUz
 
         private void SaveDocument()
         {
-            if (documentFileName != "")
+            if (!isNewDocument)
             {
-                CVacancyFileType.SaveFile(documentFileName, initialVacancyList);
+                CVacancyFileType.SaveFile(documentFileName, workingVacancyList);
             }
             else
             {
@@ -223,7 +231,7 @@ namespace DistantVacantGovUz
                     }
 
                     //bytes = CVacancyReports.GenerateReport(CVacancyReports.REPORT_TYPE.PDF, "PRINT_VERSION", language, parameters, initialVacancyList);
-                    bytes = CVacancyReports.GenerateReport(reportType, "PRINT_VERSION", language, parameters, initialVacancyList);
+                    bytes = CVacancyReports.GenerateReport(reportType, "PRINT_VERSION", language, parameters, workingVacancyList);
                 }
 
                 if (bytes != null)
@@ -284,18 +292,23 @@ namespace DistantVacantGovUz
         {
             if (MessageBox.Show("Are you sure to delete selected rows?", "Deleting rows...", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
+                // сохраним текущий список
+                CVacancyUtil.CopyVacancyItemList(workingVacancyList, oldVacancyList);
+                toolBtnUndo.Enabled = true;
+                toolBtnUndo.Enabled = false;
+
                 List<CVacancyItem> itemsToDelete = new List<CVacancyItem>();
 
                 foreach (int checkedIdx in lstVacancies.CheckedIndices)
                 {
-                    itemsToDelete.Add(initialVacancyList[checkedIdx]);
+                    itemsToDelete.Add(workingVacancyList[checkedIdx]);
                 }
 
                 foreach (CVacancyItem v in itemsToDelete)
                 {
                     try
                     {
-                        initialVacancyList.Remove(v);
+                        workingVacancyList.Remove(v);
                     }
                     catch (Exception ex)
                     {
@@ -319,17 +332,26 @@ namespace DistantVacantGovUz
 
         private void toolBtnAdd_Click(object sender, EventArgs e)
         {
-            int beforeAddVacancyCount = initialVacancyList.Count;
+            List<CVacancyItem> tempList = new List<CVacancyItem>();
+            CVacancyUtil.CopyVacancyItemList(workingVacancyList, tempList);
+
+            int beforeAddVacancyCount = workingVacancyList.Count;
 
             frmAddLocalVacancy fAdd = new frmAddLocalVacancy();
-            fAdd.vacs = initialVacancyList;
+            fAdd.vacs = workingVacancyList;
             fAdd.ShowDialog();
 
-            if (beforeAddVacancyCount - initialVacancyList.Count != 0)
+            if (beforeAddVacancyCount - workingVacancyList.Count != 0)
             {
+                oldVacancyList = tempList;
+                toolBtnUndo.Enabled = true;
+                toolBtnUndo.Enabled = false;
+
                 isDirty = true;
 
                 UpdateVacancyList();
+
+                lstVacancies.Items[lstVacancies.Items.Count - 1].Selected = true;
             }
         }
 
@@ -348,9 +370,14 @@ namespace DistantVacantGovUz
 
                 if (importedVacancies != null && importedVacancies.Count > 0)
                 {
+                    // сохраним текущий список
+                    CVacancyUtil.CopyVacancyItemList(workingVacancyList, oldVacancyList);
+                    toolBtnUndo.Enabled = true;
+                    toolBtnUndo.Enabled = false;
+
                     foreach (CVacancyItem imp_v in importedVacancies)
                     {
-                        initialVacancyList.Add(imp_v);
+                        workingVacancyList.Add(imp_v);
                     }
 
                     isDirty = true;
@@ -374,32 +401,77 @@ namespace DistantVacantGovUz
         {
             if (lstVacancies.SelectedIndices.Count == 1)
             {
+                List<CVacancyItem> tempList = new List<CVacancyItem>();
+                CVacancyUtil.CopyVacancyItemList(workingVacancyList, tempList);
+
                 int selectedIdx = lstVacancies.SelectedIndices[0];
 
                 lstVacancies.Items[selectedIdx].Checked = !lstVacancies.Items[selectedIdx].Checked;
 
-                // open vacancy edit form
+                frmEditLocalVacancy fEdit = new frmEditLocalVacancy();
+                fEdit.vac = workingVacancyList[selectedIdx];
+
+                if (fEdit.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    oldVacancyList = tempList;
+                    toolBtnUndo.Enabled = true;
+
+                    isDirty = true;
+                    UpdateVacancyList();
+
+                    lstVacancies.Items[selectedIdx].Selected = true;
+                }
             }
         }
 
         private void toolBtnSaveAs_Click(object sender, EventArgs e)
         {
-
+            SaveDocumentAs();
         }
 
         private void toolBtnEditSelected_Click(object sender, EventArgs e)
         {
             if (lstVacancies.SelectedIndices.Count == 1)
             {
+                List<CVacancyItem> tempList = new List<CVacancyItem>();
+                CVacancyUtil.CopyVacancyItemList(workingVacancyList, tempList);
+
                 frmEditLocalVacancy fEdit = new frmEditLocalVacancy();
-                fEdit.vac = initialVacancyList[lstVacancies.SelectedIndices[0]];
+                int selectedIdx = lstVacancies.SelectedIndices[0];
+                fEdit.vac = workingVacancyList[selectedIdx];
 
                 if (fEdit.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
+                    oldVacancyList = tempList;
+                    toolBtnUndo.Enabled = true;
+                    toolBtnUndo.Enabled = false;
+
                     isDirty = true;
                     UpdateVacancyList();
+
+                    lstVacancies.Items[selectedIdx].Selected = true;
                 }
             }
+        }
+
+        private void toolBtnUndo_Click(object sender, EventArgs e)
+        {
+            CVacancyUtil.Swap(ref workingVacancyList, ref oldVacancyList);
+
+            toolBtnUndo.Enabled = false;
+            toolBtnRedo.Enabled = true;
+
+            UpdateVacancyList();
+        }
+
+        private void toolBtnRedo_Click(object sender, EventArgs e)
+        {
+            CVacancyUtil.Swap(ref workingVacancyList, ref oldVacancyList);
+
+            toolBtnUndo.Enabled = true;
+            toolBtnRedo.Enabled = false;
+
+            UpdateVacancyList();
         }
     }
 }

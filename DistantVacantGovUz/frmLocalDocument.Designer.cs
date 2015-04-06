@@ -142,7 +142,7 @@
             this.toolBtnReportPdf.Image = global::DistantVacantGovUz.Properties.Resources.pdf_doc;
             this.toolBtnReportPdf.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportPdf.Name = "toolBtnReportPdf";
-            this.toolBtnReportPdf.Size = new System.Drawing.Size(184, 54);
+            this.toolBtnReportPdf.Size = new System.Drawing.Size(127, 54);
             this.toolBtnReportPdf.Text = "PDF";
             // 
             // toolBtnReportPdfPrintVersionRu
@@ -171,7 +171,7 @@
             this.toolBtnReportXls.Image = global::DistantVacantGovUz.Properties.Resources.xls_doc;
             this.toolBtnReportXls.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportXls.Name = "toolBtnReportXls";
-            this.toolBtnReportXls.Size = new System.Drawing.Size(184, 54);
+            this.toolBtnReportXls.Size = new System.Drawing.Size(127, 54);
             this.toolBtnReportXls.Text = "XLS";
             // 
             // toolBtnReportXlsPrintVersionRu
@@ -256,6 +256,7 @@
             this.toolBtnUndo.Name = "toolBtnUndo";
             this.toolBtnUndo.Size = new System.Drawing.Size(72, 36);
             this.toolBtnUndo.Text = "Undo";
+            this.toolBtnUndo.Click += new System.EventHandler(this.toolBtnUndo_Click);
             // 
             // toolBtnRedo
             // 
@@ -266,6 +267,7 @@
             this.toolBtnRedo.Name = "toolBtnRedo";
             this.toolBtnRedo.Size = new System.Drawing.Size(70, 36);
             this.toolBtnRedo.Text = "Redo";
+            this.toolBtnRedo.Click += new System.EventHandler(this.toolBtnRedo_Click);
             // 
             // toolBtnEditSelected
             // 
