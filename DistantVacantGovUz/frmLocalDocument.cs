@@ -88,9 +88,12 @@ namespace DistantVacantGovUz
         {
             isDirty = false;
             this.documentName = documentName;
-            this.Text = this.documentName + " - " + "Local Vacancies";
+            this.documentFileName = documentName;
+            this.documentFileNameWithOutExtension = documentName;
 
             initialVacancyList = new List<CVacancyItem>();
+
+            this.Text = this.documentName + " - " + "Local Vacancies";
 
             UpdateVacancyList();
         }
@@ -316,7 +319,18 @@ namespace DistantVacantGovUz
 
         private void toolBtnAdd_Click(object sender, EventArgs e)
         {
+            int beforeAddVacancyCount = initialVacancyList.Count;
 
+            frmAddLocalVacancy fAdd = new frmAddLocalVacancy();
+            fAdd.vacs = initialVacancyList;
+            fAdd.ShowDialog();
+
+            if (beforeAddVacancyCount - initialVacancyList.Count != 0)
+            {
+                isDirty = true;
+
+                UpdateVacancyList();
+            }
         }
 
         private void toolBtnImportFromFile_Click(object sender, EventArgs e)
@@ -365,6 +379,26 @@ namespace DistantVacantGovUz
                 lstVacancies.Items[selectedIdx].Checked = !lstVacancies.Items[selectedIdx].Checked;
 
                 // open vacancy edit form
+            }
+        }
+
+        private void toolBtnSaveAs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolBtnEditSelected_Click(object sender, EventArgs e)
+        {
+            if (lstVacancies.SelectedIndices.Count == 1)
+            {
+                frmEditLocalVacancy fEdit = new frmEditLocalVacancy();
+                fEdit.vac = initialVacancyList[lstVacancies.SelectedIndices[0]];
+
+                if (fEdit.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    isDirty = true;
+                    UpdateVacancyList();
+                }
             }
         }
     }

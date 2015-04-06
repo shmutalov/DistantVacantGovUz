@@ -44,3 +44,5 @@ D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\NPOI.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\NPOI.OOXML.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\NPOI.OpenXml4Net.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmAddLocalVacancy.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmEditLocalVacancy.resources

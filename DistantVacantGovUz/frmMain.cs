@@ -53,6 +53,7 @@ namespace DistantVacantGovUz
         {
             frmLocalDocument f = new frmLocalDocument();
             f.MdiParent = this;
+            f.SetDocument("Untitled document " + (this.MdiChildren.Length).ToString());
 
             f.Show();
         }
@@ -146,6 +147,10 @@ namespace DistantVacantGovUz
                 f.SetDocument(preldr.GetFileName(), preldr.GetVacancyList());
 
                 f.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error occured while loading document" + "\n" + "Reason: " + CVacancyFileType.GetLastError(), "Open document", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             preldr.GetLoadingForm().Close();

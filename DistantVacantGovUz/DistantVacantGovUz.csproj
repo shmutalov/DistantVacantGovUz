@@ -77,6 +77,7 @@
     <Compile Include="CVacancy.cs" />
     <Compile Include="CVacancyDocumentPreloader.cs" />
     <Compile Include="CVacancyFileType.cs" />
+    <Compile Include="CVacancyItem.cs" />
     <Compile Include="CVacancyPortalPreloader.cs" />
     <Compile Include="CVacancyReports.cs" />
     <Compile Include="CVacancyUtil.cs" />
@@ -86,6 +87,12 @@
     </Compile>
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddLocalVacancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddLocalVacancy.Designer.cs">
+      <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCaptcha.cs">
       <SubType>Form</SubType>
@@ -98,6 +105,12 @@
     </Compile>
     <Compile Include="frmClosedVacancies.Designer.cs">
       <DependentUpon>frmClosedVacancies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditLocalVacancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditLocalVacancy.Designer.cs">
+      <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEditPortalVacancy.cs">
       <SubType>Form</SubType>
@@ -187,11 +200,17 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLocalVacancy.resx">
+      <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCaptcha.resx">
       <DependentUpon>frmCaptcha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClosedVacancies.resx">
       <DependentUpon>frmClosedVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditLocalVacancy.resx">
+      <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditPortalVacancy.resx">
       <DependentUpon>frmEditPortalVacancy.cs</DependentUpon>

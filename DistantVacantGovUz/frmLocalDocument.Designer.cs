@@ -120,6 +120,7 @@
             this.toolBtnSaveAs.Name = "toolBtnSaveAs";
             this.toolBtnSaveAs.Size = new System.Drawing.Size(90, 36);
             this.toolBtnSaveAs.Text = "Save as...";
+            this.toolBtnSaveAs.Click += new System.EventHandler(this.toolBtnSaveAs_Click);
             // 
             // toolBtnReport
             // 
@@ -146,15 +147,19 @@
             // 
             // toolBtnReportPdfPrintVersionRu
             // 
+            this.toolBtnReportPdfPrintVersionRu.Image = global::DistantVacantGovUz.Properties.Resources.pdf_doc;
+            this.toolBtnReportPdfPrintVersionRu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportPdfPrintVersionRu.Name = "toolBtnReportPdfPrintVersionRu";
-            this.toolBtnReportPdfPrintVersionRu.Size = new System.Drawing.Size(166, 22);
+            this.toolBtnReportPdfPrintVersionRu.Size = new System.Drawing.Size(198, 54);
             this.toolBtnReportPdfPrintVersionRu.Text = "Print version (RU)";
             this.toolBtnReportPdfPrintVersionRu.Click += new System.EventHandler(this.toolBtnReportPdfPrintVersionRu_Click);
             // 
             // toolBtnReportPdfPrintVersionUz
             // 
+            this.toolBtnReportPdfPrintVersionUz.Image = global::DistantVacantGovUz.Properties.Resources.pdf_doc;
+            this.toolBtnReportPdfPrintVersionUz.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportPdfPrintVersionUz.Name = "toolBtnReportPdfPrintVersionUz";
-            this.toolBtnReportPdfPrintVersionUz.Size = new System.Drawing.Size(166, 22);
+            this.toolBtnReportPdfPrintVersionUz.Size = new System.Drawing.Size(198, 54);
             this.toolBtnReportPdfPrintVersionUz.Text = "Print version (UZ)";
             this.toolBtnReportPdfPrintVersionUz.Click += new System.EventHandler(this.toolBtnReportPdfPrintVersionUz_Click);
             // 
@@ -171,15 +176,19 @@
             // 
             // toolBtnReportXlsPrintVersionRu
             // 
+            this.toolBtnReportXlsPrintVersionRu.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportXlsPrintVersionRu.Image")));
+            this.toolBtnReportXlsPrintVersionRu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportXlsPrintVersionRu.Name = "toolBtnReportXlsPrintVersionRu";
-            this.toolBtnReportXlsPrintVersionRu.Size = new System.Drawing.Size(166, 22);
+            this.toolBtnReportXlsPrintVersionRu.Size = new System.Drawing.Size(198, 54);
             this.toolBtnReportXlsPrintVersionRu.Text = "Print version (RU)";
             this.toolBtnReportXlsPrintVersionRu.Click += new System.EventHandler(this.toolBtnReportXlsPrintVersionRu_Click);
             // 
             // toolBtnReportXlsPrintVersionUz
             // 
+            this.toolBtnReportXlsPrintVersionUz.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportXlsPrintVersionUz.Image")));
+            this.toolBtnReportXlsPrintVersionUz.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportXlsPrintVersionUz.Name = "toolBtnReportXlsPrintVersionUz";
-            this.toolBtnReportXlsPrintVersionUz.Size = new System.Drawing.Size(166, 22);
+            this.toolBtnReportXlsPrintVersionUz.Size = new System.Drawing.Size(198, 54);
             this.toolBtnReportXlsPrintVersionUz.Text = "Print version (UZ)";
             this.toolBtnReportXlsPrintVersionUz.Click += new System.EventHandler(this.toolBtnReportXlsPrintVersionUz_Click);
             // 
@@ -267,6 +276,7 @@
             this.toolBtnEditSelected.Name = "toolBtnEditSelected";
             this.toolBtnEditSelected.Size = new System.Drawing.Size(63, 36);
             this.toolBtnEditSelected.Text = "Edit";
+            this.toolBtnEditSelected.Click += new System.EventHandler(this.toolBtnEditSelected_Click);
             // 
             // toolBtnDeleteChecked
             // 
