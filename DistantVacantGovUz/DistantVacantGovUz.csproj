@@ -209,7 +209,13 @@
     <EmbeddedResource Include="frmClosedVacancies.resx">
       <DependentUpon>frmClosedVacancies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditLocalVacancy.en.resx">
+      <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditLocalVacancy.resx">
+      <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditLocalVacancy.ru.resx">
       <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditPortalVacancy.resx">

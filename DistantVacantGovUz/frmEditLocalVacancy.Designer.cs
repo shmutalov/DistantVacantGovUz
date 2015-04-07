@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditLocalVacancy));
             this.btnSave = new System.Windows.Forms.Button();
             this.tabAddVacancy = new System.Windows.Forms.TabControl();
             this.tbGeneral = new System.Windows.Forms.TabPage();
@@ -75,33 +76,23 @@
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(445, 489);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(131, 28);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // tabAddVacancy
             // 
-            this.tabAddVacancy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.tabAddVacancy, "tabAddVacancy");
             this.tabAddVacancy.Controls.Add(this.tbGeneral);
             this.tabAddVacancy.Controls.Add(this.tbRussian);
             this.tabAddVacancy.Controls.Add(this.tbUzbek);
-            this.tabAddVacancy.Location = new System.Drawing.Point(5, 4);
-            this.tabAddVacancy.Margin = new System.Windows.Forms.Padding(4);
             this.tabAddVacancy.Name = "tabAddVacancy";
             this.tabAddVacancy.SelectedIndex = 0;
-            this.tabAddVacancy.Size = new System.Drawing.Size(575, 481);
-            this.tabAddVacancy.TabIndex = 7;
             // 
             // tbGeneral
             // 
+            resources.ApplyResources(this.tbGeneral, "tbGeneral");
             this.tbGeneral.Controls.Add(this.dateVacExpire);
             this.tbGeneral.Controls.Add(this.label9);
             this.tbGeneral.Controls.Add(this.cmbVacEducation);
@@ -120,262 +111,165 @@
             this.tbGeneral.Controls.Add(this.label2);
             this.tbGeneral.Controls.Add(this.txtVacDescRU);
             this.tbGeneral.Controls.Add(this.label1);
-            this.tbGeneral.Location = new System.Drawing.Point(4, 22);
-            this.tbGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.tbGeneral.Name = "tbGeneral";
-            this.tbGeneral.Padding = new System.Windows.Forms.Padding(4);
-            this.tbGeneral.Size = new System.Drawing.Size(567, 413);
-            this.tbGeneral.TabIndex = 0;
-            this.tbGeneral.Text = "Основные данные";
             this.tbGeneral.UseVisualStyleBackColor = true;
             // 
             // dateVacExpire
             // 
-            this.dateVacExpire.CustomFormat = "yyyy-MM-dd";
+            resources.ApplyResources(this.dateVacExpire, "dateVacExpire");
             this.dateVacExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateVacExpire.Location = new System.Drawing.Point(223, 274);
-            this.dateVacExpire.Margin = new System.Windows.Forms.Padding(4);
             this.dateVacExpire.Name = "dateVacExpire";
-            this.dateVacExpire.Size = new System.Drawing.Size(164, 20);
-            this.dateVacExpire.TabIndex = 17;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(8, 278);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(207, 16);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Действителен до";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbVacEducation
             // 
-            this.cmbVacEducation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbVacEducation, "cmbVacEducation");
             this.cmbVacEducation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVacEducation.FormattingEnabled = true;
             this.cmbVacEducation.Items.AddRange(new object[] {
-            "Без разницы",
-            "Среднее",
-            "Среднее специальное",
-            "Неоконченное высшее",
-            "Высшее"});
-            this.cmbVacEducation.Location = new System.Drawing.Point(223, 241);
-            this.cmbVacEducation.Margin = new System.Windows.Forms.Padding(4);
+            resources.GetString("cmbVacEducation.Items"),
+            resources.GetString("cmbVacEducation.Items1"),
+            resources.GetString("cmbVacEducation.Items2"),
+            resources.GetString("cmbVacEducation.Items3"),
+            resources.GetString("cmbVacEducation.Items4")});
             this.cmbVacEducation.Name = "cmbVacEducation";
-            this.cmbVacEducation.Size = new System.Drawing.Size(331, 21);
-            this.cmbVacEducation.TabIndex = 15;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(8, 242);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(207, 16);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Образование";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbVacExperience
             // 
-            this.cmbVacExperience.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbVacExperience, "cmbVacExperience");
             this.cmbVacExperience.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVacExperience.FormattingEnabled = true;
             this.cmbVacExperience.Items.AddRange(new object[] {
-            "Без разницы",
-            "От одного года",
-            "От двух лет",
-            "От трех лет",
-            "Пять и более лет"});
-            this.cmbVacExperience.Location = new System.Drawing.Point(223, 208);
-            this.cmbVacExperience.Margin = new System.Windows.Forms.Padding(4);
+            resources.GetString("cmbVacExperience.Items"),
+            resources.GetString("cmbVacExperience.Items1"),
+            resources.GetString("cmbVacExperience.Items2"),
+            resources.GetString("cmbVacExperience.Items3"),
+            resources.GetString("cmbVacExperience.Items4")});
             this.cmbVacExperience.Name = "cmbVacExperience";
-            this.cmbVacExperience.Size = new System.Drawing.Size(331, 21);
-            this.cmbVacExperience.TabIndex = 13;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(8, 209);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(207, 16);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Необходимый стаж";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbVacGender
             // 
-            this.cmbVacGender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbVacGender, "cmbVacGender");
             this.cmbVacGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVacGender.FormattingEnabled = true;
             this.cmbVacGender.Items.AddRange(new object[] {
-            "Без разницы",
-            "Мужской",
-            "Женский"});
-            this.cmbVacGender.Location = new System.Drawing.Point(223, 175);
-            this.cmbVacGender.Margin = new System.Windows.Forms.Padding(4);
+            resources.GetString("cmbVacGender.Items"),
+            resources.GetString("cmbVacGender.Items1"),
+            resources.GetString("cmbVacGender.Items2")});
             this.cmbVacGender.Name = "cmbVacGender";
-            this.cmbVacGender.Size = new System.Drawing.Size(331, 21);
-            this.cmbVacGender.TabIndex = 11;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(8, 176);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 16);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Пол";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbVacEmployment
             // 
-            this.cmbVacEmployment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbVacEmployment, "cmbVacEmployment");
             this.cmbVacEmployment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVacEmployment.FormattingEnabled = true;
             this.cmbVacEmployment.Items.AddRange(new object[] {
-            "Без разницы",
-            "Полная",
-            "Частичная",
-            "Фриланс",
-            "Совместительство"});
-            this.cmbVacEmployment.Location = new System.Drawing.Point(223, 142);
-            this.cmbVacEmployment.Margin = new System.Windows.Forms.Padding(4);
+            resources.GetString("cmbVacEmployment.Items"),
+            resources.GetString("cmbVacEmployment.Items1"),
+            resources.GetString("cmbVacEmployment.Items2"),
+            resources.GetString("cmbVacEmployment.Items3"),
+            resources.GetString("cmbVacEmployment.Items4")});
             this.cmbVacEmployment.Name = "cmbVacEmployment";
-            this.cmbVacEmployment.Size = new System.Drawing.Size(331, 21);
-            this.cmbVacEmployment.TabIndex = 9;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(8, 143);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Занятость";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtVacSalary
             // 
-            this.txtVacSalary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacSalary.Location = new System.Drawing.Point(223, 110);
-            this.txtVacSalary.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacSalary.MaxLength = 100;
+            resources.ApplyResources(this.txtVacSalary, "txtVacSalary");
             this.txtVacSalary.Name = "txtVacSalary";
-            this.txtVacSalary.Size = new System.Drawing.Size(331, 20);
-            this.txtVacSalary.TabIndex = 7;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(8, 111);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Заработная плата";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbVacCategory
             // 
-            this.cmbVacCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbVacCategory, "cmbVacCategory");
             this.cmbVacCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVacCategory.FormattingEnabled = true;
             this.cmbVacCategory.Items.AddRange(new object[] {
-            "IT / Интернет / Телеком",
-            "Государственная служба",
-            "Искусство / Культура",
-            "Корпоративные услуги",
-            "Маркетинг / Реклама / PR",
-            "Медиа",
-            "Медицина / Здравоохранение / Фармацевтика",
-            "Недвижимость",
-            "Некоммерческие организации",
-            "Образование / Наука",
-            "Полезные ископаемые / Добыча сырья",
-            "Промышленность",
-            "Развлечения / Отдых / Спорт / Красота",
-            "Сельское хозяйство",
-            "Строительство",
-            "Товары народного потребления",
-            "Торговля",
-            "Транспорт / Логистика / Автомобильный бизнес",
-            "Финансы / Банки / Инвестиции / Лизинг",
-            "Экология / Защита окружающей среды",
-            "Юридическая служба",
-            "Антиквариат",
-            "Бухгалтерия / Управленческий учет / Финансы предприятия",
-            "Административный персонал",
-            "Управление персоналом / Тренинги",
-            "Безопасность",
-            "Высший менеджмент",
-            "Консультирование",
-            "Страхование"});
-            this.cmbVacCategory.Location = new System.Drawing.Point(223, 76);
-            this.cmbVacCategory.Margin = new System.Windows.Forms.Padding(4);
+            resources.GetString("cmbVacCategory.Items"),
+            resources.GetString("cmbVacCategory.Items1"),
+            resources.GetString("cmbVacCategory.Items2"),
+            resources.GetString("cmbVacCategory.Items3"),
+            resources.GetString("cmbVacCategory.Items4"),
+            resources.GetString("cmbVacCategory.Items5"),
+            resources.GetString("cmbVacCategory.Items6"),
+            resources.GetString("cmbVacCategory.Items7"),
+            resources.GetString("cmbVacCategory.Items8"),
+            resources.GetString("cmbVacCategory.Items9"),
+            resources.GetString("cmbVacCategory.Items10"),
+            resources.GetString("cmbVacCategory.Items11"),
+            resources.GetString("cmbVacCategory.Items12"),
+            resources.GetString("cmbVacCategory.Items13"),
+            resources.GetString("cmbVacCategory.Items14"),
+            resources.GetString("cmbVacCategory.Items15"),
+            resources.GetString("cmbVacCategory.Items16"),
+            resources.GetString("cmbVacCategory.Items17"),
+            resources.GetString("cmbVacCategory.Items18"),
+            resources.GetString("cmbVacCategory.Items19"),
+            resources.GetString("cmbVacCategory.Items20"),
+            resources.GetString("cmbVacCategory.Items21"),
+            resources.GetString("cmbVacCategory.Items22"),
+            resources.GetString("cmbVacCategory.Items23"),
+            resources.GetString("cmbVacCategory.Items24"),
+            resources.GetString("cmbVacCategory.Items25"),
+            resources.GetString("cmbVacCategory.Items26"),
+            resources.GetString("cmbVacCategory.Items27"),
+            resources.GetString("cmbVacCategory.Items28")});
             this.cmbVacCategory.Name = "cmbVacCategory";
-            this.cmbVacCategory.Size = new System.Drawing.Size(331, 21);
-            this.cmbVacCategory.TabIndex = 5;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(8, 77);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Категория";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtVacDescUZ
             // 
-            this.txtVacDescUZ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacDescUZ.Location = new System.Drawing.Point(223, 44);
-            this.txtVacDescUZ.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacDescUZ.MaxLength = 255;
+            resources.ApplyResources(this.txtVacDescUZ, "txtVacDescUZ");
             this.txtVacDescUZ.Name = "txtVacDescUZ";
-            this.txtVacDescUZ.Size = new System.Drawing.Size(331, 20);
-            this.txtVacDescUZ.TabIndex = 3;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(8, 45);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Узбекское наименование (латиницой)";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtVacDescRU
             // 
-            this.txtVacDescRU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacDescRU.Location = new System.Drawing.Point(223, 12);
-            this.txtVacDescRU.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacDescRU.MaxLength = 255;
+            resources.ApplyResources(this.txtVacDescRU, "txtVacDescRU");
             this.txtVacDescRU.Name = "txtVacDescRU";
-            this.txtVacDescRU.Size = new System.Drawing.Size(331, 20);
-            this.txtVacDescRU.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(8, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Русское наименование";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbRussian
             // 
+            resources.ApplyResources(this.tbRussian, "tbRussian");
             this.tbRussian.Controls.Add(this.txtVacInformationRU);
             this.tbRussian.Controls.Add(this.label14);
             this.tbRussian.Controls.Add(this.txtVacRequirementsRU);
@@ -384,104 +278,52 @@
             this.tbRussian.Controls.Add(this.label12);
             this.tbRussian.Controls.Add(this.txtVacDepartmentRU);
             this.tbRussian.Controls.Add(this.label11);
-            this.tbRussian.Location = new System.Drawing.Point(4, 22);
-            this.tbRussian.Margin = new System.Windows.Forms.Padding(4);
             this.tbRussian.Name = "tbRussian";
-            this.tbRussian.Padding = new System.Windows.Forms.Padding(4);
-            this.tbRussian.Size = new System.Drawing.Size(567, 455);
-            this.tbRussian.TabIndex = 1;
-            this.tbRussian.Text = "Доп. данные на русском";
             this.tbRussian.UseVisualStyleBackColor = true;
             // 
             // txtVacInformationRU
             // 
-            this.txtVacInformationRU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacInformationRU.Location = new System.Drawing.Point(136, 375);
-            this.txtVacInformationRU.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacInformationRU.Multiline = true;
+            resources.ApplyResources(this.txtVacInformationRU, "txtVacInformationRU");
             this.txtVacInformationRU.Name = "txtVacInformationRU";
-            this.txtVacInformationRU.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtVacInformationRU.Size = new System.Drawing.Size(423, 72);
-            this.txtVacInformationRU.TabIndex = 7;
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(8, 375);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 72);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Дополнительная\r\nинформация";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtVacRequirementsRU
             // 
-            this.txtVacRequirementsRU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacRequirementsRU.Location = new System.Drawing.Point(136, 222);
-            this.txtVacRequirementsRU.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacRequirementsRU.Multiline = true;
+            resources.ApplyResources(this.txtVacRequirementsRU, "txtVacRequirementsRU");
             this.txtVacRequirementsRU.Name = "txtVacRequirementsRU";
-            this.txtVacRequirementsRU.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtVacRequirementsRU.Size = new System.Drawing.Size(423, 145);
-            this.txtVacRequirementsRU.TabIndex = 5;
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(8, 222);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 145);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Требования";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtVacSpecializationRU
             // 
-            this.txtVacSpecializationRU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacSpecializationRU.Location = new System.Drawing.Point(136, 53);
-            this.txtVacSpecializationRU.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacSpecializationRU.Multiline = true;
+            resources.ApplyResources(this.txtVacSpecializationRU, "txtVacSpecializationRU");
             this.txtVacSpecializationRU.Name = "txtVacSpecializationRU";
-            this.txtVacSpecializationRU.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtVacSpecializationRU.Size = new System.Drawing.Size(423, 161);
-            this.txtVacSpecializationRU.TabIndex = 3;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(8, 53);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 161);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Функциональность\r\n";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtVacDepartmentRU
             // 
-            this.txtVacDepartmentRU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacDepartmentRU.Location = new System.Drawing.Point(136, 11);
-            this.txtVacDepartmentRU.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacDepartmentRU.MaxLength = 255;
+            resources.ApplyResources(this.txtVacDepartmentRU, "txtVacDepartmentRU");
             this.txtVacDepartmentRU.Name = "txtVacDepartmentRU";
-            this.txtVacDepartmentRU.Size = new System.Drawing.Size(423, 20);
-            this.txtVacDepartmentRU.TabIndex = 1;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(8, 11);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(120, 31);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Отдел / Подразделение\r\n";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tbUzbek
             // 
+            resources.ApplyResources(this.tbUzbek, "tbUzbek");
             this.tbUzbek.Controls.Add(this.txtVacInformationUZ);
             this.tbUzbek.Controls.Add(this.label18);
             this.tbUzbek.Controls.Add(this.txtVacRequirementsUZ);
@@ -490,111 +332,56 @@
             this.tbUzbek.Controls.Add(this.label16);
             this.tbUzbek.Controls.Add(this.txtVacDepartmentUZ);
             this.tbUzbek.Controls.Add(this.label15);
-            this.tbUzbek.Location = new System.Drawing.Point(4, 22);
-            this.tbUzbek.Margin = new System.Windows.Forms.Padding(4);
             this.tbUzbek.Name = "tbUzbek";
-            this.tbUzbek.Padding = new System.Windows.Forms.Padding(4);
-            this.tbUzbek.Size = new System.Drawing.Size(567, 455);
-            this.tbUzbek.TabIndex = 2;
-            this.tbUzbek.Text = "Доп. данные на узбекском";
             this.tbUzbek.UseVisualStyleBackColor = true;
             // 
             // txtVacInformationUZ
             // 
-            this.txtVacInformationUZ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacInformationUZ.Location = new System.Drawing.Point(136, 375);
-            this.txtVacInformationUZ.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacInformationUZ.Multiline = true;
+            resources.ApplyResources(this.txtVacInformationUZ, "txtVacInformationUZ");
             this.txtVacInformationUZ.Name = "txtVacInformationUZ";
-            this.txtVacInformationUZ.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtVacInformationUZ.Size = new System.Drawing.Size(423, 72);
-            this.txtVacInformationUZ.TabIndex = 7;
             // 
             // label18
             // 
-            this.label18.Location = new System.Drawing.Point(9, 375);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(119, 72);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "Дополнительная\r\nинформация";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtVacRequirementsUZ
             // 
-            this.txtVacRequirementsUZ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacRequirementsUZ.Location = new System.Drawing.Point(136, 222);
-            this.txtVacRequirementsUZ.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacRequirementsUZ.Multiline = true;
+            resources.ApplyResources(this.txtVacRequirementsUZ, "txtVacRequirementsUZ");
             this.txtVacRequirementsUZ.Name = "txtVacRequirementsUZ";
-            this.txtVacRequirementsUZ.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtVacRequirementsUZ.Size = new System.Drawing.Size(423, 145);
-            this.txtVacRequirementsUZ.TabIndex = 5;
             // 
             // label17
             // 
-            this.label17.Location = new System.Drawing.Point(9, 222);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 145);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Требования";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtVacSpecializationUZ
             // 
-            this.txtVacSpecializationUZ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacSpecializationUZ.Location = new System.Drawing.Point(136, 53);
-            this.txtVacSpecializationUZ.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacSpecializationUZ.Multiline = true;
+            resources.ApplyResources(this.txtVacSpecializationUZ, "txtVacSpecializationUZ");
             this.txtVacSpecializationUZ.Name = "txtVacSpecializationUZ";
-            this.txtVacSpecializationUZ.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtVacSpecializationUZ.Size = new System.Drawing.Size(423, 161);
-            this.txtVacSpecializationUZ.TabIndex = 3;
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(9, 53);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(119, 161);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Функциональность";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtVacDepartmentUZ
             // 
-            this.txtVacDepartmentUZ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVacDepartmentUZ.Location = new System.Drawing.Point(136, 11);
-            this.txtVacDepartmentUZ.Margin = new System.Windows.Forms.Padding(4);
-            this.txtVacDepartmentUZ.MaxLength = 255;
+            resources.ApplyResources(this.txtVacDepartmentUZ, "txtVacDepartmentUZ");
             this.txtVacDepartmentUZ.Name = "txtVacDepartmentUZ";
-            this.txtVacDepartmentUZ.Size = new System.Drawing.Size(423, 20);
-            this.txtVacDepartmentUZ.TabIndex = 1;
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(8, 11);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(120, 31);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Отдел / Подразделение\r\n";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // frmEditLocalVacancy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 521);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tabAddVacancy);
             this.Name = "frmEditLocalVacancy";
-            this.Text = "Edit local vacancy";
             this.Load += new System.EventHandler(this.frmEditLocalVacancy_Load);
             this.tabAddVacancy.ResumeLayout(false);
             this.tbGeneral.ResumeLayout(false);

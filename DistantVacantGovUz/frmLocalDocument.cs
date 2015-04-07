@@ -140,9 +140,16 @@ namespace DistantVacantGovUz
             if (documentFileName == "")
                 sfd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\" + documentName;
             else
-                sfd.InitialDirectory = documentFileName;
+                sfd.InitialDirectory = Path.GetDirectoryName(documentFileName);
 
-            sfd.ShowDialog();
+            sfd.FileName = documentFileNameWithOutExtension;
+
+            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                VACANCY_FILE_VERSION version = (sfd.FilterIndex == 1) ? VACANCY_FILE_VERSION.VERSION_3 : VACANCY_FILE_VERSION.VERSION_2;
+
+                CVacancyFileType.SaveFileAs(sfd.FileName, workingVacancyList, version);
+            }
         }
 
         private void lstVacancies_ItemChecked(object sender, ItemCheckedEventArgs e)
