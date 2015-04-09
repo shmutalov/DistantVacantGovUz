@@ -58,12 +58,12 @@ namespace DistantVacantGovUz
                 li.SubItems.Add((workingVacancyList[i].i_portal_vacancy_id == 0) ? "" : workingVacancyList[i].portal_vacancy_id);
                 li.SubItems.Add(workingVacancyList[i].description_ru);
                 li.SubItems.Add(workingVacancyList[i].description_uz);
-                li.SubItems.Add((workingVacancyList[i].i_category_id == 0) ? "" : workingVacancyList[i].category);
+                li.SubItems.Add((workingVacancyList[i].i_category_id == -1) ? "" : workingVacancyList[i].category);
                 li.SubItems.Add(workingVacancyList[i].salary);
-                li.SubItems.Add((workingVacancyList[i].i_employment_id == 0) ? "" : workingVacancyList[i].employment);
-                li.SubItems.Add((workingVacancyList[i].i_gender_id == 0) ? "" : workingVacancyList[i].gender);
-                li.SubItems.Add((workingVacancyList[i].i_experience_id == 0) ? "" : workingVacancyList[i].experience);
-                li.SubItems.Add((workingVacancyList[i].i_education_id == 0) ? "" : workingVacancyList[i].education);
+                li.SubItems.Add((workingVacancyList[i].i_employment_id == -1) ? "" : workingVacancyList[i].employment);
+                li.SubItems.Add((workingVacancyList[i].i_gender_id == -1) ? "" : workingVacancyList[i].gender);
+                li.SubItems.Add((workingVacancyList[i].i_experience_id == -1) ? "" : workingVacancyList[i].experience);
+                li.SubItems.Add((workingVacancyList[i].i_education_id == -1) ? "" : workingVacancyList[i].education);
                 li.SubItems.Add(workingVacancyList[i].expire_date);
                 li.SubItems.Add(workingVacancyList[i].department_ru);
                 li.SubItems.Add(workingVacancyList[i].specialization_ru);
@@ -124,7 +124,15 @@ namespace DistantVacantGovUz
         {
             if (!isNewDocument)
             {
-                CVacancyFileType.SaveFile(documentFileName, workingVacancyList);
+                if (!CVacancyFileType.SaveFile(documentFileName, workingVacancyList))
+                {
+                    MessageBox.Show("Не удалось сохранить документ", "Сохранение документа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    isDirty = false;
+                    isNewDocument = false;
+                }
             }
             else
             {
@@ -148,7 +156,19 @@ namespace DistantVacantGovUz
             {
                 VACANCY_FILE_VERSION version = (sfd.FilterIndex == 1) ? VACANCY_FILE_VERSION.VERSION_3 : VACANCY_FILE_VERSION.VERSION_2;
 
-                CVacancyFileType.SaveFileAs(sfd.FileName, workingVacancyList, version);
+                if (!CVacancyFileType.SaveFileAs(sfd.FileName, workingVacancyList, version))
+                {
+                    MessageBox.Show("Не удалось сохранить документ", "Сохранение документа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    documentFileName = sfd.FileName;
+                    documentName = Path.GetFileName(documentFileName);
+                    documentFileNameWithOutExtension = documentFileName.Substring(0, documentFileName.Length - 4);
+
+                    isDirty = false;
+                    isNewDocument = false;
+                }
             }
         }
 

@@ -158,12 +158,12 @@ namespace DistantVacantGovUz
             portal_vacancy_id = "";
 
             // helper ids converted to int
-            i_category_id = 0;
-            i_employment_id = 0;
-            i_gender_id = 0;
-            i_experience_id = 0;
-            i_education_id = 0;
-            i_portal_vacancy_id = 0;
+            i_category_id = -1;
+            i_employment_id = -1;
+            i_gender_id = -1;
+            i_experience_id = -1;
+            i_education_id = -1;
+            i_portal_vacancy_id = -1;
 
             e_category_id = VACANCY_CATEGORY.UNKNOWN;
             e_education_id = VACANCY_EDUCATION_LEVEL.UNKNOWN;
@@ -244,6 +244,29 @@ namespace DistantVacantGovUz
             catch { }
             try { i_portal_vacancy_id = int.Parse(this.portal_vacancy_id); }
             catch { }
+        }
+
+        public void ResetIds()
+        {
+            // helper ids converted to int and enum
+            try { i_category_id = int.Parse(this.category_id); e_category_id = (VACANCY_CATEGORY)i_category_id; }
+            catch { }
+            try { i_employment_id = int.Parse(this.employment_id); e_employment_id = (VACANCY_EMPLOYMENT)i_employment_id; }
+            catch { }
+            try { i_gender_id = int.Parse(this.gender_id); e_gender_id = (VACANCY_GENDER)i_gender_id; }
+            catch { }
+            try { i_experience_id = int.Parse(this.experience_id); e_experience_id = (VACANCY_EXPERIENCE)i_experience_id; }
+            catch { }
+            try { i_education_id = int.Parse(this.education_id); e_education_id = (VACANCY_EDUCATION_LEVEL)i_education_id; }
+            catch { }
+            try { i_portal_vacancy_id = int.Parse(this.portal_vacancy_id); }
+            catch { }
+
+            category = CVacancy.CategoryFromIdRu(e_category_id);
+            employment = CVacancy.EmploymentFromIdRu(e_employment_id);
+            gender = CVacancy.GenderFromIdRu(e_gender_id);
+            experience = CVacancy.ExperienceFromIdRu(e_experience_id);
+            education = CVacancy.EducationFromIdRu(e_education_id);
         }
     }
 }

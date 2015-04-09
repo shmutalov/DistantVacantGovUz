@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Xml;
 
 namespace DistantVacantGovUz
 {
@@ -55,7 +56,8 @@ namespace DistantVacantGovUz
                         }
                     }
                     //EF BB BF = xml version
-                    else if (bytes[0] == 0xD0 && bytes[1] == 0xCF && bytes[2] == 0x11)
+                    else if (bytes[0] == 0xEF && bytes[1] == 0xBB && bytes[2] == 0xBF)
+                    //else if (bytes[0] == 0xD0 && bytes[1] == 0xCF && bytes[2] == 0x11)
                     {
                         ver = VACANCY_FILE_VERSION.VERSION_3;
                     }
@@ -275,87 +277,90 @@ namespace DistantVacantGovUz
             #endregion
 
             #region {Table data}
-            for (int i = 0; i < vacancies.Count; i++)
+            if (vacancies != null && vacancies.Count > 0)
             {
-                NPOI.HSSF.UserModel.HSSFRow dataRow = (NPOI.HSSF.UserModel.HSSFRow)xlSheet.CreateRow(currentRow);
-                NPOI.HSSF.UserModel.HSSFCell dataCell;
+                for (int i = 0; i < vacancies.Count; i++)
+                {
+                    NPOI.HSSF.UserModel.HSSFRow dataRow = (NPOI.HSSF.UserModel.HSSFRow)xlSheet.CreateRow(currentRow);
+                    NPOI.HSSF.UserModel.HSSFCell dataCell;
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].seqNum);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].seqNum);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].description_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].description_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].description_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].description_uz);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].category);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].category);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].salary);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].salary);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].employment);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].employment);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].gender);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].gender);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].experience);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].experience);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].education);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].education);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].expire_date);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].expire_date);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].department_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].department_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].specialization_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].specialization_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].requirements_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].requirements_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].information_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].information_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].department_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].department_uz);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].specialization_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].specialization_uz);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].requirements_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].requirements_uz);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].information_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].information_uz);
 
-                // "IDs"
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_category_id.ToString());
+                    // "IDs"
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_category_id.ToString());
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_employment_id.ToString());
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_employment_id.ToString());
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_gender_id.ToString());
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_gender_id.ToString());
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_experience_id.ToString());
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_experience_id.ToString());
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_education_id.ToString());
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_education_id.ToString());
 
-                // PORTAL ID
-                //dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                //dataCell.SetCellValue(vacancies[i].portal_vacancy_id);
+                    // PORTAL ID
+                    //dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    //dataCell.SetCellValue(vacancies[i].portal_vacancy_id);
 
-                currentRow++;
-                currentCol = 0;
+                    currentRow++;
+                    currentCol = 0;
+                }
             }
             #endregion
 
@@ -515,87 +520,90 @@ namespace DistantVacantGovUz
             #endregion
 
             #region {Table data}
-            for (int i = 0; i < vacancies.Count; i++)
+            if (vacancies != null && vacancies.Count > 0)
             {
-                NPOI.HSSF.UserModel.HSSFRow dataRow = (NPOI.HSSF.UserModel.HSSFRow)xlSheet.CreateRow(currentRow);
-                NPOI.HSSF.UserModel.HSSFCell dataCell;
+                for (int i = 0; i < vacancies.Count; i++)
+                {
+                    NPOI.HSSF.UserModel.HSSFRow dataRow = (NPOI.HSSF.UserModel.HSSFRow)xlSheet.CreateRow(currentRow);
+                    NPOI.HSSF.UserModel.HSSFCell dataCell;
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].seqNum);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].seqNum);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].description_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].description_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].description_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].description_uz);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].category);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].category);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].salary);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].salary);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].employment);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].employment);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].gender);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].gender);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].experience);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].experience);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].education);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].education);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].expire_date);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].expire_date);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].department_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].department_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].specialization_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].specialization_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].requirements_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].requirements_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].information_ru);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].information_ru);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].department_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].department_uz);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].specialization_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].specialization_uz);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].requirements_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].requirements_uz);
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].information_uz);
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].information_uz);
 
-                // "IDs"
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_category_id.ToString());
+                    // "IDs"
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_category_id.ToString());
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_employment_id.ToString());
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_employment_id.ToString());
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_gender_id.ToString());
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_gender_id.ToString());
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_experience_id.ToString());
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_experience_id.ToString());
 
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].i_education_id.ToString());
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].i_education_id.ToString());
 
-                // PORTAL ID
-                dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
-                dataCell.SetCellValue(vacancies[i].portal_vacancy_id);
+                    // PORTAL ID
+                    dataCell = (NPOI.HSSF.UserModel.HSSFCell)dataRow.CreateCell(currentCol++, NPOI.SS.UserModel.CellType.String);
+                    dataCell.SetCellValue(vacancies[i].portal_vacancy_id);
 
-                currentRow++;
-                currentCol = 0;
+                    currentRow++;
+                    currentCol = 0;
+                }
             }
             #endregion
 
@@ -610,7 +618,146 @@ namespace DistantVacantGovUz
 
         private static bool SaveFileAsVer3(string fileName, List<CVacancyItem> vacancies)
         {
-            return false;
+            #region {Xml document init}
+            XmlDocument xml = new XmlDocument();
+
+            XmlElement root = xml.CreateElement("vacancies");
+            root.SetAttribute("version", "3"); // version 3
+            xml.AppendChild(root);
+            xml.InsertBefore(xml.CreateXmlDeclaration("1.0", "UTF-8", "yes"), root);
+            #endregion
+
+            #region {Data}
+            if (vacancies != null && vacancies.Count > 0)
+            {
+                for (int i = 0; i < vacancies.Count; i++)
+                {
+                    XmlElement vacList;
+
+                    vacList = xml.CreateElement("VacancyItem");
+                    vacList.SetAttribute("sequence_number", vacancies[i].seqNum);
+
+                    XmlElement el;
+                    XmlText xText;
+
+                    el = xml.CreateElement("description_ru");
+                    xText = xml.CreateTextNode(vacancies[i].description_ru);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("description_uz");
+                    xText = xml.CreateTextNode(vacancies[i].description_uz);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("category_id");
+                    el.SetAttribute("id", vacancies[i].category_id);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("salary");
+                    xText = xml.CreateTextNode(vacancies[i].salary);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("employment_id");
+                    el.SetAttribute("id", vacancies[i].employment_id);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("gender_id");
+                    el.SetAttribute("id", vacancies[i].gender_id);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("experience_id");
+                    el.SetAttribute("id", vacancies[i].experience_id);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("education_id");
+                    el.SetAttribute("id", vacancies[i].education_id);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("expire_date");
+                    el.SetAttribute("value", vacancies[i].expire_date);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("department_ru");
+                    xText = xml.CreateTextNode(vacancies[i].department_ru);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("specialization_ru");
+                    xText = xml.CreateTextNode(vacancies[i].specialization_ru);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("requirements_ru");
+                    xText = xml.CreateTextNode(vacancies[i].requirements_ru);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("information_ru");
+                    xText = xml.CreateTextNode(vacancies[i].information_ru);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("department_uz");
+                    xText = xml.CreateTextNode(vacancies[i].department_uz);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("specialization_uz");
+                    xText = xml.CreateTextNode(vacancies[i].specialization_uz);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("requirements_uz");
+                    xText = xml.CreateTextNode(vacancies[i].requirements_uz);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("information_uz");
+                    xText = xml.CreateTextNode(vacancies[i].information_uz);
+                    el.AppendChild(xText);
+
+                    vacList.AppendChild(el);
+
+                    el = xml.CreateElement("portal_vacancy_id");
+                    el.SetAttribute("id", vacancies[i].portal_vacancy_id);
+
+                    vacList.AppendChild(el);
+
+                    root.AppendChild(vacList);
+                }
+            }
+            #endregion
+
+            #region {Xml finalize}
+            try
+            {
+                xml.Save(fileName);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            #endregion
+
+            return true;
         }
 
         private static List<CVacancyItem> OpenFileVer1(string fileName)
@@ -721,7 +868,107 @@ namespace DistantVacantGovUz
 
         private static List<CVacancyItem> OpenFileVer3(string fileName)
         {
-            return null;
+            XmlDocument xml = new XmlDocument();
+            List<CVacancyItem> vacs = new List<CVacancyItem>();
+
+            try
+            {
+                xml.Load(fileName);
+
+                XmlElement root = xml.DocumentElement;
+
+                // Check version
+                if (root.Name == "vacancies" && root.GetAttribute("version") == "3")
+                {
+                    foreach (XmlElement n in root.ChildNodes)
+                    {
+                        if (n.Name == "VacancyItem")
+                        {
+                            CVacancyItem v = new CVacancyItem();
+
+                            v.seqNum = n.GetAttribute("sequence_number");
+
+                            foreach (XmlElement e in n.ChildNodes)
+                            {
+                                switch (e.Name)
+                                {
+                                    case "description_ru":
+                                        v.description_ru = e.InnerText;
+                                        break;
+                                    case "description_uz":
+                                        v.description_uz = e.InnerText;
+                                        break;
+                                    case "category_id":
+                                        v.category_id = e.GetAttribute("id");
+                                        break;
+                                    case "salary":
+                                        v.salary = e.InnerText;
+                                        break;
+                                    case "employment_id":
+                                        v.employment_id = e.GetAttribute("id");
+                                        break;
+                                    case "gender_id":
+                                        v.gender_id = e.GetAttribute("id");
+                                        break;
+                                    case "experience_id":
+                                        v.experience_id = e.GetAttribute("id");
+                                        break;
+                                    case "education_id":
+                                        v.education_id = e.GetAttribute("id");
+                                        break;
+                                    case "expire_date":
+                                        v.expire_date = e.GetAttribute("value");
+                                        break;
+                                    case "department_ru":
+                                        v.department_ru = e.InnerText;
+                                        break;
+                                    case "specialization_ru":
+                                        v.specialization_ru = e.InnerText;
+                                        break;
+                                    case "requirements_ru":
+                                        v.requirements_ru = e.InnerText;
+                                        break;
+                                    case "information_ru":
+                                        v.information_ru = e.InnerText;
+                                        break;
+                                    case "department_uz":
+                                        v.department_uz = e.InnerText;
+                                        break;
+                                    case "specialization_uz":
+                                        v.specialization_uz = e.InnerText;
+                                        break;
+                                    case "requirements_uz":
+                                        v.requirements_uz = e.InnerText;
+                                        break;
+                                    case "information_uz":
+                                        v.information_uz = e.InnerText;
+                                        break;
+                                    case "portal_vacancy_id":
+                                        v.portal_vacancy_id = e.InnerText;
+                                        break;
+                                    default:
+                                        continue;
+                                }
+                            }
+
+                            v.ResetIds();
+                            vacs.Add(v);
+                        }
+                        else
+                            continue;
+                    }
+
+                    return vacs;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }
