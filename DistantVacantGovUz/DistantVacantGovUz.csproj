@@ -81,6 +81,7 @@
     <Compile Include="CVacancyDocumentPreloader.cs" />
     <Compile Include="CVacancyFileType.cs" />
     <Compile Include="CVacancyItem.cs" />
+    <Compile Include="CVacancyPortalExporter.cs" />
     <Compile Include="CVacancyPortalPreloader.cs" />
     <Compile Include="CVacancyReports.cs" />
     <Compile Include="CVacancyResume.cs" />
@@ -199,9 +200,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>strings.resx</DependentUpon>
-    </Compile>
-    <Compile Include="ListViewExtended.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

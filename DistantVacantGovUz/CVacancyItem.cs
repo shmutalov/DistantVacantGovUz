@@ -268,5 +268,44 @@ namespace DistantVacantGovUz
             experience = CVacancy.ExperienceFromIdRu(e_experience_id);
             education = CVacancy.EducationFromIdRu(e_education_id);
         }
+
+        public void InitFromCVacancy(CVacancy v)
+        {
+            this.seqNum = "";
+            this.description_ru = v.strDescriptionRU;
+            this.description_uz = v.strDescriptionUZ;
+            //this.e_category_id = v.vacCategory;
+            this.salary = v.strSalary;
+            //this.e_employment_id = v.vacEmployment;
+            //this.e_gender_id = v.vacGender;
+            //this.e_experience_id = v.vacExperience;
+            //this.e_education_id = v.vacEducaton;
+            this.expire_date = v.strExpireDate;
+            this.department_ru = v.strDepartmentRU;
+            this.specialization_ru = v.strSpecializationRU;
+            this.requirements_ru = v.strRequirementsRU;
+            this.information_ru = v.strInformationRU;
+            this.department_uz = v.strDepartmentUZ;
+            this.specialization_uz = v.strSpecializationUZ;
+            this.requirements_uz = v.strRequirementsUZ;
+            this.information_uz = v.strInformationUZ;
+            this.portal_vacancy_id = v.strPortalVacID;
+            
+            /*
+            this.category_id = CVacancy.CategoryId(v.vacCategory).ToString();
+            this.employment_id = CVacancy.EmploymentId(v.vacEmployment).ToString();
+            this.gender_id = CVacancy.GenderId(v.vacGender).ToString();
+            this.experience_id = CVacancy.ExperienceId(v.vacExperience).ToString();
+            this.education_id = CVacancy.EducationId(v.vacEducaton).ToString();
+            */
+
+            this.category_id = ((int)(v.vacCategory)).ToString();
+            this.employment_id = ((int)(v.vacEmployment)).ToString();
+            this.gender_id = ((int)(v.vacGender)).ToString();
+            this.experience_id = ((int)(v.vacExperience)).ToString();
+            this.education_id = ((int)(v.vacEducaton)).ToString();
+
+            ResetIds();
+        }
     }
 }

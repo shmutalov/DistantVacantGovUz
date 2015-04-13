@@ -20,5 +20,10 @@ namespace DistantVacantGovUz
         {
             InitializeComponent();
         }
+
+        public void SetStatus(string statusMessage)
+        {
+            lblStatus.Text = statusMessage;
+        }
     }
 }

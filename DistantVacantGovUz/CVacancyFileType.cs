@@ -944,7 +944,7 @@ namespace DistantVacantGovUz
                                         v.information_uz = e.InnerText;
                                         break;
                                     case "portal_vacancy_id":
-                                        v.portal_vacancy_id = e.InnerText;
+                                        v.portal_vacancy_id = e.GetAttribute("id");
                                         break;
                                     default:
                                         continue;

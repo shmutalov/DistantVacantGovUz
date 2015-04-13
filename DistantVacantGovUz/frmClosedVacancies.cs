@@ -21,24 +21,12 @@ namespace DistantVacantGovUz
 
             frmLoading fLoading = new frmLoading();
 
-            //vacs = Program.vac.GetClosedVacancies();
             CVacancyPortalPreloader preloader = new CVacancyPortalPreloader(fLoading, VACANCY_STATUS.CLOSED);
             workerRefreshVacancyList.RunWorkerAsync(preloader);
 
             fLoading.SetOperationName(this.Text);
             fLoading.ShowDialog();
 
-            /*int i = 1;
-
-            foreach (CVacancyListElement v in vacs)
-            {
-                ListViewItem li = lstVacancies.Items.Add("");
-                li.SubItems.Add(i.ToString());
-                li.SubItems.Add(v.iID.ToString());
-                li.SubItems.Add(v.strDescription);
-
-                i++;
-            }*/
         }
 
         private void toolBtnRefreshVacancies_Click(object sender, EventArgs e)
@@ -99,6 +87,82 @@ namespace DistantVacantGovUz
             }
 
             preldr.GetLoadingForm().Close();
+        }
+
+        private void toolBtnChangeStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolBtnEditVacancy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolBtnExportVacancies_Click(object sender, EventArgs e)
+        {
+            if (lstVacancies.Items.Count == 0)
+                return;
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Файл Вакансий (*.vacx)|*.vacx";
+
+            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                frmLoading fLoading = new frmLoading();
+
+                CVacancyPortalExporter exporter = new CVacancyPortalExporter(sfd.FileName, fLoading, VACANCY_STATUS.CLOSED);
+                workerExportVacancies.RunWorkerAsync(exporter);
+
+                fLoading.SetOperationName("Exporting " + this.Text);
+                fLoading.ShowDialog();
+            }
+        }
+
+        private void workerExportVacancies_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            CVacancyPortalExporter exprtr = (CVacancyPortalExporter)e.Result;
+            List<CVacancy> vacs = exprtr.GetVacancyList();
+            List<CVacancyItem> vacancyItems = new List<CVacancyItem>();
+            string fileName = exprtr.GetFileName();
+
+            if (vacs != null)
+            {
+                for (int i = 0; i < vacs.Count; i++)
+                {
+                    CVacancyItem vItem = new CVacancyItem();
+                    vItem.InitFromCVacancy(vacs[i]);
+                    vItem.seqNum = (i + 1).ToString();
+                    vacancyItems.Add(vItem);
+                }
+            }
+
+            if (CVacancyFileType.SaveFile(fileName, vacancyItems))
+            {
+                MessageBox.Show("Вакансии успешно экпортированы и сохранены", "Экпорт вакансий", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ошибка сохранения экспортированных вакансий", "Экпорт вакансий", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            exprtr.GetLoadingForm().Close();
+        }
+
+        private void workerExportVacancies_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker wrkr = (BackgroundWorker)sender;
+            CVacancyPortalExporter exprtr = (CVacancyPortalExporter)e.Argument;
+
+            exprtr.DoWork(wrkr, e);
+        }
+
+        private void workerExportVacancies_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            CVacancyPortalExporter exprtr = (CVacancyPortalExporter)e.UserState;
+            frmLoading fLoading = (frmLoading)exprtr.GetLoadingForm();
+
+            fLoading.SetStatus("Exported " + exprtr.GetExportedVacanciesCount() + " from " + exprtr.GetTotalVacanciesCount() + "\n" + e.ProgressPercentage + "%");
         }
     }
 }

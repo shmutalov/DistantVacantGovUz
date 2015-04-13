@@ -28,9 +28,9 @@ namespace DistantVacantGovUz
 
             if (fLogin.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                fClosed = new frmClosedVacancies();
+                /*fClosed = new frmClosedVacancies();
                 fClosed.MdiParent = this;
-                fClosed.Show();
+                fClosed.Show();*/
 
                 fOpened = new frmOpenedVacancies();
                 fOpened.MdiParent = this;

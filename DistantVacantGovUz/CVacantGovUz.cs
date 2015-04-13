@@ -528,6 +528,9 @@ namespace DistantVacantGovUz
                                                         Vacancies_exp_period = o_chunk.GetParamValue("value");
                                                         break;
                                                     }
+
+                                                    if (Vacancies_exp_period == "")
+                                                        Vacancies_exp_period = "none";
                                                 }
                                                 break;
                                             case "Vacancies_education":

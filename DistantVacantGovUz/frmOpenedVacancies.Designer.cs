@@ -35,15 +35,16 @@
             this.clmnVacPortalNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnVacDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolbar = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.workerRefreshVacancyList = new System.ComponentModel.BackgroundWorker();
             this.toolBtnRefreshVacancies = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolBtnExportVacancies = new System.Windows.Forms.ToolStripButton();
             this.toolBtnChangeStatus = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolBtnEditVacancy = new System.Windows.Forms.ToolStripButton();
             this.toolBtnCheckAll = new System.Windows.Forms.ToolStripButton();
             this.toolBtnUncheckAll = new System.Windows.Forms.ToolStripButton();
+            this.workerRefreshVacancyList = new System.ComponentModel.BackgroundWorker();
+            this.workerExportVacancies = new System.ComponentModel.BackgroundWorker();
             this.toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,21 +106,6 @@
             this.toolbar.TabIndex = 2;
             this.toolbar.Text = "toolStrip1";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // workerRefreshVacancyList
-            // 
-            this.workerRefreshVacancyList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.workerRefreshVacancyList_DoWork);
-            this.workerRefreshVacancyList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.workerRefreshVacancyList_RunWorkerCompleted);
-            // 
             // toolBtnRefreshVacancies
             // 
             this.toolBtnRefreshVacancies.Image = global::DistantVacantGovUz.Properties.Resources.refresh_24;
@@ -131,6 +117,11 @@
             this.toolBtnRefreshVacancies.ToolTipText = "Refresh vacancies list";
             this.toolBtnRefreshVacancies.Click += new System.EventHandler(this.toolBtnRefreshVacancies_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
             // toolBtnExportVacancies
             // 
             this.toolBtnExportVacancies.Image = global::DistantVacantGovUz.Properties.Resources.export_24_2;
@@ -140,6 +131,7 @@
             this.toolBtnExportVacancies.Size = new System.Drawing.Size(68, 28);
             this.toolBtnExportVacancies.Text = "Export";
             this.toolBtnExportVacancies.ToolTipText = "Export vacancies list to a file";
+            this.toolBtnExportVacancies.Click += new System.EventHandler(this.toolBtnExportVacancies_Click);
             // 
             // toolBtnChangeStatus
             // 
@@ -151,6 +143,11 @@
             this.toolBtnChangeStatus.Text = "Change status";
             this.toolBtnChangeStatus.ToolTipText = "Change checked vacancies status";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            // 
             // toolBtnEditVacancy
             // 
             this.toolBtnEditVacancy.Image = global::DistantVacantGovUz.Properties.Resources.edit_24;
@@ -160,6 +157,7 @@
             this.toolBtnEditVacancy.Size = new System.Drawing.Size(55, 28);
             this.toolBtnEditVacancy.Text = "Edit";
             this.toolBtnEditVacancy.ToolTipText = "Edit selected vacancy";
+            this.toolBtnEditVacancy.Click += new System.EventHandler(this.toolBtnEditVacancy_Click);
             // 
             // toolBtnCheckAll
             // 
@@ -182,6 +180,18 @@
             this.toolBtnUncheckAll.Text = "Uncheck All";
             this.toolBtnUncheckAll.ToolTipText = "Uncheck all vacancies";
             this.toolBtnUncheckAll.Click += new System.EventHandler(this.toolBtnUncheckAll_Click);
+            // 
+            // workerRefreshVacancyList
+            // 
+            this.workerRefreshVacancyList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.workerRefreshVacancyList_DoWork);
+            this.workerRefreshVacancyList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.workerRefreshVacancyList_RunWorkerCompleted);
+            // 
+            // workerExportVacancies
+            // 
+            this.workerExportVacancies.WorkerReportsProgress = true;
+            this.workerExportVacancies.DoWork += new System.ComponentModel.DoWorkEventHandler(this.workerExportVacancies_DoWork);
+            this.workerExportVacancies.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.workerExportVacancies_ProgressChanged);
+            this.workerExportVacancies.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.workerExportVacancies_RunWorkerCompleted);
             // 
             // frmOpenedVacancies
             // 
@@ -218,5 +228,6 @@
         private System.Windows.Forms.ToolStripButton toolBtnUncheckAll;
         private System.Windows.Forms.ColumnHeader clmnCheckbox;
         private System.ComponentModel.BackgroundWorker workerRefreshVacancyList;
+        private System.ComponentModel.BackgroundWorker workerExportVacancies;
     }
 }
