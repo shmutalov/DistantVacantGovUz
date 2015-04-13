@@ -70,6 +70,19 @@ namespace DistantVacantGovUz
             {
                 frmLoading fLoading = new frmLoading();
 
+                // Check, is document already opened in editor
+                foreach (frmLocalDocument doc in this.MdiChildren)
+                {
+                    if (doc.GetDocumentFileName().Equals(ofd.FileName))
+                    {
+                        MessageBox.Show("Document is already opened", "Opening document...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        doc.Focus();
+
+                        return;
+                    }
+                }
+
                 CVacancyDocumentPreloader preloader = new CVacancyDocumentPreloader(ofd.FileName, fLoading);
                 worker.RunWorkerAsync(preloader);
 

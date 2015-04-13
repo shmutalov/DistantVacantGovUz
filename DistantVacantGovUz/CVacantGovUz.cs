@@ -1044,6 +1044,46 @@ namespace DistantVacantGovUz
         }
 
         /// <summary>
+        /// Получить список "полученных" резюме
+        /// </summary>
+        /// <returns></returns>
+        public List<CVacancyResumeItem> GetReceivedResumes(LANG lang)
+        {
+            throw new NotImplementedException("Method GetReceivedResumes is not implemented");
+            return null;
+        }
+
+        /// <summary>
+        /// Получить список "принятых" резюме
+        /// </summary>
+        /// <returns></returns>
+        public List<CVacancyResumeItem> GetApprovedResumes(LANG lang)
+        {
+            throw new NotImplementedException("Method GetApprovedResumes is not implemented");
+            return null;
+        }
+
+        /// <summary>
+        /// Получить список "рассмотренных" резюме
+        /// </summary>
+        /// <returns></returns>
+        public List<CVacancyResumeItem> GetProcessedResumes(LANG lang)
+        {
+            throw new NotImplementedException("Method GetProcessedResumes is not implemented");
+            return null;
+        }
+
+        /// <summary>
+        /// Получить список "зарезервированных" резюме
+        /// </summary>
+        /// <returns></returns>
+        public List<CVacancyResumeItem> GetReservedResumes(LANG lang)
+        {
+            throw new NotImplementedException("Method GetReservedResumes is not implemented");
+            return null;
+        }
+
+        /// <summary>
         /// Метод обращяется к серверу для генерации нового изображения с капчей
         /// </summary>
         /// <returns>При успешном вызове возвратит последовательность байтов PNG-изображения капчи, в другом случае <value>null</value></returns>
@@ -1076,6 +1116,10 @@ namespace DistantVacantGovUz
                 return null;
         }
 
+        /// <summary>
+        /// Присвоить текст капчи перед передачей запроса на сервер
+        /// </summary>
+        /// <param name="captchaText"></param>
         public void SetCaptchaText(string captchaText)
         {
             this.strCaptchaText = captchaText;

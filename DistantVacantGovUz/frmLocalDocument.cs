@@ -18,6 +18,11 @@ namespace DistantVacantGovUz
         private bool isNewDocument = false;
         private bool bIsDirty = false;
 
+        public string GetDocumentFileName()
+        {
+            return documentFileName;
+        }
+
         private bool isDirty
         {
             get
@@ -120,6 +125,7 @@ namespace DistantVacantGovUz
             UpdateVacancyList();
         }
 
+        // Сохранение документа (по-умолчанию версия файла = 3)
         private void SaveDocument()
         {
             if (!isNewDocument)
@@ -140,6 +146,7 @@ namespace DistantVacantGovUz
             }
         }
 
+        // Сохранение документа как...
         private void SaveDocumentAs()
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -498,7 +505,35 @@ namespace DistantVacantGovUz
             toolBtnUndo.Enabled = true;
             toolBtnRedo.Enabled = false;
 
+            //UpdateVacancyList();
+        }
+
+        private void lstVacancies_BeforeRowReorder(object sender, EventArgs e)
+        {
+            CVacancyUtil.CopyVacancyItemList(workingVacancyList, oldVacancyList);
+
+            toolBtnUndo.Enabled = true;
+            toolBtnRedo.Enabled = false;
+            isDirty = true;
+        }
+
+        private void RebuildWorkingVacancyList()
+        {
+            for (int i = 0; i < workingVacancyList.Count; i++)
+            {
+                //workingVacancyList[i].seqNum = lstVacancies.Items[i].SubItems[1].Text;
+
+                workingVacancyList[int.Parse(lstVacancies.Items[i].SubItems[1].Text) - 1].seqNum = (i + 1).ToString();
+            }
+
+            CVacancyUtil.SortBySeqNum(workingVacancyList);
+
             UpdateVacancyList();
+        }
+
+        private void lstVacancies_AfterRowReorder(object sender, EventArgs e)
+        {
+            RebuildWorkingVacancyList();
         }
     }
 }

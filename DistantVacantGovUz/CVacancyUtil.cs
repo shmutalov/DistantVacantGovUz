@@ -5,6 +5,18 @@ using System.IO;
 
 namespace DistantVacantGovUz
 {
+
+    /// <summary>
+    /// Язык 
+    /// </summary>
+    public enum LANG
+    {
+        ENGLISH,
+        RUSSIAN,
+        UZBEK,
+        UNKNOWN = -1
+    }
+
     public static class CVacancyUtil
     {
         /// <summary>
@@ -58,9 +70,23 @@ namespace DistantVacantGovUz
         /// <param name="y">Второй список</param>
         public static void Swap(ref List<CVacancyItem> x, ref List<CVacancyItem> y)
         {
-            List<CVacancyItem> temp = x;
+            List<CVacancyItem> temp;
+            temp = x;
             x = y;
             y = temp;
+        }
+
+        public class CVacancyItemComparer : IComparer<CVacancyItem>
+        {
+            public int Compare(CVacancyItem x, CVacancyItem y)
+            {
+                return int.Parse(x.seqNum).CompareTo(int.Parse(y.seqNum));
+            }
+        }
+
+        public static void SortBySeqNum(List<CVacancyItem> vacancyList)
+        {
+            vacancyList.Sort(new CVacancyItemComparer());
         }
     }
 }

@@ -122,22 +122,22 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="mnuFileCreateNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="mnuFileCreateNew.Text" xml:space="preserve">
     <value>New</value>
   </data>
   <data name="mnuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="mnuFileOpen.Text" xml:space="preserve">
     <value>Open</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 6</value>
+    <value>149, 6</value>
   </data>
   <data name="mnuFileSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="mnuFileSettings.Text" xml:space="preserve">
     <value>Settings</value>
@@ -182,25 +182,25 @@
     <value>Tile Vertical</value>
   </data>
   <data name="mnuWindowLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="mnuWindowLayout.Text" xml:space="preserve">
     <value>Layout</value>
   </data>
   <data name="mnuWindowShowAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="mnuWindowShowAll.Text" xml:space="preserve">
     <value>Show All</value>
   </data>
   <data name="mnuWindowHideAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="mnuWindowHideAll.Text" xml:space="preserve">
     <value>Hide All</value>
   </data>
   <data name="closeAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="closeAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Close All</value>

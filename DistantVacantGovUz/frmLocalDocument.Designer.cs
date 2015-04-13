@@ -50,7 +50,7 @@
             this.toolBtnRedo = new System.Windows.Forms.ToolStripButton();
             this.toolBtnEditSelected = new System.Windows.Forms.ToolStripButton();
             this.toolBtnDeleteChecked = new System.Windows.Forms.ToolStripButton();
-            this.lstVacancies = new System.Windows.Forms.ListView();
+            this.lstVacancies = new System.Windows.Forms.ListViewEx();
             this.clmnCheckbox = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnSeqNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnPortalVacancyId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -98,27 +98,27 @@
             this.toolbar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolbar.Location = new System.Drawing.Point(0, 0);
             this.toolbar.Name = "toolbar";
-            this.toolbar.Size = new System.Drawing.Size(892, 39);
+            this.toolbar.Size = new System.Drawing.Size(892, 31);
             this.toolbar.TabIndex = 0;
             this.toolbar.Text = "toolStrip1";
             // 
             // toolBtnSave
             // 
-            this.toolBtnSave.Image = global::DistantVacantGovUz.Properties.Resources.save_32;
+            this.toolBtnSave.Image = global::DistantVacantGovUz.Properties.Resources.save_24;
             this.toolBtnSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnSave.ImageTransparentColor = System.Drawing.Color.Black;
             this.toolBtnSave.Name = "toolBtnSave";
-            this.toolBtnSave.Size = new System.Drawing.Size(67, 36);
+            this.toolBtnSave.Size = new System.Drawing.Size(59, 28);
             this.toolBtnSave.Text = "Save";
             this.toolBtnSave.Click += new System.EventHandler(this.toolBtnSave_Click);
             // 
             // toolBtnSaveAs
             // 
-            this.toolBtnSaveAs.Image = global::DistantVacantGovUz.Properties.Resources.save_32;
+            this.toolBtnSaveAs.Image = global::DistantVacantGovUz.Properties.Resources.save_24;
             this.toolBtnSaveAs.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnSaveAs.ImageTransparentColor = System.Drawing.Color.Black;
             this.toolBtnSaveAs.Name = "toolBtnSaveAs";
-            this.toolBtnSaveAs.Size = new System.Drawing.Size(90, 36);
+            this.toolBtnSaveAs.Size = new System.Drawing.Size(82, 28);
             this.toolBtnSaveAs.Text = "Save as...";
             this.toolBtnSaveAs.Click += new System.EventHandler(this.toolBtnSaveAs_Click);
             // 
@@ -127,11 +127,11 @@
             this.toolBtnReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnReportPdf,
             this.toolBtnReportXls});
-            this.toolBtnReport.Image = global::DistantVacantGovUz.Properties.Resources.report_32;
+            this.toolBtnReport.Image = global::DistantVacantGovUz.Properties.Resources.report_24;
             this.toolBtnReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnReport.Name = "toolBtnReport";
-            this.toolBtnReport.Size = new System.Drawing.Size(87, 36);
+            this.toolBtnReport.Size = new System.Drawing.Size(79, 28);
             this.toolBtnReport.Text = "Report";
             // 
             // toolBtnReportPdf
@@ -139,27 +139,27 @@
             this.toolBtnReportPdf.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnReportPdfPrintVersionRu,
             this.toolBtnReportPdfPrintVersionUz});
-            this.toolBtnReportPdf.Image = global::DistantVacantGovUz.Properties.Resources.pdf_doc;
+            this.toolBtnReportPdf.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportPdf.Image")));
             this.toolBtnReportPdf.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportPdf.Name = "toolBtnReportPdf";
-            this.toolBtnReportPdf.Size = new System.Drawing.Size(127, 54);
+            this.toolBtnReportPdf.Size = new System.Drawing.Size(103, 30);
             this.toolBtnReportPdf.Text = "PDF";
             // 
             // toolBtnReportPdfPrintVersionRu
             // 
-            this.toolBtnReportPdfPrintVersionRu.Image = global::DistantVacantGovUz.Properties.Resources.pdf_doc;
+            this.toolBtnReportPdfPrintVersionRu.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportPdfPrintVersionRu.Image")));
             this.toolBtnReportPdfPrintVersionRu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportPdfPrintVersionRu.Name = "toolBtnReportPdfPrintVersionRu";
-            this.toolBtnReportPdfPrintVersionRu.Size = new System.Drawing.Size(198, 54);
+            this.toolBtnReportPdfPrintVersionRu.Size = new System.Drawing.Size(174, 30);
             this.toolBtnReportPdfPrintVersionRu.Text = "Print version (RU)";
             this.toolBtnReportPdfPrintVersionRu.Click += new System.EventHandler(this.toolBtnReportPdfPrintVersionRu_Click);
             // 
             // toolBtnReportPdfPrintVersionUz
             // 
-            this.toolBtnReportPdfPrintVersionUz.Image = global::DistantVacantGovUz.Properties.Resources.pdf_doc;
+            this.toolBtnReportPdfPrintVersionUz.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportPdfPrintVersionUz.Image")));
             this.toolBtnReportPdfPrintVersionUz.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportPdfPrintVersionUz.Name = "toolBtnReportPdfPrintVersionUz";
-            this.toolBtnReportPdfPrintVersionUz.Size = new System.Drawing.Size(198, 54);
+            this.toolBtnReportPdfPrintVersionUz.Size = new System.Drawing.Size(174, 30);
             this.toolBtnReportPdfPrintVersionUz.Text = "Print version (UZ)";
             this.toolBtnReportPdfPrintVersionUz.Click += new System.EventHandler(this.toolBtnReportPdfPrintVersionUz_Click);
             // 
@@ -168,10 +168,10 @@
             this.toolBtnReportXls.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnReportXlsPrintVersionRu,
             this.toolBtnReportXlsPrintVersionUz});
-            this.toolBtnReportXls.Image = global::DistantVacantGovUz.Properties.Resources.xls_doc;
+            this.toolBtnReportXls.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportXls.Image")));
             this.toolBtnReportXls.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportXls.Name = "toolBtnReportXls";
-            this.toolBtnReportXls.Size = new System.Drawing.Size(127, 54);
+            this.toolBtnReportXls.Size = new System.Drawing.Size(103, 30);
             this.toolBtnReportXls.Text = "XLS";
             // 
             // toolBtnReportXlsPrintVersionRu
@@ -179,7 +179,7 @@
             this.toolBtnReportXlsPrintVersionRu.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportXlsPrintVersionRu.Image")));
             this.toolBtnReportXlsPrintVersionRu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportXlsPrintVersionRu.Name = "toolBtnReportXlsPrintVersionRu";
-            this.toolBtnReportXlsPrintVersionRu.Size = new System.Drawing.Size(198, 54);
+            this.toolBtnReportXlsPrintVersionRu.Size = new System.Drawing.Size(174, 30);
             this.toolBtnReportXlsPrintVersionRu.Text = "Print version (RU)";
             this.toolBtnReportXlsPrintVersionRu.Click += new System.EventHandler(this.toolBtnReportXlsPrintVersionRu_Click);
             // 
@@ -188,95 +188,95 @@
             this.toolBtnReportXlsPrintVersionUz.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportXlsPrintVersionUz.Image")));
             this.toolBtnReportXlsPrintVersionUz.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportXlsPrintVersionUz.Name = "toolBtnReportXlsPrintVersionUz";
-            this.toolBtnReportXlsPrintVersionUz.Size = new System.Drawing.Size(198, 54);
+            this.toolBtnReportXlsPrintVersionUz.Size = new System.Drawing.Size(174, 30);
             this.toolBtnReportXlsPrintVersionUz.Text = "Print version (UZ)";
             this.toolBtnReportXlsPrintVersionUz.Click += new System.EventHandler(this.toolBtnReportXlsPrintVersionUz_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // toolBtnAdd
             // 
-            this.toolBtnAdd.Image = global::DistantVacantGovUz.Properties.Resources.add_32;
+            this.toolBtnAdd.Image = global::DistantVacantGovUz.Properties.Resources.add_24;
             this.toolBtnAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnAdd.Name = "toolBtnAdd";
-            this.toolBtnAdd.Size = new System.Drawing.Size(65, 36);
+            this.toolBtnAdd.Size = new System.Drawing.Size(57, 28);
             this.toolBtnAdd.Text = "Add";
             this.toolBtnAdd.Click += new System.EventHandler(this.toolBtnAdd_Click);
             // 
             // toolBtnImportFromFile
             // 
-            this.toolBtnImportFromFile.Image = global::DistantVacantGovUz.Properties.Resources.import;
+            this.toolBtnImportFromFile.Image = global::DistantVacantGovUz.Properties.Resources.import_24;
             this.toolBtnImportFromFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnImportFromFile.ImageTransparentColor = System.Drawing.Color.Black;
             this.toolBtnImportFromFile.Name = "toolBtnImportFromFile";
-            this.toolBtnImportFromFile.Size = new System.Drawing.Size(79, 36);
+            this.toolBtnImportFromFile.Size = new System.Drawing.Size(71, 28);
             this.toolBtnImportFromFile.Text = "Import";
             this.toolBtnImportFromFile.Click += new System.EventHandler(this.toolBtnImportFromFile_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // toolBtnCheckAll
             // 
-            this.toolBtnCheckAll.Image = global::DistantVacantGovUz.Properties.Resources.check_green_32;
+            this.toolBtnCheckAll.Image = global::DistantVacantGovUz.Properties.Resources.check_24;
             this.toolBtnCheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnCheckAll.Name = "toolBtnCheckAll";
-            this.toolBtnCheckAll.Size = new System.Drawing.Size(93, 36);
+            this.toolBtnCheckAll.Size = new System.Drawing.Size(85, 28);
             this.toolBtnCheckAll.Text = "Check All";
             this.toolBtnCheckAll.Click += new System.EventHandler(this.toolBtnCheckAll_Click);
             // 
             // toolBtnUncheckAll
             // 
-            this.toolBtnUncheckAll.Image = global::DistantVacantGovUz.Properties.Resources.check_grey_32;
+            this.toolBtnUncheckAll.Image = global::DistantVacantGovUz.Properties.Resources.uncheck_24;
             this.toolBtnUncheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnUncheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnUncheckAll.Name = "toolBtnUncheckAll";
-            this.toolBtnUncheckAll.Size = new System.Drawing.Size(106, 36);
+            this.toolBtnUncheckAll.Size = new System.Drawing.Size(98, 28);
             this.toolBtnUncheckAll.Text = "Uncheck All";
             this.toolBtnUncheckAll.Click += new System.EventHandler(this.toolBtnUncheckAll_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 39);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // toolBtnUndo
             // 
             this.toolBtnUndo.Enabled = false;
-            this.toolBtnUndo.Image = global::DistantVacantGovUz.Properties.Resources.undo_32;
+            this.toolBtnUndo.Image = global::DistantVacantGovUz.Properties.Resources.undo_24;
             this.toolBtnUndo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnUndo.Name = "toolBtnUndo";
-            this.toolBtnUndo.Size = new System.Drawing.Size(72, 36);
+            this.toolBtnUndo.Size = new System.Drawing.Size(64, 28);
             this.toolBtnUndo.Text = "Undo";
             this.toolBtnUndo.Click += new System.EventHandler(this.toolBtnUndo_Click);
             // 
             // toolBtnRedo
             // 
             this.toolBtnRedo.Enabled = false;
-            this.toolBtnRedo.Image = global::DistantVacantGovUz.Properties.Resources.redo_32;
+            this.toolBtnRedo.Image = global::DistantVacantGovUz.Properties.Resources.redo_24;
             this.toolBtnRedo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnRedo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnRedo.Name = "toolBtnRedo";
-            this.toolBtnRedo.Size = new System.Drawing.Size(70, 36);
+            this.toolBtnRedo.Size = new System.Drawing.Size(62, 28);
             this.toolBtnRedo.Text = "Redo";
             this.toolBtnRedo.Click += new System.EventHandler(this.toolBtnRedo_Click);
             // 
             // toolBtnEditSelected
             // 
             this.toolBtnEditSelected.Enabled = false;
-            this.toolBtnEditSelected.Image = global::DistantVacantGovUz.Properties.Resources.edit_32;
+            this.toolBtnEditSelected.Image = global::DistantVacantGovUz.Properties.Resources.edit_24;
             this.toolBtnEditSelected.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnEditSelected.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnEditSelected.Name = "toolBtnEditSelected";
-            this.toolBtnEditSelected.Size = new System.Drawing.Size(63, 36);
+            this.toolBtnEditSelected.Size = new System.Drawing.Size(55, 28);
             this.toolBtnEditSelected.Text = "Edit";
             this.toolBtnEditSelected.Click += new System.EventHandler(this.toolBtnEditSelected_Click);
             // 
@@ -284,16 +284,19 @@
             // 
             this.toolBtnDeleteChecked.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolBtnDeleteChecked.Enabled = false;
-            this.toolBtnDeleteChecked.Image = global::DistantVacantGovUz.Properties.Resources.delete_32;
+            this.toolBtnDeleteChecked.Image = global::DistantVacantGovUz.Properties.Resources.delete_24;
             this.toolBtnDeleteChecked.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnDeleteChecked.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnDeleteChecked.Name = "toolBtnDeleteChecked";
-            this.toolBtnDeleteChecked.Size = new System.Drawing.Size(76, 36);
+            this.toolBtnDeleteChecked.Size = new System.Drawing.Size(68, 28);
             this.toolBtnDeleteChecked.Text = "Delete";
             this.toolBtnDeleteChecked.Click += new System.EventHandler(this.toolBtnDeleteChecked_Click);
             // 
             // lstVacancies
             // 
+            this.lstVacancies.AllowColumnReorder = true;
+            this.lstVacancies.AllowDrop = true;
+            this.lstVacancies.AllowRowReorder = true;
             this.lstVacancies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -323,12 +326,15 @@
             this.lstVacancies.FullRowSelect = true;
             this.lstVacancies.GridLines = true;
             this.lstVacancies.HideSelection = false;
-            this.lstVacancies.Location = new System.Drawing.Point(0, 42);
+            this.lstVacancies.InsertionMarkColor = System.Drawing.Color.SteelBlue;
+            this.lstVacancies.Location = new System.Drawing.Point(0, 34);
             this.lstVacancies.Name = "lstVacancies";
-            this.lstVacancies.Size = new System.Drawing.Size(892, 474);
+            this.lstVacancies.Size = new System.Drawing.Size(892, 482);
             this.lstVacancies.TabIndex = 1;
             this.lstVacancies.UseCompatibleStateImageBehavior = false;
             this.lstVacancies.View = System.Windows.Forms.View.Details;
+            this.lstVacancies.BeforeRowReorder += new System.Windows.Forms.ListViewEx.BeforeRowReorderEventHandler(this.lstVacancies_BeforeRowReorder);
+            this.lstVacancies.AfterRowReorder += new System.Windows.Forms.ListViewEx.AfterRowReorderEventHandler(this.lstVacancies_AfterRowReorder);
             this.lstVacancies.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lstVacancies_ItemChecked);
             this.lstVacancies.SelectedIndexChanged += new System.EventHandler(this.lstVacancies_SelectedIndexChanged);
             this.lstVacancies.DoubleClick += new System.EventHandler(this.lstVacancies_DoubleClick);
@@ -459,7 +465,8 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolbar;
-        private System.Windows.Forms.ListView lstVacancies;
+        //private System.Windows.Forms.ListView lstVacancies;
+        private System.Windows.Forms.ListViewEx lstVacancies;
         private System.Windows.Forms.ColumnHeader clmnCheckbox;
         private System.Windows.Forms.StatusStrip status;
         private System.Windows.Forms.ToolStripStatusLabel stsSelectedItems;

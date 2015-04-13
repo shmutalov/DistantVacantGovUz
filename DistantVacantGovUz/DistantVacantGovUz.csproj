@@ -51,6 +51,9 @@
     <Reference Include="LibCurlNet">
       <HintPath>libraries\LibCurlNet.dll</HintPath>
     </Reference>
+    <Reference Include="ListViewEx">
+      <HintPath>libraries\ListViewEx.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI">
       <HintPath>libraries\NPOI.dll</HintPath>
     </Reference>
@@ -80,6 +83,8 @@
     <Compile Include="CVacancyItem.cs" />
     <Compile Include="CVacancyPortalPreloader.cs" />
     <Compile Include="CVacancyReports.cs" />
+    <Compile Include="CVacancyResume.cs" />
+    <Compile Include="CVacancyResumeItem.cs" />
     <Compile Include="CVacancyUtil.cs" />
     <Compile Include="CVacantGovUz.cs" />
     <Compile Include="frmAbout.cs">
@@ -194,6 +199,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewExtended.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -314,6 +322,24 @@
     <None Include="images\report-32.png" />
     <None Include="images\xls-doc.png" />
     <None Include="images\loading.GIF" />
+    <None Include="images\add_24.png" />
+    <None Include="images\browse_24.png" />
+    <None Include="images\check_24.png" />
+    <None Include="images\delete_24.png" />
+    <None Include="images\edit_24.png" />
+    <None Include="images\export_24_2.png" />
+    <None Include="images\import_24.png" />
+    <None Include="images\key_24.png" />
+    <None Include="images\pdf_doc_24.png" />
+    <None Include="images\redo_24.png" />
+    <None Include="images\refresh_24.png" />
+    <None Include="images\report_24.png" />
+    <None Include="images\save_24.bmp" />
+    <None Include="images\uncheck_24.png" />
+    <None Include="images\undo_24.png" />
+    <None Include="images\xls_doc_24.png" />
+    <None Include="images\pdf_doc_24_2.png" />
+    <None Include="images\xls_doc_24_2.png" />
     <Content Include="libcurl.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

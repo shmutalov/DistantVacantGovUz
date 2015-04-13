@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClosedVacancies));
             this.toolbar = new System.Windows.Forms.ToolStrip();
-            this.toolBtnRefreshVacancies = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolBtnExportVacancies = new System.Windows.Forms.ToolStripButton();
-            this.toolBtnChangeStatus = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolBtnEditVacancy = new System.Windows.Forms.ToolStripButton();
-            this.toolBtnCheckAll = new System.Windows.Forms.ToolStripButton();
-            this.toolBtnUncheckAll = new System.Windows.Forms.ToolStripButton();
             this.lstVacancies = new System.Windows.Forms.ListView();
             this.clmnCheckbox = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnVacSequenceNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnVacPortalNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnVacDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.workerRefreshVacancyList = new System.ComponentModel.BackgroundWorker();
+            this.toolBtnRefreshVacancies = new System.Windows.Forms.ToolStripButton();
+            this.toolBtnExportVacancies = new System.Windows.Forms.ToolStripButton();
+            this.toolBtnChangeStatus = new System.Windows.Forms.ToolStripButton();
+            this.toolBtnEditVacancy = new System.Windows.Forms.ToolStripButton();
+            this.toolBtnCheckAll = new System.Windows.Forms.ToolStripButton();
+            this.toolBtnUncheckAll = new System.Windows.Forms.ToolStripButton();
             this.toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,83 +61,20 @@
             this.toolBtnUncheckAll});
             this.toolbar.Location = new System.Drawing.Point(0, 0);
             this.toolbar.Name = "toolbar";
-            this.toolbar.Size = new System.Drawing.Size(584, 39);
+            this.toolbar.Size = new System.Drawing.Size(584, 31);
             this.toolbar.TabIndex = 0;
             this.toolbar.Text = "toolStrip1";
             this.toolbar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolbar_ItemClicked);
             // 
-            // toolBtnRefreshVacancies
-            // 
-            this.toolBtnRefreshVacancies.Image = global::DistantVacantGovUz.Properties.Resources.refresh_32;
-            this.toolBtnRefreshVacancies.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnRefreshVacancies.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBtnRefreshVacancies.Name = "toolBtnRefreshVacancies";
-            this.toolBtnRefreshVacancies.Size = new System.Drawing.Size(82, 36);
-            this.toolBtnRefreshVacancies.Text = "Refresh";
-            this.toolBtnRefreshVacancies.ToolTipText = "Refresh vacancies list";
-            this.toolBtnRefreshVacancies.Click += new System.EventHandler(this.toolBtnRefreshVacancies_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolBtnExportVacancies
-            // 
-            this.toolBtnExportVacancies.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnExportVacancies.Image")));
-            this.toolBtnExportVacancies.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnExportVacancies.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBtnExportVacancies.Name = "toolBtnExportVacancies";
-            this.toolBtnExportVacancies.Size = new System.Drawing.Size(76, 36);
-            this.toolBtnExportVacancies.Text = "Export";
-            this.toolBtnExportVacancies.ToolTipText = "Export vacancies list to a file";
-            // 
-            // toolBtnChangeStatus
-            // 
-            this.toolBtnChangeStatus.Image = global::DistantVacantGovUz.Properties.Resources.key_32;
-            this.toolBtnChangeStatus.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnChangeStatus.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBtnChangeStatus.Name = "toolBtnChangeStatus";
-            this.toolBtnChangeStatus.Size = new System.Drawing.Size(118, 36);
-            this.toolBtnChangeStatus.Text = "Change status";
-            this.toolBtnChangeStatus.ToolTipText = "Change checked vacancies status";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 39);
-            // 
-            // toolBtnEditVacancy
-            // 
-            this.toolBtnEditVacancy.Image = global::DistantVacantGovUz.Properties.Resources.edit_32;
-            this.toolBtnEditVacancy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnEditVacancy.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBtnEditVacancy.Name = "toolBtnEditVacancy";
-            this.toolBtnEditVacancy.Size = new System.Drawing.Size(63, 36);
-            this.toolBtnEditVacancy.Text = "Edit";
-            this.toolBtnEditVacancy.ToolTipText = "Edit selected vacancy";
-            // 
-            // toolBtnCheckAll
-            // 
-            this.toolBtnCheckAll.Image = global::DistantVacantGovUz.Properties.Resources.check_green_32;
-            this.toolBtnCheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBtnCheckAll.Name = "toolBtnCheckAll";
-            this.toolBtnCheckAll.Size = new System.Drawing.Size(93, 36);
-            this.toolBtnCheckAll.Text = "Check All";
-            this.toolBtnCheckAll.ToolTipText = "Check All Vacancies";
-            this.toolBtnCheckAll.Click += new System.EventHandler(this.toolBtnCheckAll_Click);
-            // 
-            // toolBtnUncheckAll
-            // 
-            this.toolBtnUncheckAll.Image = global::DistantVacantGovUz.Properties.Resources.check_grey_32;
-            this.toolBtnUncheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnUncheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolBtnUncheckAll.Name = "toolBtnUncheckAll";
-            this.toolBtnUncheckAll.Size = new System.Drawing.Size(106, 36);
-            this.toolBtnUncheckAll.Text = "Uncheck All";
-            this.toolBtnUncheckAll.ToolTipText = "Uncheck all vacancies";
-            this.toolBtnUncheckAll.Click += new System.EventHandler(this.toolBtnUncheckAll_Click);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // lstVacancies
             // 
@@ -151,10 +88,10 @@
             this.lstVacancies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lstVacancies.FullRowSelect = true;
             this.lstVacancies.GridLines = true;
-            this.lstVacancies.Location = new System.Drawing.Point(0, 39);
+            this.lstVacancies.Location = new System.Drawing.Point(0, 31);
             this.lstVacancies.MultiSelect = false;
             this.lstVacancies.Name = "lstVacancies";
-            this.lstVacancies.Size = new System.Drawing.Size(584, 512);
+            this.lstVacancies.Size = new System.Drawing.Size(584, 520);
             this.lstVacancies.TabIndex = 1;
             this.lstVacancies.UseCompatibleStateImageBehavior = false;
             this.lstVacancies.View = System.Windows.Forms.View.Details;
@@ -184,6 +121,69 @@
             // 
             this.workerRefreshVacancyList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.workerRefreshVacancyList_DoWork);
             this.workerRefreshVacancyList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.workerRefreshVacancyList_RunWorkerCompleted);
+            // 
+            // toolBtnRefreshVacancies
+            // 
+            this.toolBtnRefreshVacancies.Image = global::DistantVacantGovUz.Properties.Resources.refresh_24;
+            this.toolBtnRefreshVacancies.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBtnRefreshVacancies.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBtnRefreshVacancies.Name = "toolBtnRefreshVacancies";
+            this.toolBtnRefreshVacancies.Size = new System.Drawing.Size(74, 28);
+            this.toolBtnRefreshVacancies.Text = "Refresh";
+            this.toolBtnRefreshVacancies.ToolTipText = "Refresh vacancies list";
+            this.toolBtnRefreshVacancies.Click += new System.EventHandler(this.toolBtnRefreshVacancies_Click);
+            // 
+            // toolBtnExportVacancies
+            // 
+            this.toolBtnExportVacancies.Image = global::DistantVacantGovUz.Properties.Resources.export_24_2;
+            this.toolBtnExportVacancies.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBtnExportVacancies.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBtnExportVacancies.Name = "toolBtnExportVacancies";
+            this.toolBtnExportVacancies.Size = new System.Drawing.Size(68, 28);
+            this.toolBtnExportVacancies.Text = "Export";
+            this.toolBtnExportVacancies.ToolTipText = "Export vacancies list to a file";
+            // 
+            // toolBtnChangeStatus
+            // 
+            this.toolBtnChangeStatus.Image = global::DistantVacantGovUz.Properties.Resources.key_24;
+            this.toolBtnChangeStatus.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBtnChangeStatus.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBtnChangeStatus.Name = "toolBtnChangeStatus";
+            this.toolBtnChangeStatus.Size = new System.Drawing.Size(110, 28);
+            this.toolBtnChangeStatus.Text = "Change status";
+            this.toolBtnChangeStatus.ToolTipText = "Change checked vacancies status";
+            // 
+            // toolBtnEditVacancy
+            // 
+            this.toolBtnEditVacancy.Image = global::DistantVacantGovUz.Properties.Resources.edit_24;
+            this.toolBtnEditVacancy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBtnEditVacancy.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBtnEditVacancy.Name = "toolBtnEditVacancy";
+            this.toolBtnEditVacancy.Size = new System.Drawing.Size(55, 28);
+            this.toolBtnEditVacancy.Text = "Edit";
+            this.toolBtnEditVacancy.ToolTipText = "Edit selected vacancy";
+            // 
+            // toolBtnCheckAll
+            // 
+            this.toolBtnCheckAll.Image = global::DistantVacantGovUz.Properties.Resources.check_24;
+            this.toolBtnCheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBtnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBtnCheckAll.Name = "toolBtnCheckAll";
+            this.toolBtnCheckAll.Size = new System.Drawing.Size(85, 28);
+            this.toolBtnCheckAll.Text = "Check All";
+            this.toolBtnCheckAll.ToolTipText = "Check All Vacancies";
+            this.toolBtnCheckAll.Click += new System.EventHandler(this.toolBtnCheckAll_Click);
+            // 
+            // toolBtnUncheckAll
+            // 
+            this.toolBtnUncheckAll.Image = global::DistantVacantGovUz.Properties.Resources.uncheck_24;
+            this.toolBtnUncheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBtnUncheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolBtnUncheckAll.Name = "toolBtnUncheckAll";
+            this.toolBtnUncheckAll.Size = new System.Drawing.Size(98, 28);
+            this.toolBtnUncheckAll.Text = "Uncheck All";
+            this.toolBtnUncheckAll.ToolTipText = "Uncheck all vacancies";
+            this.toolBtnUncheckAll.Click += new System.EventHandler(this.toolBtnUncheckAll_Click);
             // 
             // frmClosedVacancies
             // 

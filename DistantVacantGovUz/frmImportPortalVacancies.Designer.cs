@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImportPortalVacancies));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolTxtImportFileName = new System.Windows.Forms.ToolStripTextBox();
             this.toolBtnImport = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolBtnBrowse = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,41 +47,41 @@
             this.toolTxtImportFileName});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(574, 39);
+            this.toolStrip1.Size = new System.Drawing.Size(574, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolTxtImportFileName
-            // 
-            this.toolTxtImportFileName.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolTxtImportFileName.Name = "toolTxtImportFileName";
-            this.toolTxtImportFileName.Size = new System.Drawing.Size(400, 39);
-            // 
-            // toolBtnImport
-            // 
-            this.toolBtnImport.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolBtnImport.Image = global::DistantVacantGovUz.Properties.Resources.import;
-            this.toolBtnImport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnImport.ImageTransparentColor = System.Drawing.Color.Black;
-            this.toolBtnImport.Name = "toolBtnImport";
-            this.toolBtnImport.Size = new System.Drawing.Size(79, 36);
-            this.toolBtnImport.Text = "Import";
-            this.toolBtnImport.ToolTipText = "Start import process of selected file to portal";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolTxtImportFileName
+            // 
+            this.toolTxtImportFileName.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolTxtImportFileName.Name = "toolTxtImportFileName";
+            this.toolTxtImportFileName.Size = new System.Drawing.Size(400, 31);
+            // 
+            // toolBtnImport
+            // 
+            this.toolBtnImport.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolBtnImport.Image = global::DistantVacantGovUz.Properties.Resources.import_24;
+            this.toolBtnImport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolBtnImport.ImageTransparentColor = System.Drawing.Color.Black;
+            this.toolBtnImport.Name = "toolBtnImport";
+            this.toolBtnImport.Size = new System.Drawing.Size(71, 28);
+            this.toolBtnImport.Text = "Import";
+            this.toolBtnImport.ToolTipText = "Start import process of selected file to portal";
             // 
             // toolBtnBrowse
             // 
             this.toolBtnBrowse.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolBtnBrowse.Image = global::DistantVacantGovUz.Properties.Resources.browse_32;
+            this.toolBtnBrowse.Image = global::DistantVacantGovUz.Properties.Resources.browse_24;
             this.toolBtnBrowse.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnBrowse.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnBrowse.Name = "toolBtnBrowse";
-            this.toolBtnBrowse.Size = new System.Drawing.Size(81, 36);
+            this.toolBtnBrowse.Size = new System.Drawing.Size(73, 28);
             this.toolBtnBrowse.Text = "Browse";
             this.toolBtnBrowse.ToolTipText = "Browse vacancy file";
             // 

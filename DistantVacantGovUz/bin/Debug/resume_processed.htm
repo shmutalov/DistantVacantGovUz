@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/assets/a588c0e8/jquery.js"></script>
+<script type="text/javascript" src="/assets/a588c0e8/jquery.ba-bbq.js"></script>
+<title>Vacant.Gov.Uz -[Beta]</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/themes/govuz/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/metro.css" rel="stylesheet" />
+    <link href="/themes/govuz/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/themes/govuz/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style_responsive.css" rel="stylesheet" />
+    <link href="/themes/govuz/css/style_default.css" rel="stylesheet" id="style_color" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/uniform/css/uniform.default.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/govuz/bootstrap-daterangepicker/daterangepicker.css" />
+    <link href="/themes/govuz/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <link href="/themes/govuz/jqvmap/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse navbar-fixed-top">
+<!-- BEGIN TOP NAVIGATION BAR -->
+<div class="navbar-inner">
+<div class="container-fluid">
+<!-- BEGIN LOGO -->
+<a class="brand" href="/uz/vacancies/admin">
+    <img src="/img/logo.png" alt="logo" />
+</a>
+<!-- END LOGO -->
+
+<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+    <img src="/themes/govuz/img/menu-toggler.png" alt="" />
+</a>
+<!-- END RESPONSIVE MENU TOGGLER -->
+<!-- BEGIN TOP NAVIGATION MENU -->
+<ul class="nav pull-right" style="top:4px;">
+<!-- BEGIN LANGUAGE -->
+
+    <li>
+    <a class="brand" href="/ru/request/processed">
+        <img src="/img/ru_red.png" alt="logo" />
+    </a></li><li>
+    <a class="brand" href="/uz/request/processed">
+        <img src="/img/uz_white.png" alt="logo" />
+    </a></li>
+
+<!-- END LANGUAGE -->
+
+<!-- BEGIN INBOX DROPDOWN -->
+<!--<li class="dropdown" id="header_inbox_bar">-->
+<!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+<!--        <i class="icon-envelope-alt"></i>-->
+<!--        <span class="badge">5</span>-->
+<!--    </a>-->
+<!--    <ul class="dropdown-menu extended inbox">-->
+<!--        <li>-->
+<!--            <p>Поступило 12 новых обращении</p>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!--                <span class="photo"><img src="./assets/img/avatar2.jpg" alt="" /></span>-->
+<!--								<span class="subject">-->
+<!--								<span class="from">Lisa Wong</span>-->
+<!--								<span class="time">Just Now</span>-->
+<!--								</span>-->
+<!--								<span class="message">-->
+<!--								Vivamus sed auctor nibh congue nibh. auctor nibh-->
+<!--								auctor nibh...-->
+<!--								</span>-->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!---->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#">-->
+<!---->
+<!--            </a>-->
+<!--        </li>-->
+<!--        <li class="external">-->
+<!--            <a href="#">Все сообщения <i class="m-icon-swapright"></i></a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</li>-->
+<!-- END INBOX DROPDOWN -->
+
+<!-- BEGIN USER LOGIN DROPDOWN -->
+<li class="dropdown user">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<!--        <img alt="" src="http://id.uz/images/users/a/--><!--/small.jpg" style="height: 30px;"/>-->
+        <span class="username">Xush kelibsiz, hurmatli Дадабаев Уразали Насибалиевич</span>
+        <i class="icon-angle-down"></i>
+    </a>
+    <ul class="dropdown-menu">
+<!--        <li><a href="extra_profile.html"><i class="icon-user"></i> My Profile</a></li>-->
+<!--        <li><a href="calendar.html"><i class="icon-calendar"></i> My Calendar</a></li>-->
+<!--        <li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>-->
+<!--        <li class="divider"></li>-->
+        <li> <a href="/uz/site/logout"><i class="icon-key"></i> Выход</a></li>
+    </ul>
+</li>
+<!-- END USER LOGIN DROPDOWN -->
+</ul>
+<!-- END TOP NAVIGATION MENU -->
+</div>
+</div>
+<!-- END TOP NAVIGATION BAR -->
+</div>
+<!-- END HEADER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid">
+
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar nav-collapse collapse">
+        <br />
+    <ul>
+        <li>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <div class="sidebar-toggler hidden-phone"></div>
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+        </li>
+<!--        <li>-->
+            <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+<!--            <form class="sidebar-search">-->
+<!--                <div class="input-box">-->
+<!--                    <a href="javascript:;" class="remove"></a>-->
+<!--                    <input type="text" placeholder="Search..." />-->
+<!--                    <input type="button" class="submit" value=" " />-->
+<!--                </div>-->
+<!--            </form>-->
+            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+<!--        </li>-->
+    <!-- BEGIN SIDEBAR MENU -->
+        <li class="">
+                          <a href="/uz/vacancies/admin">
+                              <i class=" icon-share"></i>
+                              <span class="title">Bo'sh ish o'rinlari</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/uz/vacancies/cAdmin">
+                              <i class=" icon-ban-circle"></i>
+                              <span class="title">Yopilgan ish o'rinlari</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/uz/request/received">
+                              <i class="icon-download-alt"></i>
+                              <span class="title">Yangi rezyumelar</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/uz/request/approved">
+                              <i class="icon-check"></i>
+                              <span class="title">Qabul qilingan</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li><li class="active">
+                          <a href="/uz/request/processed">
+                              <i class="icon-trash"></i>
+                              <span class="title">Ko’rib chiqilgan</span>
+                              <span class="selected"></span>
+                          </a>
+                      </li><li class="">
+                          <a href="/uz/request/reserved">
+                              <i class="icon-inbox"></i>
+                              <span class="title">Zahiradagi rezyumelar</span>
+                              <span class="arrow"></span>
+                          </a>
+                      </li>        </ul>
+        <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN PAGE -->
+    <div class="page-content">
+        <!-- BEGIN PAGE CONTAINER-->
+        <div class="container-fluid">
+
+
+                    <!--main-->
+                    <!-- BEGIN PAGE HEADER-->
+<div class="row-fluid">
+    <div class="span12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <h3 class="page-title">
+            Ko’rib chiqilgan				<small></small>
+        </h3>
+        <ul class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="/uz/request/processed">Ko’rib chiqilgan</a>
+                <i class="icon-angle-right"></i>
+            </li>
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+
+<div id="request-grid" class="grid-view">
+<div class="summary"></div>
+<table class="table table-striped table-bordered table-advance table">
+<thead>
+<tr>
+<th id="request-grid_c0"><a class="sort-link" href="/uz/request/processed?Request_sort=id">Murojaat raqami<span class="caret"></span></a></th><th id="request-grid_c1">Xizmat turi</th><th id="request-grid_c2">Murojaat egasi</th><th id="request-grid_c3"><a class="sort-link" href="/uz/request/processed?Request_sort=added_on">Kelib tushgan sana<span class="caret"></span></a></th><th id="request-grid_c4"><a class="sort-link" href="/uz/request/processed?Request_sort=status">Status<span class="caret"></span></a></th><th class="button-column" id="request-grid_c5">&nbsp;</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>187055</td><td>Rezumeni yuborish</td><td>nodira ulug&#039;bek alijonova</td><td>2015-04-09 09:27:11</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/187055">Просмотр</a></td></tr>
+<tr class="even">
+<td>184720</td><td>Rezumeni yuborish</td><td>Yuldashev Sirojiddin Tojitdinovich</td><td>2015-04-07 10:53:35</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/184720">Просмотр</a></td></tr>
+<tr class="odd">
+<td>182665</td><td>Rezumeni yuborish</td><td>Madraimov Jurabek Bababek o&#039;g&#039;li</td><td>2015-04-03 18:15:55</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/182665">Просмотр</a></td></tr>
+<tr class="even">
+<td>182638</td><td>Rezumeni yuborish</td><td>Madraimov Jurabek Bababek o&#039;g&#039;li</td><td>2015-04-03 17:57:10</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/182638">Просмотр</a></td></tr>
+<tr class="odd">
+<td>182625</td><td>Rezumeni yuborish</td><td>Madraimov Jurabek Bababek o&#039;g&#039;li</td><td>2015-04-03 17:48:57</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/182625">Просмотр</a></td></tr>
+<tr class="even">
+<td>182596</td><td>Rezumeni yuborish</td><td>Madraimov Jurabek Bababek o&#039;g&#039;li</td><td>2015-04-03 17:34:19</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/182596">Просмотр</a></td></tr>
+<tr class="odd">
+<td>181838</td><td>Rezumeni yuborish</td><td>Toraev Orif Shermuhammedovech</td><td>2015-04-03 11:24:54</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/181838">Просмотр</a></td></tr>
+<tr class="even">
+<td>181033</td><td>Rezumeni yuborish</td><td>Toraev Orif Shermuhammedovech</td><td>2015-04-02 15:00:53</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/181033">Просмотр</a></td></tr>
+<tr class="odd">
+<td>180412</td><td>Rezumeni yuborish</td><td>Samiyev Turgun Xushvaqtivich</td><td>2015-04-02 09:08:26</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/180412">Просмотр</a></td></tr>
+<tr class="even">
+<td>180401</td><td>Rezumeni yuborish</td><td>Samiyev Turgun Xushvaqtivich</td><td>2015-04-02 08:44:08</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/180401">Просмотр</a></td></tr>
+<tr class="odd">
+<td>180398</td><td>Rezumeni yuborish</td><td>Samiyev Turgun Xushvaqtivich</td><td>2015-04-02 08:29:00</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/180398">Просмотр</a></td></tr>
+<tr class="even">
+<td>179880</td><td>Rezumeni yuborish</td><td>Zufar Toshmuxammadjvich Mirzaaxmedov</td><td>2015-04-01 16:44:01</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/179880">Просмотр</a></td></tr>
+<tr class="odd">
+<td>178306</td><td>Rezumeni yuborish</td><td>Holmurodov Murodjon Xolmurodovich</td><td>2015-03-31 10:13:12</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/178306">Просмотр</a></td></tr>
+<tr class="even">
+<td>178167</td><td>Rezumeni yuborish</td><td>Holmurodov Murodjon Xolmurodovich</td><td>2015-03-30 19:05:58</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/178167">Просмотр</a></td></tr>
+<tr class="odd">
+<td>177410</td><td>Rezumeni yuborish</td><td>Тимур Мухамадиевич Хушвактов</td><td>2015-03-30 10:04:55</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/177410">Просмотр</a></td></tr>
+<tr class="even">
+<td>177375</td><td>Rezumeni yuborish</td><td>Тимур Мухамадиевич Хушвактов</td><td>2015-03-30 09:51:08</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/177375">Просмотр</a></td></tr>
+<tr class="odd">
+<td>176825</td><td>Rezumeni yuborish</td><td>egamberdiyev navruz uchqun ugli</td><td>2015-03-27 21:30:01</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/176825">Просмотр</a></td></tr>
+<tr class="even">
+<td>175788</td><td>Rezumeni yuborish</td><td>Rustamov Foziljon Xazratkulovich</td><td>2015-03-27 10:08:37</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/175788">Просмотр</a></td></tr>
+<tr class="odd">
+<td>173967</td><td>Rezumeni yuborish</td><td>Ixtiyor Xabibullayevich Kasimov</td><td>2015-03-25 12:42:53</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/173967">Просмотр</a></td></tr>
+<tr class="even">
+<td>171225</td><td>Rezumeni yuborish</td><td>Eshboev Xoljura Islomidinovich</td><td>2015-03-20 17:52:34</td><td>Qayta ishlandi</td><td style="width:100px;"><a class="btn" style="width:150px;" title="Просмотр" href="/uz/requestview/171225">Просмотр</a></td></tr>
+</tbody>
+</table>
+<div class="pagination"><ul id="yw0" class="yiiPager"><li class="previous disabled"><a href="/uz/request/processed">&larr;</a></li>
+<li class=" active"><a href="/uz/request/processed">1</a></li>
+<li class=""><a href="/uz/request/processed?Request_page=2">2</a></li>
+<li class=""><a href="/uz/request/processed?Request_page=3">3</a></li>
+<li class=""><a href="/uz/request/processed?Request_page=4">4</a></li>
+<li class=""><a href="/uz/request/processed?Request_page=5">5</a></li>
+<li class="next"><a href="/uz/request/processed?Request_page=2">&rarr;</a></li></ul></div><div class="keys" style="display:none" title="/uz/request/processed"><span>187055</span><span>184720</span><span>182665</span><span>182638</span><span>182625</span><span>182596</span><span>181838</span><span>181033</span><span>180412</span><span>180401</span><span>180398</span><span>179880</span><span>178306</span><span>178167</span><span>177410</span><span>177375</span><span>176825</span><span>175788</span><span>173967</span><span>171225</span></div>
+</div>                    <!--main-->
+
+        </div>
+        <!-- END PAGE CONTAINER-->
+    </div>
+    <!-- END PAGE -->
+
+</div>
+<!-- END CONTAINER -->
+
+
+
+
+<!-- BEGIN FOOTER -->
+<div class="footer">
+    2013 &copy; UZINFOCOM.
+    <div class="span pull-right">
+        <span class="go-top"><i class="icon-angle-up"></i></span>
+    </div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS -->
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- <script src="/themes/govuz/js/jquery-1.8.3.min.js"></script> -->
+<!--[if lt IE 9]>
+<script src="/themes/govuz/js/excanvas.js"></script>
+<script src="/themes/govuz/js/respond.js"></script>
+<![endif]-->
+<script src="/themes/govuz/breakpoints/breakpoints.js"></script>
+<script src="/themes/govuz/bootstrap/js/bootstrap.min.js"></script>
+<script src="/themes/govuz/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/themes/govuz/js/jquery.cookie.js"></script>
+<script src="/themes/govuz/js/additions.js"></script>
+
+
+<!-- END JAVASCRIPTS -->
+
+<script type="text/javascript" src="/assets/d9ec37f/gridview/jquery.yiigridview.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+jQuery('#request-grid').yiiGridView({'ajaxUpdate':false,'ajaxVar':'ajax','pagerClass':'pagination','loadingClass':'grid-view-loading','filterClass':'filters','tableClass':'table table-striped table-bordered table-advance table','selectableRows':1,'enableHistory':false,'updateSelector':'{page}, {sort}','filterSelector':'{filter}','pageVar':'Request_page','selectionChanged':function(id){window.location='/uz/requestview/' + $.fn.yiiGridView.getSelection(id);}});
+});
+/*]]>*/
+</script>
+</body>
+<!-- END BODY -->
+</html>

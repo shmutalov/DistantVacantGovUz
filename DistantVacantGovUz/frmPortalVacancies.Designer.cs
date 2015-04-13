@@ -35,7 +35,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTools = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuImportToPortal = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindowCloseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWindowLayout = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,16 +95,10 @@
             // mnuTools
             // 
             this.mnuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator2,
             this.mnuImportToPortal});
             this.mnuTools.Name = "mnuTools";
             this.mnuTools.Size = new System.Drawing.Size(48, 20);
             this.mnuTools.Text = "Tools";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(161, 6);
             // 
             // mnuImportToPortal
             // 
@@ -243,7 +236,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem mnuLogout;
         private System.Windows.Forms.ToolStripMenuItem mnuTools;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem mnuImportToPortal;
         private System.Windows.Forms.ToolStripMenuItem mnuWindowCloseAll;
         private System.Windows.Forms.ToolStripMenuItem mnuWindowLayout;

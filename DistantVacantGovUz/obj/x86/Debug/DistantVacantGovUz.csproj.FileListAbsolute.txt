@@ -48,3 +48,4 @@ D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.fr
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmEditLocalVacancy.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmEditLocalVacancy.en.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmEditLocalVacancy.ru.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\ListViewEx.dll
