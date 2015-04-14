@@ -115,6 +115,8 @@ namespace DistantVacantGovUz
             _curl = new Easy();
 
             // Установка загаловков запроса по-умолчанию
+            //_curl.SetOpt(CURLoption.CURLOPT_HEADER, "");
+            //_curl.SetOpt(CURLoption.CURLOPT_ENCODING, "gzip");
             _curl.SetOpt(CURLoption.CURLOPT_USERAGENT, "Mozilla/4.0");
             _curl.SetOpt(CURLoption.CURLOPT_AUTOREFERER, 1);
             _curl.SetOpt(CURLoption.CURLOPT_FOLLOWLOCATION, 1);

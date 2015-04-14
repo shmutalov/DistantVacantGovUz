@@ -142,7 +142,15 @@ namespace DistantVacantGovUz
         /// <returns>Возратит "очищенную" строку</returns>
         private string ClearString(string p_srcString)
         {
-            return StripHtmlTags(p_srcString).Trim().Replace("\r\n\r\n", "\r\n").Replace("\t", "");
+            string temp = StripHtmlTags(p_srcString);
+            temp = temp.Replace("\r\n\r\n", "\r\n");
+            temp = temp.Replace("\r\n\r\n", "\r\n");
+            temp = temp.Replace("\t", "");
+            temp = temp.Replace("  ", " ");
+            temp = temp.Replace("  ", " ");
+            temp = temp.Trim();
+
+            return temp;
         }
 
         /// <summary>
@@ -394,8 +402,9 @@ namespace DistantVacantGovUz
                 post_data = post_data.Replace(@"#VACANCIES_INFORMATION_UZ#", Uri.EscapeDataString(p_Vacancy.strInformationUZ));
                 post_data = post_data.Replace(@"#VACANCIES_CAPTCHA#", this.strCaptchaText);
 
-                string page = http.GetUrl(strEditVacancyUrl + @"/" + p_vac_id.ToString(), RequestMethod.POST, post_data);
-
+                byte[] bytes = http.GetBytes(strEditVacancyUrl + @"/" + p_vac_id.ToString(), RequestMethod.POST, post_data);
+                //string page = http.GetUrl(strEditVacancyUrl + @"/" + p_vac_id.ToString(), RequestMethod.POST, post_data);
+                string page = Encoding.UTF8.GetString(bytes);
                 string str_search = "a class=\"brand pull-right\" href=\"/ru/vacancies/admin/";
 
                 int vac_id_str_index = page.IndexOf(str_search);
@@ -418,7 +427,8 @@ namespace DistantVacantGovUz
                 CVacancy v = null;
 
                 // test
-                string page = http.GetUrl(strEditVacancyUrl + "/" + p_vac_id.ToString());
+                //string page = http.GetUrl(strEditVacancyUrl + "/" + p_vac_id.ToString());
+                string page = Encoding.UTF8.GetString(http.GetBytes(strEditVacancyUrl + "/" + p_vac_id.ToString()));
 
                 if (page.IndexOf(@"Редактировать вакансию") > 0)
                 //if (true)
@@ -565,7 +575,7 @@ namespace DistantVacantGovUz
 
                                                 if (t_chunk.oType == HTMLchunkType.Text)
                                                 {
-                                                    Vacancies_specialization_ru = t_chunk.oHTML;
+                                                    Vacancies_specialization_ru = ClearString(HttpUtility.HtmlDecode(t_chunk.oHTML));
                                                 }
                                                 break;
                                             case "Vacancies_specialization_uz":
@@ -573,7 +583,7 @@ namespace DistantVacantGovUz
 
                                                 if (t_chunk.oType == HTMLchunkType.Text)
                                                 {
-                                                    Vacancies_specialization_uz = t_chunk.oHTML;
+                                                    Vacancies_specialization_uz = ClearString(HttpUtility.HtmlDecode(t_chunk.oHTML));
                                                 }
                                                 break;
                                             case "Vacancies_requarements_ru":
@@ -581,7 +591,7 @@ namespace DistantVacantGovUz
 
                                                 if (t_chunk.oType == HTMLchunkType.Text)
                                                 {
-                                                    Vacancies_requarements_ru = t_chunk.oHTML;
+                                                    Vacancies_requarements_ru = ClearString(HttpUtility.HtmlDecode(t_chunk.oHTML));
                                                 }
                                                 break;
                                             case "Vacancies_requarements_uz":
@@ -589,7 +599,7 @@ namespace DistantVacantGovUz
 
                                                 if (t_chunk.oType == HTMLchunkType.Text)
                                                 {
-                                                    Vacancies_requarements_uz = t_chunk.oHTML;
+                                                    Vacancies_requarements_uz = ClearString(HttpUtility.HtmlDecode(t_chunk.oHTML));
                                                 }
                                                 break;
                                             case "Vacancies_information_ru":
@@ -597,7 +607,7 @@ namespace DistantVacantGovUz
 
                                                 if (t_chunk.oType == HTMLchunkType.Text)
                                                 {
-                                                    Vacancies_information_ru = t_chunk.oHTML;
+                                                    Vacancies_information_ru = ClearString(HttpUtility.HtmlDecode(t_chunk.oHTML));
                                                 }
                                                 break;
                                             case "Vacancies_information_uz":
@@ -605,7 +615,7 @@ namespace DistantVacantGovUz
 
                                                 if (t_chunk.oType == HTMLchunkType.Text)
                                                 {
-                                                    Vacancies_information_uz = t_chunk.oHTML;
+                                                    Vacancies_information_uz = ClearString(HttpUtility.HtmlDecode(t_chunk.oHTML));
                                                 }
                                                 break;
                                             default:
@@ -710,7 +720,9 @@ namespace DistantVacantGovUz
             {
                 List<CVacancyListElement> vacs = null;
 
-                string page = http.GetUrl(strOpenedUrl);
+                //string page = http.GetUrl(strOpenedUrl);
+                string page = Encoding.UTF8.GetString(http.GetBytes(strOpenedUrl));
+
                 //string page = null;
 
                 /*TextReader reader;
@@ -884,10 +896,12 @@ namespace DistantVacantGovUz
             {
                 List<CVacancyListElement> vacs = null;
 
-                string page = http.GetUrl(strClosedUrl);
+                //string page = http.GetUrl(strClosedUrl);
+                string page = Encoding.UTF8.GetString(http.GetBytes(strClosedUrl));
+
                 //string page = null;
 
-                TextReader reader;
+                /*TextReader reader;
                 using (reader = new StreamReader(Program.GetApplicationDirectory() + "\\" + "closed.htm", Encoding.UTF8))
                 {
                     try
@@ -898,7 +912,7 @@ namespace DistantVacantGovUz
                     {
                         page = "";
                     }
-                }
+                }*/
 
                 vacs = new List<CVacancyListElement>();
 

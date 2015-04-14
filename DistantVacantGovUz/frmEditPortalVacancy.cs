@@ -186,7 +186,7 @@ namespace DistantVacantGovUz
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            return;
+            //return;
 
             if (!ValidateVacancy())
                 return;

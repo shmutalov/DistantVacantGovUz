@@ -633,7 +633,8 @@ namespace DistantVacantGovUz
                 case VACANCY_EXPERIENCE.TWO_YEARS:
                     return "two years";
                 case VACANCY_EXPERIENCE.THREE_YEARS:
-                    return "three years";
+                    //return "three years";                 // Bug on Portal. Someone doesn't know english numbers )
+                    return "tree years";
                 //case VACANCY_EXPERIENCE.FOUR_YEARS:
                 //    return "four years";
                 case VACANCY_EXPERIENCE.FIVE_AND_MORE_YEARS:
@@ -653,6 +654,7 @@ namespace DistantVacantGovUz
                     return VACANCY_EXPERIENCE.ONE_YEAR;
                 case "two years":
                     return VACANCY_EXPERIENCE.TWO_YEARS;
+                case "tree years":                          // Bug on Portal. Someone doesn't know english numbers )
                 case "three years":
                     return VACANCY_EXPERIENCE.THREE_YEARS;
                 case "five etc":

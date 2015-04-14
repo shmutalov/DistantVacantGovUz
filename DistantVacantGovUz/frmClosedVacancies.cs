@@ -96,7 +96,17 @@ namespace DistantVacantGovUz
 
         private void toolBtnEditVacancy_Click(object sender, EventArgs e)
         {
+            if (lstVacancies.SelectedIndices.Count == 1)
+            {
+                int portalVacancyId = int.Parse(lstVacancies.SelectedItems[0].SubItems[2].Text);
 
+                frmEditPortalVacancy fEdit = new frmEditPortalVacancy(portalVacancyId);
+
+                if (fEdit.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    RefreshVacancyList();
+                }
+            }
         }
 
         private void toolBtnExportVacancies_Click(object sender, EventArgs e)
