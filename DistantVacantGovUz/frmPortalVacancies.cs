@@ -123,5 +123,10 @@ namespace DistantVacantGovUz
             fImport = new frmImportPortalVacancies();
             fImport.ShowDialog();
         }
+
+        private void frmPortalVacancies_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.vac.Logout();
+        }
     }
 }

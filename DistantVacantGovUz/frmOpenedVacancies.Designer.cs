@@ -67,6 +67,8 @@
             this.lstVacancies.TabIndex = 3;
             this.lstVacancies.UseCompatibleStateImageBehavior = false;
             this.lstVacancies.View = System.Windows.Forms.View.Details;
+            this.lstVacancies.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lstVacancies_ItemChecked);
+            this.lstVacancies.SelectedIndexChanged += new System.EventHandler(this.lstVacancies_SelectedIndexChanged);
             // 
             // clmnCheckbox
             // 
@@ -124,6 +126,7 @@
             // 
             // toolBtnExportVacancies
             // 
+            this.toolBtnExportVacancies.Enabled = false;
             this.toolBtnExportVacancies.Image = global::DistantVacantGovUz.Properties.Resources.export_24_2;
             this.toolBtnExportVacancies.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnExportVacancies.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -135,6 +138,7 @@
             // 
             // toolBtnChangeStatus
             // 
+            this.toolBtnChangeStatus.Enabled = false;
             this.toolBtnChangeStatus.Image = global::DistantVacantGovUz.Properties.Resources.key_24;
             this.toolBtnChangeStatus.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnChangeStatus.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -150,6 +154,7 @@
             // 
             // toolBtnEditVacancy
             // 
+            this.toolBtnEditVacancy.Enabled = false;
             this.toolBtnEditVacancy.Image = global::DistantVacantGovUz.Properties.Resources.edit_24;
             this.toolBtnEditVacancy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnEditVacancy.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -161,6 +166,7 @@
             // 
             // toolBtnCheckAll
             // 
+            this.toolBtnCheckAll.Enabled = false;
             this.toolBtnCheckAll.Image = global::DistantVacantGovUz.Properties.Resources.check_24;
             this.toolBtnCheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -172,6 +178,7 @@
             // 
             // toolBtnUncheckAll
             // 
+            this.toolBtnUncheckAll.Enabled = false;
             this.toolBtnUncheckAll.Image = global::DistantVacantGovUz.Properties.Resources.uncheck_24;
             this.toolBtnUncheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnUncheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;

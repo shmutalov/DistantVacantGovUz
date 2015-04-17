@@ -68,18 +68,36 @@ namespace DistantVacantGovUz
             CVacancyPortalPreloader preldr = (CVacancyPortalPreloader)e.Result;
             List<CVacancyListElement> vacs = preldr.GetVacancyList();
 
-            int i = 1;
-
-            foreach (CVacancyListElement v in vacs)
+            if (vacs != null)
             {
-                ListViewItem li = lstVacancies.Items.Add("");
-                li.SubItems.Add(i.ToString());
-                li.SubItems.Add(v.iID.ToString());
-                li.SubItems.Add(v.strDescription);
+                int i = 1;
 
-                i++;
+                foreach (CVacancyListElement v in vacs)
+                {
+                    ListViewItem li = lstVacancies.Items.Add("");
+                    li.SubItems.Add(i.ToString());
+                    li.SubItems.Add(v.iID.ToString());
+                    li.SubItems.Add(v.strDescription);
+
+                    i++;
+                }
+
+                if (vacs.Count > 0)
+                {
+                    toolBtnCheckAll.Enabled = true;
+                    toolBtnExportVacancies.Enabled = true;
+                }
+                else
+                {
+                    toolBtnCheckAll.Enabled = false;
+                    toolBtnExportVacancies.Enabled = false;
+                }
+
+                toolBtnEditVacancy.Enabled = false;
+                toolBtnChangeStatus.Enabled = false;
+                toolBtnUncheckAll.Enabled = false;
             }
-
+            
             preldr.GetLoadingForm().Close();
         }
 
@@ -161,6 +179,36 @@ namespace DistantVacantGovUz
                 {
                     RefreshVacancyList();
                 }
+            }
+        }
+
+        private void lstVacancies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstVacancies.SelectedIndices.Count == 1)
+                toolBtnEditVacancy.Enabled = true;
+            else
+                toolBtnEditVacancy.Enabled = false;
+        }
+
+        private void lstVacancies_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            if (lstVacancies.CheckedItems.Count > 0)
+            {
+                toolBtnChangeStatus.Enabled = true;
+
+                if (lstVacancies.CheckedItems.Count == lstVacancies.Items.Count)
+                {
+                    toolBtnUncheckAll.Enabled = true;
+                    toolBtnCheckAll.Enabled = false;
+                }
+                else
+                    toolBtnCheckAll.Enabled = true;
+            }
+            else
+            {
+                toolBtnChangeStatus.Enabled = false;
+                toolBtnCheckAll.Enabled = true;
+                toolBtnUncheckAll.Enabled = false;
             }
         }
     }

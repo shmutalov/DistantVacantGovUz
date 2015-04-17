@@ -40,12 +40,12 @@
             this.lblProxyHost = new System.Windows.Forms.Label();
             this.chkUseProxy = new System.Windows.Forms.CheckBox();
             this.grpUpdates = new System.Windows.Forms.GroupBox();
-            this.chkEnableUpdates = new System.Windows.Forms.CheckBox();
-            this.lblUpdateServer = new System.Windows.Forms.Label();
             this.txtUpdateServer = new System.Windows.Forms.TextBox();
+            this.lblUpdateServer = new System.Windows.Forms.Label();
+            this.chkEnableUpdates = new System.Windows.Forms.CheckBox();
             this.grpInterface = new System.Windows.Forms.GroupBox();
-            this.lblLanguage = new System.Windows.Forms.Label();
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
+            this.lblLanguage = new System.Windows.Forms.Label();
             this.grpConnection.SuspendLayout();
             this.grpUpdates.SuspendLayout();
             this.grpInterface.SuspendLayout();
@@ -172,6 +172,22 @@
             this.grpUpdates.TabStop = false;
             this.grpUpdates.Text = "Updates";
             // 
+            // txtUpdateServer
+            // 
+            this.txtUpdateServer.Location = new System.Drawing.Point(105, 42);
+            this.txtUpdateServer.Name = "txtUpdateServer";
+            this.txtUpdateServer.Size = new System.Drawing.Size(322, 20);
+            this.txtUpdateServer.TabIndex = 2;
+            // 
+            // lblUpdateServer
+            // 
+            this.lblUpdateServer.Location = new System.Drawing.Point(9, 41);
+            this.lblUpdateServer.Name = "lblUpdateServer";
+            this.lblUpdateServer.Size = new System.Drawing.Size(90, 20);
+            this.lblUpdateServer.TabIndex = 1;
+            this.lblUpdateServer.Text = "Update server";
+            this.lblUpdateServer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // chkEnableUpdates
             // 
             this.chkEnableUpdates.AutoSize = true;
@@ -183,22 +199,6 @@
             this.chkEnableUpdates.UseVisualStyleBackColor = true;
             this.chkEnableUpdates.CheckedChanged += new System.EventHandler(this.chkEnableUpdates_CheckedChanged);
             // 
-            // lblUpdateServer
-            // 
-            this.lblUpdateServer.Location = new System.Drawing.Point(9, 41);
-            this.lblUpdateServer.Name = "lblUpdateServer";
-            this.lblUpdateServer.Size = new System.Drawing.Size(90, 20);
-            this.lblUpdateServer.TabIndex = 1;
-            this.lblUpdateServer.Text = "Update server";
-            this.lblUpdateServer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtUpdateServer
-            // 
-            this.txtUpdateServer.Location = new System.Drawing.Point(105, 42);
-            this.txtUpdateServer.Name = "txtUpdateServer";
-            this.txtUpdateServer.Size = new System.Drawing.Size(322, 20);
-            this.txtUpdateServer.TabIndex = 2;
-            // 
             // grpInterface
             // 
             this.grpInterface.Controls.Add(this.cmbLanguage);
@@ -209,15 +209,6 @@
             this.grpInterface.TabIndex = 9;
             this.grpInterface.TabStop = false;
             this.grpInterface.Text = "Interface";
-            // 
-            // lblLanguage
-            // 
-            this.lblLanguage.Location = new System.Drawing.Point(6, 19);
-            this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(93, 20);
-            this.lblLanguage.TabIndex = 0;
-            this.lblLanguage.Text = "Language";
-            this.lblLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbLanguage
             // 
@@ -232,6 +223,15 @@
             this.cmbLanguage.Size = new System.Drawing.Size(322, 21);
             this.cmbLanguage.TabIndex = 1;
             // 
+            // lblLanguage
+            // 
+            this.lblLanguage.Location = new System.Drawing.Point(6, 19);
+            this.lblLanguage.Name = "lblLanguage";
+            this.lblLanguage.Size = new System.Drawing.Size(93, 20);
+            this.lblLanguage.TabIndex = 0;
+            this.lblLanguage.Text = "Language";
+            this.lblLanguage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +243,7 @@
             this.Controls.Add(this.grpConnection);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmSettings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.frmSettings_Load);
             this.grpConnection.ResumeLayout(false);
