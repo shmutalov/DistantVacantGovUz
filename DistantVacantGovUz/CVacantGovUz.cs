@@ -43,7 +43,8 @@ namespace DistantVacantGovUz
         /// <summary>
         /// Класс для работы с HTTP-запросами
         /// </summary>
-        private HttpRequest http;
+        //private HttpRequest http;
+        private IHttpRequests http;
 
         /// <summary>
         /// Класс для парсинга HTML-данных
@@ -65,9 +66,11 @@ namespace DistantVacantGovUz
         private const string strReservedUrl = @"http://vacant.gov.uz/ru/request/reserved";
         private const string strAddVacancyUrl = @"http://vacant.gov.uz/ru/vacancies/create";
         private const string strEditVacancyUrl = @"http://vacant.gov.uz/ru/vacancies/update";
-        private const string strRefreshCaptchaUrl = @"http://vacant.gov.uz/ru/vacancies/captcha?refresh=1&_=";
-        private const string strCaptchaImageUrl = @"http://vacant.gov.uz/ru/vacancies/captcha?v=";
-        
+        //private const string strRefreshCaptchaUrl = @"http://vacant.gov.uz/ru/vacancies/captcha?refresh=1&_=";
+        //private const string strCaptchaImageUrl = @"http://vacant.gov.uz/ru/vacancies/captcha?v=";
+        private const string strRefreshCaptchaUrl = @"http://vacant.gov.uz/ru/site/captcha?refresh=1&_=";
+        private const string strCaptchaImageUrl = @"http://vacant.gov.uz/ru/site/captcha?v=";
+
         public string strVacancyUserName = "";
 
         private bool bIsLogged = false;
@@ -191,7 +194,9 @@ namespace DistantVacantGovUz
         /// <param name="p_Browser">Объект WebBrowser</param>
         public CVacantGovUz()
         {
-            http = new HttpRequest();
+            //http = new HttpRequest();
+            //http = new CurlHttpRequests();
+            http = new NetHttpRequests();
 
             parser = new HTMLparser();
 
@@ -251,8 +256,14 @@ namespace DistantVacantGovUz
 
             string post_data = @"password=" + Uri.EscapeDataString(this.strVacPassword);
 
-            string page = http.GetUrl(strLoginUrl, RequestMethod.POST, post_data);
+            //string page = http.GetUrl(strLoginUrl, RequestMethod.POST, post_data);
+            byte[] bytes = http.GetBytes(strLoginUrl, RequestMethod.POST, post_data);
 
+            string page = "";
+
+            if (bytes != null)
+                page = Encoding.UTF8.GetString(bytes);
+            
             if (page.Contains(@"/uz/site/logout"))
             {
                 string strDbg;
@@ -281,7 +292,10 @@ namespace DistantVacantGovUz
         public void Logout()
         {
             if (bIsLogged)
-                http.GetUrl(strLogoutUrl);
+            {
+                //http.GetUrl(strLogoutUrl);
+                http.GetBytes(strLogoutUrl);
+            }
 
             bIsLogged = false;
         }
@@ -337,7 +351,12 @@ namespace DistantVacantGovUz
                 post_data = post_data.Replace(@"#VACANCIES_INFORMATION_UZ#", Uri.EscapeDataString(p_Vacancy.strInformationUZ));
                 post_data = post_data.Replace(@"#VACANCIES_CAPTCHA#", this.strCaptchaText);
 
-                string page = http.GetUrl(strAddVacancyUrl, RequestMethod.POST, post_data);
+                //string page = http.GetUrl(strAddVacancyUrl, RequestMethod.POST, post_data);
+                byte[] bytes = http.GetBytesEx(strAddVacancyUrl, RequestMethod.POST, post_data);
+                string page = "";
+
+                if (bytes != null)
+                    page = Encoding.UTF8.GetString(bytes);
 
                 string str_search = "a class=\"brand pull-right\" href=\"/ru/vacancies/admin/";
 
@@ -382,6 +401,8 @@ namespace DistantVacantGovUz
                 // captcha
                 post_data += "&Vacancies[verifyCode]=#VACANCIES_CAPTCHA#";
 
+                //post_data = post_data.Replace("[", "%5B").Replace("]", "%5D");
+
                 post_data = post_data.Replace(@"#VACANCIES_NAME_RU#", Uri.EscapeDataString(p_Vacancy.strDescriptionRU));
                 post_data = post_data.Replace(@"#VACANCIES_NAME_UZ#", Uri.EscapeDataString(p_Vacancy.strDescriptionUZ));
                 post_data = post_data.Replace(@"#VACANCIES_CATEGORY_ID#", CVacancy.CategoryId(p_Vacancy.vacCategory).ToString());
@@ -402,9 +423,13 @@ namespace DistantVacantGovUz
                 post_data = post_data.Replace(@"#VACANCIES_INFORMATION_UZ#", Uri.EscapeDataString(p_Vacancy.strInformationUZ));
                 post_data = post_data.Replace(@"#VACANCIES_CAPTCHA#", this.strCaptchaText);
 
-                byte[] bytes = http.GetBytes(strEditVacancyUrl + @"/" + p_vac_id.ToString(), RequestMethod.POST, post_data);
+                byte[] bytes = http.GetBytesEx(strEditVacancyUrl + @"/" + p_vac_id.ToString(), RequestMethod.POST, post_data);
                 //string page = http.GetUrl(strEditVacancyUrl + @"/" + p_vac_id.ToString(), RequestMethod.POST, post_data);
-                string page = Encoding.UTF8.GetString(bytes);
+                string page = "";
+
+                if (bytes != null)
+                    page = Encoding.UTF8.GetString(bytes);
+
                 string str_search = "a class=\"brand pull-right\" href=\"/ru/vacancies/admin/";
 
                 int vac_id_str_index = page.IndexOf(str_search);
@@ -428,7 +453,11 @@ namespace DistantVacantGovUz
 
                 // test
                 //string page = http.GetUrl(strEditVacancyUrl + "/" + p_vac_id.ToString());
-                string page = Encoding.UTF8.GetString(http.GetBytes(strEditVacancyUrl + "/" + p_vac_id.ToString()));
+                byte[] bytes = http.GetBytes(strEditVacancyUrl + "/" + p_vac_id.ToString());
+                string page = "";
+
+                if (bytes != null)
+                    page = Encoding.UTF8.GetString(bytes);
 
                 if (page.IndexOf(@"Редактировать вакансию") > 0)
                 //if (true)
@@ -721,7 +750,12 @@ namespace DistantVacantGovUz
                 List<CVacancyListElement> vacs = null;
 
                 //string page = http.GetUrl(strOpenedUrl);
-                string page = Encoding.UTF8.GetString(http.GetBytes(strOpenedUrl));
+                byte[] bytes = http.GetBytes(strOpenedUrl);
+
+                string page = "";
+
+                if (bytes != null)
+                 page = Encoding.UTF8.GetString(bytes);
 
                 //string page = null;
 
@@ -829,7 +863,8 @@ namespace DistantVacantGovUz
                         if (lastPage || (strNextPageUrl == ""))
                             break;
 
-                        page = http.GetUrl(strNextPageUrl);
+                        //page = http.GetUrl(strNextPageUrl);
+                        page = Encoding.UTF8.GetString(http.GetBytes(strNextPageUrl));
                     }
                 }
                 else
@@ -897,7 +932,11 @@ namespace DistantVacantGovUz
                 List<CVacancyListElement> vacs = null;
 
                 //string page = http.GetUrl(strClosedUrl);
-                string page = Encoding.UTF8.GetString(http.GetBytes(strClosedUrl));
+                byte[] bytes = http.GetBytes(strClosedUrl);
+                string page = "";
+
+                if (bytes != null)
+                    page = Encoding.UTF8.GetString(bytes);
 
                 //string page = null;
 
@@ -1005,7 +1044,8 @@ namespace DistantVacantGovUz
                         if (lastPage || (strNextPageUrl == ""))
                             break;
 
-                        page = http.GetUrl(strNextPageUrl);
+                        //page = http.GetUrl(strNextPageUrl);
+                        page = Encoding.UTF8.GetString(http.GetBytes(strNextPageUrl));
                     }
                 }
                 else
@@ -1112,7 +1152,12 @@ namespace DistantVacantGovUz
 
                 string newCapcthaUrl = strRefreshCaptchaUrl + rnd.Next().ToString();
 
-                string newCaptchaResponse = http.GetUrl(newCapcthaUrl);
+                //string newCaptchaResponse = http.GetUrl(newCapcthaUrl);
+                string newCaptchaResponse = "";
+                byte[] bytes = http.GetBytes(newCapcthaUrl);
+
+                if (bytes != null)
+                    newCaptchaResponse = Encoding.UTF8.GetString(bytes);
 
                 int parse_pos = newCaptchaResponse.IndexOf("v=");
 

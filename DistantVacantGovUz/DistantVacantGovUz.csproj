@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DistantVacantGovUz</RootNamespace>
     <AssemblyName>DistantVacantGovUz</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -48,7 +49,8 @@
     <Reference Include="itextsharp">
       <HintPath>libraries\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="LibCurlNet">
+    <Reference Include="LibCurlNet, Version=1.3.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>libraries\LibCurlNet.dll</HintPath>
     </Reference>
     <Reference Include="ListViewEx">
@@ -77,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CReportVisaItem.cs" />
+    <Compile Include="CurlHttpRequests.cs" />
     <Compile Include="CVacancy.cs" />
     <Compile Include="CVacancyDocumentPreloader.cs" />
     <Compile Include="CVacancyFileType.cs" />
@@ -191,6 +194,7 @@
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="HttpRequest.cs" />
+    <Compile Include="IHttpRequests.cs" />
     <Compile Include="language\strings.ru-RU.Designer.cs">
       <DependentUpon>strings.ru-RU.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -201,6 +205,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>strings.resx</DependentUpon>
     </Compile>
+    <Compile Include="NetHttpRequests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAbout.resx">
@@ -290,6 +295,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

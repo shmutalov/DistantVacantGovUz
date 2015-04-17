@@ -8,6 +8,7 @@ using SeasideResearch.LibCurlNet;
 
 namespace DistantVacantGovUz
 {
+    /*
     /// <summary>
     /// Метод HTTP-запроса
     /// </summary>
@@ -15,7 +16,7 @@ namespace DistantVacantGovUz
     {
         GET,
         POST
-    }
+    }*/
 
     /// <summary>
     /// Класс для работы с HTTP-запросами
@@ -117,7 +118,8 @@ namespace DistantVacantGovUz
             // Установка загаловков запроса по-умолчанию
             //_curl.SetOpt(CURLoption.CURLOPT_HEADER, "");
             //_curl.SetOpt(CURLoption.CURLOPT_ENCODING, "gzip");
-            _curl.SetOpt(CURLoption.CURLOPT_USERAGENT, "Mozilla/4.0");
+            _curl.SetOpt(CURLoption.CURLOPT_USERAGENT, "Mozilla/5.0");
+            //_curl.SetOpt(CURLoption.CURLOPT_HEADER, "");
             _curl.SetOpt(CURLoption.CURLOPT_AUTOREFERER, 1);
             _curl.SetOpt(CURLoption.CURLOPT_FOLLOWLOCATION, 1);
             _curl.SetOpt(CURLoption.CURLOPT_SSL_VERIFYPEER, false);
