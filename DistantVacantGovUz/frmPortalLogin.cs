@@ -15,11 +15,11 @@ namespace DistantVacantGovUz
             InitializeComponent();
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
+        private void Login()
         {
             if ((txtUserName.Text == "") || (txtPassword.Text == ""))
             {
-                lblStatus.Text = "Please, fill all fields";
+                lblStatus.Text = language.strings.loginFillAllFields;
                 return;
             }
 
@@ -30,12 +30,17 @@ namespace DistantVacantGovUz
 
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.Close();
-            } 
+            }
             else
             {
-                lblStatus.Text = "Login failed!" + "\n";
+                lblStatus.Text = language.strings.loginFailed;
                 lblStatus.Text += Program.vac.GetLastErrorMessage();
             }
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            Login();
         }
 
         private void txtUserName_KeyUp(object sender, KeyEventArgs e)
@@ -50,25 +55,7 @@ namespace DistantVacantGovUz
         {
             if (e.KeyCode == Keys.Return)
             {
-                if ((txtUserName.Text == "") || (txtPassword.Text == ""))
-                {
-                    lblStatus.Text = "Please, fill all fields";
-                    return;
-                }
-
-                if (Program.vac.Login(txtUserName.Text, txtPassword.Text))
-                {
-                    Program.strUserName = txtUserName.Text;
-                    Program.strPassword = txtPassword.Text;
-
-                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    lblStatus.Text = "Login failed!" + "\n";
-                    lblStatus.Text += Program.vac.GetLastErrorMessage();
-                }
+                Login();
             }
         }
 

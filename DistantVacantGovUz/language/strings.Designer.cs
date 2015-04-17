@@ -61,6 +61,43 @@ namespace DistantVacantGovUz.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exported %d of %d.
+        ///%d%.
+        /// </summary>
+        internal static string exportStatus {
+            get {
+                return ResourceManager.GetString("exportStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portal vacancy edit form - Vacancy #.
+        /// </summary>
+        internal static string frmEditPortalVacancyCaption {
+            get {
+                return ResourceManager.GetString("frmEditPortalVacancyCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local vacancies.
+        /// </summary>
+        internal static string frmLocalDocumentCaption {
+            get {
+                return ResourceManager.GetString("frmLocalDocumentCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Untitled document .
+        /// </summary>
+        internal static string frmMainNewDocumentTitle {
+            get {
+                return ResourceManager.GetString("frmMainNewDocumentTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Launcher version: .
         /// </summary>
         internal static string lblAppLauncherVersion {
@@ -97,6 +134,34 @@ namespace DistantVacantGovUz.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Selected: .
+        /// </summary>
+        internal static string localDocSelectedItems {
+            get {
+                return ResourceManager.GetString("localDocSelectedItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login failed!
+        ///.
+        /// </summary>
+        internal static string loginFailed {
+            get {
+                return ResourceManager.GetString("loginFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please, fill all fields.
+        /// </summary>
+        internal static string loginFillAllFields {
+            get {
+                return ResourceManager.GetString("loginFillAllFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About program....
         /// </summary>
         internal static string mnuAboutProgram {
@@ -120,6 +185,154 @@ namespace DistantVacantGovUz.language {
         internal static string mnuHowToWork {
             get {
                 return ResourceManager.GetString("mnuHowToWork", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adding local vacancy.
+        /// </summary>
+        internal static string MsgCaptionAddVacancy {
+            get {
+                return ResourceManager.GetString("MsgCaptionAddVacancy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opening portal vacancy....
+        /// </summary>
+        internal static string MsgEditPortalVacOpenCaption {
+            get {
+                return ResourceManager.GetString("MsgEditPortalVacOpenCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot open selected vacancy. 
+        ///Error occured..
+        /// </summary>
+        internal static string MsgEditPortalVacOpenError {
+            get {
+                return ResourceManager.GetString("MsgEditPortalVacOpenError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saving portal vacancy....
+        /// </summary>
+        internal static string MsgEditPortalVacSaveCaption {
+            get {
+                return ResourceManager.GetString("MsgEditPortalVacSaveCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacancy was not saved. 
+        ///Error occured..
+        /// </summary>
+        internal static string MsgEditPortalVacSaveError {
+            get {
+                return ResourceManager.GetString("MsgEditPortalVacSaveError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some fields not filled.
+        ///Continue save?.
+        /// </summary>
+        internal static string MsgNotAllFieldsFilled {
+            get {
+                return ResourceManager.GetString("MsgNotAllFieldsFilled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document is already opened.
+        /// </summary>
+        internal static string MsgOpenVacancyDocumentAlreadyOpened {
+            get {
+                return ResourceManager.GetString("MsgOpenVacancyDocumentAlreadyOpened", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opening document....
+        /// </summary>
+        internal static string MsgOpenVacancyDocumentCaption {
+            get {
+                return ResourceManager.GetString("MsgOpenVacancyDocumentCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error occured while loading document.
+        ///Reason: .
+        /// </summary>
+        internal static string MsgOpenVacancyDocumentError {
+            get {
+                return ResourceManager.GetString("MsgOpenVacancyDocumentError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exporting vacancies....
+        /// </summary>
+        internal static string MsgPortalVacExportCaption {
+            get {
+                return ResourceManager.GetString("MsgPortalVacExportCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exported vacancies save error..
+        /// </summary>
+        internal static string MsgPortalVacExportSaveError {
+            get {
+                return ResourceManager.GetString("MsgPortalVacExportSaveError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacancies successfully exported and saved..
+        /// </summary>
+        internal static string MsgPortalVacExportSuccess {
+            get {
+                return ResourceManager.GetString("MsgPortalVacExportSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changing status....
+        /// </summary>
+        internal static string MsgPortalVacStatusChangeCaption {
+            get {
+                return ResourceManager.GetString("MsgPortalVacStatusChangeCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to %d of %d vacancies status changed..
+        /// </summary>
+        internal static string MsgPortalVacStatusChanged {
+            get {
+                return ResourceManager.GetString("MsgPortalVacStatusChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacancies document file (*.vac, *.vacx)|*.vac;*.vacx.
+        /// </summary>
+        internal static string openVacancyDocumentFilter {
+            get {
+                return ResourceManager.GetString("openVacancyDocumentFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose vacancies document file.
+        /// </summary>
+        internal static string openVacancyDocumentTitle {
+            get {
+                return ResourceManager.GetString("openVacancyDocumentTitle", resourceCulture);
             }
         }
         

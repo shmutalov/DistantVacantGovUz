@@ -39,68 +39,43 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(255, 103);
+            resources.ApplyResources(this.btnOk, "btnOk");
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 26);
-            this.btnOk.TabIndex = 10;
-            this.btnOk.Text = "ОК";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(198, 76);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(132, 20);
-            this.txtPassword.TabIndex = 9;
             this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
             // 
             // lblPassword
             // 
-            this.lblPassword.Location = new System.Drawing.Point(13, 77);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(177, 16);
-            this.lblPassword.TabIndex = 8;
-            this.lblPassword.Text = "Пароль:";
-            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(198, 44);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.txtUserName, "txtUserName");
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(132, 20);
-            this.txtUserName.TabIndex = 7;
             this.txtUserName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyUp);
             // 
             // lblUserName
             // 
-            this.lblUserName.Location = new System.Drawing.Point(13, 45);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.lblUserName, "lblUserName");
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(177, 16);
-            this.lblUserName.TabIndex = 6;
-            this.lblUserName.Text = "Пользователь:";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblStatus
             // 
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            resources.ApplyResources(this.lblStatus, "lblStatus");
             this.lblStatus.ForeColor = System.Drawing.Color.Red;
-            this.lblStatus.Location = new System.Drawing.Point(12, 9);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(356, 31);
-            this.lblStatus.TabIndex = 11;
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPortalLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 154);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtPassword);
@@ -108,12 +83,9 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPortalLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Login to portal";
             this.Load += new System.EventHandler(this.frmPortalLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

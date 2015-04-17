@@ -112,30 +112,43 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AppLauncherVersion" xml:space="preserve">
-    <value>Версия лаунчера: </value>
+  <data name="lblPassword.Text" xml:space="preserve">
+    <value>Пароль:</value>
   </data>
-  <data name="AppVersion" xml:space="preserve">
-    <value>Версия приложения: </value>
+  <data name="lblUserName.Text" xml:space="preserve">
+    <value>Пользователь:</value>
   </data>
-  <data name="mnuAboutProgram" xml:space="preserve">
-    <value>О программе...</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADFpTR5xaU0+MWlNPDFpTTwxaU08MWlNPDFpTTuxaU02sWlNNnFpTTZxaU02sWl
+        NNjFpTRwAAAAAAAAAADFpTRwxaU0NMWlNMjFpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU04AAAAAAAAAAAxaU0/8WlNL7FpTQpxaU0xMWlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNN0AAAAAAAAAAMWlNO3FpTT/xaU0ucWlNCnFpTTExaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTTfAAAAAAAAAADFpTToxaU0/8WlNP/FpTS6xaU0KsWlNMTFpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU04gAAAAAAAAAAxaU06cWlNP/FpTT/xaU0/8WlNLrFpTQqxaU0xMWl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNOIAAAAAAAAAAMWlNOjFpTT/xaU0/8WlNP/FpTT/xaU0usWl
+        NCrFpTTExaU0/8WlNP/FpTT/xaU0/8WlNP/FpTTiAAAAAAAAAADFpTTixaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTS6xaU0K8WlNMTFpTT/xaU0/8WlNP/FpTT/xaU06QAAAAAAAAAAxaU04sWlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNLrFpTQrxaU0xMWlNP/FpTT/xaU0/8WlNOkAAAAAAAAAAMWlNOLFpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0usWlNCvFpTTExaU0/8WlNP/FpTTpAAAAAAAAAADFpTTexaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTS6xaU0K8WlNMTFpTT/xaU07QAAAAAAAAAAxaU03cWl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNLvFpTQrxaU0yMWlNP8AAAAAAAAAAMWl
+        NN/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0wcWlNDbFpTR8AAAAAAAA
+        AADFpTRvxaU018WlNNrFpTTZxaU02cWlNNjFpTTgxaU08MWlNPDFpTTwxaU08MWlNPjFpTRxAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//8AAMABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIAB
+        AACAAwAA//8AAA==
+</value>
   </data>
-  <data name="mnuHelp" xml:space="preserve">
-    <value>Справка</value>
-  </data>
-  <data name="mnuHowToWork" xml:space="preserve">
-    <value>Работа с программой</value>
-  </data>
-  <data name="ProgramAuthor" xml:space="preserve">
-    <value>Шерзод Муталов</value>
-  </data>
-  <data name="ProgramName" xml:space="preserve">
-    <value>Distant Vacant.Gov.Uz</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Вход в Портал</value>
   </data>
 </root>

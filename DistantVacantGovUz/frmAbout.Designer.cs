@@ -72,8 +72,8 @@
             // 
             // imgLogo
             // 
-            this.imgLogo.Image = global::DistantVacantGovUz.Properties.Resources.logo_144;
             resources.ApplyResources(this.imgLogo, "imgLogo");
+            this.imgLogo.Image = global::DistantVacantGovUz.Properties.Resources.logo_144;
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.TabStop = false;
             // 

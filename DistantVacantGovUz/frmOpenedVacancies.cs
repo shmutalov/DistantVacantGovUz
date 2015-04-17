@@ -134,7 +134,10 @@ namespace DistantVacantGovUz
             CVacancyPortalExporter exprtr = (CVacancyPortalExporter)e.UserState;
             frmLoading fLoading = (frmLoading)exprtr.GetLoadingForm();
 
-            fLoading.SetStatus("Exported " + exprtr.GetExportedVacanciesCount() + " from " + exprtr.GetTotalVacanciesCount() + "\n" + e.ProgressPercentage + "%");
+            fLoading.SetStatus(String.Format(language.strings.exportStatus
+                , exprtr.GetExportedVacanciesCount()
+                , exprtr.GetTotalVacanciesCount()
+                , e.ProgressPercentage));
         }
 
         private void workerExportVacancies_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -157,11 +160,15 @@ namespace DistantVacantGovUz
 
             if (CVacancyFileType.SaveFile(fileName, vacancyItems))
             {
-                MessageBox.Show("Вакансии успешно экпортированы и сохранены", "Экпорт вакансий", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(language.strings.MsgPortalVacExportSuccess
+                    , language.strings.MsgPortalVacExportCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Ошибка сохранения экспортированных вакансий", "Экпорт вакансий", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(language.strings.MsgPortalVacExportSaveError
+                    , language.strings.MsgPortalVacExportCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             exprtr.GetLoadingForm().Close();
@@ -209,6 +216,50 @@ namespace DistantVacantGovUz
                 toolBtnChangeStatus.Enabled = false;
                 toolBtnCheckAll.Enabled = true;
                 toolBtnUncheckAll.Enabled = false;
+            }
+        }
+
+        private void toolBtnChangeStatus_Click(object sender, EventArgs e)
+        {
+            if (lstVacancies.CheckedItems.Count > 0)
+            {
+                int statusChanged = 0;
+
+                foreach (ListViewItem li in lstVacancies.CheckedItems)
+                {
+                    try
+                    {
+                        int portalVacancyId = int.Parse(li.SubItems[2].Text);
+
+                        using (frmCaptcha fCaptcha = new frmCaptcha())
+                        {
+                            if (fCaptcha.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                            {
+                                Program.vac.SetCaptchaText(fCaptcha.captchaText);
+
+                                if (Program.vac.SetVacancyStatus(portalVacancyId, VACANCY_STATUS.CLOSED))
+                                    statusChanged++;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }
+
+                MessageBox.Show
+                (
+                    String.Format
+                    (
+                        language.strings.MsgPortalVacStatusChanged
+                        , statusChanged
+                        , lstVacancies.CheckedItems.Count
+                    )
+                    , language.strings.MsgPortalVacStatusChangeCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Information
+                );
+
+                RefreshVacancyList();
             }
         }
     }

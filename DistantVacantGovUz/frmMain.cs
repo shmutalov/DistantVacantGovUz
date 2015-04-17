@@ -53,7 +53,7 @@ namespace DistantVacantGovUz
         {
             frmLocalDocument f = new frmLocalDocument();
             f.MdiParent = this;
-            f.SetDocument("Untitled document " + (this.MdiChildren.Length).ToString());
+            f.SetDocument(language.strings.frmMainNewDocumentTitle + (this.MdiChildren.Length).ToString());
 
             f.Show();
         }
@@ -63,8 +63,8 @@ namespace DistantVacantGovUz
             OpenFileDialog ofd = new OpenFileDialog();
 
             ofd.CheckFileExists = true;
-            ofd.Filter = "Файл Вакансий (*.vac, *.vacx)|*.vac;*.vacx";
-            ofd.Title = "Выберите файл вакансий";
+            ofd.Filter = language.strings.openVacancyDocumentFilter; //"Файл Вакансий (*.vac, *.vacx)|*.vac;*.vacx";
+            ofd.Title = language.strings.openVacancyDocumentTitle;
 
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -75,7 +75,9 @@ namespace DistantVacantGovUz
                 {
                     if (doc.GetDocumentFileName().Equals(ofd.FileName))
                     {
-                        MessageBox.Show("Document is already opened", "Opening document...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(language.strings.MsgOpenVacancyDocumentAlreadyOpened
+                                , language.strings.MsgOpenVacancyDocumentCaption
+                                , MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         doc.Focus();
 
@@ -163,7 +165,9 @@ namespace DistantVacantGovUz
             }
             else
             {
-                MessageBox.Show("Error occured while loading document" + "\n" + "Reason: " + CVacancyFileType.GetLastError(), "Open document", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(language.strings.MsgOpenVacancyDocumentError + CVacancyFileType.GetLastError()
+                    , language.strings.MsgOpenVacancyDocumentCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             preldr.GetLoadingForm().Close();

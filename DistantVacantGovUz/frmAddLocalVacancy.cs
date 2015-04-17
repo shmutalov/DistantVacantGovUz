@@ -97,7 +97,10 @@ namespace DistantVacantGovUz
 
                 if (!validated)
                 {
-                    if (MessageBox.Show("Не все поля заполнены." + "\n" + "Продолжить сохранение?", "Добавление вакансии", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+                    if (MessageBox.Show(language.strings.MsgNotAllFieldsFilled
+                            , language.strings.MsgCaptionAddVacancy
+                            , MessageBoxButtons.YesNo
+                            , MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
                         return false;
                 }
                 

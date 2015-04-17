@@ -27,7 +27,7 @@ namespace DistantVacantGovUz
             if (vacancyId == 0)
                 this.Close();
 
-            this.Text = "Portal vacancy edit form - Vacancy #" + portalVacancyId.ToString();
+            this.Text = language.strings.frmEditPortalVacancyCaption + portalVacancyId.ToString();
         }
 
         /// <summary>
@@ -179,7 +179,9 @@ namespace DistantVacantGovUz
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Не удалось открыть вакансию", "Редактирование вакансии портала", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(language.strings.MsgEditPortalVacOpenError
+                    , language.strings.MsgEditPortalVacOpenCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
         }
@@ -219,7 +221,9 @@ namespace DistantVacantGovUz
             }
             else
             {
-                MessageBox.Show("Не удалось сохранить вакансию", "Редактирование вакансии портала", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(language.strings.MsgEditPortalVacSaveError
+                    , language.strings.MsgEditPortalVacSaveCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

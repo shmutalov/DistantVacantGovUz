@@ -48,7 +48,7 @@ namespace DistantVacantGovUz
         private void frmCaptcha_Load(object sender, EventArgs e)
         {
             RefreshCaptcha();
-
+            
             txtCaptchaText.Select();
         }
 

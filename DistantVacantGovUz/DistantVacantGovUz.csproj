@@ -195,11 +195,6 @@
     </Compile>
     <Compile Include="HttpRequest.cs" />
     <Compile Include="IHttpRequests.cs" />
-    <Compile Include="language\strings.ru-RU.Designer.cs">
-      <DependentUpon>strings.ru-RU.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="language\strings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -211,13 +206,31 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.ru.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.uz.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddLocalVacancy.resx">
+      <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLocalVacancy.ru.resx">
+      <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddLocalVacancy.uz.resx">
       <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCaptcha.resx">
       <DependentUpon>frmCaptcha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCaptcha.ru.resx">
+      <DependentUpon>frmCaptcha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClosedVacancies.resx">
+      <DependentUpon>frmClosedVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClosedVacancies.ru.resx">
       <DependentUpon>frmClosedVacancies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditLocalVacancy.en.resx">
@@ -232,13 +245,25 @@
     <EmbeddedResource Include="frmEditPortalVacancy.resx">
       <DependentUpon>frmEditPortalVacancy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditPortalVacancy.ru.resx">
+      <DependentUpon>frmEditPortalVacancy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmImportPortalVacancies.resx">
+      <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportPortalVacancies.ru.resx">
       <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.ru.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLocalDocument.resx">
+      <DependentUpon>frmLocalDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalDocument.ru.resx">
       <DependentUpon>frmLocalDocument.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.en.resx">
@@ -259,27 +284,44 @@
     <EmbeddedResource Include="frmOpenedVacancies.resx">
       <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenedVacancies.ru.resx">
+      <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPortalLogin.resx">
+      <DependentUpon>frmPortalLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPortalLogin.ru.resx">
       <DependentUpon>frmPortalLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPortalVacancies.resx">
       <DependentUpon>frmPortalVacancies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPortalVacancies.ru.resx">
+      <DependentUpon>frmPortalVacancies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRptPrintVersionAddVisa.resx">
+      <DependentUpon>frmRptPrintVersionAddVisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptPrintVersionAddVisa.ru.resx">
       <DependentUpon>frmRptPrintVersionAddVisa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRptPrintVersionEditVisa.resx">
       <DependentUpon>frmRptPrintVersionEditVisa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRptPrintVersionEditVisa.ru.resx">
+      <DependentUpon>frmRptPrintVersionEditVisa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRptPrintVersionSettings.resx">
+      <DependentUpon>frmRptPrintVersionSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptPrintVersionSettings.ru.resx">
       <DependentUpon>frmRptPrintVersionSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="language\strings.ru-RU.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>strings.ru-RU.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="frmSettings.ru.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="language\strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>

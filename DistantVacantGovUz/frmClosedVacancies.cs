@@ -111,7 +111,32 @@ namespace DistantVacantGovUz
         {
             if (lstVacancies.CheckedItems.Count > 0)
             {
+                int statusChanged = 0;
 
+                foreach (ListViewItem li in lstVacancies.CheckedItems)
+                {
+                    try
+                    {
+                        int portalVacancyId = int.Parse(li.SubItems[2].Text);
+
+                        using (frmCaptcha fCaptcha = new frmCaptcha())
+                        {
+                            if (fCaptcha.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                            {
+                                Program.vac.SetCaptchaText(fCaptcha.captchaText);
+
+                                if (Program.vac.SetVacancyStatus(portalVacancyId, VACANCY_STATUS.OPEN))
+                                    statusChanged++;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }
+
+                MessageBox.Show("" + statusChanged + " of " + lstVacancies.CheckedItems.Count + " vacancies status changed.", "Change status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshVacancyList();
             }
         }
 

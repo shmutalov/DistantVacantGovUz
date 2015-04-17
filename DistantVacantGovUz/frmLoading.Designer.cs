@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoading));
             this.imgLoading = new System.Windows.Forms.PictureBox();
             this.lblStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgLoading)).BeginInit();
@@ -35,28 +36,21 @@
             // 
             // imgLoading
             // 
+            resources.ApplyResources(this.imgLoading, "imgLoading");
             this.imgLoading.Image = global::DistantVacantGovUz.Properties.Resources.loading;
-            this.imgLoading.Location = new System.Drawing.Point(185, 12);
             this.imgLoading.Name = "imgLoading";
-            this.imgLoading.Size = new System.Drawing.Size(128, 128);
-            this.imgLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgLoading.TabIndex = 0;
             this.imgLoading.TabStop = false;
             // 
             // lblStatus
             // 
-            this.lblStatus.Location = new System.Drawing.Point(12, 143);
+            resources.ApplyResources(this.lblStatus, "lblStatus");
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(470, 44);
-            this.lblStatus.TabIndex = 1;
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmLoading
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(494, 196);
             this.ControlBox = false;
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.imgLoading);
@@ -65,8 +59,6 @@
             this.MinimizeBox = false;
             this.Name = "frmLoading";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Loading...";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.imgLoading)).EndInit();
             this.ResumeLayout(false);

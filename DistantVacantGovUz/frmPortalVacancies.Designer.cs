@@ -50,33 +50,28 @@
             // 
             // mnuMain
             // 
+            resources.ApplyResources(this.mnuMain, "mnuMain");
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuTools,
             this.mnuWindowCloseAll});
-            this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
-            this.mnuMain.Size = new System.Drawing.Size(802, 24);
-            this.mnuMain.TabIndex = 8;
-            this.mnuMain.Text = "Настройки";
             // 
             // mnuTools
             // 
+            resources.ApplyResources(this.mnuTools, "mnuTools");
             this.mnuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuImportToPortal});
             this.mnuTools.Name = "mnuTools";
-            this.mnuTools.Size = new System.Drawing.Size(48, 20);
-            this.mnuTools.Text = "Tools";
             // 
             // mnuImportToPortal
             // 
+            resources.ApplyResources(this.mnuImportToPortal, "mnuImportToPortal");
             this.mnuImportToPortal.Name = "mnuImportToPortal";
-            this.mnuImportToPortal.Size = new System.Drawing.Size(164, 22);
-            this.mnuImportToPortal.Text = "Import vacancies";
-            this.mnuImportToPortal.ToolTipText = "Import vacancies to portal from file";
             this.mnuImportToPortal.Click += new System.EventHandler(this.mnuImportToPortal_Click);
             // 
             // mnuWindowCloseAll
             // 
+            resources.ApplyResources(this.mnuWindowCloseAll, "mnuWindowCloseAll");
             this.mnuWindowCloseAll.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuWindowLayout,
             this.mnuWindowOpen,
@@ -84,11 +79,10 @@
             this.mnuWindowHideAll,
             this.closeAllToolStripMenuItem});
             this.mnuWindowCloseAll.Name = "mnuWindowCloseAll";
-            this.mnuWindowCloseAll.Size = new System.Drawing.Size(63, 20);
-            this.mnuWindowCloseAll.Text = "Window";
             // 
             // mnuWindowLayout
             // 
+            resources.ApplyResources(this.mnuWindowLayout, "mnuWindowLayout");
             this.mnuWindowLayout.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuWindowLayoutArrangeIcons,
             this.toolStripSeparator4,
@@ -96,97 +90,81 @@
             this.mnuWindowLayoutTileH,
             this.mnuWindowLayoutTileV});
             this.mnuWindowLayout.Name = "mnuWindowLayout";
-            this.mnuWindowLayout.Size = new System.Drawing.Size(152, 22);
-            this.mnuWindowLayout.Text = "Layout";
             // 
             // mnuWindowLayoutArrangeIcons
             // 
+            resources.ApplyResources(this.mnuWindowLayoutArrangeIcons, "mnuWindowLayoutArrangeIcons");
             this.mnuWindowLayoutArrangeIcons.Name = "mnuWindowLayoutArrangeIcons";
-            this.mnuWindowLayoutArrangeIcons.Size = new System.Drawing.Size(151, 22);
-            this.mnuWindowLayoutArrangeIcons.Text = "Arrange Icons";
             this.mnuWindowLayoutArrangeIcons.Click += new System.EventHandler(this.mnuWindowLayoutArrangeIcons_Click);
             // 
             // toolStripSeparator4
             // 
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(148, 6);
             // 
             // mnuWindowLayoutCascade
             // 
+            resources.ApplyResources(this.mnuWindowLayoutCascade, "mnuWindowLayoutCascade");
             this.mnuWindowLayoutCascade.Name = "mnuWindowLayoutCascade";
-            this.mnuWindowLayoutCascade.Size = new System.Drawing.Size(151, 22);
-            this.mnuWindowLayoutCascade.Text = "Cascade";
             this.mnuWindowLayoutCascade.Click += new System.EventHandler(this.mnuWindowLayoutCascade_Click);
             // 
             // mnuWindowLayoutTileH
             // 
+            resources.ApplyResources(this.mnuWindowLayoutTileH, "mnuWindowLayoutTileH");
             this.mnuWindowLayoutTileH.Name = "mnuWindowLayoutTileH";
-            this.mnuWindowLayoutTileH.Size = new System.Drawing.Size(151, 22);
-            this.mnuWindowLayoutTileH.Text = "Tile Horizontal";
             this.mnuWindowLayoutTileH.Click += new System.EventHandler(this.mnuWindowLayoutTileH_Click);
             // 
             // mnuWindowLayoutTileV
             // 
+            resources.ApplyResources(this.mnuWindowLayoutTileV, "mnuWindowLayoutTileV");
             this.mnuWindowLayoutTileV.Name = "mnuWindowLayoutTileV";
-            this.mnuWindowLayoutTileV.Size = new System.Drawing.Size(151, 22);
-            this.mnuWindowLayoutTileV.Text = "Tile Vertical";
             this.mnuWindowLayoutTileV.Click += new System.EventHandler(this.mnuWindowLayoutTileV_Click);
             // 
             // mnuWindowOpen
             // 
+            resources.ApplyResources(this.mnuWindowOpen, "mnuWindowOpen");
             this.mnuWindowOpen.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuWindowOpenOpenedVacs,
             this.mnuWindowOpenClosedVacs});
             this.mnuWindowOpen.Name = "mnuWindowOpen";
-            this.mnuWindowOpen.Size = new System.Drawing.Size(152, 22);
-            this.mnuWindowOpen.Text = "Open";
             // 
             // mnuWindowOpenOpenedVacs
             // 
+            resources.ApplyResources(this.mnuWindowOpenOpenedVacs, "mnuWindowOpenOpenedVacs");
             this.mnuWindowOpenOpenedVacs.Name = "mnuWindowOpenOpenedVacs";
-            this.mnuWindowOpenOpenedVacs.Size = new System.Drawing.Size(171, 22);
-            this.mnuWindowOpenOpenedVacs.Text = "Opened Vacancies";
             this.mnuWindowOpenOpenedVacs.Click += new System.EventHandler(this.mnuWindowOpenOpenedVacs_Click);
             // 
             // mnuWindowOpenClosedVacs
             // 
+            resources.ApplyResources(this.mnuWindowOpenClosedVacs, "mnuWindowOpenClosedVacs");
             this.mnuWindowOpenClosedVacs.Name = "mnuWindowOpenClosedVacs";
-            this.mnuWindowOpenClosedVacs.Size = new System.Drawing.Size(171, 22);
-            this.mnuWindowOpenClosedVacs.Text = "Closed Vacancies";
             this.mnuWindowOpenClosedVacs.Click += new System.EventHandler(this.mnuWindowOpenClosedVacs_Click);
             // 
             // mnuWindowShowAll
             // 
+            resources.ApplyResources(this.mnuWindowShowAll, "mnuWindowShowAll");
             this.mnuWindowShowAll.Name = "mnuWindowShowAll";
-            this.mnuWindowShowAll.Size = new System.Drawing.Size(152, 22);
-            this.mnuWindowShowAll.Text = "Show All";
             this.mnuWindowShowAll.Click += new System.EventHandler(this.mnuWindowShowAll_Click);
             // 
             // mnuWindowHideAll
             // 
+            resources.ApplyResources(this.mnuWindowHideAll, "mnuWindowHideAll");
             this.mnuWindowHideAll.Name = "mnuWindowHideAll";
-            this.mnuWindowHideAll.Size = new System.Drawing.Size(152, 22);
-            this.mnuWindowHideAll.Text = "Hide All";
             this.mnuWindowHideAll.Click += new System.EventHandler(this.mnuWindowHideAll_Click);
             // 
             // closeAllToolStripMenuItem
             // 
+            resources.ApplyResources(this.closeAllToolStripMenuItem, "closeAllToolStripMenuItem");
             this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.closeAllToolStripMenuItem.Text = "Close All";
             this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.closeAllToolStripMenuItem_Click);
             // 
             // frmPortalVacancies
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 478);
             this.Controls.Add(this.mnuMain);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmPortalVacancies";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vacancies on portal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPortalVacancies_FormClosing);
             this.Load += new System.EventHandler(this.frmPortalVacancies_Load);
             this.mnuMain.ResumeLayout(false);

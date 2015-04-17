@@ -79,6 +79,7 @@
             // 
             // toolbar
             // 
+            resources.ApplyResources(this.toolbar, "toolbar");
             this.toolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnSave,
@@ -96,210 +97,149 @@
             this.toolBtnEditSelected,
             this.toolBtnDeleteChecked});
             this.toolbar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.toolbar.Location = new System.Drawing.Point(0, 0);
             this.toolbar.Name = "toolbar";
-            this.toolbar.Size = new System.Drawing.Size(892, 31);
-            this.toolbar.TabIndex = 0;
-            this.toolbar.Text = "toolStrip1";
             // 
             // toolBtnSave
             // 
+            resources.ApplyResources(this.toolBtnSave, "toolBtnSave");
             this.toolBtnSave.Image = global::DistantVacantGovUz.Properties.Resources.save_24;
-            this.toolBtnSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnSave.ImageTransparentColor = System.Drawing.Color.Black;
             this.toolBtnSave.Name = "toolBtnSave";
-            this.toolBtnSave.Size = new System.Drawing.Size(59, 28);
-            this.toolBtnSave.Text = "Save";
             this.toolBtnSave.Click += new System.EventHandler(this.toolBtnSave_Click);
             // 
             // toolBtnSaveAs
             // 
+            resources.ApplyResources(this.toolBtnSaveAs, "toolBtnSaveAs");
             this.toolBtnSaveAs.Image = global::DistantVacantGovUz.Properties.Resources.save_24;
-            this.toolBtnSaveAs.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnSaveAs.ImageTransparentColor = System.Drawing.Color.Black;
             this.toolBtnSaveAs.Name = "toolBtnSaveAs";
-            this.toolBtnSaveAs.Size = new System.Drawing.Size(82, 28);
-            this.toolBtnSaveAs.Text = "Save as...";
             this.toolBtnSaveAs.Click += new System.EventHandler(this.toolBtnSaveAs_Click);
             // 
             // toolBtnReport
             // 
+            resources.ApplyResources(this.toolBtnReport, "toolBtnReport");
             this.toolBtnReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnReportPdf,
             this.toolBtnReportXls});
             this.toolBtnReport.Image = global::DistantVacantGovUz.Properties.Resources.report_24;
-            this.toolBtnReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnReport.Name = "toolBtnReport";
-            this.toolBtnReport.Size = new System.Drawing.Size(79, 28);
-            this.toolBtnReport.Text = "Report";
             // 
             // toolBtnReportPdf
             // 
+            resources.ApplyResources(this.toolBtnReportPdf, "toolBtnReportPdf");
             this.toolBtnReportPdf.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnReportPdfPrintVersionRu,
             this.toolBtnReportPdfPrintVersionUz});
-            this.toolBtnReportPdf.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportPdf.Image")));
-            this.toolBtnReportPdf.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportPdf.Name = "toolBtnReportPdf";
-            this.toolBtnReportPdf.Size = new System.Drawing.Size(103, 30);
-            this.toolBtnReportPdf.Text = "PDF";
             // 
             // toolBtnReportPdfPrintVersionRu
             // 
-            this.toolBtnReportPdfPrintVersionRu.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportPdfPrintVersionRu.Image")));
-            this.toolBtnReportPdfPrintVersionRu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            resources.ApplyResources(this.toolBtnReportPdfPrintVersionRu, "toolBtnReportPdfPrintVersionRu");
             this.toolBtnReportPdfPrintVersionRu.Name = "toolBtnReportPdfPrintVersionRu";
-            this.toolBtnReportPdfPrintVersionRu.Size = new System.Drawing.Size(174, 30);
-            this.toolBtnReportPdfPrintVersionRu.Text = "Print version (RU)";
             this.toolBtnReportPdfPrintVersionRu.Click += new System.EventHandler(this.toolBtnReportPdfPrintVersionRu_Click);
             // 
             // toolBtnReportPdfPrintVersionUz
             // 
-            this.toolBtnReportPdfPrintVersionUz.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportPdfPrintVersionUz.Image")));
-            this.toolBtnReportPdfPrintVersionUz.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            resources.ApplyResources(this.toolBtnReportPdfPrintVersionUz, "toolBtnReportPdfPrintVersionUz");
             this.toolBtnReportPdfPrintVersionUz.Name = "toolBtnReportPdfPrintVersionUz";
-            this.toolBtnReportPdfPrintVersionUz.Size = new System.Drawing.Size(174, 30);
-            this.toolBtnReportPdfPrintVersionUz.Text = "Print version (UZ)";
             this.toolBtnReportPdfPrintVersionUz.Click += new System.EventHandler(this.toolBtnReportPdfPrintVersionUz_Click);
             // 
             // toolBtnReportXls
             // 
+            resources.ApplyResources(this.toolBtnReportXls, "toolBtnReportXls");
             this.toolBtnReportXls.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnReportXlsPrintVersionRu,
             this.toolBtnReportXlsPrintVersionUz});
-            this.toolBtnReportXls.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportXls.Image")));
-            this.toolBtnReportXls.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolBtnReportXls.Name = "toolBtnReportXls";
-            this.toolBtnReportXls.Size = new System.Drawing.Size(103, 30);
-            this.toolBtnReportXls.Text = "XLS";
             // 
             // toolBtnReportXlsPrintVersionRu
             // 
-            this.toolBtnReportXlsPrintVersionRu.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportXlsPrintVersionRu.Image")));
-            this.toolBtnReportXlsPrintVersionRu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            resources.ApplyResources(this.toolBtnReportXlsPrintVersionRu, "toolBtnReportXlsPrintVersionRu");
             this.toolBtnReportXlsPrintVersionRu.Name = "toolBtnReportXlsPrintVersionRu";
-            this.toolBtnReportXlsPrintVersionRu.Size = new System.Drawing.Size(174, 30);
-            this.toolBtnReportXlsPrintVersionRu.Text = "Print version (RU)";
             this.toolBtnReportXlsPrintVersionRu.Click += new System.EventHandler(this.toolBtnReportXlsPrintVersionRu_Click);
             // 
             // toolBtnReportXlsPrintVersionUz
             // 
-            this.toolBtnReportXlsPrintVersionUz.Image = ((System.Drawing.Image)(resources.GetObject("toolBtnReportXlsPrintVersionUz.Image")));
-            this.toolBtnReportXlsPrintVersionUz.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            resources.ApplyResources(this.toolBtnReportXlsPrintVersionUz, "toolBtnReportXlsPrintVersionUz");
             this.toolBtnReportXlsPrintVersionUz.Name = "toolBtnReportXlsPrintVersionUz";
-            this.toolBtnReportXlsPrintVersionUz.Size = new System.Drawing.Size(174, 30);
-            this.toolBtnReportXlsPrintVersionUz.Text = "Print version (UZ)";
             this.toolBtnReportXlsPrintVersionUz.Click += new System.EventHandler(this.toolBtnReportXlsPrintVersionUz_Click);
             // 
             // toolStripSeparator1
             // 
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // toolBtnAdd
             // 
+            resources.ApplyResources(this.toolBtnAdd, "toolBtnAdd");
             this.toolBtnAdd.Image = global::DistantVacantGovUz.Properties.Resources.add_24;
-            this.toolBtnAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnAdd.Name = "toolBtnAdd";
-            this.toolBtnAdd.Size = new System.Drawing.Size(57, 28);
-            this.toolBtnAdd.Text = "Add";
             this.toolBtnAdd.Click += new System.EventHandler(this.toolBtnAdd_Click);
             // 
             // toolBtnImportFromFile
             // 
+            resources.ApplyResources(this.toolBtnImportFromFile, "toolBtnImportFromFile");
             this.toolBtnImportFromFile.Image = global::DistantVacantGovUz.Properties.Resources.import_24;
-            this.toolBtnImportFromFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnImportFromFile.ImageTransparentColor = System.Drawing.Color.Black;
             this.toolBtnImportFromFile.Name = "toolBtnImportFromFile";
-            this.toolBtnImportFromFile.Size = new System.Drawing.Size(71, 28);
-            this.toolBtnImportFromFile.Text = "Import";
             this.toolBtnImportFromFile.Click += new System.EventHandler(this.toolBtnImportFromFile_Click);
             // 
             // toolStripSeparator2
             // 
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // toolBtnCheckAll
             // 
+            resources.ApplyResources(this.toolBtnCheckAll, "toolBtnCheckAll");
             this.toolBtnCheckAll.Image = global::DistantVacantGovUz.Properties.Resources.check_24;
-            this.toolBtnCheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnCheckAll.Name = "toolBtnCheckAll";
-            this.toolBtnCheckAll.Size = new System.Drawing.Size(85, 28);
-            this.toolBtnCheckAll.Text = "Check All";
             this.toolBtnCheckAll.Click += new System.EventHandler(this.toolBtnCheckAll_Click);
             // 
             // toolBtnUncheckAll
             // 
+            resources.ApplyResources(this.toolBtnUncheckAll, "toolBtnUncheckAll");
             this.toolBtnUncheckAll.Image = global::DistantVacantGovUz.Properties.Resources.uncheck_24;
-            this.toolBtnUncheckAll.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnUncheckAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnUncheckAll.Name = "toolBtnUncheckAll";
-            this.toolBtnUncheckAll.Size = new System.Drawing.Size(98, 28);
-            this.toolBtnUncheckAll.Text = "Uncheck All";
             this.toolBtnUncheckAll.Click += new System.EventHandler(this.toolBtnUncheckAll_Click);
             // 
             // toolStripSeparator3
             // 
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // toolBtnUndo
             // 
-            this.toolBtnUndo.Enabled = false;
+            resources.ApplyResources(this.toolBtnUndo, "toolBtnUndo");
             this.toolBtnUndo.Image = global::DistantVacantGovUz.Properties.Resources.undo_24;
-            this.toolBtnUndo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnUndo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnUndo.Name = "toolBtnUndo";
-            this.toolBtnUndo.Size = new System.Drawing.Size(64, 28);
-            this.toolBtnUndo.Text = "Undo";
             this.toolBtnUndo.Click += new System.EventHandler(this.toolBtnUndo_Click);
             // 
             // toolBtnRedo
             // 
-            this.toolBtnRedo.Enabled = false;
+            resources.ApplyResources(this.toolBtnRedo, "toolBtnRedo");
             this.toolBtnRedo.Image = global::DistantVacantGovUz.Properties.Resources.redo_24;
-            this.toolBtnRedo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnRedo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnRedo.Name = "toolBtnRedo";
-            this.toolBtnRedo.Size = new System.Drawing.Size(62, 28);
-            this.toolBtnRedo.Text = "Redo";
             this.toolBtnRedo.Click += new System.EventHandler(this.toolBtnRedo_Click);
             // 
             // toolBtnEditSelected
             // 
-            this.toolBtnEditSelected.Enabled = false;
+            resources.ApplyResources(this.toolBtnEditSelected, "toolBtnEditSelected");
             this.toolBtnEditSelected.Image = global::DistantVacantGovUz.Properties.Resources.edit_24;
-            this.toolBtnEditSelected.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnEditSelected.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnEditSelected.Name = "toolBtnEditSelected";
-            this.toolBtnEditSelected.Size = new System.Drawing.Size(55, 28);
-            this.toolBtnEditSelected.Text = "Edit";
             this.toolBtnEditSelected.Click += new System.EventHandler(this.toolBtnEditSelected_Click);
             // 
             // toolBtnDeleteChecked
             // 
+            resources.ApplyResources(this.toolBtnDeleteChecked, "toolBtnDeleteChecked");
             this.toolBtnDeleteChecked.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolBtnDeleteChecked.Enabled = false;
             this.toolBtnDeleteChecked.Image = global::DistantVacantGovUz.Properties.Resources.delete_24;
-            this.toolBtnDeleteChecked.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolBtnDeleteChecked.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolBtnDeleteChecked.Name = "toolBtnDeleteChecked";
-            this.toolBtnDeleteChecked.Size = new System.Drawing.Size(68, 28);
-            this.toolBtnDeleteChecked.Text = "Delete";
             this.toolBtnDeleteChecked.Click += new System.EventHandler(this.toolBtnDeleteChecked_Click);
             // 
             // lstVacancies
             // 
+            resources.ApplyResources(this.lstVacancies, "lstVacancies");
             this.lstVacancies.AllowColumnReorder = true;
             this.lstVacancies.AllowDrop = true;
             this.lstVacancies.AllowRowReorder = true;
-            this.lstVacancies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstVacancies.CheckBoxes = true;
             this.lstVacancies.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmnCheckbox,
@@ -322,15 +262,11 @@
             this.clmnSpecializationUz,
             this.clmnRequirementsUz,
             this.clmnInformationUz});
-            this.lstVacancies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lstVacancies.FullRowSelect = true;
             this.lstVacancies.GridLines = true;
             this.lstVacancies.HideSelection = false;
             this.lstVacancies.InsertionMarkColor = System.Drawing.Color.SteelBlue;
-            this.lstVacancies.Location = new System.Drawing.Point(0, 34);
             this.lstVacancies.Name = "lstVacancies";
-            this.lstVacancies.Size = new System.Drawing.Size(892, 482);
-            this.lstVacancies.TabIndex = 1;
             this.lstVacancies.UseCompatibleStateImageBehavior = false;
             this.lstVacancies.View = System.Windows.Forms.View.Details;
             this.lstVacancies.BeforeRowReorder += new System.Windows.Forms.ListViewEx.BeforeRowReorderEventHandler(this.lstVacancies_BeforeRowReorder);
@@ -341,118 +277,104 @@
             // 
             // clmnCheckbox
             // 
-            this.clmnCheckbox.Text = "";
-            this.clmnCheckbox.Width = 32;
+            resources.ApplyResources(this.clmnCheckbox, "clmnCheckbox");
             // 
             // clmnSeqNum
             // 
-            this.clmnSeqNum.Text = "#";
-            this.clmnSeqNum.Width = 50;
+            resources.ApplyResources(this.clmnSeqNum, "clmnSeqNum");
             // 
             // clmnPortalVacancyId
             // 
-            this.clmnPortalVacancyId.Text = "Portal vacancy #";
-            this.clmnPortalVacancyId.Width = 50;
+            resources.ApplyResources(this.clmnPortalVacancyId, "clmnPortalVacancyId");
             // 
             // clmnDescriptionRu
             // 
-            this.clmnDescriptionRu.Text = "Description (RU)";
-            this.clmnDescriptionRu.Width = 256;
+            resources.ApplyResources(this.clmnDescriptionRu, "clmnDescriptionRu");
             // 
             // clmnDescriptionUz
             // 
-            this.clmnDescriptionUz.Text = "Description (UZ)";
-            this.clmnDescriptionUz.Width = 256;
+            resources.ApplyResources(this.clmnDescriptionUz, "clmnDescriptionUz");
             // 
             // clmnCategory
             // 
-            this.clmnCategory.Text = "Category";
-            this.clmnCategory.Width = 256;
+            resources.ApplyResources(this.clmnCategory, "clmnCategory");
             // 
             // clmnSalary
             // 
-            this.clmnSalary.Text = "Salary";
-            this.clmnSalary.Width = 100;
+            resources.ApplyResources(this.clmnSalary, "clmnSalary");
             // 
             // clmnEmployment
             // 
-            this.clmnEmployment.Text = "Employment";
+            resources.ApplyResources(this.clmnEmployment, "clmnEmployment");
             // 
             // clmnGender
             // 
-            this.clmnGender.Text = "Gender";
+            resources.ApplyResources(this.clmnGender, "clmnGender");
             // 
             // clmnExperience
             // 
-            this.clmnExperience.Text = "Experience";
+            resources.ApplyResources(this.clmnExperience, "clmnExperience");
             // 
             // clmnEducation
             // 
-            this.clmnEducation.Text = "Education level";
+            resources.ApplyResources(this.clmnEducation, "clmnEducation");
             // 
             // clmnExpireDate
             // 
-            this.clmnExpireDate.Text = "Expire date";
+            resources.ApplyResources(this.clmnExpireDate, "clmnExpireDate");
             // 
             // clmnDepartmentRu
             // 
-            this.clmnDepartmentRu.Text = "Department (RU)";
+            resources.ApplyResources(this.clmnDepartmentRu, "clmnDepartmentRu");
             // 
             // clmnSpecializationRu
             // 
-            this.clmnSpecializationRu.Text = "Specialization (RU)";
+            resources.ApplyResources(this.clmnSpecializationRu, "clmnSpecializationRu");
             // 
             // clmnRequirementsRu
             // 
-            this.clmnRequirementsRu.Text = "Requirements (RU)";
+            resources.ApplyResources(this.clmnRequirementsRu, "clmnRequirementsRu");
             // 
             // clmnInformationRu
             // 
-            this.clmnInformationRu.Text = "Information (RU)";
+            resources.ApplyResources(this.clmnInformationRu, "clmnInformationRu");
             // 
             // clmnDepartmentUz
             // 
-            this.clmnDepartmentUz.Text = "Department (UZ)";
+            resources.ApplyResources(this.clmnDepartmentUz, "clmnDepartmentUz");
             // 
             // clmnSpecializationUz
             // 
-            this.clmnSpecializationUz.Text = "Specialization (UZ)";
+            resources.ApplyResources(this.clmnSpecializationUz, "clmnSpecializationUz");
             // 
             // clmnRequirementsUz
             // 
-            this.clmnRequirementsUz.Text = "Requirements (UZ)";
+            resources.ApplyResources(this.clmnRequirementsUz, "clmnRequirementsUz");
             // 
             // clmnInformationUz
             // 
-            this.clmnInformationUz.Text = "Information (UZ)";
+            resources.ApplyResources(this.clmnInformationUz, "clmnInformationUz");
             // 
             // status
             // 
+            resources.ApplyResources(this.status, "status");
             this.status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stsSelectedItems});
-            this.status.Location = new System.Drawing.Point(0, 519);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(892, 22);
-            this.status.TabIndex = 2;
-            this.status.Text = "statusStrip1";
             // 
             // stsSelectedItems
             // 
+            resources.ApplyResources(this.stsSelectedItems, "stsSelectedItems");
             this.stsSelectedItems.Name = "stsSelectedItems";
-            this.stsSelectedItems.Size = new System.Drawing.Size(63, 17);
-            this.stsSelectedItems.Text = "Selected: 0";
             // 
             // frmLocalDocument
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 541);
             this.Controls.Add(this.status);
             this.Controls.Add(this.lstVacancies);
             this.Controls.Add(this.toolbar);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLocalDocument";
-            this.Text = "Local Vacancies";
             this.toolbar.ResumeLayout(false);
             this.toolbar.PerformLayout();
             this.status.ResumeLayout(false);

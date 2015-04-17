@@ -34,7 +34,7 @@ namespace DistantVacantGovUz
             {
                 bIsDirty = value;
 
-                this.Text = ((bIsDirty)?"*":"") + this.documentName + " - " + "Local Vacancies";
+                this.Text = ((bIsDirty) ? "*" : "") + this.documentName + " - " + language.strings.frmLocalDocumentCaption;
             }
         }
 
@@ -104,7 +104,7 @@ namespace DistantVacantGovUz
 
             workingVacancyList = new List<CVacancyItem>();
 
-            this.Text = this.documentName + " - " + "Local Vacancies";
+            this.Text = this.documentName + " - " + language.strings.frmLocalDocumentCaption;
 
             UpdateVacancyList();
         }
@@ -120,7 +120,7 @@ namespace DistantVacantGovUz
 
             this.workingVacancyList = vacancyList;
 
-            this.Text = this.documentName + " - " + "Local Vacancies";
+            this.Text = this.documentName + " - " + language.strings.frmLocalDocumentCaption;
 
             UpdateVacancyList();
         }
@@ -132,7 +132,9 @@ namespace DistantVacantGovUz
             {
                 if (!CVacancyFileType.SaveFile(documentFileName, workingVacancyList))
                 {
-                    MessageBox.Show("Не удалось сохранить документ", "Сохранение документа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Не удалось сохранить документ"
+                            , "Сохранение документа"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -165,7 +167,9 @@ namespace DistantVacantGovUz
 
                 if (!CVacancyFileType.SaveFileAs(sfd.FileName, workingVacancyList, version))
                 {
-                    MessageBox.Show("Не удалось сохранить документ", "Сохранение документа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Не удалось сохранить документ"
+                        , "Сохранение документа"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -181,7 +185,7 @@ namespace DistantVacantGovUz
 
         private void lstVacancies_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            stsSelectedItems.Text = "Selected: " + lstVacancies.CheckedItems.Count;
+            stsSelectedItems.Text = language.strings.localDocSelectedItems + lstVacancies.CheckedItems.Count;
 
             toolBtnDeleteChecked.Enabled = (lstVacancies.CheckedItems.Count > 0) ? true : false;
             toolBtnUncheckAll.Enabled = (lstVacancies.CheckedItems.Count > 0) ? true : false;
@@ -324,7 +328,9 @@ namespace DistantVacantGovUz
 
         private void toolBtnDeleteChecked_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to delete selected rows?", "Deleting rows...", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Are you sure to delete selected rows?"
+                    , "Deleting rows..."
+                    , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 // сохраним текущий список
                 CVacancyUtil.CopyVacancyItemList(workingVacancyList, oldVacancyList);

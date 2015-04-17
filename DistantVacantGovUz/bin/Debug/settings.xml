@@ -7,5 +7,5 @@
   <ProxyPassword value="" />
   <CheckForUpdates value="True" />
   <UpdateServer value="http://192.168.7.85:8089" />
-  <Language value="en" />
+  <Language value="ru" />
 </settings>

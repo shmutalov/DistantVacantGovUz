@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblAppLauncherVersion" xml:space="preserve">
     <value>Launcher version: </value>
@@ -140,5 +140,80 @@
   </data>
   <data name="lblProgramName" xml:space="preserve">
     <value>Distant Vacant.Gov.Uz</value>
+  </data>
+  <data name="exportStatus" xml:space="preserve">
+    <value>Exported %d of %d.
+%d%</value>
+  </data>
+  <data name="frmEditPortalVacancyCaption" xml:space="preserve">
+    <value>Portal vacancy edit form - Vacancy #</value>
+  </data>
+  <data name="frmLocalDocumentCaption" xml:space="preserve">
+    <value>Local vacancies</value>
+  </data>
+  <data name="frmMainNewDocumentTitle" xml:space="preserve">
+    <value>Untitled document </value>
+  </data>
+  <data name="localDocSelectedItems" xml:space="preserve">
+    <value>Selected: </value>
+  </data>
+  <data name="loginFailed" xml:space="preserve">
+    <value>Login failed!
+</value>
+  </data>
+  <data name="loginFillAllFields" xml:space="preserve">
+    <value>Please, fill all fields</value>
+  </data>
+  <data name="MsgCaptionAddVacancy" xml:space="preserve">
+    <value>Adding local vacancy</value>
+  </data>
+  <data name="MsgEditPortalVacOpenCaption" xml:space="preserve">
+    <value>Opening portal vacancy...</value>
+  </data>
+  <data name="MsgEditPortalVacOpenError" xml:space="preserve">
+    <value>Cannot open selected vacancy. 
+Error occured.</value>
+  </data>
+  <data name="MsgEditPortalVacSaveCaption" xml:space="preserve">
+    <value>Saving portal vacancy...</value>
+  </data>
+  <data name="MsgEditPortalVacSaveError" xml:space="preserve">
+    <value>Vacancy was not saved. 
+Error occured.</value>
+  </data>
+  <data name="MsgNotAllFieldsFilled" xml:space="preserve">
+    <value>Some fields not filled.
+Continue save?</value>
+  </data>
+  <data name="MsgOpenVacancyDocumentAlreadyOpened" xml:space="preserve">
+    <value>Document is already opened</value>
+  </data>
+  <data name="MsgOpenVacancyDocumentCaption" xml:space="preserve">
+    <value>Opening document...</value>
+  </data>
+  <data name="MsgOpenVacancyDocumentError" xml:space="preserve">
+    <value>Error occured while loading document.
+Reason: </value>
+  </data>
+  <data name="MsgPortalVacExportCaption" xml:space="preserve">
+    <value>Exporting vacancies...</value>
+  </data>
+  <data name="MsgPortalVacExportSaveError" xml:space="preserve">
+    <value>Exported vacancies save error.</value>
+  </data>
+  <data name="MsgPortalVacExportSuccess" xml:space="preserve">
+    <value>Vacancies successfully exported and saved.</value>
+  </data>
+  <data name="MsgPortalVacStatusChangeCaption" xml:space="preserve">
+    <value>Changing status...</value>
+  </data>
+  <data name="MsgPortalVacStatusChanged" xml:space="preserve">
+    <value>%d of %d vacancies status changed.</value>
+  </data>
+  <data name="openVacancyDocumentFilter" xml:space="preserve">
+    <value>Vacancies document file (*.vac, *.vacx)|*.vac;*.vacx</value>
+  </data>
+  <data name="openVacancyDocumentTitle" xml:space="preserve">
+    <value>Choose vacancies document file</value>
   </data>
 </root>
