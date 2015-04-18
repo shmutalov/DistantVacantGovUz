@@ -216,4 +216,40 @@ Reason: </value>
   <data name="openVacancyDocumentTitle" xml:space="preserve">
     <value>Choose vacancies document file</value>
   </data>
+  <data name="frmImportPortalVacsCaption" xml:space="preserve">
+    <value>Import vacancies</value>
+  </data>
+  <data name="MsgImportPortalVacsFinished" xml:space="preserve">
+    <value>Import finished. Imported %d from %d</value>
+  </data>
+  <data name="MsgImportVacsCaption" xml:space="preserve">
+    <value>Importing vacancies...</value>
+  </data>
+  <data name="portalImportVacStatusImported" xml:space="preserve">
+    <value>Imported</value>
+  </data>
+  <data name="portalImportVacStatusImportError" xml:space="preserve">
+    <value>Import error</value>
+  </data>
+  <data name="portalImportVacStatusNotImported" xml:space="preserve">
+    <value>Not imported</value>
+  </data>
+  <data name="portalImportVacStatusSkipped" xml:space="preserve">
+    <value>Skipped</value>
+  </data>
+  <data name="portalImportVacStatusUncompleted" xml:space="preserve">
+    <value>Vacancy have uncompleted fields</value>
+  </data>
+  <data name="frmEditLocalVacancyCaption" xml:space="preserve">
+    <value>Edit local vacancy #</value>
+  </data>
+  <data name="MsgLocalDocDeletingRows" xml:space="preserve">
+    <value>Are you sure to delete selected rows?</value>
+  </data>
+  <data name="MsgLocalDocDeletingRowsCaption" xml:space="preserve">
+    <value>Deleting rows...</value>
+  </data>
+  <data name="openVacancyDocImportTitle" xml:space="preserve">
+    <value>Select document to import...</value>
+  </data>
 </root>

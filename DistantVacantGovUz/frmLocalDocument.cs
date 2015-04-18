@@ -328,8 +328,8 @@ namespace DistantVacantGovUz
 
         private void toolBtnDeleteChecked_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to delete selected rows?"
-                    , "Deleting rows..."
+            if (MessageBox.Show(language.strings.MsgLocalDocDeletingRows
+                    , language.strings.MsgLocalDocDeletingRowsCaption
                     , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 // сохраним текущий список
@@ -400,9 +400,9 @@ namespace DistantVacantGovUz
             OpenFileDialog ofd = new OpenFileDialog();
 
             ofd.CheckPathExists = true;
-            ofd.Title = "Выберите документ для импорта...";
+            ofd.Title = language.strings.openVacancyDocImportTitle;
             ofd.CheckFileExists = true;
-            ofd.Filter = "Файл Вакансий (*.vac, *.vacx) | *.vac;*.vacx";
+            ofd.Filter = language.strings.openVacancyDocumentFilter;
 
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {

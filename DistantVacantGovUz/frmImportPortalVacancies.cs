@@ -39,14 +39,14 @@ namespace DistantVacantGovUz
                 if (workingVacancyList[i].IsValid())
                 {
                     li.BackColor = (c) ? Color.White : Color.AliceBlue;
-                    li.SubItems.Add("Not imported");
+                    li.SubItems.Add(language.strings.portalImportVacStatusNotImported);
                 }
                 else
                 {
                     canImport = false;
 
                     li.BackColor = Color.LightCoral;
-                    li.SubItems.Add("Vacancy have uncompleted fields");
+                    li.SubItems.Add(language.strings.portalImportVacStatusUncompleted);
                 }
             }
 
@@ -61,8 +61,8 @@ namespace DistantVacantGovUz
             OpenFileDialog ofd = new OpenFileDialog();
 
             ofd.CheckFileExists = true;
-            ofd.Filter = "Файл Вакансий (*.vac, *.vacx)|*.vac;*.vacx";
-            ofd.Title = "Выберите файл вакансий";
+            ofd.Filter = language.strings.openVacancyDocumentFilter;
+            ofd.Title = language.strings.openVacancyDocumentTitle;
 
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -90,7 +90,7 @@ namespace DistantVacantGovUz
 
             if (preldr.GetVacancyList() != null)
             {
-                this.Text = "Import Vacancies" + " - " + preldr.GetFileName();
+                this.Text = language.strings.frmImportPortalVacsCaption + " - " + preldr.GetFileName();
                 toolTxtImportFileName.Text = preldr.GetFileName();
                 
                 workingVacancyList = preldr.GetVacancyList();
@@ -101,7 +101,9 @@ namespace DistantVacantGovUz
             else
             {
                 toolBtnImport.Enabled = false;
-                MessageBox.Show("Error occured while loading document" + "\n" + "Reason: " + CVacancyFileType.GetLastError(), "Open document", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(language.strings.MsgOpenVacancyDocumentError + CVacancyFileType.GetLastError()
+                    , language.strings.MsgOpenVacancyDocumentCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             preldr.GetLoadingForm().Close();
@@ -154,14 +156,14 @@ namespace DistantVacantGovUz
                             imported++;
 
                             ListViewItem li = lstVacancies.Items[i];
-                            li.SubItems[2].Text = "Imported";
+                            li.SubItems[2].Text = language.strings.portalImportVacStatusImported;
 
                             li.BackColor = Color.Green;
                         }
                         else
                         {
                             ListViewItem li = lstVacancies.Items[i];
-                            li.SubItems[2].Text = "Import error";
+                            li.SubItems[2].Text = language.strings.portalImportVacStatusImportError;
 
                             li.BackColor = Color.Red;
                         }
@@ -169,7 +171,7 @@ namespace DistantVacantGovUz
                     else
                     {
                         ListViewItem li = lstVacancies.Items[i];
-                        li.SubItems[2].Text = "Skipped";
+                        li.SubItems[2].Text = language.strings.portalImportVacStatusSkipped;
 
                         li.BackColor = Color.Red;
 
@@ -178,7 +180,9 @@ namespace DistantVacantGovUz
                 }
             }
 
-            MessageBox.Show("Import finished. Imported " + imported + " from " + workingVacancyList.Count, "Import vacancies", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format(language.strings.MsgImportPortalVacsFinished, imported, workingVacancyList.Count)
+                , language.strings.MsgImportVacsCaption
+                , MessageBoxButtons.OK, MessageBoxIcon.Information);
             toolBtnImport.Enabled = false;
         }
     }

@@ -33,7 +33,6 @@ D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.fr
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmMain.uz.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\ru\DistantVacantGovUz.resources.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\uz\DistantVacantGovUz.resources.dll
-D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.csprojResolveAssemblyReference.cache
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmLoading.resources
 D:\git\DistantVacantGovUz\DistantVacantGovUz\bin\Debug\itextsharp.dll
 D:\git\DistantVacantGovUz\DistantVacantGovUz\obj\x86\Debug\DistantVacantGovUz.frmRptPrintVersionAddVisa.resources

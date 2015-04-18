@@ -71,11 +71,29 @@ namespace DistantVacantGovUz.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit local vacancy #.
+        /// </summary>
+        internal static string frmEditLocalVacancyCaption {
+            get {
+                return ResourceManager.GetString("frmEditLocalVacancyCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Portal vacancy edit form - Vacancy #.
         /// </summary>
         internal static string frmEditPortalVacancyCaption {
             get {
                 return ResourceManager.GetString("frmEditPortalVacancyCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import vacancies.
+        /// </summary>
+        internal static string frmImportPortalVacsCaption {
+            get {
+                return ResourceManager.GetString("frmImportPortalVacsCaption", resourceCulture);
             }
         }
         
@@ -236,6 +254,42 @@ namespace DistantVacantGovUz.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Import finished. Imported %d from %d.
+        /// </summary>
+        internal static string MsgImportPortalVacsFinished {
+            get {
+                return ResourceManager.GetString("MsgImportPortalVacsFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Importing vacancies....
+        /// </summary>
+        internal static string MsgImportVacsCaption {
+            get {
+                return ResourceManager.GetString("MsgImportVacsCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete selected rows?.
+        /// </summary>
+        internal static string MsgLocalDocDeletingRows {
+            get {
+                return ResourceManager.GetString("MsgLocalDocDeletingRows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting rows....
+        /// </summary>
+        internal static string MsgLocalDocDeletingRowsCaption {
+            get {
+                return ResourceManager.GetString("MsgLocalDocDeletingRowsCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Some fields not filled.
         ///Continue save?.
         /// </summary>
@@ -319,6 +373,15 @@ namespace DistantVacantGovUz.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select document to import....
+        /// </summary>
+        internal static string openVacancyDocImportTitle {
+            get {
+                return ResourceManager.GetString("openVacancyDocImportTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vacancies document file (*.vac, *.vacx)|*.vac;*.vacx.
         /// </summary>
         internal static string openVacancyDocumentFilter {
@@ -333,6 +396,51 @@ namespace DistantVacantGovUz.language {
         internal static string openVacancyDocumentTitle {
             get {
                 return ResourceManager.GetString("openVacancyDocumentTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Imported.
+        /// </summary>
+        internal static string portalImportVacStatusImported {
+            get {
+                return ResourceManager.GetString("portalImportVacStatusImported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import error.
+        /// </summary>
+        internal static string portalImportVacStatusImportError {
+            get {
+                return ResourceManager.GetString("portalImportVacStatusImportError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not imported.
+        /// </summary>
+        internal static string portalImportVacStatusNotImported {
+            get {
+                return ResourceManager.GetString("portalImportVacStatusNotImported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skipped.
+        /// </summary>
+        internal static string portalImportVacStatusSkipped {
+            get {
+                return ResourceManager.GetString("portalImportVacStatusSkipped", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacancy have uncompleted fields.
+        /// </summary>
+        internal static string portalImportVacStatusUncompleted {
+            get {
+                return ResourceManager.GetString("portalImportVacStatusUncompleted", resourceCulture);
             }
         }
         

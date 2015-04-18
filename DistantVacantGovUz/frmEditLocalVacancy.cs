@@ -54,7 +54,7 @@ namespace DistantVacantGovUz
             txtVacRequirementsUZ.Text = vac.requirements_uz;
             txtVacInformationUZ.Text = vac.information_uz;
 
-            this.Text = "Edit local vacancy #" + vac.seqNum;
+            this.Text = language.strings.frmEditLocalVacancyCaption + vac.seqNum;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -90,7 +90,9 @@ namespace DistantVacantGovUz
 
             if (!validated)
             {
-                if (MessageBox.Show("Не все поля заполнены." + "\n" + "Продолжить сохранение изменений?", "Редактирование вакансии", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+                if (MessageBox.Show("Не все поля заполнены." + "\n" + "Продолжить сохранение изменений?"
+                    , "Редактирование вакансии"
+                    , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
                     return;
             }
 
