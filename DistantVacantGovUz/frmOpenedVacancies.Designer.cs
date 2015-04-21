@@ -51,13 +51,13 @@
             // 
             // lstVacancies
             // 
+            resources.ApplyResources(this.lstVacancies, "lstVacancies");
             this.lstVacancies.CheckBoxes = true;
             this.lstVacancies.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmnCheckbox,
             this.clmnVacSequenceNumber,
             this.clmnVacPortalNumber,
             this.clmnVacDescription});
-            resources.ApplyResources(this.lstVacancies, "lstVacancies");
             this.lstVacancies.FullRowSelect = true;
             this.lstVacancies.GridLines = true;
             this.lstVacancies.MultiSelect = false;
@@ -85,6 +85,7 @@
             // 
             // toolbar
             // 
+            resources.ApplyResources(this.toolbar, "toolbar");
             this.toolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnRefreshVacancies,
@@ -96,20 +97,19 @@
             this.toolBtnEditVacancy,
             this.toolBtnCheckAll,
             this.toolBtnUncheckAll});
-            resources.ApplyResources(this.toolbar, "toolbar");
             this.toolbar.Name = "toolbar";
             // 
             // toolBtnRefreshVacancies
             // 
-            this.toolBtnRefreshVacancies.Image = global::DistantVacantGovUz.Properties.Resources.refresh_24;
             resources.ApplyResources(this.toolBtnRefreshVacancies, "toolBtnRefreshVacancies");
+            this.toolBtnRefreshVacancies.Image = global::DistantVacantGovUz.Properties.Resources.refresh_24;
             this.toolBtnRefreshVacancies.Name = "toolBtnRefreshVacancies";
             this.toolBtnRefreshVacancies.Click += new System.EventHandler(this.toolBtnRefreshVacancies_Click);
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // toolBtnExportVacancies
             // 
@@ -127,13 +127,13 @@
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // toolBtnAddVacancy
             // 
-            this.toolBtnAddVacancy.Image = global::DistantVacantGovUz.Properties.Resources.add_24;
             resources.ApplyResources(this.toolBtnAddVacancy, "toolBtnAddVacancy");
+            this.toolBtnAddVacancy.Image = global::DistantVacantGovUz.Properties.Resources.add_24;
             this.toolBtnAddVacancy.Name = "toolBtnAddVacancy";
             this.toolBtnAddVacancy.Click += new System.EventHandler(this.toolBtnAddVacancy_Click);
             // 

@@ -118,610 +118,106 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblSpecializationRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="btnAddMore.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dateVacExpire.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 20</value>
+  <data name="btnAddMore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>439, 487</value>
   </data>
-  <data name="cmbVacCategory.Items24" xml:space="preserve">
-    <value>Управление персоналом / Тренинги</value>
-  </data>
-  <data name="cmbVacCategory.Items14" xml:space="preserve">
-    <value>Строительство</value>
-  </data>
-  <data name="&gt;&gt;cmbVacEducation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtVacSpecializationRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txtVacInformationUZ.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="&gt;&gt;txtVacRequirementsRU.Name" xml:space="preserve">
-    <value>txtVacRequirementsRU</value>
-  </data>
-  <data name="cmbVacEmployment.Items2" xml:space="preserve">
-    <value>Частичная</value>
-  </data>
-  <data name="lblDepartmentUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
+  <data name="btnAddMore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblSalary.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tbRussian.Parent" xml:space="preserve">
-    <value>tabAddVacancy</value>
-  </data>
-  <data name="&gt;&gt;lblDepartmentRU.Name" xml:space="preserve">
-    <value>lblDepartmentRU</value>
-  </data>
-  <data name="lblInformationUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 288</value>
-  </data>
-  <data name="&gt;&gt;lblInformationRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblRequirementsRU.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="lblSalary.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblRequirementsUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtVacDepartmentUZ.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtVacDepartmentRU.MaxLength" type="System.Int32, mscorlib">
-    <value>255</value>
-  </data>
-  <data name="lblSpecizalizationUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="txtVacDepartmentRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 11</value>
-  </data>
-  <data name="&gt;&gt;txtVacSpecializationUZ.Parent" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="txtVacDepartmentRU.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblInformationRU.Name" xml:space="preserve">
-    <value>lblInformationRU</value>
-  </data>
-  <data name="lblInformationRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblCategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDepartmentRU.Parent" xml:space="preserve">
-    <value>tbRussian</value>
-  </data>
-  <data name="&gt;&gt;txtVacDescRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbVacEmployment.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;txtVacDepartmentRU.Parent" xml:space="preserve">
-    <value>tbRussian</value>
-  </data>
-  <data name="txtVacRequirementsUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 114</value>
-  </data>
-  <data name="cmbVacEmployment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="cmbVacEducation.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="txtVacSpecializationRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="lblEmployment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;txtVacDepartmentRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbVacEducation.Items" xml:space="preserve">
-    <value>Без разницы</value>
-  </data>
-  <data name="&gt;&gt;lblDepartmentRU.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="cmbVacGender.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;cmbVacGender.Name" xml:space="preserve">
-    <value>cmbVacGender</value>
-  </data>
-  <data name="&gt;&gt;tabAddVacancy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblSalary.Text" xml:space="preserve">
-    <value>Salary *</value>
-  </data>
-  <data name="txtVacRequirementsRU.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnAddMore.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;cmbVacCategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblEmployment.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="txtVacSalary.MaxLength" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="&gt;&gt;cmbVacGender.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="tbGeneral.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="lblSpecializationRU.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabAddVacancy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>575, 478</value>
-  </data>
-  <data name="&gt;&gt;txtVacInformationUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDescriptionRU.Name" xml:space="preserve">
-    <value>lblDescriptionRU</value>
-  </data>
-  <data name="lblRequirementsRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblRequirementsUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 166</value>
-  </data>
-  <data name="lblDescriptionRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="lblGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="txtVacInformationRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txtVacSalary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 20</value>
-  </data>
-  <data name="txtVacDescUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="txtVacInformationRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 114</value>
-  </data>
-  <data name="&gt;&gt;btnAddMore.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbVacGender.Items1" xml:space="preserve">
-    <value>Мужской</value>
-  </data>
-  <data name="&gt;&gt;txtVacSpecializationRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblExperience.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="cmbVacCategory.Items20" xml:space="preserve">
-    <value>Юридическая служба</value>
-  </data>
-  <data name="&gt;&gt;dateVacExpire.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblDepartmentUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="cmbVacEmployment.Items3" xml:space="preserve">
-    <value>Фриланс</value>
-  </data>
-  <data name="txtVacInformationUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="cmbVacCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 21</value>
-  </data>
-  <data name="cmbVacGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 21</value>
-  </data>
-  <data name="cmbVacEducation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="lblSpecizalizationUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="&gt;&gt;lblGender.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblCategory.Text" xml:space="preserve">
-    <value>Category *</value>
-  </data>
-  <data name="&gt;&gt;lblSpecializationRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtVacSalary.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 110</value>
-  </data>
-  <data name="cmbVacCategory.Items13" xml:space="preserve">
-    <value>Сельское хозяйство</value>
-  </data>
-  <data name="cmbVacEducation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;lblRequirementsRU.Name" xml:space="preserve">
-    <value>lblRequirementsRU</value>
-  </data>
-  <data name="lblDescriptionUZ.Text" xml:space="preserve">
-    <value>Uzbek description (latin) *</value>
-  </data>
-  <data name="txtVacInformationUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 285</value>
-  </data>
-  <data name="&gt;&gt;cmbVacCategory.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;tbRussian.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cmbVacCategory.Items18" xml:space="preserve">
-    <value>Финансы / Банки / Инвестиции / Лизинг</value>
-  </data>
-  <data name="lblDescriptionRU.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tbRussian.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtVacRequirementsRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 163</value>
-  </data>
-  <data name="txtVacRequirementsUZ.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblDepartmentUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 14</value>
-  </data>
-  <data name="dateVacExpire.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 274</value>
-  </data>
-  <data name="lblEmployment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="txtVacRequirementsRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="cmbVacExperience.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;txtVacInformationUZ.Parent" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="dateVacExpire.CustomFormat" xml:space="preserve">
-    <value>yyyy-MM-dd</value>
-  </data>
-  <data name="&gt;&gt;lblGender.Name" xml:space="preserve">
-    <value>lblGender</value>
-  </data>
-  <data name="txtVacDepartmentUZ.MaxLength" type="System.Int32, mscorlib">
-    <value>255</value>
-  </data>
-  <data name="&gt;&gt;lblEducation.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblDescriptionUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 44</value>
-  </data>
-  <data name="&gt;&gt;lblExperience.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cmbVacCategory.Items9" xml:space="preserve">
-    <value>Образование / Наука</value>
-  </data>
-  <data name="tbGeneral.Text" xml:space="preserve">
-    <value>General data</value>
-  </data>
-  <data name="cmbVacCategory.Items7" xml:space="preserve">
-    <value>Недвижимость</value>
-  </data>
-  <data name="cmbVacCategory.Items6" xml:space="preserve">
-    <value>Медицина / Здравоохранение / Фармацевтика</value>
-  </data>
-  <data name="cmbVacCategory.Items5" xml:space="preserve">
-    <value>Медиа</value>
-  </data>
-  <data name="cmbVacCategory.Items4" xml:space="preserve">
-    <value>Маркетинг / Реклама / PR</value>
-  </data>
-  <data name="&gt;&gt;cmbVacGender.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbVacCategory.Items2" xml:space="preserve">
-    <value>Искусство / Культура</value>
-  </data>
-  <data name="txtVacSpecializationUZ.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="cmbVacEmployment.Items" xml:space="preserve">
-    <value>Без разницы</value>
-  </data>
-  <data name="lblDepartmentRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="cmbVacCategory.Items10" xml:space="preserve">
-    <value>Полезные ископаемые / Добыча сырья</value>
-  </data>
-  <data name="tbRussian.Size" type="System.Drawing.Size, System.Drawing">
-    <value>567, 452</value>
-  </data>
-  <data name="tabAddVacancy.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="txtVacDepartmentUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 20</value>
-  </data>
-  <data name="cmbVacCategory.Items1" xml:space="preserve">
-    <value>Государственная служба</value>
-  </data>
-  <data name="txtVacRequirementsUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtVacDescUZ.MaxLength" type="System.Int32, mscorlib">
-    <value>255</value>
-  </data>
-  <data name="txtVacDescUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="btnAddMore.Text" xml:space="preserve">
+    <value>Add more</value>
   </data>
   <data name="&gt;&gt;btnAddMore.Name" xml:space="preserve">
     <value>btnAddMore</value>
   </data>
-  <data name="tbUzbek.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="&gt;&gt;btnAddMore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblRequirementsRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnAddMore.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblRequirementsUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="&gt;&gt;txtVacDescUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtVacDepartmentRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 20</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbRussian.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tbGeneral.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tbUzbek.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="cmbVacGender.Items" xml:space="preserve">
-    <value>Без разницы</value>
-  </data>
-  <data name="lblCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="&gt;&gt;txtVacDepartmentUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblExpireDate.Text" xml:space="preserve">
-    <value>Expire date *</value>
-  </data>
-  <data name="txtVacDepartmentUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 11</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnAddMore.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblRequirementsUZ.Name" xml:space="preserve">
-    <value>lblRequirementsUZ</value>
-  </data>
-  <data name="txtVacDescRU.MaxLength" type="System.Int32, mscorlib">
-    <value>255</value>
-  </data>
-  <data name="lblCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="lblDescriptionUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="lblInformationRU.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="cmbVacCategory.Items25" xml:space="preserve">
-    <value>Безопасность</value>
-  </data>
-  <data name="cmbVacCategory.Items15" xml:space="preserve">
-    <value>Товары народного потребления</value>
-  </data>
-  <data name="txtVacDescUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 20</value>
-  </data>
-  <data name="&gt;&gt;lblGender.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="cmbVacExperience.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="lblCategory.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tbGeneral.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>584, 521</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
-  </data>
-  <data name="&gt;&gt;txtVacRequirementsRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblExperience.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="lblSalary.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;lblInformationRU.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cmbVacExperience.Items4" xml:space="preserve">
-    <value>Пять и более лет</value>
-  </data>
-  <data name="&gt;&gt;cmbVacEmployment.Name" xml:space="preserve">
-    <value>cmbVacEmployment</value>
-  </data>
-  <data name="dateVacExpire.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;dateVacExpire.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="txtVacSpecializationRU.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="txtVacInformationUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="tbUzbek.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="tbGeneral.Size" type="System.Drawing.Size, System.Drawing">
-    <value>567, 452</value>
-  </data>
-  <data name="lblEmployment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="&gt;&gt;tbGeneral.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tbUzbek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>567, 452</value>
-  </data>
-  <data name="&gt;&gt;lblDescriptionRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbVacCategory.Items26" xml:space="preserve">
-    <value>Высший менеджмент</value>
-  </data>
-  <data name="txtVacRequirementsUZ.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="tbGeneral.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="cmbVacCategory.Items" xml:space="preserve">
-    <value>IT / Интернет / Телеком</value>
-  </data>
-  <data name="cmbVacExperience.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 208</value>
-  </data>
-  <data name="&gt;&gt;lblSalary.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
   </data>
   <data name="&gt;&gt;btnAddMore.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lblRequirementsUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 487</value>
   </data>
-  <data name="txtVacRequirementsUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 28</value>
   </data>
-  <data name="cmbVacEducation.Items1" xml:space="preserve">
-    <value>Среднее</value>
+  <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="lblExpireDate.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>Add</value>
   </data>
-  <data name="&gt;&gt;lblEmployment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
   </data>
-  <data name="lblDepartmentRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 14</value>
+  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cmbVacCategory.Name" xml:space="preserve">
-    <value>cmbVacCategory</value>
+  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lblRequirementsRU.Text" xml:space="preserve">
-    <value>Requirements *</value>
+  <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="tbRussian.Text" xml:space="preserve">
-    <value>Additional data in russian</value>
+  <data name="tabAddVacancy.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;lblEmployment.Name" xml:space="preserve">
-    <value>lblEmployment</value>
+  <data name="dateVacExpire.CustomFormat" xml:space="preserve">
+    <value>yyyy-MM-dd</value>
   </data>
-  <data name="lblSpecizalizationUZ.Text" xml:space="preserve">
-    <value>Specialization *</value>
+  <data name="dateVacExpire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 274</value>
+  </data>
+  <data name="dateVacExpire.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="dateVacExpire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 20</value>
+  </data>
+  <data name="dateVacExpire.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;dateVacExpire.Name" xml:space="preserve">
+    <value>dateVacExpire</value>
+  </data>
+  <data name="&gt;&gt;dateVacExpire.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateVacExpire.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;dateVacExpire.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblExpireDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblExpireDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 279</value>
   </data>
-  <data name="&gt;&gt;lblEmployment.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lblDepartmentUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtVacSpecializationUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="cmbVacEmployment.Items4" xml:space="preserve">
-    <value>Совместительство</value>
-  </data>
-  <data name="&gt;&gt;lblRequirementsUZ.Parent" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="cmbVacCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;cmbVacExperience.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="lblExpireDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="&gt;&gt;tbUzbek.Parent" xml:space="preserve">
-    <value>tabAddVacancy</value>
+  <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
   </data>
-  <data name="tbUzbek.Text" xml:space="preserve">
-    <value>Additional data in uzbek</value>
+  <data name="lblExpireDate.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
-  <data name="txtVacRequirementsUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 163</value>
+  <data name="lblExpireDate.Text" xml:space="preserve">
+    <value>Expire date *</value>
   </data>
   <data name="lblExpireDate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -729,116 +225,1289 @@
   <data name="&gt;&gt;lblExpireDate.Name" xml:space="preserve">
     <value>lblExpireDate</value>
   </data>
-  <data name="lblGender.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;lblEducation.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblExpireDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtVacSpecializationRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 41</value>
+  <data name="&gt;&gt;lblExpireDate.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
   </data>
-  <data name="&gt;&gt;lblRequirementsRU.Parent" xml:space="preserve">
-    <value>tbRussian</value>
+  <data name="&gt;&gt;lblExpireDate.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;lblDescriptionRU.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="cmbVacEducation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="lblSpecializationRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="cmbVacEducation.Items" xml:space="preserve">
+    <value>Без разницы</value>
   </data>
-  <data name="&gt;&gt;txtVacDepartmentRU.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblEmployment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 145</value>
-  </data>
-  <data name="dateVacExpire.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;txtVacRequirementsUZ.Name" xml:space="preserve">
-    <value>txtVacRequirementsUZ</value>
+  <data name="cmbVacEducation.Items1" xml:space="preserve">
+    <value>Среднее</value>
   </data>
   <data name="cmbVacEducation.Items2" xml:space="preserve">
     <value>Среднее специальное</value>
   </data>
-  <data name="lblDepartmentRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 13</value>
+  <data name="cmbVacEducation.Items3" xml:space="preserve">
+    <value>Неоконченное высшее</value>
   </data>
-  <data name="cmbVacCategory.Items22" xml:space="preserve">
-    <value>Бухгалтерия / Управленческий учет / Финансы предприятия</value>
+  <data name="cmbVacEducation.Items4" xml:space="preserve">
+    <value>Высшее</value>
   </data>
-  <data name="cmbVacCategory.Items8" xml:space="preserve">
-    <value>Некоммерческие организации</value>
+  <data name="cmbVacEducation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 241</value>
   </data>
-  <data name="&gt;&gt;txtVacSpecializationUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtVacInformationUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 114</value>
-  </data>
-  <data name="&gt;&gt;txtVacInformationUZ.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtVacSalary.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;txtVacRequirementsRU.Parent" xml:space="preserve">
-    <value>tbRussian</value>
-  </data>
-  <data name="lblDepartmentRU.Text" xml:space="preserve">
-    <value>Department *</value>
-  </data>
-  <data name="txtVacSpecializationUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 114</value>
-  </data>
-  <data name="lblDescriptionRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="txtVacDepartmentUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="cmbVacEducation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;lblExperience.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cmbVacEducation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="cmbVacEducation.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;cmbVacEducation.Name" xml:space="preserve">
+    <value>cmbVacEducation</value>
+  </data>
+  <data name="&gt;&gt;cmbVacEducation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbVacEducation.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;cmbVacEducation.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblEducation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblEducation.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 245</value>
   </data>
-  <data name="&gt;&gt;lblEmployment.Parent" xml:space="preserve">
+  <data name="lblEducation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblEducation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblEducation.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblEducation.Text" xml:space="preserve">
+    <value>Education level</value>
+  </data>
+  <data name="lblEducation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblEducation.Name" xml:space="preserve">
+    <value>lblEducation</value>
+  </data>
+  <data name="&gt;&gt;lblEducation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblEducation.Parent" xml:space="preserve">
     <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblEducation.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbVacExperience.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="cmbVacExperience.Items" xml:space="preserve">
+    <value>Без разницы</value>
+  </data>
+  <data name="cmbVacExperience.Items1" xml:space="preserve">
+    <value>От одного года</value>
+  </data>
+  <data name="cmbVacExperience.Items2" xml:space="preserve">
+    <value>От двух лет</value>
+  </data>
+  <data name="cmbVacExperience.Items3" xml:space="preserve">
+    <value>От трех лет</value>
+  </data>
+  <data name="cmbVacExperience.Items4" xml:space="preserve">
+    <value>Пять и более лет</value>
+  </data>
+  <data name="cmbVacExperience.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 208</value>
+  </data>
+  <data name="cmbVacExperience.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cmbVacExperience.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="cmbVacExperience.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;cmbVacExperience.Name" xml:space="preserve">
+    <value>cmbVacExperience</value>
+  </data>
+  <data name="&gt;&gt;cmbVacExperience.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbVacExperience.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;cmbVacExperience.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblExperience.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblExperience.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 211</value>
+  </data>
+  <data name="lblExperience.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblExperience.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblExperience.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblExperience.Text" xml:space="preserve">
+    <value>Experience level</value>
+  </data>
+  <data name="lblExperience.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblExperience.Name" xml:space="preserve">
+    <value>lblExperience</value>
+  </data>
+  <data name="&gt;&gt;lblExperience.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblExperience.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblExperience.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbVacGender.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="cmbVacGender.Items" xml:space="preserve">
+    <value>Без разницы</value>
+  </data>
+  <data name="cmbVacGender.Items1" xml:space="preserve">
+    <value>Мужской</value>
+  </data>
+  <data name="cmbVacGender.Items2" xml:space="preserve">
+    <value>Женский</value>
+  </data>
+  <data name="cmbVacGender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 175</value>
+  </data>
+  <data name="cmbVacGender.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cmbVacGender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="cmbVacGender.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;cmbVacGender.Name" xml:space="preserve">
+    <value>cmbVacGender</value>
+  </data>
+  <data name="&gt;&gt;cmbVacGender.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbVacGender.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;cmbVacGender.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblGender.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblGender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 178</value>
+  </data>
+  <data name="lblGender.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblGender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblGender.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblGender.Text" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="lblGender.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblGender.Name" xml:space="preserve">
+    <value>lblGender</value>
+  </data>
+  <data name="&gt;&gt;lblGender.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblGender.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblGender.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmbVacEmployment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="cmbVacEmployment.Items" xml:space="preserve">
+    <value>Без разницы</value>
   </data>
   <data name="cmbVacEmployment.Items1" xml:space="preserve">
     <value>Полная</value>
   </data>
-  <data name="&gt;&gt;lblSpecizalizationUZ.Type" xml:space="preserve">
+  <data name="cmbVacEmployment.Items2" xml:space="preserve">
+    <value>Частичная</value>
+  </data>
+  <data name="cmbVacEmployment.Items3" xml:space="preserve">
+    <value>Фриланс</value>
+  </data>
+  <data name="cmbVacEmployment.Items4" xml:space="preserve">
+    <value>Совместительство</value>
+  </data>
+  <data name="cmbVacEmployment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 142</value>
+  </data>
+  <data name="cmbVacEmployment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cmbVacEmployment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="cmbVacEmployment.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cmbVacEmployment.Name" xml:space="preserve">
+    <value>cmbVacEmployment</value>
+  </data>
+  <data name="&gt;&gt;cmbVacEmployment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbVacEmployment.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;cmbVacEmployment.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblEmployment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblEmployment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 145</value>
+  </data>
+  <data name="lblEmployment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblEmployment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblEmployment.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblEmployment.Text" xml:space="preserve">
+    <value>Employment</value>
+  </data>
+  <data name="lblEmployment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblEmployment.Name" xml:space="preserve">
+    <value>lblEmployment</value>
+  </data>
+  <data name="&gt;&gt;lblEmployment.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;lblEmployment.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
   </data>
-  <data name="&gt;&gt;lblCategory.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;lblEmployment.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtVacSalary.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacSalary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 110</value>
+  </data>
+  <data name="txtVacSalary.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacSalary.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="txtVacSalary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 20</value>
+  </data>
+  <data name="txtVacSalary.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtVacSalary.Name" xml:space="preserve">
+    <value>txtVacSalary</value>
+  </data>
+  <data name="&gt;&gt;txtVacSalary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacSalary.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;txtVacSalary.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblSalary.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSalary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 113</value>
+  </data>
+  <data name="lblSalary.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblSalary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblSalary.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblSalary.Text" xml:space="preserve">
+    <value>Salary *</value>
+  </data>
+  <data name="lblSalary.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblSalary.Name" xml:space="preserve">
+    <value>lblSalary</value>
+  </data>
+  <data name="&gt;&gt;lblSalary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSalary.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
   </data>
   <data name="&gt;&gt;lblSalary.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="cmbVacCategory.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="cmbVacCategory.Items" xml:space="preserve">
+    <value>IT / Интернет / Телеком</value>
+  </data>
+  <data name="cmbVacCategory.Items1" xml:space="preserve">
+    <value>Государственная служба</value>
+  </data>
+  <data name="cmbVacCategory.Items2" xml:space="preserve">
+    <value>Искусство / Культура</value>
+  </data>
+  <data name="cmbVacCategory.Items3" xml:space="preserve">
+    <value>Корпоративные услуги</value>
+  </data>
+  <data name="cmbVacCategory.Items4" xml:space="preserve">
+    <value>Маркетинг / Реклама / PR</value>
+  </data>
+  <data name="cmbVacCategory.Items5" xml:space="preserve">
+    <value>Медиа</value>
+  </data>
+  <data name="cmbVacCategory.Items6" xml:space="preserve">
+    <value>Медицина / Здравоохранение / Фармацевтика</value>
+  </data>
+  <data name="cmbVacCategory.Items7" xml:space="preserve">
+    <value>Недвижимость</value>
+  </data>
+  <data name="cmbVacCategory.Items8" xml:space="preserve">
+    <value>Некоммерческие организации</value>
+  </data>
+  <data name="cmbVacCategory.Items9" xml:space="preserve">
+    <value>Образование / Наука</value>
+  </data>
+  <data name="cmbVacCategory.Items10" xml:space="preserve">
+    <value>Полезные ископаемые / Добыча сырья</value>
+  </data>
+  <data name="cmbVacCategory.Items11" xml:space="preserve">
+    <value>Промышленность</value>
+  </data>
+  <data name="cmbVacCategory.Items12" xml:space="preserve">
+    <value>Развлечения / Отдых / Спорт / Красота</value>
+  </data>
+  <data name="cmbVacCategory.Items13" xml:space="preserve">
+    <value>Сельское хозяйство</value>
+  </data>
+  <data name="cmbVacCategory.Items14" xml:space="preserve">
+    <value>Строительство</value>
+  </data>
+  <data name="cmbVacCategory.Items15" xml:space="preserve">
+    <value>Товары народного потребления</value>
+  </data>
+  <data name="cmbVacCategory.Items16" xml:space="preserve">
+    <value>Торговля</value>
+  </data>
+  <data name="cmbVacCategory.Items17" xml:space="preserve">
+    <value>Транспорт / Логистика / Автомобильный бизнес</value>
+  </data>
+  <data name="cmbVacCategory.Items18" xml:space="preserve">
+    <value>Финансы / Банки / Инвестиции / Лизинг</value>
+  </data>
+  <data name="cmbVacCategory.Items19" xml:space="preserve">
+    <value>Экология / Защита окружающей среды</value>
+  </data>
+  <data name="cmbVacCategory.Items20" xml:space="preserve">
+    <value>Юридическая служба</value>
+  </data>
+  <data name="cmbVacCategory.Items21" xml:space="preserve">
+    <value>Антиквариат</value>
+  </data>
+  <data name="cmbVacCategory.Items22" xml:space="preserve">
+    <value>Бухгалтерия / Управленческий учет / Финансы предприятия</value>
+  </data>
+  <data name="cmbVacCategory.Items23" xml:space="preserve">
+    <value>Административный персонал</value>
+  </data>
+  <data name="cmbVacCategory.Items24" xml:space="preserve">
+    <value>Управление персоналом / Тренинги</value>
+  </data>
+  <data name="cmbVacCategory.Items25" xml:space="preserve">
+    <value>Безопасность</value>
+  </data>
+  <data name="cmbVacCategory.Items26" xml:space="preserve">
+    <value>Высший менеджмент</value>
+  </data>
+  <data name="cmbVacCategory.Items27" xml:space="preserve">
+    <value>Консультирование</value>
+  </data>
+  <data name="cmbVacCategory.Items28" xml:space="preserve">
+    <value>Страхование</value>
+  </data>
+  <data name="cmbVacCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 76</value>
+  </data>
+  <data name="cmbVacCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cmbVacCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="cmbVacCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cmbVacCategory.Name" xml:space="preserve">
+    <value>cmbVacCategory</value>
+  </data>
+  <data name="&gt;&gt;cmbVacCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbVacCategory.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;cmbVacCategory.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblCategory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 79</value>
+  </data>
+  <data name="lblCategory.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblCategory.Text" xml:space="preserve">
+    <value>Category *</value>
+  </data>
+  <data name="lblCategory.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblCategory.Name" xml:space="preserve">
+    <value>lblCategory</value>
+  </data>
+  <data name="&gt;&gt;lblCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCategory.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblCategory.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtVacDescUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacDescUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 44</value>
+  </data>
+  <data name="txtVacDescUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacDescUZ.MaxLength" type="System.Int32, mscorlib">
+    <value>255</value>
+  </data>
+  <data name="txtVacDescUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 20</value>
+  </data>
+  <data name="txtVacDescUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtVacDescUZ.Name" xml:space="preserve">
+    <value>txtVacDescUZ</value>
+  </data>
+  <data name="&gt;&gt;txtVacDescUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacDescUZ.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;txtVacDescUZ.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lblDescriptionUZ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDescriptionUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 44</value>
+  </data>
+  <data name="lblDescriptionUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDescriptionUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblDescriptionUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblDescriptionUZ.Text" xml:space="preserve">
+    <value>Uzbek description (latin) *</value>
+  </data>
+  <data name="lblDescriptionUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDescriptionUZ.Name" xml:space="preserve">
+    <value>lblDescriptionUZ</value>
+  </data>
+  <data name="&gt;&gt;lblDescriptionUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDescriptionUZ.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblDescriptionUZ.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="txtVacDescRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacDescRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 12</value>
+  </data>
+  <data name="txtVacDescRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacDescRU.MaxLength" type="System.Int32, mscorlib">
+    <value>255</value>
+  </data>
+  <data name="txtVacDescRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 20</value>
+  </data>
+  <data name="txtVacDescRU.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtVacDescRU.Name" xml:space="preserve">
+    <value>txtVacDescRU</value>
+  </data>
+  <data name="&gt;&gt;txtVacDescRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacDescRU.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;txtVacDescRU.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lblDescriptionRU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDescriptionRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 15</value>
+  </data>
+  <data name="lblDescriptionRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDescriptionRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblDescriptionRU.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblDescriptionRU.Text" xml:space="preserve">
+    <value>Russian description *</value>
+  </data>
+  <data name="lblDescriptionRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDescriptionRU.Name" xml:space="preserve">
+    <value>lblDescriptionRU</value>
+  </data>
+  <data name="&gt;&gt;lblDescriptionRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDescriptionRU.Parent" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;lblDescriptionRU.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="tbGeneral.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tbGeneral.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tbGeneral.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tbGeneral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>567, 452</value>
+  </data>
+  <data name="tbGeneral.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tbGeneral.Text" xml:space="preserve">
+    <value>General data</value>
+  </data>
+  <data name="&gt;&gt;tbGeneral.Name" xml:space="preserve">
+    <value>tbGeneral</value>
+  </data>
+  <data name="&gt;&gt;tbGeneral.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbGeneral.Parent" xml:space="preserve">
+    <value>tabAddVacancy</value>
+  </data>
+  <data name="&gt;&gt;tbGeneral.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtVacInformationRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacInformationRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 372</value>
+  </data>
+  <data name="txtVacInformationRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacInformationRU.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVacInformationRU.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="txtVacInformationRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 72</value>
+  </data>
+  <data name="txtVacInformationRU.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtVacInformationRU.Name" xml:space="preserve">
+    <value>txtVacInformationRU</value>
+  </data>
+  <data name="&gt;&gt;txtVacInformationRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacInformationRU.Parent" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;txtVacInformationRU.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblInformationRU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblInformationRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 372</value>
+  </data>
+  <data name="lblInformationRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblInformationRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 72</value>
+  </data>
+  <data name="lblInformationRU.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblInformationRU.Text" xml:space="preserve">
+    <value>Additional information</value>
+  </data>
+  <data name="lblInformationRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblInformationRU.Name" xml:space="preserve">
+    <value>lblInformationRU</value>
+  </data>
+  <data name="&gt;&gt;lblInformationRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblInformationRU.Parent" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;lblInformationRU.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtVacRequirementsRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacRequirementsRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 219</value>
+  </data>
+  <data name="txtVacRequirementsRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacRequirementsRU.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVacRequirementsRU.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
   <data name="txtVacRequirementsRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 114</value>
+    <value>423, 145</value>
+  </data>
+  <data name="txtVacRequirementsRU.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtVacRequirementsRU.Name" xml:space="preserve">
+    <value>txtVacRequirementsRU</value>
+  </data>
+  <data name="&gt;&gt;txtVacRequirementsRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacRequirementsRU.Parent" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;txtVacRequirementsRU.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblRequirementsRU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRequirementsRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 219</value>
+  </data>
+  <data name="lblRequirementsRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblRequirementsRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 145</value>
+  </data>
+  <data name="lblRequirementsRU.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblRequirementsRU.Text" xml:space="preserve">
+    <value>Requirements *</value>
+  </data>
+  <data name="lblRequirementsRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblRequirementsRU.Name" xml:space="preserve">
+    <value>lblRequirementsRU</value>
+  </data>
+  <data name="&gt;&gt;lblRequirementsRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRequirementsRU.Parent" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;lblRequirementsRU.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtVacSpecializationRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacSpecializationRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 50</value>
+  </data>
+  <data name="txtVacSpecializationRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacSpecializationRU.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVacSpecializationRU.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="txtVacSpecializationRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 161</value>
+  </data>
+  <data name="txtVacSpecializationRU.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtVacSpecializationRU.Name" xml:space="preserve">
+    <value>txtVacSpecializationRU</value>
+  </data>
+  <data name="&gt;&gt;txtVacSpecializationRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacSpecializationRU.Parent" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;txtVacSpecializationRU.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblSpecializationRU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSpecializationRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 50</value>
+  </data>
+  <data name="lblSpecializationRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblSpecializationRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 161</value>
+  </data>
+  <data name="lblSpecializationRU.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblSpecializationRU.Text" xml:space="preserve">
+    <value>Specialization *</value>
+  </data>
+  <data name="lblSpecializationRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblSpecializationRU.Name" xml:space="preserve">
+    <value>lblSpecializationRU</value>
+  </data>
+  <data name="&gt;&gt;lblSpecializationRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSpecializationRU.Parent" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;lblSpecializationRU.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtVacDepartmentRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacDepartmentRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 11</value>
+  </data>
+  <data name="txtVacDepartmentRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacDepartmentRU.MaxLength" type="System.Int32, mscorlib">
+    <value>255</value>
+  </data>
+  <data name="txtVacDepartmentRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 20</value>
+  </data>
+  <data name="txtVacDepartmentRU.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtVacDepartmentRU.Name" xml:space="preserve">
+    <value>txtVacDepartmentRU</value>
+  </data>
+  <data name="&gt;&gt;txtVacDepartmentRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacDepartmentRU.Parent" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;txtVacDepartmentRU.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblDepartmentRU.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDepartmentRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 11</value>
+  </data>
+  <data name="lblDepartmentRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDepartmentRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 31</value>
+  </data>
+  <data name="lblDepartmentRU.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblDepartmentRU.Text" xml:space="preserve">
+    <value>Department *</value>
+  </data>
+  <data name="lblDepartmentRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblDepartmentRU.Name" xml:space="preserve">
+    <value>lblDepartmentRU</value>
+  </data>
+  <data name="&gt;&gt;lblDepartmentRU.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDepartmentRU.Parent" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;lblDepartmentRU.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tbRussian.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tbRussian.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tbRussian.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tbRussian.Size" type="System.Drawing.Size, System.Drawing">
+    <value>567, 452</value>
+  </data>
+  <data name="tbRussian.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbRussian.Text" xml:space="preserve">
+    <value>Additional data in russian</value>
+  </data>
+  <data name="&gt;&gt;tbRussian.Name" xml:space="preserve">
+    <value>tbRussian</value>
+  </data>
+  <data name="&gt;&gt;tbRussian.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRussian.Parent" xml:space="preserve">
+    <value>tabAddVacancy</value>
+  </data>
+  <data name="&gt;&gt;tbRussian.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtVacInformationUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacInformationUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 372</value>
+  </data>
+  <data name="txtVacInformationUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacInformationUZ.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVacInformationUZ.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="txtVacInformationUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 72</value>
+  </data>
+  <data name="txtVacInformationUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtVacInformationUZ.Name" xml:space="preserve">
+    <value>txtVacInformationUZ</value>
+  </data>
+  <data name="&gt;&gt;txtVacInformationUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacInformationUZ.Parent" xml:space="preserve">
+    <value>tbUzbek</value>
+  </data>
+  <data name="&gt;&gt;txtVacInformationUZ.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblInformationUZ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblInformationUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 372</value>
+  </data>
+  <data name="lblInformationUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblInformationUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 72</value>
+  </data>
+  <data name="lblInformationUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblInformationUZ.Text" xml:space="preserve">
+    <value>Additional information</value>
+  </data>
+  <data name="lblInformationUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblInformationUZ.Name" xml:space="preserve">
+    <value>lblInformationUZ</value>
+  </data>
+  <data name="&gt;&gt;lblInformationUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblInformationUZ.Parent" xml:space="preserve">
+    <value>tbUzbek</value>
+  </data>
+  <data name="&gt;&gt;lblInformationUZ.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtVacRequirementsUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacRequirementsUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 219</value>
+  </data>
+  <data name="txtVacRequirementsUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacRequirementsUZ.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVacRequirementsUZ.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="txtVacRequirementsUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 145</value>
+  </data>
+  <data name="txtVacRequirementsUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtVacRequirementsUZ.Name" xml:space="preserve">
+    <value>txtVacRequirementsUZ</value>
+  </data>
+  <data name="&gt;&gt;txtVacRequirementsUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacRequirementsUZ.Parent" xml:space="preserve">
+    <value>tbUzbek</value>
+  </data>
+  <data name="&gt;&gt;txtVacRequirementsUZ.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblRequirementsUZ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRequirementsUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 219</value>
+  </data>
+  <data name="lblRequirementsUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblRequirementsUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 145</value>
+  </data>
+  <data name="lblRequirementsUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblRequirementsUZ.Text" xml:space="preserve">
+    <value>Requirements *</value>
+  </data>
+  <data name="lblRequirementsUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblRequirementsUZ.Name" xml:space="preserve">
+    <value>lblRequirementsUZ</value>
+  </data>
+  <data name="&gt;&gt;lblRequirementsUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRequirementsUZ.Parent" xml:space="preserve">
+    <value>tbUzbek</value>
+  </data>
+  <data name="&gt;&gt;lblRequirementsUZ.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtVacSpecializationUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacSpecializationUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 50</value>
+  </data>
+  <data name="txtVacSpecializationUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacSpecializationUZ.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtVacSpecializationUZ.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="txtVacSpecializationUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 161</value>
+  </data>
+  <data name="txtVacSpecializationUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;txtVacSpecializationUZ.Name" xml:space="preserve">
     <value>txtVacSpecializationUZ</value>
   </data>
-  <data name="txtVacDepartmentUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="&gt;&gt;txtVacSpecializationUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacSpecializationUZ.Parent" xml:space="preserve">
+    <value>tbUzbek</value>
   </data>
   <data name="&gt;&gt;txtVacSpecializationUZ.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="lblEducation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
+  <data name="lblSpecizalizationUZ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;lblDepartmentRU.Type" xml:space="preserve">
+  <data name="lblSpecizalizationUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 50</value>
+  </data>
+  <data name="lblSpecizalizationUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblSpecizalizationUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 161</value>
+  </data>
+  <data name="lblSpecizalizationUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblSpecizalizationUZ.Text" xml:space="preserve">
+    <value>Specialization *</value>
+  </data>
+  <data name="lblSpecizalizationUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblSpecizalizationUZ.Name" xml:space="preserve">
+    <value>lblSpecizalizationUZ</value>
+  </data>
+  <data name="&gt;&gt;lblSpecizalizationUZ.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSpecizalizationUZ.Parent" xml:space="preserve">
+    <value>tbUzbek</value>
+  </data>
+  <data name="&gt;&gt;lblSpecizalizationUZ.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtVacDepartmentUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtVacDepartmentUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 11</value>
+  </data>
+  <data name="txtVacDepartmentUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtVacDepartmentUZ.MaxLength" type="System.Int32, mscorlib">
+    <value>255</value>
+  </data>
+  <data name="txtVacDepartmentUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 20</value>
+  </data>
+  <data name="txtVacDepartmentUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtVacDepartmentUZ.Name" xml:space="preserve">
+    <value>txtVacDepartmentUZ</value>
+  </data>
+  <data name="&gt;&gt;txtVacDepartmentUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtVacDepartmentUZ.Parent" xml:space="preserve">
+    <value>tbUzbek</value>
+  </data>
+  <data name="&gt;&gt;txtVacDepartmentUZ.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblDepartmentUZ.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDepartmentUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 11</value>
+  </data>
+  <data name="lblDepartmentUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDepartmentUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 31</value>
+  </data>
+  <data name="lblDepartmentUZ.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblDepartmentUZ.Text" xml:space="preserve">
+    <value>Department *</value>
+  </data>
+  <data name="lblDepartmentUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lblDepartmentUZ.Name" xml:space="preserve">
+    <value>lblDepartmentUZ</value>
+  </data>
+  <data name="&gt;&gt;lblDepartmentUZ.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDepartmentUZ.Parent" xml:space="preserve">
+    <value>tbUzbek</value>
+  </data>
+  <data name="&gt;&gt;lblDepartmentUZ.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="tbUzbek.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tbUzbek.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tbUzbek.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tbUzbek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>567, 452</value>
+  </data>
+  <data name="tbUzbek.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tbUzbek.Text" xml:space="preserve">
+    <value>Additional data in uzbek</value>
+  </data>
+  <data name="&gt;&gt;tbUzbek.Name" xml:space="preserve">
+    <value>tbUzbek</value>
+  </data>
+  <data name="&gt;&gt;tbUzbek.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbUzbek.Parent" xml:space="preserve">
+    <value>tabAddVacancy</value>
+  </data>
+  <data name="&gt;&gt;tbUzbek.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabAddVacancy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="tabAddVacancy.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabAddVacancy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>575, 478</value>
+  </data>
+  <data name="tabAddVacancy.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabAddVacancy.Name" xml:space="preserve">
+    <value>tabAddVacancy</value>
+  </data>
+  <data name="&gt;&gt;tabAddVacancy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabAddVacancy.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabAddVacancy.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>584, 521</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -864,637 +1533,13 @@
         AACAAwAA//8AAA==
 </value>
   </data>
-  <data name="tbRussian.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="lblExperience.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="txtVacDescRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 20</value>
-  </data>
-  <data name="&gt;&gt;txtVacDepartmentUZ.Parent" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="&gt;&gt;txtVacDepartmentUZ.Name" xml:space="preserve">
-    <value>txtVacDepartmentUZ</value>
-  </data>
-  <data name="&gt;&gt;lblInformationUZ.Name" xml:space="preserve">
-    <value>lblInformationUZ</value>
-  </data>
-  <data name="lblEducation.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="cmbVacCategory.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;txtVacInformationRU.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cmbVacExperience.Items" xml:space="preserve">
-    <value>Без разницы</value>
-  </data>
-  <data name="lblEducation.Text" xml:space="preserve">
-    <value>Education level</value>
-  </data>
-  <data name="cmbVacGender.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="cmbVacCategory.Items19" xml:space="preserve">
-    <value>Экология / Защита окружающей среды</value>
-  </data>
-  <data name="&gt;&gt;lblDepartmentUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblInformationRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 288</value>
-  </data>
-  <data name="&gt;&gt;cmbVacEducation.Name" xml:space="preserve">
-    <value>cmbVacEducation</value>
-  </data>
-  <data name="cmbVacCategory.Items11" xml:space="preserve">
-    <value>Промышленность</value>
-  </data>
-  <data name="txtVacInformationRU.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblDepartmentUZ.Parent" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="lblCategory.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="txtVacRequirementsUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;txtVacDescRU.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="txtVacSalary.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="lblDepartmentUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;dateVacExpire.Name" xml:space="preserve">
-    <value>dateVacExpire</value>
-  </data>
-  <data name="txtVacDepartmentUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnAddMore.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="txtVacDescRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 12</value>
-  </data>
-  <data name="cmbVacCategory.Items3" xml:space="preserve">
-    <value>Корпоративные услуги</value>
-  </data>
-  <data name="&gt;&gt;lblSalary.Name" xml:space="preserve">
-    <value>lblSalary</value>
-  </data>
-  <data name="&gt;&gt;lblDescriptionUZ.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="txtVacInformationRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="lblSpecializationRU.Text" xml:space="preserve">
-    <value>Specialization *</value>
-  </data>
-  <data name="txtVacDescUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 44</value>
-  </data>
-  <data name="txtVacInformationUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="tbRussian.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="cmbVacGender.Items2" xml:space="preserve">
-    <value>Женский</value>
-  </data>
-  <data name="&gt;&gt;lblExpireDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtVacRequirementsUZ.Parent" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="&gt;&gt;lblDescriptionUZ.Name" xml:space="preserve">
-    <value>lblDescriptionUZ</value>
-  </data>
-  <data name="cmbVacCategory.Items12" xml:space="preserve">
-    <value>Развлечения / Отдых / Спорт / Красота</value>
-  </data>
-  <data name="lblExperience.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="tabAddVacancy.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;txtVacInformationRU.Name" xml:space="preserve">
-    <value>txtVacInformationRU</value>
-  </data>
-  <data name="&gt;&gt;lblDescriptionUZ.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 28</value>
-  </data>
-  <data name="&gt;&gt;lblEducation.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="cmbVacExperience.Items2" xml:space="preserve">
-    <value>От двух лет</value>
-  </data>
-  <data name="cmbVacExperience.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;tbUzbek.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtVacInformationRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 285</value>
-  </data>
-  <data name="&gt;&gt;txtVacSpecializationRU.Parent" xml:space="preserve">
-    <value>tbRussian</value>
-  </data>
-  <data name="btnAddMore.Text" xml:space="preserve">
-    <value>Add more</value>
-  </data>
-  <data name="lblRequirementsUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="tabAddVacancy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 6</value>
-  </data>
-  <data name="txtVacInformationRU.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblSpecizalizationUZ.Parent" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="&gt;&gt;txtVacRequirementsUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbVacGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 175</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Portal vacancy add form</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmAddPortalVacancy</value>
   </data>
-  <data name="&gt;&gt;txtVacRequirementsRU.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblInformationUZ.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txtVacDescUZ.Name" xml:space="preserve">
-    <value>txtVacDescUZ</value>
-  </data>
-  <data name="lblEducation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblInformationUZ.Parent" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="&gt;&gt;tabAddVacancy.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblSpecizalizationUZ.Name" xml:space="preserve">
-    <value>lblSpecizalizationUZ</value>
-  </data>
-  <data name="cmbVacCategory.Items27" xml:space="preserve">
-    <value>Консультирование</value>
-  </data>
-  <data name="lblExperience.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 211</value>
-  </data>
-  <data name="&gt;&gt;lblRequirementsUZ.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblSalary.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 113</value>
-  </data>
-  <data name="&gt;&gt;lblCategory.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="txtVacDescRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="cmbVacExperience.Items1" xml:space="preserve">
-    <value>От одного года</value>
-  </data>
-  <data name="&gt;&gt;lblExperience.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="lblInformationUZ.Text" xml:space="preserve">
-    <value>Additional information</value>
-  </data>
-  <data name="lblDescriptionRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="lblInformationUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;tbGeneral.Parent" xml:space="preserve">
-    <value>tabAddVacancy</value>
-  </data>
-  <data name="&gt;&gt;lblExpireDate.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="txtVacSpecializationUZ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="cmbVacCategory.Items16" xml:space="preserve">
-    <value>Торговля</value>
-  </data>
-  <data name="txtVacSalary.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btnAddMore.Location" type="System.Drawing.Point, System.Drawing">
-    <value>439, 488</value>
-  </data>
-  <data name="&gt;&gt;txtVacInformationUZ.Name" xml:space="preserve">
-    <value>txtVacInformationUZ</value>
-  </data>
-  <data name="cmbVacCategory.Items28" xml:space="preserve">
-    <value>Страхование</value>
-  </data>
-  <data name="lblRequirementsUZ.Text" xml:space="preserve">
-    <value>Requirements *</value>
-  </data>
-  <data name="&gt;&gt;lblRequirementsRU.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;txtVacDescRU.Name" xml:space="preserve">
-    <value>txtVacDescRU</value>
-  </data>
-  <data name="&gt;&gt;lblGender.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="lblEducation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;cmbVacEmployment.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lblDepartmentUZ.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lblGender.Text" xml:space="preserve">
-    <value>Gender</value>
-  </data>
-  <data name="cmbVacCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 76</value>
-  </data>
-  <data name="cmbVacCategory.Items17" xml:space="preserve">
-    <value>Транспорт / Логистика / Автомобильный бизнес</value>
-  </data>
-  <data name="&gt;&gt;cmbVacEducation.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tbGeneral.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tbRussian.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;txtVacSalary.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="&gt;&gt;txtVacSalary.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbVacEducation.Items3" xml:space="preserve">
-    <value>Неоконченное высшее</value>
-  </data>
-  <data name="lblInformationUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;cmbVacExperience.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtVacRequirementsRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="tabAddVacancy.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="tbUzbek.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="lblDepartmentRU.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblDepartmentUZ.Text" xml:space="preserve">
-    <value>Department *</value>
-  </data>
-  <data name="&gt;&gt;cmbVacExperience.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="&gt;&gt;lblExperience.Name" xml:space="preserve">
-    <value>lblExperience</value>
-  </data>
-  <data name="&gt;&gt;tbGeneral.Name" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="txtVacInformationRU.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="txtVacRequirementsRU.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="txtVacDescUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="lblInformationRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="&gt;&gt;lblCategory.Name" xml:space="preserve">
-    <value>lblCategory</value>
-  </data>
-  <data name="cmbVacEmployment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 21</value>
-  </data>
-  <data name="&gt;&gt;cmbVacEducation.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="txtVacDescRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;lblSpecializationRU.Name" xml:space="preserve">
-    <value>lblSpecializationRU</value>
-  </data>
-  <data name="txtVacDepartmentRU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txtVacSpecializationUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="cmbVacEducation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 21</value>
-  </data>
-  <data name="lblSalary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="txtVacRequirementsRU.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblInformationUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="lblInformationRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;txtVacDescUZ.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="txtVacSpecializationRU.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cmbVacCategory.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="cmbVacEducation.Items4" xml:space="preserve">
-    <value>Высшее</value>
-  </data>
-  <data name="&gt;&gt;txtVacSpecializationRU.Name" xml:space="preserve">
-    <value>txtVacSpecializationRU</value>
-  </data>
-  <data name="lblInformationRU.Text" xml:space="preserve">
-    <value>Additional information</value>
-  </data>
-  <data name="cmbVacExperience.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 21</value>
-  </data>
-  <data name="&gt;&gt;txtVacSpecializationRU.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cmbVacCategory.Items21" xml:space="preserve">
-    <value>Антиквариат</value>
-  </data>
-  <data name="&gt;&gt;tabAddVacancy.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblRequirementsUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="cmbVacEmployment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="lblSpecizalizationUZ.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;lblDescriptionUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblDescriptionRU.Text" xml:space="preserve">
-    <value>Russian description *</value>
-  </data>
-  <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="lblSpecizalizationUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 44</value>
-  </data>
-  <data name="lblGender.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblDescriptionUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="&gt;&gt;lblSalary.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtVacDescUZ.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="&gt;&gt;tabAddVacancy.Name" xml:space="preserve">
-    <value>tabAddVacancy</value>
-  </data>
-  <data name="&gt;&gt;tbUzbek.Name" xml:space="preserve">
-    <value>tbUzbek</value>
-  </data>
-  <data name="&gt;&gt;lblDescriptionRU.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="&gt;&gt;cmbVacGender.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblGender.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="txtVacSalary.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;lblExpireDate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtVacDescRU.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblDepartmentUZ.Name" xml:space="preserve">
-    <value>lblDepartmentUZ</value>
-  </data>
-  <data name="txtVacSpecializationUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 41</value>
-  </data>
-  <data name="&gt;&gt;lblSpecializationRU.Parent" xml:space="preserve">
-    <value>tbRussian</value>
-  </data>
-  <data name="&gt;&gt;lblInformationUZ.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Portal vacancy add form</value>
-  </data>
-  <data name="cmbVacGender.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="btnSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="lblGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 178</value>
-  </data>
-  <data name="&gt;&gt;txtVacRequirementsUZ.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtVacInformationRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbVacExperience.Items3" xml:space="preserve">
-    <value>От трех лет</value>
-  </data>
-  <data name="cmbVacEducation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 241</value>
-  </data>
-  <data name="lblDescriptionUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;txtVacDepartmentRU.Name" xml:space="preserve">
-    <value>txtVacDepartmentRU</value>
-  </data>
-  <data name="&gt;&gt;cmbVacExperience.Name" xml:space="preserve">
-    <value>cmbVacExperience</value>
-  </data>
-  <data name="&gt;&gt;txtVacSalary.Name" xml:space="preserve">
-    <value>txtVacSalary</value>
-  </data>
-  <data name="txtVacDepartmentRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="txtVacSpecializationUZ.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSpecializationRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="lblCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 79</value>
-  </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 488</value>
-  </data>
-  <data name="&gt;&gt;dateVacExpire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbVacCategory.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="lblRequirementsRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="cmbVacCategory.Items23" xml:space="preserve">
-    <value>Административный персонал</value>
-  </data>
-  <data name="&gt;&gt;lblSpecializationRU.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblSpecizalizationUZ.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="txtVacSpecializationRU.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblDescriptionUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblExperience.Text" xml:space="preserve">
-    <value>Experience level</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEducation.Name" xml:space="preserve">
-    <value>lblEducation</value>
-  </data>
-  <data name="lblDepartmentRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="lblDescriptionRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 15</value>
-  </data>
-  <data name="lblSpecizalizationUZ.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cmbVacEmployment.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="lblRequirementsRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 166</value>
-  </data>
-  <data name="&gt;&gt;tbRussian.Name" xml:space="preserve">
-    <value>tbRussian</value>
-  </data>
-  <data name="btnAddMore.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 28</value>
-  </data>
-  <data name="&gt;&gt;txtVacDescRU.Parent" xml:space="preserve">
-    <value>tbGeneral</value>
-  </data>
-  <data name="lblInformationUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="txtVacInformationUZ.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblInformationRU.Parent" xml:space="preserve">
-    <value>tbRussian</value>
-  </data>
-  <data name="lblRequirementsRU.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;tbUzbek.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblEmployment.Text" xml:space="preserve">
-    <value>Employment</value>
-  </data>
-  <data name="&gt;&gt;txtVacInformationRU.Parent" xml:space="preserve">
-    <value>tbRussian</value>
-  </data>
-  <data name="&gt;&gt;cmbVacEmployment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblSpecializationRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 44</value>
-  </data>
-  <data name="txtVacSpecializationRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 114</value>
-  </data>
-  <data name="cmbVacEmployment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 142</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ru</value>
-  </metadata>
 </root>

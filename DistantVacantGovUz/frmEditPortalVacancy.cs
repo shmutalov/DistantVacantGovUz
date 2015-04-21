@@ -29,7 +29,7 @@ namespace DistantVacantGovUz
         {
             InitializeComponent();
 
-            resources = new ResourceManager("frmEditPortalVacancy", Assembly.GetExecutingAssembly());
+            resources = new ResourceManager("DistantVacantGovUz.frmEditPortalVacancy", Assembly.GetExecutingAssembly());
             currentCultureInfo = Thread.CurrentThread.CurrentUICulture;
 
             this.vacancyId = portalVacancyId;

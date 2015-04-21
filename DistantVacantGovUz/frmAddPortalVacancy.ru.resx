@@ -117,117 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>294, 488</value>
+  <data name="btnAddMore.Text" xml:space="preserve">
+    <value>Добавить еще</value>
   </data>
-  <data name="btnSave.Text" xml:space="preserve">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
     <value>Добавить</value>
-  </data>
-  <data name="dateVacExpire.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 274</value>
-  </data>
-  <data name="dateVacExpire.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 20</value>
-  </data>
-  <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
   </data>
   <data name="lblExpireDate.Text" xml:space="preserve">
     <value>Действителен до *</value>
   </data>
-  <data name="cmbVacEducation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 241</value>
-  </data>
-  <data name="cmbVacEducation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 21</value>
-  </data>
-  <data name="lblEducation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
-  </data>
   <data name="lblEducation.Text" xml:space="preserve">
     <value>Образование</value>
-  </data>
-  <data name="cmbVacExperience.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 208</value>
-  </data>
-  <data name="cmbVacExperience.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 21</value>
-  </data>
-  <data name="lblExperience.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
   </data>
   <data name="lblExperience.Text" xml:space="preserve">
     <value>Необходимый стаж</value>
   </data>
-  <data name="cmbVacGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 175</value>
-  </data>
-  <data name="cmbVacGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 21</value>
-  </data>
-  <data name="lblGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
-  </data>
   <data name="lblGender.Text" xml:space="preserve">
     <value>Пол</value>
-  </data>
-  <data name="cmbVacEmployment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 142</value>
-  </data>
-  <data name="cmbVacEmployment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 21</value>
-  </data>
-  <data name="lblEmployment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
   </data>
   <data name="lblEmployment.Text" xml:space="preserve">
     <value>Занятость</value>
   </data>
-  <data name="txtVacSalary.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 110</value>
-  </data>
-  <data name="txtVacSalary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 20</value>
-  </data>
-  <data name="lblSalary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
-  </data>
   <data name="lblSalary.Text" xml:space="preserve">
     <value>Заработная плата *</value>
-  </data>
-  <data name="cmbVacCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 76</value>
-  </data>
-  <data name="cmbVacCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 21</value>
-  </data>
-  <data name="lblCategory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
   </data>
   <data name="lblCategory.Text" xml:space="preserve">
     <value>Категория *</value>
   </data>
-  <data name="txtVacDescUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 44</value>
-  </data>
-  <data name="txtVacDescUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 20</value>
-  </data>
-  <data name="lblDescriptionUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
-  </data>
   <data name="lblDescriptionUZ.Text" xml:space="preserve">
     <value>Узбекское наименование (латиницой) *</value>
-  </data>
-  <data name="txtVacDescRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 12</value>
-  </data>
-  <data name="txtVacDescRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 20</value>
-  </data>
-  <data name="lblDescriptionRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 16</value>
   </data>
   <data name="lblDescriptionRU.Text" xml:space="preserve">
     <value>Русское наименование *</value>
@@ -235,171 +163,39 @@
   <data name="tbGeneral.Text" xml:space="preserve">
     <value>Общие данные</value>
   </data>
-  <data name="txtVacInformationRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 372</value>
-  </data>
-  <data name="txtVacInformationRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 72</value>
-  </data>
-  <data name="lblInformationRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 372</value>
-  </data>
-  <data name="lblInformationRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 72</value>
-  </data>
   <data name="lblInformationRU.Text" xml:space="preserve">
     <value>Дополнительная
 информация</value>
   </data>
-  <data name="lblInformationRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="txtVacRequirementsRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 219</value>
-  </data>
-  <data name="txtVacRequirementsRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 145</value>
-  </data>
-  <data name="lblRequirementsRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 219</value>
-  </data>
-  <data name="lblRequirementsRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 145</value>
-  </data>
   <data name="lblRequirementsRU.Text" xml:space="preserve">
     <value>Требования *</value>
-  </data>
-  <data name="lblRequirementsRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="txtVacSpecializationRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 50</value>
-  </data>
-  <data name="txtVacSpecializationRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 161</value>
-  </data>
-  <data name="lblSpecializationRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 50</value>
-  </data>
-  <data name="lblSpecializationRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 161</value>
   </data>
   <data name="lblSpecializationRU.Text" xml:space="preserve">
     <value>Функциональность *</value>
   </data>
-  <data name="lblSpecializationRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="txtVacDepartmentRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 11</value>
-  </data>
-  <data name="txtVacDepartmentRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 20</value>
-  </data>
-  <data name="lblDepartmentRU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 11</value>
-  </data>
-  <data name="lblDepartmentRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 31</value>
-  </data>
   <data name="lblDepartmentRU.Text" xml:space="preserve">
     <value>Отдел / Подразделение *</value>
   </data>
-  <data name="lblDepartmentRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
   <data name="tbRussian.Text" xml:space="preserve">
-    <value>Дополнительные данные на русском</value>
-  </data>
-  <data name="txtVacInformationUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 372</value>
-  </data>
-  <data name="txtVacInformationUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 72</value>
-  </data>
-  <data name="lblInformationUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 372</value>
-  </data>
-  <data name="lblInformationUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 72</value>
+    <value>Допольнительные данные на русском</value>
   </data>
   <data name="lblInformationUZ.Text" xml:space="preserve">
     <value>Дополнительная
 информация</value>
   </data>
-  <data name="lblInformationUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="txtVacRequirementsUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 219</value>
-  </data>
-  <data name="txtVacRequirementsUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 145</value>
-  </data>
-  <data name="lblRequirementsUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 219</value>
-  </data>
-  <data name="lblRequirementsUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 145</value>
-  </data>
   <data name="lblRequirementsUZ.Text" xml:space="preserve">
     <value>Требования *</value>
-  </data>
-  <data name="lblRequirementsUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="txtVacSpecializationUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 50</value>
-  </data>
-  <data name="txtVacSpecializationUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 161</value>
-  </data>
-  <data name="lblSpecizalizationUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 50</value>
-  </data>
-  <data name="lblSpecizalizationUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 161</value>
   </data>
   <data name="lblSpecizalizationUZ.Text" xml:space="preserve">
     <value>Функциональность *</value>
   </data>
-  <data name="lblSpecizalizationUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
-  <data name="txtVacDepartmentUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 11</value>
-  </data>
-  <data name="txtVacDepartmentUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>423, 20</value>
-  </data>
-  <data name="lblDepartmentUZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 11</value>
-  </data>
-  <data name="lblDepartmentUZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 31</value>
-  </data>
   <data name="lblDepartmentUZ.Text" xml:space="preserve">
     <value>Отдел / Подразделение *</value>
   </data>
-  <data name="lblDepartmentUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopRight</value>
-  </data>
   <data name="tbUzbek.Text" xml:space="preserve">
-    <value>Дополнительные данные на узбекском</value>
+    <value>Допольнительные данные на узбекском</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnAddMore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="btnAddMore.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnAddMore.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="btnAddMore.Text" xml:space="preserve">
-    <value>Добавить еще</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAA
@@ -423,8 +219,5 @@
         AAAAAAAA//8AAMABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIAB
         AACAAwAA//8AAA==
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Редактирование вакансии Портала</value>
   </data>
 </root>

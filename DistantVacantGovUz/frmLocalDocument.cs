@@ -116,7 +116,8 @@ namespace DistantVacantGovUz
 
             this.documentFileName = documentFileName;
             this.documentName = Path.GetFileName(documentFileName);
-            this.documentFileNameWithOutExtension = documentFileName.Substring(0, documentFileName.Length - 4);
+            //this.documentFileNameWithOutExtension = documentFileName.Substring(0, documentFileName.Length - 4);
+            this.documentFileNameWithOutExtension = Path.GetFileNameWithoutExtension(documentFileName);
 
             this.workingVacancyList = vacancyList;
 
@@ -176,7 +177,8 @@ namespace DistantVacantGovUz
                 {
                     documentFileName = sfd.FileName;
                     documentName = Path.GetFileName(documentFileName);
-                    documentFileNameWithOutExtension = documentFileName.Substring(0, documentFileName.Length - 4);
+                    //documentFileNameWithOutExtension = documentFileName.Substring(0, documentFileName.Length - 4);
+                    documentFileNameWithOutExtension = Path.GetFileNameWithoutExtension(documentFileName);
 
                     isDirty = false;
                     isNewDocument = false;

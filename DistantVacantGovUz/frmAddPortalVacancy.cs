@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Resources;
-using System.Reflection;
 using System.Threading;
 using System.Globalization;
+using System.Reflection;
 
 namespace DistantVacantGovUz
 {
@@ -21,7 +22,7 @@ namespace DistantVacantGovUz
         {
             InitializeComponent();
 
-            resources = new ResourceManager("frmAddPortalVacancy", Assembly.GetExecutingAssembly());
+            resources = new ResourceManager("DistantVacantGovUz.frmAddPortalVacancy", Assembly.GetExecutingAssembly());
             currentCultureInfo = Thread.CurrentThread.CurrentUICulture;
         }
 
@@ -43,7 +44,7 @@ namespace DistantVacantGovUz
 
                 errorMessage += String.Format(language.strings.editPortalVacCheckVacField
                     , resources.GetString("lblDescriptionRU.Text", currentCultureInfo));
-                
+
                 txtVacDescRU.Focus();
                 ret = false;
             }
@@ -73,7 +74,7 @@ namespace DistantVacantGovUz
             if (txtVacSalary.Text.Trim() == "")
             {
                 //MessageBox.Show("Поле \"" + @"Заработная плата" + "\" не может быть пустым");
-                
+
                 errorMessage += String.Format(language.strings.editPortalVacCheckVacField
                     , resources.GetString("lblSalary.Text", currentCultureInfo));
 
@@ -86,7 +87,7 @@ namespace DistantVacantGovUz
             if (txtVacDepartmentRU.Text.Trim() == "")
             {
                 //MessageBox.Show("Поле \"" + @"Отдел / Подразделение (РУ)" + "\" не может быть пустым");
-                
+
                 errorMessage += String.Format(language.strings.editPortalVacCheckVacField
                     , resources.GetString("lblDepartmentRU.Text", currentCultureInfo));
 
@@ -97,7 +98,7 @@ namespace DistantVacantGovUz
             if (txtVacSpecializationRU.Text.Trim() == "")
             {
                 //MessageBox.Show("Поле \"" + @"Функциональность (РУ)" + "\" не может быть пустым");
-                
+
                 errorMessage += String.Format(language.strings.editPortalVacCheckVacField
                     , resources.GetString("lblSpecializationRU.Text", currentCultureInfo));
 
@@ -178,15 +179,8 @@ namespace DistantVacantGovUz
             }
         }
 
-        private void frmAddPortalVacancy_Load(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            //return;
-
             if (!ValidateVacancy())
                 return;
 

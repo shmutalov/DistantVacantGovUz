@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPortalVacancy));
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnAddMore = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tabAddVacancy = new System.Windows.Forms.TabControl();
             this.tbGeneral = new System.Windows.Forms.TabPage();
             this.dateVacExpire = new System.Windows.Forms.DateTimePicker();
@@ -68,20 +69,27 @@
             this.lblSpecizalizationUZ = new System.Windows.Forms.Label();
             this.txtVacDepartmentUZ = new System.Windows.Forms.TextBox();
             this.lblDepartmentUZ = new System.Windows.Forms.Label();
-            this.btnAddMore = new System.Windows.Forms.Button();
             this.tabAddVacancy.SuspendLayout();
             this.tbGeneral.SuspendLayout();
             this.tbRussian.SuspendLayout();
             this.tbUzbek.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSave
+            // btnAddMore
             // 
-            resources.ApplyResources(this.btnSave, "btnSave");
-            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnAddMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.btnAddMore, "btnAddMore");
+            this.btnAddMore.Name = "btnAddMore";
+            this.btnAddMore.UseVisualStyleBackColor = false;
+            this.btnAddMore.Click += new System.EventHandler(this.btnAddMore_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.btnAdd, "btnAdd");
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tabAddVacancy
             // 
@@ -94,7 +102,6 @@
             // 
             // tbGeneral
             // 
-            resources.ApplyResources(this.tbGeneral, "tbGeneral");
             this.tbGeneral.Controls.Add(this.dateVacExpire);
             this.tbGeneral.Controls.Add(this.lblExpireDate);
             this.tbGeneral.Controls.Add(this.cmbVacEducation);
@@ -113,6 +120,7 @@
             this.tbGeneral.Controls.Add(this.lblDescriptionUZ);
             this.tbGeneral.Controls.Add(this.txtVacDescRU);
             this.tbGeneral.Controls.Add(this.lblDescriptionRU);
+            resources.ApplyResources(this.tbGeneral, "tbGeneral");
             this.tbGeneral.Name = "tbGeneral";
             this.tbGeneral.UseVisualStyleBackColor = true;
             // 
@@ -271,7 +279,6 @@
             // 
             // tbRussian
             // 
-            resources.ApplyResources(this.tbRussian, "tbRussian");
             this.tbRussian.Controls.Add(this.txtVacInformationRU);
             this.tbRussian.Controls.Add(this.lblInformationRU);
             this.tbRussian.Controls.Add(this.txtVacRequirementsRU);
@@ -280,6 +287,7 @@
             this.tbRussian.Controls.Add(this.lblSpecializationRU);
             this.tbRussian.Controls.Add(this.txtVacDepartmentRU);
             this.tbRussian.Controls.Add(this.lblDepartmentRU);
+            resources.ApplyResources(this.tbRussian, "tbRussian");
             this.tbRussian.Name = "tbRussian";
             this.tbRussian.UseVisualStyleBackColor = true;
             // 
@@ -325,7 +333,6 @@
             // 
             // tbUzbek
             // 
-            resources.ApplyResources(this.tbUzbek, "tbUzbek");
             this.tbUzbek.Controls.Add(this.txtVacInformationUZ);
             this.tbUzbek.Controls.Add(this.lblInformationUZ);
             this.tbUzbek.Controls.Add(this.txtVacRequirementsUZ);
@@ -334,6 +341,7 @@
             this.tbUzbek.Controls.Add(this.lblSpecizalizationUZ);
             this.tbUzbek.Controls.Add(this.txtVacDepartmentUZ);
             this.tbUzbek.Controls.Add(this.lblDepartmentUZ);
+            resources.ApplyResources(this.tbUzbek, "tbUzbek");
             this.tbUzbek.Name = "tbUzbek";
             this.tbUzbek.UseVisualStyleBackColor = true;
             // 
@@ -377,23 +385,14 @@
             resources.ApplyResources(this.lblDepartmentUZ, "lblDepartmentUZ");
             this.lblDepartmentUZ.Name = "lblDepartmentUZ";
             // 
-            // btnAddMore
-            // 
-            resources.ApplyResources(this.btnAddMore, "btnAddMore");
-            this.btnAddMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAddMore.Name = "btnAddMore";
-            this.btnAddMore.UseVisualStyleBackColor = false;
-            this.btnAddMore.Click += new System.EventHandler(this.btnAddMore_Click);
-            // 
             // frmAddPortalVacancy
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnAddMore);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tabAddVacancy);
             this.Name = "frmAddPortalVacancy";
-            this.Load += new System.EventHandler(this.frmAddPortalVacancy_Load);
             this.tabAddVacancy.ResumeLayout(false);
             this.tbGeneral.ResumeLayout(false);
             this.tbGeneral.PerformLayout();
@@ -407,7 +406,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnAddMore;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TabControl tabAddVacancy;
         private System.Windows.Forms.TabPage tbGeneral;
         private System.Windows.Forms.DateTimePicker dateVacExpire;
@@ -446,6 +446,5 @@
         private System.Windows.Forms.Label lblSpecizalizationUZ;
         private System.Windows.Forms.TextBox txtVacDepartmentUZ;
         private System.Windows.Forms.Label lblDepartmentUZ;
-        private System.Windows.Forms.Button btnAddMore;
     }
 }

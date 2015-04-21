@@ -342,9 +342,13 @@ namespace DistantVacantGovUz
             {
                 List<CReportVisaItem> visas = (List<CReportVisaItem>)parameters["visas"];
 
-                PDF.pdf.PdfPTable pdfTableVisa = new PDF.pdf.PdfPTable(2);
+                /*PDF.pdf.PdfPTable pdfTableVisa = new PDF.pdf.PdfPTable(2);
 
-                float[] visaColumnWidths = new float[] { 392f, 392f };
+                float[] visaColumnWidths = new float[] { 392f, 392f };*/
+
+                PDF.pdf.PdfPTable pdfTableVisa = new PDF.pdf.PdfPTable(3);
+
+                float[] visaColumnWidths = new float[] { 212f, 212f, 360f };
 
                 pdfTableVisa.SpacingBefore = 12f;
                 pdfTableVisa.LockedWidth = true;
@@ -361,7 +365,12 @@ namespace DistantVacantGovUz
 
                     pdfTableVisa.AddCell(vcell);
 
-                    vcell.Phrase = new PDF.Phrase(visa.subject, fnt_9_b);
+                    vcell.Phrase = new PDF.Phrase(visa.subject + "\n\n", fnt_9_b);
+                    vcell.HorizontalAlignment = PDF.pdf.PdfPCell.ALIGN_RIGHT;
+
+                    pdfTableVisa.AddCell(vcell);
+
+                    vcell.Phrase = new PDF.Phrase("", fnt_9_b);
                     vcell.HorizontalAlignment = PDF.pdf.PdfPCell.ALIGN_RIGHT;
 
                     pdfTableVisa.AddCell(vcell);
