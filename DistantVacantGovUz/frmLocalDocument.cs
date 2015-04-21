@@ -270,6 +270,8 @@ namespace DistantVacantGovUz
                         parameters.Add("footer", fRptSettings.footerText);
                         parameters.Add("visas", fRptSettings.visas);
                     }
+                    else
+                        return; // bug fix. Throws exception, when Report Settings form just closed, not pressed "Continue" button
 
                     //bytes = CVacancyReports.GenerateReport(CVacancyReports.REPORT_TYPE.PDF, "PRINT_VERSION", language, parameters, initialVacancyList);
                     bytes = CVacancyReports.GenerateReport(reportType, "PRINT_VERSION", language, parameters, workingVacancyList);
