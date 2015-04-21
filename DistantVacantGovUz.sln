@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistantVacantGovUz", "Dista
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistantVacantGovUzLauncher", "DistantVacantGovUzLauncher\DistantVacantGovUzLauncher.csproj", "{DD9BAA92-6160-4815-B992-D8F0F7003803}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistantVacantGovUzDocAssociate", "DistantVacantGovUzDocAssociate\DistantVacantGovUzDocAssociate.csproj", "{E1988339-432E-438E-8287-7B2AC8FD4322}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +21,10 @@ Global
 		{DD9BAA92-6160-4815-B992-D8F0F7003803}.Debug|x86.Build.0 = Debug|x86
 		{DD9BAA92-6160-4815-B992-D8F0F7003803}.Release|x86.ActiveCfg = Release|x86
 		{DD9BAA92-6160-4815-B992-D8F0F7003803}.Release|x86.Build.0 = Release|x86
+		{E1988339-432E-438E-8287-7B2AC8FD4322}.Debug|x86.ActiveCfg = Debug|x86
+		{E1988339-432E-438E-8287-7B2AC8FD4322}.Debug|x86.Build.0 = Debug|x86
+		{E1988339-432E-438E-8287-7B2AC8FD4322}.Release|x86.ActiveCfg = Release|x86
+		{E1988339-432E-438E-8287-7B2AC8FD4322}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

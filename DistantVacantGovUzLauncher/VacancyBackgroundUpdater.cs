@@ -9,7 +9,7 @@ using ICSharpCode.SharpZipLib.Zip;
 using ICSharpCode.SharpZipLib.Core;
 using System.Reflection;
 
-namespace VacancyImporterLauncher
+namespace DistantVacantGovUzLauncher
 {
     public class UpdateState
     {
@@ -32,13 +32,14 @@ namespace VacancyImporterLauncher
     {
         String version;
         UpdateState state;
-        String urlUpdateSite = "http://192.168.7.85:8089/vacancy/importer/";
+        String urlUpdateSite = ""; //"http://192.168.7.85:8089/vacancy/importer/";
         String urlUpdateVersionFileName = "update.ver";
         String urlUpdatePackFileName = "update.pack";
 
         public VacancyBackgroundUpdater(string currentVersion)
         {
             this.version = currentVersion;
+            urlUpdateSite = Program.strUpdateServer + "/vacantgovuz/application/";
 
             state = new UpdateState("", 0);
         }
@@ -92,19 +93,21 @@ namespace VacancyImporterLauncher
 
         public void DoWork(BackgroundWorker worker, DoWorkEventArgs e)
         {
-            string appDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            Random random = new Random();
+
+            string appDir = Program.GetApplicationDirectory();
 
             TextWriter log;
 
-            using (log = new StreamWriter("update.log", false, Encoding.UTF8))
+            using (log = new StreamWriter(appDir + "\\update.log", false, Encoding.UTF8))
             {
-                state.SetUpdateState("Текущая версия программы: " + version, 0);
+                state.SetUpdateState(language.strings.stateApplicationCurrentVersion + version, 0);
                 log.WriteLine(state.info);
                 worker.ReportProgress(5, state);
 
                 //Thread.Sleep(500);
 
-                state.SetUpdateState("Получаем информацию о версии программы: Скачиваем файл...", 0);
+                state.SetUpdateState(language.strings.stateGettingVersionInfoDownloadingFile, 0);
                 log.WriteLine(state.info);
                 worker.ReportProgress(10, state);
 
@@ -112,20 +115,34 @@ namespace VacancyImporterLauncher
 
                 using (WebClient web = new WebClient())
                 {
+                    state.SetUpdateState(language.strings.stateUpdateServer + urlUpdateSite, 0);
+                    log.WriteLine(state.info);
+                    worker.ReportProgress(15, state);
+
+                    if (Program.proxyEnabled)
+                    {
+                        web.Proxy = new WebProxy(Program.strProxyHost + ((Program.strProxyPort != "") ? ":" + Program.strProxyPort : ""));
+                        web.Proxy.Credentials = new NetworkCredential(Program.strProxyUser, Program.strProxyPassword);
+
+                        state.SetUpdateState(language.strings.stateProxyServer + Program.strProxyHost + ((Program.strProxyPort != "") ? ":" + Program.strProxyPort : ""), 0);
+                        log.WriteLine(state.info);
+                        worker.ReportProgress(15, state);
+                    }
+
                     try
                     {
-                        web.DownloadFile(urlUpdateSite + urlUpdateVersionFileName, appDir + "\\" + urlUpdateVersionFileName);
+                        web.DownloadFile(urlUpdateSite + urlUpdateVersionFileName + "?random=" + random.Next().ToString(), appDir + "\\" + urlUpdateVersionFileName);
                     }
                     catch (Exception ex)
                     {
-                        state.SetUpdateState("Получаем информацию о версии программы: Не удалось скачать файл...", -1);
+                        state.SetUpdateState(language.strings.stateGettingVersionInfoDownloadFailed, -1);
                         log.WriteLine(state.info);
                         log.WriteLine(ex.Message);
                         worker.ReportProgress(100, state);
                         return;
                     }
 
-                    state.SetUpdateState("Получаем информацию о версии программы: Файл скачан...", 0);
+                    state.SetUpdateState(language.strings.stateGettingVersionInfoFileDownloaded, 0);
                     log.WriteLine(state.info);
                     worker.ReportProgress(20, state);
 
@@ -142,20 +159,20 @@ namespace VacancyImporterLauncher
                     }
                     catch (Exception ex)
                     {
-                        state.SetUpdateState("Получаем информацию о версии программы: Не удалось прочесть файл.", -1);
+                        state.SetUpdateState(language.strings.stateGettingVersionInfoCannotReadFile, -1);
                         log.WriteLine(state.info);
                         log.WriteLine(ex.Message);
                         worker.ReportProgress(100, state);
                         return;
                     }
 
-                    state.SetUpdateState("Получаем информацию о версии программы: Проверка версии...", 0);
+                    state.SetUpdateState(language.strings.stateGettingVersionInfoCheckingVersion, 0);
                     log.WriteLine(state.info);
                     worker.ReportProgress(30, state);
 
                     //Thread.Sleep(500);
 
-                    state.SetUpdateState("Версия программы на сервере: " + newVer, 0);
+                    state.SetUpdateState(language.strings.stateApplicationVersionOnServer + newVer, 0);
                     log.WriteLine(state.info);
                     worker.ReportProgress(35, state);
 
@@ -163,7 +180,7 @@ namespace VacancyImporterLauncher
 
                     if (version.CompareTo(newVer) == 0)
                     {
-                        state.SetUpdateState("Обновление отсутствует.", 1);
+                        state.SetUpdateState(language.strings.stateThereAreNoUpdates, 1);
                         log.WriteLine(state.info);
                         worker.ReportProgress(100, state);
 
@@ -172,7 +189,7 @@ namespace VacancyImporterLauncher
                         return;
                     }
 
-                    state.SetUpdateState("Имеется более новая версия программы: Скачивание...", 0);
+                    state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionDownloading, 0);
                     log.WriteLine(state.info);
                     worker.ReportProgress(40, state);
 
@@ -180,11 +197,11 @@ namespace VacancyImporterLauncher
 
                     try
                     {
-                        web.DownloadFile(urlUpdateSite + "updates/" + newVer + "/" + urlUpdatePackFileName, appDir + "\\" + urlUpdatePackFileName);
+                        web.DownloadFile(urlUpdateSite + "updates/" + newVer + "/" + urlUpdatePackFileName + "?random=" + random.Next().ToString(), appDir + "\\" + urlUpdatePackFileName);
                     }
                     catch (Exception ex)
                     {
-                        state.SetUpdateState("Имеется более новая версия программы: Не удалось скачать файл...", -1);
+                        state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionDownloadFailed, -1);
                         log.WriteLine(state.info);
                         log.WriteLine(ex.Message);
                         worker.ReportProgress(100, state);
@@ -192,7 +209,7 @@ namespace VacancyImporterLauncher
                     }
                 }
 
-                state.SetUpdateState("Имеется более новая версия программы: Применение обновления...", 0);
+                state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionApplyingUpdates, 0);
                 log.WriteLine(state.info);
                 worker.ReportProgress(75, state);
 
@@ -200,13 +217,13 @@ namespace VacancyImporterLauncher
 
                 if (UnpackUpdateFile(appDir + "\\" + urlUpdatePackFileName, appDir + "\\"))
                 {
-                    state.SetUpdateState("Обновление успешно применено.", 0);
+                    state.SetUpdateState(language.strings.stateUpdatesSuccessfullyApplyed, 0);
                     log.WriteLine(state.info);
                     worker.ReportProgress(100, state);
                 }
                 else
                 {
-                    state.SetUpdateState("Имеется более новая версия программы: Ошибка при распаковке.", -1);
+                    state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionUnpackError, -1);
                     log.WriteLine(state.info);
                     worker.ReportProgress(100, state);
                 }

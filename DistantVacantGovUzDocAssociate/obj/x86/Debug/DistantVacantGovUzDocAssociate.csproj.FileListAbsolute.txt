@@ -1,0 +1,4 @@
+D:\git\DistantVacantGovUz\DistantVacantGovUzDocAssociate\bin\Debug\DistantVacantGovUzDocAssociate.exe
+D:\git\DistantVacantGovUz\DistantVacantGovUzDocAssociate\bin\Debug\DistantVacantGovUzDocAssociate.pdb
+D:\git\DistantVacantGovUz\DistantVacantGovUzDocAssociate\obj\x86\Debug\DistantVacantGovUzDocAssociate.exe
+D:\git\DistantVacantGovUz\DistantVacantGovUzDocAssociate\obj\x86\Debug\DistantVacantGovUzDocAssociate.pdb

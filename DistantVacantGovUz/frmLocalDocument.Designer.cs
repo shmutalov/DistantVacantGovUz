@@ -375,6 +375,7 @@
             this.Controls.Add(this.lstVacancies);
             this.Controls.Add(this.toolbar);
             this.Name = "frmLocalDocument";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLocalDocument_FormClosing);
             this.toolbar.ResumeLayout(false);
             this.toolbar.PerformLayout();
             this.status.ResumeLayout(false);

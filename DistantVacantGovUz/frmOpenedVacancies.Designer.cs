@@ -40,6 +40,7 @@
             this.toolBtnExportVacancies = new System.Windows.Forms.ToolStripButton();
             this.toolBtnChangeStatus = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolBtnAddVacancy = new System.Windows.Forms.ToolStripButton();
             this.toolBtnEditVacancy = new System.Windows.Forms.ToolStripButton();
             this.toolBtnCheckAll = new System.Windows.Forms.ToolStripButton();
             this.toolBtnUncheckAll = new System.Windows.Forms.ToolStripButton();
@@ -50,13 +51,13 @@
             // 
             // lstVacancies
             // 
-            resources.ApplyResources(this.lstVacancies, "lstVacancies");
             this.lstVacancies.CheckBoxes = true;
             this.lstVacancies.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmnCheckbox,
             this.clmnVacSequenceNumber,
             this.clmnVacPortalNumber,
             this.clmnVacDescription});
+            resources.ApplyResources(this.lstVacancies, "lstVacancies");
             this.lstVacancies.FullRowSelect = true;
             this.lstVacancies.GridLines = true;
             this.lstVacancies.MultiSelect = false;
@@ -84,7 +85,6 @@
             // 
             // toolbar
             // 
-            resources.ApplyResources(this.toolbar, "toolbar");
             this.toolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBtnRefreshVacancies,
@@ -92,22 +92,24 @@
             this.toolBtnExportVacancies,
             this.toolBtnChangeStatus,
             this.toolStripSeparator2,
+            this.toolBtnAddVacancy,
             this.toolBtnEditVacancy,
             this.toolBtnCheckAll,
             this.toolBtnUncheckAll});
+            resources.ApplyResources(this.toolbar, "toolbar");
             this.toolbar.Name = "toolbar";
             // 
             // toolBtnRefreshVacancies
             // 
-            resources.ApplyResources(this.toolBtnRefreshVacancies, "toolBtnRefreshVacancies");
             this.toolBtnRefreshVacancies.Image = global::DistantVacantGovUz.Properties.Resources.refresh_24;
+            resources.ApplyResources(this.toolBtnRefreshVacancies, "toolBtnRefreshVacancies");
             this.toolBtnRefreshVacancies.Name = "toolBtnRefreshVacancies";
             this.toolBtnRefreshVacancies.Click += new System.EventHandler(this.toolBtnRefreshVacancies_Click);
             // 
             // toolStripSeparator1
             // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // toolBtnExportVacancies
             // 
@@ -125,8 +127,15 @@
             // 
             // toolStripSeparator2
             // 
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // toolBtnAddVacancy
+            // 
+            this.toolBtnAddVacancy.Image = global::DistantVacantGovUz.Properties.Resources.add_24;
+            resources.ApplyResources(this.toolBtnAddVacancy, "toolBtnAddVacancy");
+            this.toolBtnAddVacancy.Name = "toolBtnAddVacancy";
+            this.toolBtnAddVacancy.Click += new System.EventHandler(this.toolBtnAddVacancy_Click);
             // 
             // toolBtnEditVacancy
             // 
@@ -194,5 +203,6 @@
         private System.Windows.Forms.ColumnHeader clmnCheckbox;
         private System.ComponentModel.BackgroundWorker workerRefreshVacancyList;
         private System.ComponentModel.BackgroundWorker workerExportVacancies;
+        private System.Windows.Forms.ToolStripButton toolBtnAddVacancy;
     }
 }

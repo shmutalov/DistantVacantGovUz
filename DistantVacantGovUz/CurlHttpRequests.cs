@@ -9,7 +9,6 @@ namespace DistantVacantGovUz
     public class CurlHttpRequests : IHttpRequests
     {
         Easy _curl;
-        Easy.ProgressFunction pf;
         Easy.WriteFunction wf;
         Easy.DebugFunction df;
         

@@ -10,7 +10,6 @@ namespace DistantVacantGovUz
 {
     public class NetHttpRequests : IHttpRequests
     {
-        HttpWebRequest http;
         int timeout = 20000;
 
         string strLastError;

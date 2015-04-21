@@ -145,6 +145,15 @@
   <data name="toolBtnChangeStatus.Text" xml:space="preserve">
     <value>Сменить статус</value>
   </data>
+  <data name="toolBtnAddVacancy.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolBtnAddVacancy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 28</value>
+  </data>
+  <data name="toolBtnAddVacancy.Text" xml:space="preserve">
+    <value>Добавить вакансию</value>
+  </data>
   <data name="toolBtnEditVacancy.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 28</value>
   </data>

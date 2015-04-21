@@ -127,13 +127,6 @@
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 31</value>
   </data>
-  <data name="toolBtnUndo.Text" xml:space="preserve">
-    <value>Undo</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="toolBtnSave.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
   <data name="&gt;&gt;toolBtnReportPdfPrintVersionUz.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -143,8 +136,14 @@
   <data name="&gt;&gt;toolBtnReport.Name" xml:space="preserve">
     <value>toolBtnReport</value>
   </data>
+  <data name="&gt;&gt;toolBtnReportXlsPrintVersionRu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="toolBtnReportPdf.Text" xml:space="preserve">
     <value>PDF</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toolBtnAdd.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 28</value>
@@ -161,21 +160,16 @@
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="toolBtnUndo.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="toolBtnReport.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 28</value>
   </data>
-  <data name="&gt;&gt;toolBtnReportPdfPrintVersionUz.Name" xml:space="preserve">
-    <value>toolBtnReportPdfPrintVersionUz</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="toolBtnDeleteChecked.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="clmnPortalVacancyId.Width" type="System.Int32, mscorlib">
-    <value>50</value>
   </data>
   <data name="&gt;&gt;status.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -201,23 +195,26 @@
   <data name="&gt;&gt;clmnRequirementsRu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>892, 541</value>
+  </data>
   <data name="clmnExpireDate.Text" xml:space="preserve">
     <value>Expire date</value>
   </data>
-  <data name="&gt;&gt;toolBtnRedo.Name" xml:space="preserve">
-    <value>toolBtnRedo</value>
+  <data name="toolBtnAdd.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="toolBtnEditSelected.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="&gt;&gt;clmnDepartmentRu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolBtnDeleteChecked.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolBtnImportFromFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Local Vacancies</value>
   </data>
   <data name="&gt;&gt;toolBtnUncheckAll.Name" xml:space="preserve">
     <value>toolBtnUncheckAll</value>
+  </data>
+  <data name="toolBtnSave.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
   <data name="clmnCheckbox.Text" xml:space="preserve">
     <value />
@@ -300,11 +297,17 @@
   <data name="toolBtnReportPdf.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 30</value>
   </data>
+  <data name="toolBtnCheckAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 28</value>
+  </data>
   <data name="&gt;&gt;clmnEmployment.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toolbar.Size" type="System.Drawing.Size, System.Drawing">
     <value>892, 31</value>
+  </data>
+  <data name="toolBtnDeleteChecked.Text" xml:space="preserve">
+    <value>Delete</value>
   </data>
   <data name="toolBtnReportPdfPrintVersionRu.Text" xml:space="preserve">
     <value>Print version (RU)</value>
@@ -342,6 +345,9 @@
   <data name="toolBtnReport.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
+  <data name="&gt;&gt;clmnCategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="status.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 519</value>
   </data>
@@ -360,8 +366,8 @@
   <data name="&gt;&gt;toolBtnImportFromFile.Name" xml:space="preserve">
     <value>toolBtnImportFromFile</value>
   </data>
-  <data name="toolbar.Text" xml:space="preserve">
-    <value>toolStrip1</value>
+  <data name="&gt;&gt;toolBtnRedo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;stsSelectedItems.Name" xml:space="preserve">
     <value>stsSelectedItems</value>
@@ -369,7 +375,67 @@
   <data name="&gt;&gt;toolBtnUndo.Name" xml:space="preserve">
     <value>toolBtnUndo</value>
   </data>
-  <data name="toolBtnReportXlsPrintVersionRu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="clmnDescriptionUz.Text" xml:space="preserve">
+    <value>Description (UZ)</value>
+  </data>
+  <data name="clmnExperience.Text" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmLocalDocument</value>
+  </data>
+  <data name="clmnSeqNum.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolBtnUncheckAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolBtnReport.Text" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="lstVacancies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 34</value>
+  </data>
+  <data name="&gt;&gt;stsSelectedItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolBtnEditSelected.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="&gt;&gt;toolBtnCheckAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolBtnUncheckAll.Text" xml:space="preserve">
+    <value>Uncheck All</value>
+  </data>
+  <data name="&gt;&gt;clmnSalary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolBtnRedo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolBtnUncheckAll.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolBtnRedo.Text" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="&gt;&gt;toolBtnUndo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="toolBtnReportXlsPrintVersionUz.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolbar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolBtnReportXls.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABbRJREFUSEul
         lglQU1cUhpmpndalldGOjFMttWirEgjWjY4ssogoljqKjCiLWFFHNgFTK1XUOtKF4jJFG5gSwQotCFIs
@@ -398,75 +464,6 @@
         fA+k50WVegJ7z0zhUpcXALM+mP6Opeu085ZuU9OI0l9DaRbL3opY4vz+VEPpCXMM/vhN4uYS0X8/Xksz
         LabN9gize8PMzMzsHzkFGyETeYa9AAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="clmnDescriptionUz.Text" xml:space="preserve">
-    <value>Description (UZ)</value>
-  </data>
-  <data name="clmnExperience.Text" xml:space="preserve">
-    <value>Experience</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmLocalDocument</value>
-  </data>
-  <data name="clmnSeqNum.Width" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolBtnUncheckAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolBtnReport.Text" xml:space="preserve">
-    <value>Report</value>
-  </data>
-  <data name="&gt;&gt;clmnSeqNum.Name" xml:space="preserve">
-    <value>clmnSeqNum</value>
-  </data>
-  <data name="&gt;&gt;stsSelectedItems.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolBtnSave.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Black</value>
-  </data>
-  <data name="toolBtnEditSelected.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="&gt;&gt;toolBtnCheckAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolBtnUncheckAll.Text" xml:space="preserve">
-    <value>Uncheck All</value>
-  </data>
-  <data name="&gt;&gt;clmnSalary.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;clmnSpecializationRu.Name" xml:space="preserve">
-    <value>clmnSpecializationRu</value>
-  </data>
-  <data name="lstVacancies.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="toolBtnRedo.Text" xml:space="preserve">
-    <value>Redo</value>
-  </data>
-  <data name="&gt;&gt;toolBtnUndo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolBtnAdd.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;toolBtnImportFromFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
-  </data>
-  <data name="toolBtnReportXlsPrintVersionUz.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolbar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;toolBtnReport.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -513,11 +510,11 @@
   <data name="clmnSpecializationRu.Text" xml:space="preserve">
     <value>Specialization (RU)</value>
   </data>
-  <data name="&gt;&gt;toolBtnRedo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;clmnPortalVacancyId.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBtnSave.Name" xml:space="preserve">
+    <value>toolBtnSave</value>
   </data>
   <data name="toolBtnReportXls.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 30</value>
@@ -525,11 +522,17 @@
   <data name="&gt;&gt;clmnDescriptionRu.Name" xml:space="preserve">
     <value>clmnDescriptionRu</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Local Vacancies</value>
+  </data>
   <data name="&gt;&gt;clmnDescriptionRu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="clmnRequirementsUz.Text" xml:space="preserve">
     <value>Requirements (UZ)</value>
+  </data>
+  <data name="&gt;&gt;toolBtnRedo.Name" xml:space="preserve">
+    <value>toolBtnRedo</value>
   </data>
   <data name="&gt;&gt;clmnDepartmentUz.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -555,8 +558,8 @@
   <data name="clmnInformationUz.Text" xml:space="preserve">
     <value>Information (UZ)</value>
   </data>
-  <data name="&gt;&gt;clmnExperience.Name" xml:space="preserve">
-    <value>clmnExperience</value>
+  <data name="toolbar.Text" xml:space="preserve">
+    <value>toolStrip1</value>
   </data>
   <data name="toolBtnSaveAs.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 28</value>
@@ -601,7 +604,13 @@
   <data name="&gt;&gt;lstVacancies.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;toolbar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;clmnInformationUz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clmnGender.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;clmnPortalVacancyId.Name" xml:space="preserve">
@@ -619,14 +628,11 @@
   <data name="clmnSpecializationUz.Text" xml:space="preserve">
     <value>Specialization (UZ)</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="toolBtnCheckAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 28</value>
+  <data name="&gt;&gt;clmnSpecializationRu.Name" xml:space="preserve">
+    <value>clmnSpecializationRu</value>
   </data>
   <data name="&gt;&gt;clmnDescriptionUz.Name" xml:space="preserve">
     <value>clmnDescriptionUz</value>
@@ -637,14 +643,11 @@
   <data name="toolBtnReportPdfPrintVersionRu.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 30</value>
   </data>
-  <data name="toolBtnDeleteChecked.Text" xml:space="preserve">
-    <value>Delete</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toolBtnReportXlsPrintVersionRu.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="&gt;&gt;clmnDepartmentUz.Name" xml:space="preserve">
-    <value>clmnDepartmentUz</value>
   </data>
   <data name="toolBtnReportPdfPrintVersionUz.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
@@ -655,19 +658,7 @@
   <data name="stsSelectedItems.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 17</value>
   </data>
-  <data name="lstVacancies.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 34</value>
-  </data>
-  <data name="toolBtnCheckAll.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="clmnSalary.Text" xml:space="preserve">
-    <value>Salary</value>
-  </data>
-  <data name="&gt;&gt;toolBtnSaveAs.Name" xml:space="preserve">
-    <value>toolBtnSaveAs</value>
-  </data>
-  <data name="toolBtnReportXls.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="toolBtnReportXlsPrintVersionRu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABbRJREFUSEul
         lglQU1cUhpmpndalldGOjFMttWirEgjWjY4ssogoljqKjCiLWFFHNgFTK1XUOtKF4jJFG5gSwQotCFIs
@@ -697,11 +688,20 @@
         LabN9gize8PMzMzsHzkFGyETeYa9AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="toolBtnCheckAll.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="clmnSalary.Text" xml:space="preserve">
+    <value>Salary</value>
+  </data>
+  <data name="&gt;&gt;toolBtnSaveAs.Name" xml:space="preserve">
+    <value>toolBtnSaveAs</value>
+  </data>
+  <data name="&gt;&gt;toolBtnDeleteChecked.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="toolBtnImportFromFile.Text" xml:space="preserve">
     <value>Import</value>
-  </data>
-  <data name="toolBtnEditSelected.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
   </data>
   <data name="clmnSalary.Width" type="System.Int32, mscorlib">
     <value>100</value>
@@ -718,8 +718,11 @@
   <data name="&gt;&gt;toolBtnReportXlsPrintVersionRu.Name" xml:space="preserve">
     <value>toolBtnReportXlsPrintVersionRu</value>
   </data>
-  <data name="&gt;&gt;clmnGender.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;clmnExperience.Name" xml:space="preserve">
+    <value>clmnExperience</value>
+  </data>
+  <data name="&gt;&gt;clmnEmployment.Name" xml:space="preserve">
+    <value>clmnEmployment</value>
   </data>
   <data name="&gt;&gt;toolBtnAdd.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -742,8 +745,8 @@
   <data name="&gt;&gt;toolBtnReportPdf.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;clmnCategory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolBtnUndo.Text" xml:space="preserve">
+    <value>Undo</value>
   </data>
   <data name="toolBtnReportPdfPrintVersionUz.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -776,14 +779,14 @@
   <data name="toolBtnReportXlsPrintVersionRu.Text" xml:space="preserve">
     <value>Print version (RU)</value>
   </data>
-  <data name="toolBtnUndo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 28</value>
+  <data name="&gt;&gt;toolBtnReportPdfPrintVersionUz.Name" xml:space="preserve">
+    <value>toolBtnReportPdfPrintVersionUz</value>
+  </data>
+  <data name="toolBtnDeleteChecked.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
-  </data>
-  <data name="toolBtnCheckAll.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
   </data>
   <data name="clmnCategory.Text" xml:space="preserve">
     <value>Category</value>
@@ -791,23 +794,20 @@
   <data name="&gt;&gt;lstVacancies.Name" xml:space="preserve">
     <value>lstVacancies</value>
   </data>
-  <data name="&gt;&gt;toolbar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolBtnSave.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="&gt;&gt;toolbar.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="clmnPortalVacancyId.Width" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="toolBtnEditSelected.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 28</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>892, 541</value>
+  <data name="&gt;&gt;clmnDepartmentUz.Name" xml:space="preserve">
+    <value>clmnDepartmentUz</value>
   </data>
-  <data name="toolBtnDeleteChecked.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+  <data name="toolBtnEditSelected.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="toolBtnRedo.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="toolBtnCheckAll.Text" xml:space="preserve">
     <value>Check All</value>
@@ -824,8 +824,8 @@
   <data name="&gt;&gt;clmnEducation.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;clmnDepartmentRu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;clmnSeqNum.Name" xml:space="preserve">
+    <value>clmnSeqNum</value>
   </data>
   <data name="&gt;&gt;clmnCheckbox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -863,8 +863,8 @@
         LabN9gize8PMzMzsHzkFGyETeYa9AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;toolBtnReportXlsPrintVersionRu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolBtnEditSelected.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
   <data name="toolBtnReportPdf.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -912,11 +912,11 @@
   <data name="lstVacancies.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="toolBtnSave.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="toolBtnUncheckAll.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="toolBtnCheckAll.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
+  </data>
+  <data name="toolBtnUndo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 28</value>
   </data>
   <data name="&gt;&gt;clmnInformationRu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -927,11 +927,11 @@
   <data name="lstVacancies.Size" type="System.Drawing.Size, System.Drawing">
     <value>892, 482</value>
   </data>
-  <data name="&gt;&gt;clmnEmployment.Name" xml:space="preserve">
-    <value>clmnEmployment</value>
+  <data name="toolBtnSave.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Black</value>
   </data>
-  <data name="&gt;&gt;toolBtnSave.Name" xml:space="preserve">
-    <value>toolBtnSave</value>
+  <data name="lstVacancies.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;toolbar.Name" xml:space="preserve">
     <value>toolbar</value>

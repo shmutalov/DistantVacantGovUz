@@ -24,7 +24,6 @@ namespace DistantVacantGovUz
     public class HttpRequest
     {
         Easy _curl;
-        Easy.ProgressFunction pf;
         Easy.WriteFunction wf;
         Easy.DebugFunction df;
 

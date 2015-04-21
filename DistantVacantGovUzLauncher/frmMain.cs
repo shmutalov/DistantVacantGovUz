@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.IO;
 
-namespace VacancyImporterLauncher
+namespace DistantVacantGovUzLauncher
 {
     public partial class frmMain : Form
     {
@@ -22,27 +22,8 @@ namespace VacancyImporterLauncher
         }
 
         private void StartVacancies() {
-            /*lstStatus.Items.Add("Проверка ассоциации файлов...").ForeColor = Color.White;
-
-            // Проверим ассоциации файлов
-            if (!FileAssociation.IsAssociated(".vac"))
-            {
-                lstStatus.Items.Add("Ассоциации не найдены, применяем...").ForeColor = Color.White;
-
-                if (FileAssociation.Associate(".vac", "VACANCY.AGMK", "AGMK Vacancies document", null, Assembly.GetExecutingAssembly().Location))
-                {
-                    lstStatus.Items.Add("Ассоциации применены.").ForeColor = Color.Green;
-                }
-                else
-                {
-                    lstStatus.Items.Add("Не удалось применить ассоциации.").ForeColor = Color.Red;
-                }
-            }
-
-            lstStatus.Items.Add("Завершено.").ForeColor = Color.LightBlue;*/
-
             ProcessStartInfo processInfo = new ProcessStartInfo();
-            processInfo.FileName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\" + "Vacant_AGMK.exe";
+            processInfo.FileName = Program.GetApplicationDirectory() + "\\" + "DistantVacantGovUz.exe";
 
             foreach (String arg in Program.argv)
                 processInfo.Arguments += "\"" + arg + "\" ";
@@ -53,7 +34,8 @@ namespace VacancyImporterLauncher
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка при попытке запустить программу\n\n" + processInfo.FileName + "\n\n" + ex.Message, "Ошибка запуска", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(String.Format(language.strings.MsgLaunchAppError, processInfo.FileName, ex.Message)
+                    , language.strings.MsgLaunchAppErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.Close();
@@ -76,14 +58,14 @@ namespace VacancyImporterLauncher
         {
             if (updateError)
             {
-                btnCancel.Text = "Закрыть";
+                btnCancel.Text = language.strings.btnCancel_CloseText;
                 btnForceLaunch.Enabled = true;
                 return;
             }
 
             if (updateCancelled)
             {
-                btnCancel.Text = "Продолжить";
+                btnCancel.Text = language.strings.btnCancel_ContinueText;
                 return;
             }
 
@@ -117,7 +99,7 @@ namespace VacancyImporterLauncher
             else
                 lstStatus.Items.Add("Запуск без прав администратора").ForeColor = Color.LightBlue;*/
 
-            String filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\" + "Vacant_AGMK.exe";
+            String filePath = Program.GetApplicationDirectory() + "\\" + "DistantVacantGovUz.exe";
             FileVersionInfo fvi = null;
 
             try
@@ -126,7 +108,7 @@ namespace VacancyImporterLauncher
             }
             catch (Exception ex)
             {
-                lblStatus.Text = "Не удалось получить текущую версию программы.";
+                lblStatus.Text = language.strings.statusCannotRetreiveApplicationCurrentVersion;
                 lstStatus.Items.Add(lblStatus.Text).ForeColor = Color.Red;
 
                 updateError = true;
@@ -146,11 +128,11 @@ namespace VacancyImporterLauncher
             updateCancelled = e.Cancelled;
 
             if (updateError)
-                lblStatus.Text = "Произошла ошибка.";
+                lblStatus.Text = language.strings.statusErrorOccured;
             else if (updateCancelled)
-                lblStatus.Text = "Операция отменена.";
+                lblStatus.Text = language.strings.statusOperationCanceled;
             else
-                lblStatus.Text = "Завершено.";
+                lblStatus.Text = language.strings.statusFinished;
 
             lstStatus.Items.Add(lblStatus.Text);
 

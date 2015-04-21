@@ -204,7 +204,7 @@ namespace DistantVacantGovUz
         {
             try
             {
-                FileVersionInfo fi = FileVersionInfo.GetVersionInfo(GetApplicationDirectory() + "\\" + "Distantlauncher.exe");
+                FileVersionInfo fi = FileVersionInfo.GetVersionInfo(GetApplicationDirectory() + "\\" + "DistantVacantGovUzLauncher.exe");
 
                 return fi.ProductVersion;
             }
@@ -266,6 +266,8 @@ namespace DistantVacantGovUz
         /// </summary>
         private static void LauncherUpdaterThreadEntryPoint()
         {
+            Random random = new Random();
+
             //string urlLauncherUpdateServer = "http://192.168.7.85:8089/vacancy/launcher/importer/";
             string urlLauncherUpdateServer = strUpdateServer + "/vacantgovuz/launcher/";
             string launcherVersionFileName = "launcher_update.ver";
@@ -274,35 +276,33 @@ namespace DistantVacantGovUz
 
             bool updateAvailable = false;
 
-            string appDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string appDir = GetApplicationDirectory();
 
             TextWriter log;
 
             using (log = new StreamWriter(appDir + "\\" + "launcher_update.log", false, Encoding.UTF8))
             {
-                log.WriteLine("Vacancy Importer Launcher update start...");
+                log.WriteLine(language.strings.stateLauncherUpdateStart);
 
-                try
+                currentLauncherVersion = GetLauncherVersion();
+
+                if (currentLauncherVersion != "")
                 {
-                    FileVersionInfo fi = FileVersionInfo.GetVersionInfo(appDir + "\\" + "Vacant_AGMK.exe");
-                    currentLauncherVersion = fi.ProductVersion;
-
-                    log.WriteLine("Launcher current version: " + currentLauncherVersion);
+                    log.WriteLine(language.strings.stateLauncherCurrentVersion + currentLauncherVersion);
                 }
-                catch (FileNotFoundException ex)
+                else
                 {
-                    log.WriteLine("ERROR: " + ex.Message);
-                    // Must not reach here (o_O)
+                    log.WriteLine(language.strings.stateErrorLauncherNotFound);
                 }
 
-                if (currentLauncherVersion != null)
+                if (currentLauncherVersion != null && currentLauncherVersion != "")
                 {
                     using (WebClient webClient = new WebClient())
                     {
                         // Если используется прокси, нужно настроить прокски веб-клиента
                         if (vac.UseHttpProxy)
                         {
-                            log.WriteLine("Используется прокси сервер");
+                            log.WriteLine(language.strings.stateUsingProxyServer);
 
                             try
                             {
@@ -316,19 +316,19 @@ namespace DistantVacantGovUz
                             }
                             catch (Exception ex)
                             {
-                                log.WriteLine("Не удалось инициализировать прокси: " + strProxyHost + ":" + strProxyPort);
+                                log.WriteLine(language.strings.stateCannotInitializeProxy + strProxyHost + ":" + strProxyPort);
                             }
                         }
 
                         try
                         {
-                            log.WriteLine("Downloading update version file: " + urlLauncherUpdateServer + launcherVersionFileName);
-                            webClient.DownloadFile(urlLauncherUpdateServer + launcherVersionFileName, appDir + "\\" + launcherVersionFileName);
-                            log.WriteLine("File downloaded");
+                            log.WriteLine(language.strings.stateDownloadingUpdateVersionFile + urlLauncherUpdateServer + launcherVersionFileName);
+                            webClient.DownloadFile(urlLauncherUpdateServer + launcherVersionFileName + "?random=" + random.Next().ToString(), appDir + "\\" + launcherVersionFileName);
+                            log.WriteLine(language.strings.stateFileDownloaded);
                         }
                         catch (Exception ex)
                         {
-                            log.WriteLine("ERROR: " + ex.Message);
+                            log.WriteLine(language.strings.stateError + ex.Message);
                             return;
                         }
 
@@ -339,12 +339,12 @@ namespace DistantVacantGovUz
                             using (txt = new StreamReader(appDir + "\\" + launcherVersionFileName))
                             {
                                 newestLauncherVersion = txt.ReadLine();
-                                log.WriteLine("Launcher version on server: " + newestLauncherVersion);
+                                log.WriteLine(language.strings.stateLauncherVersionOnServer + newestLauncherVersion);
                             }
                         }
                         catch (Exception ex)
                         {
-                            log.WriteLine("ERROR: " + ex.Message);
+                            log.WriteLine(language.strings.stateError + ex.Message);
                             return;
                         }
 
@@ -352,7 +352,7 @@ namespace DistantVacantGovUz
                         {
                             if (newestLauncherVersion.CompareTo(currentLauncherVersion) != 0)
                             {
-                                log.WriteLine("New version is available");
+                                log.WriteLine(language.strings.stateNewVersionIsAvailable);
                                 updateAvailable = true;
                             }
                         }
@@ -361,23 +361,23 @@ namespace DistantVacantGovUz
                         {
                             try
                             {
-                                log.WriteLine("Downloading update file: " + urlLauncherUpdateServer + "update/" + newestLauncherVersion + "/" + "launcher_update.pack");
-                                webClient.DownloadFile(urlLauncherUpdateServer + "update/" + newestLauncherVersion + "/" + "launcher_update.pack", appDir + "\\" + "launcher_update.pack");
-                                log.WriteLine("File downloaded");
+                                log.WriteLine(language.strings.stateDownloadingUpdateFile + urlLauncherUpdateServer + "update/" + newestLauncherVersion + "/" + "launcher_update.pack");
+                                webClient.DownloadFile(urlLauncherUpdateServer + "update/" + newestLauncherVersion + "/" + "launcher_update.pack" + "?random=" + random.Next().ToString(), appDir + "\\" + "launcher_update.pack");
+                                log.WriteLine(language.strings.stateFileDownloaded);
                             }
                             catch (Exception ex)
                             {
-                                log.WriteLine("Download error: " + ex.Message);
+                                log.WriteLine(language.strings.stateDownloadError + ex.Message);
                                 return;
                             }
 
                             if (UnpackUpdateFile(appDir + "\\" + "launcher_update.pack", appDir + "\\"))
                             {
-                                log.WriteLine("Launcher successfully updated!");
+                                log.WriteLine(language.strings.stateLauncherSuccessfullyUpdated);
                             }
                             else
                             {
-                                log.WriteLine("Unpack error");
+                                log.WriteLine(language.strings.stateUnpackError);
                                 return;
                             }
                         }
@@ -418,7 +418,7 @@ namespace DistantVacantGovUz
             vac = new CVacantGovUz();
             
             LoadSettings();
-            //UpdateLauncher();
+            UpdateLauncher();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

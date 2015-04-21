@@ -1,0 +1,14 @@
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\bin\Debug\DistantVacantGovUzLauncher.exe
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\bin\Debug\DistantVacantGovUzLauncher.pdb
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.frmMain.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.Properties.Resources.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.csproj.GenerateResource.Cache
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.exe
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.pdb
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\bin\Debug\ru\DistantVacantGovUzLauncher.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.language.strings.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.frmMain.ru.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.language.strings.ru.resources
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\ru\DistantVacantGovUzLauncher.resources.dll
+D:\git\DistantVacantGovUz\DistantVacantGovUzLauncher\obj\x86\Debug\DistantVacantGovUzLauncher.csprojResolveAssemblyReference.cache

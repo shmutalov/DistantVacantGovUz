@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="grpConnection.Text" xml:space="preserve">
+    <value>Соединение</value>
+  </data>
   <data name="lblProxyPort.Text" xml:space="preserve">
     <value>Порт</value>
   </data>
@@ -136,8 +142,8 @@
   <data name="chkUseProxy.Text" xml:space="preserve">
     <value>Использовать прокси</value>
   </data>
-  <data name="grpConnection.Text" xml:space="preserve">
-    <value>Соединение</value>
+  <data name="grpUpdates.Text" xml:space="preserve">
+    <value>Обновления</value>
   </data>
   <data name="txtUpdateServer.Location" type="System.Drawing.Point, System.Drawing">
     <value>156, 42</value>
@@ -157,14 +163,14 @@
   <data name="chkEnableUpdates.Text" xml:space="preserve">
     <value>Проверять обновления</value>
   </data>
-  <data name="grpUpdates.Text" xml:space="preserve">
-    <value>Обновления</value>
+  <data name="grpInterface.Text" xml:space="preserve">
+    <value>Интерфейс</value>
   </data>
   <data name="lblLanguage.Text" xml:space="preserve">
     <value>Язык</value>
   </data>
-  <data name="grpInterface.Text" xml:space="preserve">
-    <value>Интерфейс</value>
+  <data name="btnAssoc.Text" xml:space="preserve">
+    <value>Ассоциировать приложение с файлами вакансий</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Настройки</value>

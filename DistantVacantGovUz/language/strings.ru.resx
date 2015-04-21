@@ -277,4 +277,46 @@
   <data name="frmLoadingCaption" xml:space="preserve">
     <value>Загрузка</value>
   </data>
+  <data name="stateCannotInitializeProxy" xml:space="preserve">
+    <value>Не удалось инициализировать прокси: </value>
+  </data>
+  <data name="stateDownloadError" xml:space="preserve">
+    <value>Ошибка загрузки: </value>
+  </data>
+  <data name="stateDownloadingUpdateFile" xml:space="preserve">
+    <value>Загрузка файла обновления: </value>
+  </data>
+  <data name="stateDownloadingUpdateVersionFile" xml:space="preserve">
+    <value>Загрузка файла версии обновления: </value>
+  </data>
+  <data name="stateError" xml:space="preserve">
+    <value>Ошибка: </value>
+  </data>
+  <data name="stateErrorLauncherNotFound" xml:space="preserve">
+    <value>Ошибка: Лаунчер не найден</value>
+  </data>
+  <data name="stateFileDownloaded" xml:space="preserve">
+    <value>Файл загружен</value>
+  </data>
+  <data name="stateLauncherCurrentVersion" xml:space="preserve">
+    <value>Текущяя версия лаунчера: </value>
+  </data>
+  <data name="stateLauncherSuccessfullyUpdated" xml:space="preserve">
+    <value>Лаунчер успешно обновлен!</value>
+  </data>
+  <data name="stateLauncherUpdateStart" xml:space="preserve">
+    <value>Запуск обновления лаунчера...</value>
+  </data>
+  <data name="stateLauncherVersionOnServer" xml:space="preserve">
+    <value>Версия лаунчера на сервере: </value>
+  </data>
+  <data name="stateNewVersionIsAvailable" xml:space="preserve">
+    <value>Имеется новая версия</value>
+  </data>
+  <data name="stateUnpackError" xml:space="preserve">
+    <value>Ошибка распаковки</value>
+  </data>
+  <data name="stateUsingProxyServer" xml:space="preserve">
+    <value>Используется прокси-сервер</value>
+  </data>
 </root>

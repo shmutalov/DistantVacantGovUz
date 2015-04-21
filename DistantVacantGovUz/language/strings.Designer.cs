@@ -117,6 +117,24 @@ namespace DistantVacantGovUz.language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exiting....
+        /// </summary>
+        internal static string frmLocalDocExitingCaption {
+            get {
+                return ResourceManager.GetString("frmLocalDocExitingCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Document have unsaved changes. Save changes before exit?.
+        /// </summary>
+        internal static string frmLocalDocSaveBeforeExit {
+            get {
+                return ResourceManager.GetString("frmLocalDocSaveBeforeExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Local vacancies.
         /// </summary>
         internal static string frmLocalDocumentCaption {
@@ -523,6 +541,132 @@ namespace DistantVacantGovUz.language {
         internal static string ProgramAuthor {
             get {
                 return ResourceManager.GetString("ProgramAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot initialize proxy: .
+        /// </summary>
+        internal static string stateCannotInitializeProxy {
+            get {
+                return ResourceManager.GetString("stateCannotInitializeProxy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download error: .
+        /// </summary>
+        internal static string stateDownloadError {
+            get {
+                return ResourceManager.GetString("stateDownloadError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading update file: .
+        /// </summary>
+        internal static string stateDownloadingUpdateFile {
+            get {
+                return ResourceManager.GetString("stateDownloadingUpdateFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading update version file: .
+        /// </summary>
+        internal static string stateDownloadingUpdateVersionFile {
+            get {
+                return ResourceManager.GetString("stateDownloadingUpdateVersionFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ERROR: .
+        /// </summary>
+        internal static string stateError {
+            get {
+                return ResourceManager.GetString("stateError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ERROR: Launcher not found.
+        /// </summary>
+        internal static string stateErrorLauncherNotFound {
+            get {
+                return ResourceManager.GetString("stateErrorLauncherNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File downloaded.
+        /// </summary>
+        internal static string stateFileDownloaded {
+            get {
+                return ResourceManager.GetString("stateFileDownloaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launcher current version: .
+        /// </summary>
+        internal static string stateLauncherCurrentVersion {
+            get {
+                return ResourceManager.GetString("stateLauncherCurrentVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launcher successfully updated!.
+        /// </summary>
+        internal static string stateLauncherSuccessfullyUpdated {
+            get {
+                return ResourceManager.GetString("stateLauncherSuccessfullyUpdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launcher update start....
+        /// </summary>
+        internal static string stateLauncherUpdateStart {
+            get {
+                return ResourceManager.GetString("stateLauncherUpdateStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launcher version on server: .
+        /// </summary>
+        internal static string stateLauncherVersionOnServer {
+            get {
+                return ResourceManager.GetString("stateLauncherVersionOnServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New version is available.
+        /// </summary>
+        internal static string stateNewVersionIsAvailable {
+            get {
+                return ResourceManager.GetString("stateNewVersionIsAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unpack error.
+        /// </summary>
+        internal static string stateUnpackError {
+            get {
+                return ResourceManager.GetString("stateUnpackError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Using proxy-server.
+        /// </summary>
+        internal static string stateUsingProxyServer {
+            get {
+                return ResourceManager.GetString("stateUsingProxyServer", resourceCulture);
             }
         }
     }

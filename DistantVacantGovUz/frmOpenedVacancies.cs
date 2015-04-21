@@ -262,5 +262,15 @@ namespace DistantVacantGovUz
                 RefreshVacancyList();
             }
         }
+
+        private void toolBtnAddVacancy_Click(object sender, EventArgs e)
+        {
+            frmAddPortalVacancy fAdd = new frmAddPortalVacancy();
+
+            if (fAdd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                RefreshVacancyList();
+            }
+        }
     }
 }

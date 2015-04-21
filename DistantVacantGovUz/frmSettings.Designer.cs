@@ -47,6 +47,7 @@
             this.grpInterface = new System.Windows.Forms.GroupBox();
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
             this.lblLanguage = new System.Windows.Forms.Label();
+            this.btnAssoc = new System.Windows.Forms.Button();
             this.grpConnection.SuspendLayout();
             this.grpUpdates.SuspendLayout();
             this.grpInterface.SuspendLayout();
@@ -125,10 +126,10 @@
             // 
             // grpUpdates
             // 
-            resources.ApplyResources(this.grpUpdates, "grpUpdates");
             this.grpUpdates.Controls.Add(this.txtUpdateServer);
             this.grpUpdates.Controls.Add(this.lblUpdateServer);
             this.grpUpdates.Controls.Add(this.chkEnableUpdates);
+            resources.ApplyResources(this.grpUpdates, "grpUpdates");
             this.grpUpdates.Name = "grpUpdates";
             this.grpUpdates.TabStop = false;
             // 
@@ -151,21 +152,21 @@
             // 
             // grpInterface
             // 
-            resources.ApplyResources(this.grpInterface, "grpInterface");
             this.grpInterface.Controls.Add(this.cmbLanguage);
             this.grpInterface.Controls.Add(this.lblLanguage);
+            resources.ApplyResources(this.grpInterface, "grpInterface");
             this.grpInterface.Name = "grpInterface";
             this.grpInterface.TabStop = false;
             // 
             // cmbLanguage
             // 
-            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLanguage.FormattingEnabled = true;
             this.cmbLanguage.Items.AddRange(new object[] {
             resources.GetString("cmbLanguage.Items"),
             resources.GetString("cmbLanguage.Items1"),
             resources.GetString("cmbLanguage.Items2")});
+            resources.ApplyResources(this.cmbLanguage, "cmbLanguage");
             this.cmbLanguage.Name = "cmbLanguage";
             // 
             // lblLanguage
@@ -173,10 +174,18 @@
             resources.ApplyResources(this.lblLanguage, "lblLanguage");
             this.lblLanguage.Name = "lblLanguage";
             // 
+            // btnAssoc
+            // 
+            resources.ApplyResources(this.btnAssoc, "btnAssoc");
+            this.btnAssoc.Name = "btnAssoc";
+            this.btnAssoc.UseVisualStyleBackColor = true;
+            this.btnAssoc.Click += new System.EventHandler(this.btnAssoc_Click);
+            // 
             // frmSettings
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAssoc);
             this.Controls.Add(this.grpInterface);
             this.Controls.Add(this.grpUpdates);
             this.Controls.Add(this.btnSave);
@@ -213,5 +222,6 @@
         private System.Windows.Forms.GroupBox grpInterface;
         private System.Windows.Forms.ComboBox cmbLanguage;
         private System.Windows.Forms.Label lblLanguage;
+        private System.Windows.Forms.Button btnAssoc;
     }
 }

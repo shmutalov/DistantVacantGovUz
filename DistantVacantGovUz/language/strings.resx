@@ -277,4 +277,52 @@ Reason: </value>
   <data name="frmLoadingCaption" xml:space="preserve">
     <value>Loading</value>
   </data>
+  <data name="stateLauncherUpdateStart" xml:space="preserve">
+    <value>Launcher update start...</value>
+  </data>
+  <data name="stateLauncherCurrentVersion" xml:space="preserve">
+    <value>Launcher current version: </value>
+  </data>
+  <data name="stateErrorLauncherNotFound" xml:space="preserve">
+    <value>ERROR: Launcher not found</value>
+  </data>
+  <data name="stateUsingProxyServer" xml:space="preserve">
+    <value>Using proxy-server</value>
+  </data>
+  <data name="stateCannotInitializeProxy" xml:space="preserve">
+    <value>Cannot initialize proxy: </value>
+  </data>
+  <data name="stateDownloadingUpdateVersionFile" xml:space="preserve">
+    <value>Downloading update version file: </value>
+  </data>
+  <data name="stateFileDownloaded" xml:space="preserve">
+    <value>File downloaded</value>
+  </data>
+  <data name="stateError" xml:space="preserve">
+    <value>ERROR: </value>
+  </data>
+  <data name="stateLauncherVersionOnServer" xml:space="preserve">
+    <value>Launcher version on server: </value>
+  </data>
+  <data name="stateNewVersionIsAvailable" xml:space="preserve">
+    <value>New version is available</value>
+  </data>
+  <data name="stateDownloadingUpdateFile" xml:space="preserve">
+    <value>Downloading update file: </value>
+  </data>
+  <data name="stateDownloadError" xml:space="preserve">
+    <value>Download error: </value>
+  </data>
+  <data name="stateLauncherSuccessfullyUpdated" xml:space="preserve">
+    <value>Launcher successfully updated!</value>
+  </data>
+  <data name="stateUnpackError" xml:space="preserve">
+    <value>Unpack error</value>
+  </data>
+  <data name="frmLocalDocExitingCaption" xml:space="preserve">
+    <value>Exiting...</value>
+  </data>
+  <data name="frmLocalDocSaveBeforeExit" xml:space="preserve">
+    <value>Document have unsaved changes. Save changes before exit?</value>
+  </data>
 </root>

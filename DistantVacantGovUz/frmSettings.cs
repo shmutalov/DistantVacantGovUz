@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace DistantVacantGovUz
 {
@@ -126,6 +128,22 @@ namespace DistantVacantGovUz
             {
                 txtUpdateServer.Enabled = false;
             }
+        }
+
+        private void btnAssoc_Click(object sender, EventArgs e)
+        {
+            string fileName = Program.GetApplicationDirectory() + "\\DistantVacantGovUzDocAssociate.exe";
+            ProcessStartInfo processInfo = new ProcessStartInfo();
+            processInfo.Verb = "runas";
+            processInfo.FileName = fileName;
+
+            try
+            {
+                Process.Start(processInfo);
+                return;
+            }
+            catch (Win32Exception)
+            {}
         }
     }
 }

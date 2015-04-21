@@ -5,7 +5,7 @@ using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 
-namespace VacancyImporterLauncher
+namespace DistantVacantGovUzDocAssociate
 {
     public class FileAssociation
     {

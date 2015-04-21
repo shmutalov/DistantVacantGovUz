@@ -542,5 +542,19 @@ namespace DistantVacantGovUz
         {
             RebuildWorkingVacancyList();
         }
+
+        private void frmLocalDocument_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isDirty)
+            {
+                if (MessageBox.Show(language.strings.frmLocalDocSaveBeforeExit
+                    , language.strings.frmLocalDocExitingCaption
+                    , MessageBoxButtons.YesNo
+                    , MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    SaveDocument();
+                }
+            }
+        }
     }
 }
