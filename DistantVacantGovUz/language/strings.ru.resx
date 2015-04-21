@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblAppLauncherVersion" xml:space="preserve">
+    <value>Версия лаунчера: </value>
+  </data>
+  <data name="lblAppVersion" xml:space="preserve">
+    <value>Версия приложения: </value>
+  </data>
+  <data name="lblAuthor" xml:space="preserve">
+    <value>Автор: </value>
+  </data>
+  <data name="mnuAboutProgram" xml:space="preserve">
+    <value>О программе...</value>
+  </data>
+  <data name="mnuHelp" xml:space="preserve">
+    <value>Помощь</value>
+  </data>
+  <data name="mnuHowToWork" xml:space="preserve">
+    <value>Как начать работать?</value>
+  </data>
+  <data name="ProgramAuthor" xml:space="preserve">
+    <value>Шерзод Муталов</value>
+  </data>
+  <data name="lblProgramName" xml:space="preserve">
+    <value>Distant Vacant.Gov.Uz</value>
+  </data>
+  <data name="exportStatus" xml:space="preserve">
+    <value>Экпортировано {0} из {1}.
+{2}%</value>
+  </data>
+  <data name="frmEditPortalVacancyCaption" xml:space="preserve">
+    <value>Форма редактирования вакансии на Портале - Вакансия #</value>
+  </data>
+  <data name="frmLocalDocumentCaption" xml:space="preserve">
+    <value>Локальные вакансии</value>
+  </data>
+  <data name="frmMainNewDocumentTitle" xml:space="preserve">
+    <value>Безымянный документ </value>
+  </data>
+  <data name="localDocSelectedItems" xml:space="preserve">
+    <value>Выбрано: </value>
+  </data>
+  <data name="loginFailed" xml:space="preserve">
+    <value>Ошибка входа!
+</value>
+  </data>
+  <data name="loginFillAllFields" xml:space="preserve">
+    <value>Пожалуйста, заполните все поля</value>
+  </data>
+  <data name="MsgCaptionAddVacancy" xml:space="preserve">
+    <value>Добавление локальной вакансии</value>
+  </data>
+  <data name="MsgEditPortalVacOpenCaption" xml:space="preserve">
+    <value>Открытие вакансии Портала...</value>
+  </data>
+  <data name="MsgEditPortalVacOpenError" xml:space="preserve">
+    <value>Не удалось открыть выбранную вакансию. 
+Произошла ошибка.</value>
+  </data>
+  <data name="MsgEditPortalVacSaveCaption" xml:space="preserve">
+    <value>Сохранение вакансии Портала...</value>
+  </data>
+  <data name="MsgEditPortalVacSaveError" xml:space="preserve">
+    <value>Вакансия не сохранена. 
+Произошла ошибка.</value>
+  </data>
+  <data name="MsgNotAllFieldsFilled" xml:space="preserve">
+    <value>Некоторые поля не заполнены.
+Продолжить сохранение?</value>
+  </data>
+  <data name="MsgOpenVacancyDocumentAlreadyOpened" xml:space="preserve">
+    <value>Документ уже открыт</value>
+  </data>
+  <data name="MsgOpenVacancyDocumentCaption" xml:space="preserve">
+    <value>Открытие документа...</value>
+  </data>
+  <data name="MsgOpenVacancyDocumentError" xml:space="preserve">
+    <value>Ошибка загрузки документа.
+Причина: </value>
+  </data>
+  <data name="MsgPortalVacExportCaption" xml:space="preserve">
+    <value>Экспорт вакансий...</value>
+  </data>
+  <data name="MsgPortalVacExportSaveError" xml:space="preserve">
+    <value>Ошибка сохранения экпортированных вакансий.</value>
+  </data>
+  <data name="MsgPortalVacExportSuccess" xml:space="preserve">
+    <value>Вакансии успешно экспортированы и сохранены.</value>
+  </data>
+  <data name="MsgPortalVacStatusChangeCaption" xml:space="preserve">
+    <value>Изменение статуса...</value>
+  </data>
+  <data name="MsgPortalVacStatusChanged" xml:space="preserve">
+    <value>Изменен статус {0} из {1} вакансий.</value>
+  </data>
+  <data name="openVacancyDocumentFilter" xml:space="preserve">
+    <value>Файл документа вакансий (*.vac, *.vacx)|*.vac;*.vacx</value>
+  </data>
+  <data name="openVacancyDocumentTitle" xml:space="preserve">
+    <value>Выберите файл документа вакансий...</value>
+  </data>
+  <data name="frmImportPortalVacsCaption" xml:space="preserve">
+    <value>Импорт вакансий</value>
+  </data>
+  <data name="MsgImportPortalVacsFinished" xml:space="preserve">
+    <value>Импорт завершен. Импортировано {0} из {1}</value>
+  </data>
+  <data name="MsgImportVacsCaption" xml:space="preserve">
+    <value>Импортирование вакансий...</value>
+  </data>
+  <data name="portalImportVacStatusImported" xml:space="preserve">
+    <value>Импортировано</value>
+  </data>
+  <data name="portalImportVacStatusImportError" xml:space="preserve">
+    <value>Ошибка импорта</value>
+  </data>
+  <data name="portalImportVacStatusNotImported" xml:space="preserve">
+    <value>Не импортировано</value>
+  </data>
+  <data name="portalImportVacStatusSkipped" xml:space="preserve">
+    <value>Пропущено</value>
+  </data>
+  <data name="portalImportVacStatusUncompleted" xml:space="preserve">
+    <value>Не все поля заполнены</value>
+  </data>
+  <data name="frmEditLocalVacancyCaption" xml:space="preserve">
+    <value>Форма редактирования локальной вакансии #</value>
+  </data>
+  <data name="MsgLocalDocDeletingRows" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные строки?</value>
+  </data>
+  <data name="MsgLocalDocDeletingRowsCaption" xml:space="preserve">
+    <value>Удаление строк...</value>
+  </data>
+  <data name="openVacancyDocImportTitle" xml:space="preserve">
+    <value>Выберите документ для импорта...</value>
+  </data>
+  <data name="localDocSaveAsFilter" xml:space="preserve">
+    <value>Документ вакансии (*.vacx)|*.vacx|Документ вакансии (Старая версия, *.vac)|*.vac</value>
+  </data>
+  <data name="MsgLocalVacSaveCaption" xml:space="preserve">
+    <value>Сохранение документа...</value>
+  </data>
+  <data name="MsgLocVacSaveError" xml:space="preserve">
+    <value>Произошла ошибка при сохранении документа</value>
+  </data>
+  <data name="MsgEditSavingLocalVacancyCaption" xml:space="preserve">
+    <value>Сохранение локальной вакансии...</value>
+  </data>
+  <data name="editPortalVacCheckVacField" xml:space="preserve">
+    <value>Поле &lt;{0}&gt; должно быть заполнено
+</value>
+  </data>
+  <data name="portalVacExporting" xml:space="preserve">
+    <value>Экспорт </value>
+  </data>
+  <data name="portalVacExportSaveFilter" xml:space="preserve">
+    <value>Файл документа вакансий (*.vacx)|*.vacx</value>
+  </data>
+  <data name="frmLoadingCaption" xml:space="preserve">
+    <value>Загрузка</value>
+  </data>
+</root>

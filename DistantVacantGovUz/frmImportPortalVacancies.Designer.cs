@@ -92,8 +92,7 @@
             this.clmnStatus});
             this.lstVacancies.FullRowSelect = true;
             this.lstVacancies.GridLines = true;
-            this.lstVacancies.HotTracking = true;
-            this.lstVacancies.HoverSelection = true;
+            this.lstVacancies.HideSelection = false;
             this.lstVacancies.MultiSelect = false;
             this.lstVacancies.Name = "lstVacancies";
             this.lstVacancies.UseCompatibleStateImageBehavior = false;

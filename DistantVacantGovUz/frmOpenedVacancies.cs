@@ -107,7 +107,7 @@ namespace DistantVacantGovUz
                 return;
 
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Файл Вакансий (*.vacx)|*.vacx";
+            sfd.Filter = language.strings.portalVacExportSaveFilter;
 
             if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -116,7 +116,7 @@ namespace DistantVacantGovUz
                 CVacancyPortalExporter exporter = new CVacancyPortalExporter(sfd.FileName, fLoading, VACANCY_STATUS.OPEN);
                 workerExportVacancies.RunWorkerAsync(exporter);
 
-                fLoading.SetOperationName("Exporting " + this.Text);
+                fLoading.SetOperationName(language.strings.portalVacExporting + this.Text);
                 fLoading.ShowDialog();
             }
         }
@@ -158,6 +158,8 @@ namespace DistantVacantGovUz
                 }
             }
 
+            exprtr.GetLoadingForm().Close();
+
             if (CVacancyFileType.SaveFile(fileName, vacancyItems))
             {
                 MessageBox.Show(language.strings.MsgPortalVacExportSuccess
@@ -170,8 +172,6 @@ namespace DistantVacantGovUz
                     , language.strings.MsgPortalVacExportCaption
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            exprtr.GetLoadingForm().Close();
         }
 
         private void toolBtnEditVacancy_Click(object sender, EventArgs e)

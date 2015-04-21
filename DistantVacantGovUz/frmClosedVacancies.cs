@@ -135,7 +135,18 @@ namespace DistantVacantGovUz
                     }
                 }
 
-                MessageBox.Show("" + statusChanged + " of " + lstVacancies.CheckedItems.Count + " vacancies status changed.", "Change status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show
+                (
+                    String.Format
+                    (
+                        language.strings.MsgPortalVacStatusChanged
+                        , statusChanged
+                        , lstVacancies.CheckedItems.Count
+                    )
+                    , language.strings.MsgPortalVacStatusChangeCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Information
+                );
+
                 RefreshVacancyList();
             }
         }
@@ -161,7 +172,7 @@ namespace DistantVacantGovUz
                 return;
 
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Файл Вакансий (*.vacx)|*.vacx";
+            sfd.Filter = language.strings.portalVacExportSaveFilter;
 
             if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -170,7 +181,7 @@ namespace DistantVacantGovUz
                 CVacancyPortalExporter exporter = new CVacancyPortalExporter(sfd.FileName, fLoading, VACANCY_STATUS.CLOSED);
                 workerExportVacancies.RunWorkerAsync(exporter);
 
-                fLoading.SetOperationName("Exporting " + this.Text);
+                fLoading.SetOperationName(language.strings.portalVacExporting + this.Text);
                 fLoading.ShowDialog();
             }
         }
@@ -193,16 +204,20 @@ namespace DistantVacantGovUz
                 }
             }
 
+            exprtr.GetLoadingForm().Close();
+
             if (CVacancyFileType.SaveFile(fileName, vacancyItems))
             {
-                MessageBox.Show("Вакансии успешно экпортированы и сохранены", "Экпорт вакансий", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(language.strings.MsgPortalVacExportSuccess
+                    , language.strings.MsgPortalVacExportCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Ошибка сохранения экспортированных вакансий", "Экпорт вакансий", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(language.strings.MsgPortalVacExportSaveError
+                    , language.strings.MsgPortalVacExportCaption
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            exprtr.GetLoadingForm().Close();
         }
 
         private void workerExportVacancies_DoWork(object sender, DoWorkEventArgs e)
@@ -218,7 +233,10 @@ namespace DistantVacantGovUz
             CVacancyPortalExporter exprtr = (CVacancyPortalExporter)e.UserState;
             frmLoading fLoading = (frmLoading)exprtr.GetLoadingForm();
 
-            fLoading.SetStatus("Exported " + exprtr.GetExportedVacanciesCount() + " from " + exprtr.GetTotalVacanciesCount() + "\n" + e.ProgressPercentage + "%");
+            fLoading.SetStatus(String.Format(language.strings.exportStatus
+                , exprtr.GetExportedVacanciesCount()
+                , exprtr.GetTotalVacanciesCount()
+                , e.ProgressPercentage));
         }
 
         private void lstVacancies_SelectedIndexChanged(object sender, EventArgs e)

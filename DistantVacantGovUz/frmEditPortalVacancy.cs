@@ -5,6 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Resources;
+using System.Reflection;
+using System.Threading;
+using System.Globalization;
 
 namespace DistantVacantGovUz
 {
@@ -18,9 +22,15 @@ namespace DistantVacantGovUz
             InitializeComponent();
         }*/
 
+        ResourceManager resources;
+        CultureInfo currentCultureInfo;
+
         public frmEditPortalVacancy(int portalVacancyId)
         {
             InitializeComponent();
+
+            resources = new ResourceManager("frmEditPortalVacancy", Assembly.GetExecutingAssembly());
+            currentCultureInfo = Thread.CurrentThread.CurrentUICulture;
 
             this.vacancyId = portalVacancyId;
 
@@ -37,74 +47,143 @@ namespace DistantVacantGovUz
         /// <returns>Возвратит <value>true</value> если проверка прошла успешно. В другом случае возвратит <value>false</value></returns>
         private bool ValidateVacancy()
         {
-            bool ret = false;
+            bool ret = true;
+            string errorMessage = "";
 
             tabAddVacancy.SelectedIndex = 0;
 
             if (txtVacDescRU.Text.Trim() == "")
             {
-                MessageBox.Show("Поле \"" + @"Русское наименование" + "\" не может быть пустым");
+                //MessageBox.Show("Поле \"" + @"Русское наименование" + "\" не может быть пустым");
+
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblDescriptionRU.Text", currentCultureInfo));
+                
                 txtVacDescRU.Focus();
-                return false;
+                ret = false;
             }
 
             if (txtVacDescUZ.Text.Trim() == "")
             {
-                MessageBox.Show("Поле \"" + @"Узбекское наименование (латиницой)" + "\" не может быть пустым");
+                //MessageBox.Show("Поле \"" + @"Узбекское наименование (латиницой)" + "\" не может быть пустым");
+
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblDescriptionUZ.Text", currentCultureInfo));
+
                 txtVacDescUZ.Focus();
-                return false;
+                ret = false;
             }
 
             if (cmbVacCategory.SelectedIndex == -1)
             {
-                MessageBox.Show("Выберите категорию");
+                //MessageBox.Show("Выберите категорию");
+
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblCategory.Text", currentCultureInfo));
+
                 cmbVacCategory.Focus();
-                return false;
+                ret = false;
             }
 
             if (txtVacSalary.Text.Trim() == "")
             {
-                MessageBox.Show("Поле \"" + @"Заработная плата" + "\" не может быть пустым");
+                //MessageBox.Show("Поле \"" + @"Заработная плата" + "\" не может быть пустым");
+                
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblSalary.Text", currentCultureInfo));
+
                 txtVacSalary.Focus();
-                return false;
+                ret = false;
             }
 
             if (cmbVacStatus.SelectedIndex == -1)
             {
-                MessageBox.Show("Укажите статус");
+                //MessageBox.Show("Укажите статус");
+                
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblStatus.Text", currentCultureInfo));
+
                 cmbVacStatus.Focus();
-                return false;
+                ret = false;
             }
 
             tabAddVacancy.SelectedIndex = 1;
 
             if (txtVacDepartmentRU.Text.Trim() == "")
             {
-                MessageBox.Show("Поле \"" + @"Отдел / Подразделение (РУ)" + "\" не может быть пустым");
+                //MessageBox.Show("Поле \"" + @"Отдел / Подразделение (РУ)" + "\" не может быть пустым");
+                
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblDepartmentRU.Text", currentCultureInfo));
+
                 txtVacDepartmentRU.Focus();
-                return false;
+                ret = false;
             }
 
             if (txtVacSpecializationRU.Text.Trim() == "")
             {
-                MessageBox.Show("Поле \"" + @"Функциональность (РУ)" + "\" не может быть пустым");
+                //MessageBox.Show("Поле \"" + @"Функциональность (РУ)" + "\" не может быть пустым");
+                
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblSpecializationRU.Text", currentCultureInfo));
+
                 txtVacSpecializationRU.Focus();
-                return false;
+                ret = false;
+            }
+
+            if (txtVacRequirementsRU.Text.Trim() == "")
+            {
+                //MessageBox.Show("Поле \"" + @"Функциональность (РУ)" + "\" не может быть пустым");
+
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblRequirementsRU.Text", currentCultureInfo));
+
+                txtVacRequirementsRU.Focus();
+                ret = false;
             }
 
             tabAddVacancy.SelectedIndex = 2;
 
             if (txtVacDepartmentUZ.Text.Trim() == "")
             {
-                MessageBox.Show("Поле \"" + @"Отдел / Подразделение (УЗ)" + "\" не может быть пустым");
+                //MessageBox.Show("Поле \"" + @"Отдел / Подразделение (УЗ)" + "\" не может быть пустым");
+
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblDepartmentUZ.Text", currentCultureInfo));
+
                 txtVacDepartmentUZ.Focus();
-                return false;
+                ret = false;
             }
 
             if (txtVacSpecializationUZ.Text.Trim() == "")
             {
-                MessageBox.Show("Поле \"" + @"Функциональность (УЗ)" + "\" не может быть пустым");
+                //MessageBox.Show("Поле \"" + @"Функциональность (УЗ)" + "\" не может быть пустым");
+
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblSpecializationUZ.Text", currentCultureInfo));
+
                 txtVacSpecializationUZ.Focus();
+                ret = false;
+            }
+
+            if (txtVacRequirementsUZ.Text.Trim() == "")
+            {
+                //MessageBox.Show("Поле \"" + @"Функциональность (РУ)" + "\" не может быть пустым");
+
+                errorMessage += String.Format(language.strings.editPortalVacCheckVacField
+                    , resources.GetString("lblRequirementsUZ.Text", currentCultureInfo));
+
+                txtVacRequirementsUZ.Focus();
+                ret = false;
+            }
+
+            if (!ret)
+            {
+                MessageBox.Show(errorMessage
+                        , language.strings.MsgEditPortalVacSaveCaption
+                        , MessageBoxButtons.OK
+                        , MessageBoxIcon.Error);
+
                 return false;
             }
 

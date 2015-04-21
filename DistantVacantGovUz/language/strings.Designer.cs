@@ -61,8 +61,18 @@ namespace DistantVacantGovUz.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exported %d of %d.
-        ///%d%.
+        ///   Looks up a localized string similar to Field &lt;{0}&gt; must have some value
+        ///.
+        /// </summary>
+        internal static string editPortalVacCheckVacField {
+            get {
+                return ResourceManager.GetString("editPortalVacCheckVacField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exported {0} of {1}.
+        ///{2}%.
         /// </summary>
         internal static string exportStatus {
             get {
@@ -94,6 +104,15 @@ namespace DistantVacantGovUz.language {
         internal static string frmImportPortalVacsCaption {
             get {
                 return ResourceManager.GetString("frmImportPortalVacsCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading.
+        /// </summary>
+        internal static string frmLoadingCaption {
+            get {
+                return ResourceManager.GetString("frmLoadingCaption", resourceCulture);
             }
         }
         
@@ -148,6 +167,15 @@ namespace DistantVacantGovUz.language {
         internal static string lblProgramName {
             get {
                 return ResourceManager.GetString("lblProgramName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacancies document (*.vacx)|*.vacx|Vacancies document (Old version, *.vac)|*.vac.
+        /// </summary>
+        internal static string localDocSaveAsFilter {
+            get {
+                return ResourceManager.GetString("localDocSaveAsFilter", resourceCulture);
             }
         }
         
@@ -254,7 +282,16 @@ namespace DistantVacantGovUz.language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Import finished. Imported %d from %d.
+        ///   Looks up a localized string similar to Saving local vacancy....
+        /// </summary>
+        internal static string MsgEditSavingLocalVacancyCaption {
+            get {
+                return ResourceManager.GetString("MsgEditSavingLocalVacancyCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Import finished. Imported {0} from {1}.
         /// </summary>
         internal static string MsgImportPortalVacsFinished {
             get {
@@ -286,6 +323,24 @@ namespace DistantVacantGovUz.language {
         internal static string MsgLocalDocDeletingRowsCaption {
             get {
                 return ResourceManager.GetString("MsgLocalDocDeletingRowsCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saving document....
+        /// </summary>
+        internal static string MsgLocalVacSaveCaption {
+            get {
+                return ResourceManager.GetString("MsgLocalVacSaveCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error occured while document saving.
+        /// </summary>
+        internal static string MsgLocVacSaveError {
+            get {
+                return ResourceManager.GetString("MsgLocVacSaveError", resourceCulture);
             }
         }
         
@@ -441,6 +496,24 @@ namespace DistantVacantGovUz.language {
         internal static string portalImportVacStatusUncompleted {
             get {
                 return ResourceManager.GetString("portalImportVacStatusUncompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exporting .
+        /// </summary>
+        internal static string portalVacExporting {
+            get {
+                return ResourceManager.GetString("portalVacExporting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacancies document (*.vacx)|*.vacx.
+        /// </summary>
+        internal static string portalVacExportSaveFilter {
+            get {
+                return ResourceManager.GetString("portalVacExportSaveFilter", resourceCulture);
             }
         }
         

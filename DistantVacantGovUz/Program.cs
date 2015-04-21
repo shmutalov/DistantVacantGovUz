@@ -10,6 +10,7 @@ using System.Net;
 using ICSharpCode.SharpZipLib.Zip;
 using ICSharpCode.SharpZipLib.Core;
 using System.Text;
+using System.ServiceModel;
 
 namespace DistantVacantGovUz
 {
@@ -265,7 +266,8 @@ namespace DistantVacantGovUz
         /// </summary>
         private static void LauncherUpdaterThreadEntryPoint()
         {
-            string urlLauncherUpdateServer = "http://192.168.7.85:8089/vacancy/launcher/importer/";
+            //string urlLauncherUpdateServer = "http://192.168.7.85:8089/vacancy/launcher/importer/";
+            string urlLauncherUpdateServer = strUpdateServer + "/vacantgovuz/launcher/";
             string launcherVersionFileName = "launcher_update.ver";
             string currentLauncherVersion = null;
             string newestLauncherVersion = null;
@@ -398,8 +400,21 @@ namespace DistantVacantGovUz
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string [] args)
         {
+            VacancyApplicationService service = new VacancyApplicationService();
+            
+            if (args.Length > 0)
+            {
+                if (VacancySingleApplicationService.IsServiceAlreadyStartedOpenDocument("net.pipe://localhost/VacancyService", args[0]))
+                    return;
+            }
+            else
+            {
+                if (VacancySingleApplicationService.IsServiceAlreadyStarted("net.pipe://localhost/VacancyService"))
+                    return;
+            }
+
             vac = new CVacantGovUz();
             
             LoadSettings();
@@ -407,7 +422,17 @@ namespace DistantVacantGovUz
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+
+            frmMain fMain;
+
+            if (args.Length > 0)
+                fMain = new frmMain(args[0]);
+            else
+                fMain = new frmMain();
+
+            VacancySingleApplicationService.StartService(service, "net.pipe://localhost/VacancyService", fMain);
+            
+            Application.Run(fMain);
         }
     }
 }

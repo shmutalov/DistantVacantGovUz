@@ -132,8 +132,8 @@ namespace DistantVacantGovUz
             {
                 if (!CVacancyFileType.SaveFile(documentFileName, workingVacancyList))
                 {
-                    MessageBox.Show("Не удалось сохранить документ"
-                            , "Сохранение документа"
+                    MessageBox.Show(language.strings.MsgLocVacSaveError
+                            , language.strings.MsgLocalVacSaveCaption
                             , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -152,7 +152,8 @@ namespace DistantVacantGovUz
         private void SaveDocumentAs()
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Файл Вакансий (*.vacx)|*.vacx" + "|" + "Файл Вакансий (Старая версия, *.vac)|*.vac";
+            //sfd.Filter = "Файл Вакансий (*.vacx)|*.vacx|Файл Вакансий (Старая версия, *.vac)|*.vac";
+            sfd.Filter = language.strings.localDocSaveAsFilter;
 
             if (documentFileName == "")
                 sfd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\" + documentName;
@@ -167,8 +168,8 @@ namespace DistantVacantGovUz
 
                 if (!CVacancyFileType.SaveFileAs(sfd.FileName, workingVacancyList, version))
                 {
-                    MessageBox.Show("Не удалось сохранить документ"
-                        , "Сохранение документа"
+                    MessageBox.Show(language.strings.MsgLocVacSaveError
+                        , language.strings.MsgLocalVacSaveCaption
                         , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else

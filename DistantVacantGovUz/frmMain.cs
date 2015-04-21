@@ -10,6 +10,15 @@ namespace DistantVacantGovUz
 {
     public partial class frmMain : Form
     {
+        public delegate void OpenDocumentDelegate(string fileName);
+        public OpenDocumentDelegate openDocDelegate;
+
+        public void ShowMainWindowAndOpenDocument(string fileName)
+        {
+            this.Show();
+            this.OpenDocument(fileName);
+        }
+
         public class CVacancyLoaderArgument
         {
             public List<CVacancyItem> vacancyList;
@@ -26,6 +35,14 @@ namespace DistantVacantGovUz
         {
             InitializeComponent();
             this.IsMdiContainer = true;
+        }
+
+        public frmMain(string fileName)
+        {
+            InitializeComponent();
+            this.IsMdiContainer = true;
+
+            OpenDocument(fileName);
         }
 
         private void mnuAboutProgram_Click(object sender, EventArgs e)
@@ -58,6 +75,32 @@ namespace DistantVacantGovUz
             f.Show();
         }
 
+        public void OpenDocument(string fileName)
+        {
+            frmLoading fLoading = new frmLoading();
+
+            // Check, is document already opened in editor
+            foreach (frmLocalDocument doc in this.MdiChildren)
+            {
+                if (doc.GetDocumentFileName().Equals(fileName))
+                {
+                    MessageBox.Show(language.strings.MsgOpenVacancyDocumentAlreadyOpened
+                            , language.strings.MsgOpenVacancyDocumentCaption
+                            , MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    doc.Focus();
+
+                    return;
+                }
+            }
+
+            CVacancyDocumentPreloader preloader = new CVacancyDocumentPreloader(fileName, fLoading);
+            worker.RunWorkerAsync(preloader);
+
+            fLoading.SetOperationName(fileName);
+            fLoading.ShowDialog();
+        }
+
         private void mnuFileOpen_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -68,28 +111,7 @@ namespace DistantVacantGovUz
 
             if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                frmLoading fLoading = new frmLoading();
-
-                // Check, is document already opened in editor
-                foreach (frmLocalDocument doc in this.MdiChildren)
-                {
-                    if (doc.GetDocumentFileName().Equals(ofd.FileName))
-                    {
-                        MessageBox.Show(language.strings.MsgOpenVacancyDocumentAlreadyOpened
-                                , language.strings.MsgOpenVacancyDocumentCaption
-                                , MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        doc.Focus();
-
-                        return;
-                    }
-                }
-
-                CVacancyDocumentPreloader preloader = new CVacancyDocumentPreloader(ofd.FileName, fLoading);
-                worker.RunWorkerAsync(preloader);
-
-                fLoading.SetOperationName(ofd.FileName);
-                fLoading.ShowDialog();
+                OpenDocument(ofd.FileName);
             }
         }
 
@@ -139,7 +161,7 @@ namespace DistantVacantGovUz
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            openDocDelegate += new OpenDocumentDelegate(ShowMainWindowAndOpenDocument);
         }
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)

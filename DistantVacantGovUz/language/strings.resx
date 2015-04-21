@@ -142,8 +142,8 @@
     <value>Distant Vacant.Gov.Uz</value>
   </data>
   <data name="exportStatus" xml:space="preserve">
-    <value>Exported %d of %d.
-%d%</value>
+    <value>Exported {0} of {1}.
+{2}%</value>
   </data>
   <data name="frmEditPortalVacancyCaption" xml:space="preserve">
     <value>Portal vacancy edit form - Vacancy #</value>
@@ -220,7 +220,7 @@ Reason: </value>
     <value>Import vacancies</value>
   </data>
   <data name="MsgImportPortalVacsFinished" xml:space="preserve">
-    <value>Import finished. Imported %d from %d</value>
+    <value>Import finished. Imported {0} from {1}</value>
   </data>
   <data name="MsgImportVacsCaption" xml:space="preserve">
     <value>Importing vacancies...</value>
@@ -251,5 +251,30 @@ Reason: </value>
   </data>
   <data name="openVacancyDocImportTitle" xml:space="preserve">
     <value>Select document to import...</value>
+  </data>
+  <data name="localDocSaveAsFilter" xml:space="preserve">
+    <value>Vacancies document (*.vacx)|*.vacx|Vacancies document (Old version, *.vac)|*.vac</value>
+  </data>
+  <data name="MsgLocalVacSaveCaption" xml:space="preserve">
+    <value>Saving document...</value>
+  </data>
+  <data name="MsgLocVacSaveError" xml:space="preserve">
+    <value>Error occured while document saving</value>
+  </data>
+  <data name="MsgEditSavingLocalVacancyCaption" xml:space="preserve">
+    <value>Saving local vacancy...</value>
+  </data>
+  <data name="editPortalVacCheckVacField" xml:space="preserve">
+    <value>Field &lt;{0}&gt; must have some value
+</value>
+  </data>
+  <data name="portalVacExporting" xml:space="preserve">
+    <value>Exporting </value>
+  </data>
+  <data name="portalVacExportSaveFilter" xml:space="preserve">
+    <value>Vacancies document (*.vacx)|*.vacx</value>
+  </data>
+  <data name="frmLoadingCaption" xml:space="preserve">
+    <value>Loading</value>
   </data>
 </root>

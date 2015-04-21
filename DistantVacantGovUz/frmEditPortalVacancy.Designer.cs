@@ -33,43 +33,43 @@
             this.tabAddVacancy = new System.Windows.Forms.TabControl();
             this.tbGeneral = new System.Windows.Forms.TabPage();
             this.cmbVacStatus = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.dateVacExpire = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblExpireDate = new System.Windows.Forms.Label();
             this.cmbVacEducation = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblEducation = new System.Windows.Forms.Label();
             this.cmbVacExperience = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblExperience = new System.Windows.Forms.Label();
             this.cmbVacGender = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
             this.cmbVacEmployment = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblEmployment = new System.Windows.Forms.Label();
             this.txtVacSalary = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
             this.cmbVacCategory = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
             this.txtVacDescUZ = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDescriptionUZ = new System.Windows.Forms.Label();
             this.txtVacDescRU = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDescriptionRU = new System.Windows.Forms.Label();
             this.tbRussian = new System.Windows.Forms.TabPage();
             this.txtVacInformationRU = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblInformationRU = new System.Windows.Forms.Label();
             this.txtVacRequirementsRU = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblRequirementsRU = new System.Windows.Forms.Label();
             this.txtVacSpecializationRU = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblSpecializationRU = new System.Windows.Forms.Label();
             this.txtVacDepartmentRU = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblDepartmentRU = new System.Windows.Forms.Label();
             this.tbUzbek = new System.Windows.Forms.TabPage();
             this.txtVacInformationUZ = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblInformationUZ = new System.Windows.Forms.Label();
             this.txtVacRequirementsUZ = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblRequirementsUZ = new System.Windows.Forms.Label();
             this.txtVacSpecializationUZ = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblSpecizalizationUZ = new System.Windows.Forms.Label();
             this.txtVacDepartmentUZ = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblDepartmentUZ = new System.Windows.Forms.Label();
             this.tabAddVacancy.SuspendLayout();
             this.tbGeneral.SuspendLayout();
             this.tbRussian.SuspendLayout();
@@ -95,27 +95,27 @@
             // 
             // tbGeneral
             // 
-            this.tbGeneral.Controls.Add(this.cmbVacStatus);
-            this.tbGeneral.Controls.Add(this.label10);
-            this.tbGeneral.Controls.Add(this.dateVacExpire);
-            this.tbGeneral.Controls.Add(this.label9);
-            this.tbGeneral.Controls.Add(this.cmbVacEducation);
-            this.tbGeneral.Controls.Add(this.label8);
-            this.tbGeneral.Controls.Add(this.cmbVacExperience);
-            this.tbGeneral.Controls.Add(this.label7);
-            this.tbGeneral.Controls.Add(this.cmbVacGender);
-            this.tbGeneral.Controls.Add(this.label6);
-            this.tbGeneral.Controls.Add(this.cmbVacEmployment);
-            this.tbGeneral.Controls.Add(this.label5);
-            this.tbGeneral.Controls.Add(this.txtVacSalary);
-            this.tbGeneral.Controls.Add(this.label4);
-            this.tbGeneral.Controls.Add(this.cmbVacCategory);
-            this.tbGeneral.Controls.Add(this.label3);
-            this.tbGeneral.Controls.Add(this.txtVacDescUZ);
-            this.tbGeneral.Controls.Add(this.label2);
-            this.tbGeneral.Controls.Add(this.txtVacDescRU);
-            this.tbGeneral.Controls.Add(this.label1);
             resources.ApplyResources(this.tbGeneral, "tbGeneral");
+            this.tbGeneral.Controls.Add(this.cmbVacStatus);
+            this.tbGeneral.Controls.Add(this.lblStatus);
+            this.tbGeneral.Controls.Add(this.dateVacExpire);
+            this.tbGeneral.Controls.Add(this.lblExpireDate);
+            this.tbGeneral.Controls.Add(this.cmbVacEducation);
+            this.tbGeneral.Controls.Add(this.lblEducation);
+            this.tbGeneral.Controls.Add(this.cmbVacExperience);
+            this.tbGeneral.Controls.Add(this.lblExperience);
+            this.tbGeneral.Controls.Add(this.cmbVacGender);
+            this.tbGeneral.Controls.Add(this.lblGender);
+            this.tbGeneral.Controls.Add(this.cmbVacEmployment);
+            this.tbGeneral.Controls.Add(this.lblEmployment);
+            this.tbGeneral.Controls.Add(this.txtVacSalary);
+            this.tbGeneral.Controls.Add(this.lblSalary);
+            this.tbGeneral.Controls.Add(this.cmbVacCategory);
+            this.tbGeneral.Controls.Add(this.lblCategory);
+            this.tbGeneral.Controls.Add(this.txtVacDescUZ);
+            this.tbGeneral.Controls.Add(this.lblDescriptionUZ);
+            this.tbGeneral.Controls.Add(this.txtVacDescRU);
+            this.tbGeneral.Controls.Add(this.lblDescriptionRU);
             this.tbGeneral.Name = "tbGeneral";
             this.tbGeneral.UseVisualStyleBackColor = true;
             // 
@@ -129,10 +129,10 @@
             resources.GetString("cmbVacStatus.Items1")});
             this.cmbVacStatus.Name = "cmbVacStatus";
             // 
-            // label10
+            // lblStatus
             // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
+            resources.ApplyResources(this.lblStatus, "lblStatus");
+            this.lblStatus.Name = "lblStatus";
             // 
             // dateVacExpire
             // 
@@ -140,10 +140,10 @@
             this.dateVacExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateVacExpire.Name = "dateVacExpire";
             // 
-            // label9
+            // lblExpireDate
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
+            resources.ApplyResources(this.lblExpireDate, "lblExpireDate");
+            this.lblExpireDate.Name = "lblExpireDate";
             // 
             // cmbVacEducation
             // 
@@ -158,10 +158,10 @@
             resources.GetString("cmbVacEducation.Items4")});
             this.cmbVacEducation.Name = "cmbVacEducation";
             // 
-            // label8
+            // lblEducation
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.lblEducation, "lblEducation");
+            this.lblEducation.Name = "lblEducation";
             // 
             // cmbVacExperience
             // 
@@ -176,10 +176,10 @@
             resources.GetString("cmbVacExperience.Items4")});
             this.cmbVacExperience.Name = "cmbVacExperience";
             // 
-            // label7
+            // lblExperience
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.lblExperience, "lblExperience");
+            this.lblExperience.Name = "lblExperience";
             // 
             // cmbVacGender
             // 
@@ -192,10 +192,10 @@
             resources.GetString("cmbVacGender.Items2")});
             this.cmbVacGender.Name = "cmbVacGender";
             // 
-            // label6
+            // lblGender
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.lblGender, "lblGender");
+            this.lblGender.Name = "lblGender";
             // 
             // cmbVacEmployment
             // 
@@ -210,20 +210,20 @@
             resources.GetString("cmbVacEmployment.Items4")});
             this.cmbVacEmployment.Name = "cmbVacEmployment";
             // 
-            // label5
+            // lblEmployment
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.lblEmployment, "lblEmployment");
+            this.lblEmployment.Name = "lblEmployment";
             // 
             // txtVacSalary
             // 
             resources.ApplyResources(this.txtVacSalary, "txtVacSalary");
             this.txtVacSalary.Name = "txtVacSalary";
             // 
-            // label4
+            // lblSalary
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblSalary, "lblSalary");
+            this.lblSalary.Name = "lblSalary";
             // 
             // cmbVacCategory
             // 
@@ -262,42 +262,42 @@
             resources.GetString("cmbVacCategory.Items28")});
             this.cmbVacCategory.Name = "cmbVacCategory";
             // 
-            // label3
+            // lblCategory
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.lblCategory, "lblCategory");
+            this.lblCategory.Name = "lblCategory";
             // 
             // txtVacDescUZ
             // 
             resources.ApplyResources(this.txtVacDescUZ, "txtVacDescUZ");
             this.txtVacDescUZ.Name = "txtVacDescUZ";
             // 
-            // label2
+            // lblDescriptionUZ
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.lblDescriptionUZ, "lblDescriptionUZ");
+            this.lblDescriptionUZ.Name = "lblDescriptionUZ";
             // 
             // txtVacDescRU
             // 
             resources.ApplyResources(this.txtVacDescRU, "txtVacDescRU");
             this.txtVacDescRU.Name = "txtVacDescRU";
             // 
-            // label1
+            // lblDescriptionRU
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.lblDescriptionRU, "lblDescriptionRU");
+            this.lblDescriptionRU.Name = "lblDescriptionRU";
             // 
             // tbRussian
             // 
-            this.tbRussian.Controls.Add(this.txtVacInformationRU);
-            this.tbRussian.Controls.Add(this.label14);
-            this.tbRussian.Controls.Add(this.txtVacRequirementsRU);
-            this.tbRussian.Controls.Add(this.label13);
-            this.tbRussian.Controls.Add(this.txtVacSpecializationRU);
-            this.tbRussian.Controls.Add(this.label12);
-            this.tbRussian.Controls.Add(this.txtVacDepartmentRU);
-            this.tbRussian.Controls.Add(this.label11);
             resources.ApplyResources(this.tbRussian, "tbRussian");
+            this.tbRussian.Controls.Add(this.txtVacInformationRU);
+            this.tbRussian.Controls.Add(this.lblInformationRU);
+            this.tbRussian.Controls.Add(this.txtVacRequirementsRU);
+            this.tbRussian.Controls.Add(this.lblRequirementsRU);
+            this.tbRussian.Controls.Add(this.txtVacSpecializationRU);
+            this.tbRussian.Controls.Add(this.lblSpecializationRU);
+            this.tbRussian.Controls.Add(this.txtVacDepartmentRU);
+            this.tbRussian.Controls.Add(this.lblDepartmentRU);
             this.tbRussian.Name = "tbRussian";
             this.tbRussian.UseVisualStyleBackColor = true;
             // 
@@ -306,52 +306,52 @@
             resources.ApplyResources(this.txtVacInformationRU, "txtVacInformationRU");
             this.txtVacInformationRU.Name = "txtVacInformationRU";
             // 
-            // label14
+            // lblInformationRU
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
+            resources.ApplyResources(this.lblInformationRU, "lblInformationRU");
+            this.lblInformationRU.Name = "lblInformationRU";
             // 
             // txtVacRequirementsRU
             // 
             resources.ApplyResources(this.txtVacRequirementsRU, "txtVacRequirementsRU");
             this.txtVacRequirementsRU.Name = "txtVacRequirementsRU";
             // 
-            // label13
+            // lblRequirementsRU
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.lblRequirementsRU, "lblRequirementsRU");
+            this.lblRequirementsRU.Name = "lblRequirementsRU";
             // 
             // txtVacSpecializationRU
             // 
             resources.ApplyResources(this.txtVacSpecializationRU, "txtVacSpecializationRU");
             this.txtVacSpecializationRU.Name = "txtVacSpecializationRU";
             // 
-            // label12
+            // lblSpecializationRU
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
+            resources.ApplyResources(this.lblSpecializationRU, "lblSpecializationRU");
+            this.lblSpecializationRU.Name = "lblSpecializationRU";
             // 
             // txtVacDepartmentRU
             // 
             resources.ApplyResources(this.txtVacDepartmentRU, "txtVacDepartmentRU");
             this.txtVacDepartmentRU.Name = "txtVacDepartmentRU";
             // 
-            // label11
+            // lblDepartmentRU
             // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
+            resources.ApplyResources(this.lblDepartmentRU, "lblDepartmentRU");
+            this.lblDepartmentRU.Name = "lblDepartmentRU";
             // 
             // tbUzbek
             // 
-            this.tbUzbek.Controls.Add(this.txtVacInformationUZ);
-            this.tbUzbek.Controls.Add(this.label18);
-            this.tbUzbek.Controls.Add(this.txtVacRequirementsUZ);
-            this.tbUzbek.Controls.Add(this.label17);
-            this.tbUzbek.Controls.Add(this.txtVacSpecializationUZ);
-            this.tbUzbek.Controls.Add(this.label16);
-            this.tbUzbek.Controls.Add(this.txtVacDepartmentUZ);
-            this.tbUzbek.Controls.Add(this.label15);
             resources.ApplyResources(this.tbUzbek, "tbUzbek");
+            this.tbUzbek.Controls.Add(this.txtVacInformationUZ);
+            this.tbUzbek.Controls.Add(this.lblInformationUZ);
+            this.tbUzbek.Controls.Add(this.txtVacRequirementsUZ);
+            this.tbUzbek.Controls.Add(this.lblRequirementsUZ);
+            this.tbUzbek.Controls.Add(this.txtVacSpecializationUZ);
+            this.tbUzbek.Controls.Add(this.lblSpecizalizationUZ);
+            this.tbUzbek.Controls.Add(this.txtVacDepartmentUZ);
+            this.tbUzbek.Controls.Add(this.lblDepartmentUZ);
             this.tbUzbek.Name = "tbUzbek";
             this.tbUzbek.UseVisualStyleBackColor = true;
             // 
@@ -360,40 +360,40 @@
             resources.ApplyResources(this.txtVacInformationUZ, "txtVacInformationUZ");
             this.txtVacInformationUZ.Name = "txtVacInformationUZ";
             // 
-            // label18
+            // lblInformationUZ
             // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            resources.ApplyResources(this.lblInformationUZ, "lblInformationUZ");
+            this.lblInformationUZ.Name = "lblInformationUZ";
             // 
             // txtVacRequirementsUZ
             // 
             resources.ApplyResources(this.txtVacRequirementsUZ, "txtVacRequirementsUZ");
             this.txtVacRequirementsUZ.Name = "txtVacRequirementsUZ";
             // 
-            // label17
+            // lblRequirementsUZ
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            resources.ApplyResources(this.lblRequirementsUZ, "lblRequirementsUZ");
+            this.lblRequirementsUZ.Name = "lblRequirementsUZ";
             // 
             // txtVacSpecializationUZ
             // 
             resources.ApplyResources(this.txtVacSpecializationUZ, "txtVacSpecializationUZ");
             this.txtVacSpecializationUZ.Name = "txtVacSpecializationUZ";
             // 
-            // label16
+            // lblSpecizalizationUZ
             // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            resources.ApplyResources(this.lblSpecizalizationUZ, "lblSpecizalizationUZ");
+            this.lblSpecizalizationUZ.Name = "lblSpecizalizationUZ";
             // 
             // txtVacDepartmentUZ
             // 
             resources.ApplyResources(this.txtVacDepartmentUZ, "txtVacDepartmentUZ");
             this.txtVacDepartmentUZ.Name = "txtVacDepartmentUZ";
             // 
-            // label15
+            // lblDepartmentUZ
             // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
+            resources.ApplyResources(this.lblDepartmentUZ, "lblDepartmentUZ");
+            this.lblDepartmentUZ.Name = "lblDepartmentUZ";
             // 
             // frmEditPortalVacancy
             // 
@@ -420,42 +420,42 @@
         private System.Windows.Forms.TabControl tabAddVacancy;
         private System.Windows.Forms.TabPage tbGeneral;
         private System.Windows.Forms.ComboBox cmbVacStatus;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.DateTimePicker dateVacExpire;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblExpireDate;
         private System.Windows.Forms.ComboBox cmbVacEducation;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblEducation;
         private System.Windows.Forms.ComboBox cmbVacExperience;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblExperience;
         private System.Windows.Forms.ComboBox cmbVacGender;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.ComboBox cmbVacEmployment;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblEmployment;
         private System.Windows.Forms.TextBox txtVacSalary;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.ComboBox cmbVacCategory;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.TextBox txtVacDescUZ;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDescriptionUZ;
         private System.Windows.Forms.TextBox txtVacDescRU;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDescriptionRU;
         private System.Windows.Forms.TabPage tbRussian;
         private System.Windows.Forms.TextBox txtVacInformationRU;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblInformationRU;
         private System.Windows.Forms.TextBox txtVacRequirementsRU;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblRequirementsRU;
         private System.Windows.Forms.TextBox txtVacSpecializationRU;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblSpecializationRU;
         private System.Windows.Forms.TextBox txtVacDepartmentRU;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblDepartmentRU;
         private System.Windows.Forms.TabPage tbUzbek;
         private System.Windows.Forms.TextBox txtVacInformationUZ;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblInformationUZ;
         private System.Windows.Forms.TextBox txtVacRequirementsUZ;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblRequirementsUZ;
         private System.Windows.Forms.TextBox txtVacSpecializationUZ;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblSpecizalizationUZ;
         private System.Windows.Forms.TextBox txtVacDepartmentUZ;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblDepartmentUZ;
     }
 }

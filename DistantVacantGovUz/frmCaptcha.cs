@@ -43,13 +43,13 @@ namespace DistantVacantGovUz
                 imgCaptcha.Image = img;
                 imgCaptcha.Refresh();
             }
+
+            txtCaptchaText.Select();
         }
 
         private void frmCaptcha_Load(object sender, EventArgs e)
         {
             RefreshCaptcha();
-            
-            txtCaptchaText.Select();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
