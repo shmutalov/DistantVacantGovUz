@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <settings>
-  <UseProxy value="True" />
+  <UseProxy value="False" />
   <ProxyHost value="http://192.168.0.1" />
   <ProxyPort value="3128" />
   <ProxyUserName value="" />
   <ProxyPassword value="" />
-  <CheckForUpdates value="True" />
+  <CheckForUpdates value="False" />
   <UpdateServer value="http://192.168.7.85:8089" />
   <Language value="ru" />
 </settings>
