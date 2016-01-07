@@ -196,8 +196,8 @@ namespace DistantVacantGovUz.Windows
 
             if (_vacancy != null)
             {
-                txtVacDescRU.Text = _vacancy.StrDescriptionRu;
-                txtVacDescUZ.Text = _vacancy.StrDescriptionUz;
+                txtVacDescRU.Text = _vacancy.DescriptionRu;
+                txtVacDescUZ.Text = _vacancy.DescriptionUz;
 
                 cmbVacCategory.SelectedIndex = (int)_vacancy.Category - 1;
                 cmbVacEmployment.SelectedIndex = (int)_vacancy.Employment;

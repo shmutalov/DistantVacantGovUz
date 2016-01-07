@@ -58,7 +58,7 @@ namespace DistantVacantGovUz.Utils
             switch (_vacStatus)
             {
                 case VacancyStatus.Open:
-                    vacList = Program.VacancyApi.GetActualVacancies();
+                    vacList = Program.VacancyApi.GetOpenVacancies();
                     break;
                 case VacancyStatus.Closed:
                     vacList = Program.VacancyApi.GetClosedVacancies();

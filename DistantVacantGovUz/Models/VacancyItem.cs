@@ -278,8 +278,8 @@ namespace DistantVacantGovUz.Models
         public void InitFromCVacancy(Vacancy v)
         {
             SequenceNumber = string.Empty;
-            DescriptionRu = v.StrDescriptionRu;
-            DescriptionUz = v.StrDescriptionUz;
+            DescriptionRu = v.DescriptionRu;
+            DescriptionUz = v.DescriptionUz;
 
             Salary = v.StrSalary;
 

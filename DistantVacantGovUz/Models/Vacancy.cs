@@ -7,8 +7,8 @@ namespace DistantVacantGovUz.Models
     /// </summary>
     public class Vacancy
     {
-        public readonly string StrDescriptionRu;
-        public readonly string StrDescriptionUz;
+        public readonly string DescriptionRu;
+        public readonly string DescriptionUz;
         public readonly VacancyCategory Category;
         public readonly string StrSalary;
         public readonly VacancyEmployment Employment;
@@ -69,8 +69,8 @@ namespace DistantVacantGovUz.Models
             , string informationUz
             , string id)
         {
-            StrDescriptionRu = descriptionRu;
-            StrDescriptionUz = descriptionUz;
+            DescriptionRu = descriptionRu;
+            DescriptionUz = descriptionUz;
             Category = category;
             StrSalary = salary;
             Employment = employment;

@@ -200,7 +200,7 @@ namespace DistantVacantGovUz
         private bool LogIntoVacant()
         {
             var postData = string.Format("{0}={1}",
-                Uri.EscapeDataString("Users[identity]"), 
+                Uri.EscapeDataString("Users[identity]"),
                 Uri.EscapeDataString(_strVacUserName));
 
             var bytes = _http.GetBytes(VacantGovUzUrls.VacantGovUzLoginUrl, HttpRequestMethod.Post, postData);
@@ -293,8 +293,8 @@ namespace DistantVacantGovUz
             // captcha
             postData += "&Vacancies[verifyCode]=#VACANCIES_CAPTCHA#";
 
-            postData = postData.Replace(@"#VACANCIES_NAME_RU#", Uri.EscapeDataString(pVacancy.StrDescriptionRu));
-            postData = postData.Replace(@"#VACANCIES_NAME_UZ#", Uri.EscapeDataString(pVacancy.StrDescriptionUz));
+            postData = postData.Replace(@"#VACANCIES_NAME_RU#", Uri.EscapeDataString(pVacancy.DescriptionRu));
+            postData = postData.Replace(@"#VACANCIES_NAME_UZ#", Uri.EscapeDataString(pVacancy.DescriptionUz));
             postData = postData.Replace(@"#VACANCIES_CATEGORY_ID#", Vacancy.CategoryId(pVacancy.Category).ToString());
             postData = postData.Replace(@"#VACANCIES_SALARY#", Uri.EscapeDataString(pVacancy.StrSalary));
             postData = postData.Replace(@"#VACANCIES_EMPLOYMENT#", Vacancy.EmploymentId(pVacancy.Employment));
@@ -359,8 +359,8 @@ namespace DistantVacantGovUz
 
             //post_data = post_data.Replace("[", "%5B").Replace("]", "%5D");
 
-            postData = postData.Replace(@"#VACANCIES_NAME_RU#", Uri.EscapeDataString(pVacancy.StrDescriptionRu));
-            postData = postData.Replace(@"#VACANCIES_NAME_UZ#", Uri.EscapeDataString(pVacancy.StrDescriptionUz));
+            postData = postData.Replace(@"#VACANCIES_NAME_RU#", Uri.EscapeDataString(pVacancy.DescriptionRu));
+            postData = postData.Replace(@"#VACANCIES_NAME_UZ#", Uri.EscapeDataString(pVacancy.DescriptionUz));
             postData = postData.Replace(@"#VACANCIES_CATEGORY_ID#", Vacancy.CategoryId(pVacancy.Category).ToString());
             postData = postData.Replace(@"#VACANCIES_SALARY#", Uri.EscapeDataString(pVacancy.StrSalary));
             postData = postData.Replace(@"#VACANCIES_EMPLOYMENT#", Vacancy.EmploymentId(pVacancy.Employment));
@@ -657,168 +657,12 @@ namespace DistantVacantGovUz
             return EditVacancy(id, v);
         }
 
-        /// <summary>
-        /// Получение списка открытых (актуальных) вакансий
-        /// </summary>
-        /// <returns></returns>
-        public List<VacancyListItem> GetActualVacancies()
+        private List<VacancyListItem> GetVacancies(string url)
         {
             if (!IsLogged)
                 return null;
 
-            var bytes = _http.GetBytes(VacantGovUzUrls.OpenVacanciesUrl);
-
-            var page = string.Empty;
-
-            if (bytes != null)
-                page = Encoding.UTF8.GetString(bytes);
-
-            var vacs = new List<VacancyListItem>();
-
-            // Проверка количество страниц с вакансиями
-            if (page.IndexOf("<div class=\"pagination\">", StringComparison.InvariantCultureIgnoreCase) > 0)
-            {
-                var nextPageUrl = string.Empty;
-
-                while (true)
-                {
-                    var lastPage = page.IndexOf("<li class=\"next\">", StringComparison.InvariantCultureIgnoreCase) <= 0;
-
-                    _parser.Init(Encoding.UTF8.GetBytes(page));
-                    _parser.SetEncoding(Encoding.UTF8);
-
-                    HTMLchunk chunk;
-
-                    while ((chunk = _parser.ParseNext()) != null)
-                    {
-                        switch (chunk.sTag)
-                        {
-                            case "tbody":
-                                HTMLchunk trChunk;
-                                while ((trChunk = _parser.ParseNextTag()) != null && trChunk.sTag == "tr")
-                                {
-                                    // VAC ID
-                                    var tdChunk = _parser.ParseNext();
-
-                                    var vacancyId = tdChunk.oHTML;
-
-                                    _parser.ParseNext(); // td close
-
-                                    // VAC DESC
-                                    _parser.ParseNextTag(); // td open
-                                    tdChunk = _parser.ParseNext();
-
-                                    var vacancyDescription = tdChunk.oHTML;
-
-                                    _parser.ParseNextTag(); // td close
-
-                                    _parser.ParseNextTag(); // td open
-                                    _parser.ParseNextTag(); // a open
-                                    _parser.ParseNextTag(); // a close
-                                    _parser.ParseNextTag(); // td close
-
-                                    _parser.ParseNextTag(); // tr close
-
-                                    vacs.Add(new VacancyListItem(int.Parse(vacancyId), vacancyDescription));
-                                }
-                                break;
-                            case "ul":
-                                if (chunk.GetParamValue("id") == "yw0")
-                                {
-                                    HTMLchunk liChunk;
-                                    while ((liChunk = _parser.ParseNextTag()) != null && liChunk.sTag == "li")
-                                    {
-                                        if (liChunk.GetParamValue("class") == "next")
-                                        {
-                                            var aChunk = _parser.ParseNextTag();
-
-                                            if (aChunk.sTag == "a")
-                                                nextPageUrl = aChunk.GetParamValue("href");
-
-                                            if (nextPageUrl != "")
-                                                nextPageUrl = string.Format("{0}{1}", VacantGovUzUrls.MainPageUrl, nextPageUrl);
-
-                                            _parser.ParseNextTag();
-                                        }
-                                        else
-                                        {
-                                            _parser.ParseNextTag();
-                                            _parser.ParseNextTag();
-                                        }
-
-                                        _parser.ParseNextTag();
-                                    }
-                                }
-
-                                break;
-                        }
-                    }
-
-                    if (lastPage || (nextPageUrl == ""))
-                        break;
-
-                    //page = http.GetUrl(strNextPageUrl);
-                    page = Encoding.UTF8.GetString(_http.GetBytes(nextPageUrl));
-                }
-            }
-            else
-            {
-                _parser.Init(Encoding.UTF8.GetBytes(page));
-                _parser.SetEncoding(Encoding.UTF8);
-
-                HTMLchunk chunk;
-
-                while ((chunk = _parser.ParseNext()) != null)
-                {
-                    switch (chunk.sTag)
-                    {
-                        case "tbody":
-                            HTMLchunk trChunk;
-                            while ((trChunk = _parser.ParseNextTag()) != null && trChunk.sTag == "tr")
-                            {
-                                // VAC ID
-                                _parser.ParseNextTag(); // td open
-                                var tdChunk = _parser.ParseNext();
-
-                                var vacancyId = tdChunk.oHTML;
-
-                                _parser.ParseNext(); // td close
-
-                                // VAC DESC
-                                _parser.ParseNextTag(); // td open
-                                tdChunk = _parser.ParseNext();
-
-                                var vacancyDescription = tdChunk.oHTML;
-
-                                _parser.ParseNextTag(); // td close
-
-                                _parser.ParseNextTag(); // td open
-                                _parser.ParseNextTag(); // a open
-                                _parser.ParseNextTag(); // a close
-                                _parser.ParseNextTag(); // td close
-
-                                _parser.ParseNextTag(); // tr close
-
-                                vacs.Add(new VacancyListItem(int.Parse(vacancyId), vacancyDescription));
-                            }
-                            break;
-                    }
-                }
-            }
-
-            return vacs;
-        }
-
-        /// <summary>
-        /// Получение списка закрытых (не актуальных) вакансий
-        /// </summary>
-        /// <returns></returns>
-        public List<VacancyListItem> GetClosedVacancies()
-        {
-            if (!IsLogged)
-                return null;
-
-            var bytes = _http.GetBytes(VacantGovUzUrls.ClosedVacanciesUrl);
+            var bytes = _http.GetBytes(url);
             var page = string.Empty;
 
             if (bytes != null)
@@ -850,7 +694,7 @@ namespace DistantVacantGovUz
                                 {
                                     // VAC ID
                                     _parser.ParseNextTag(); // td open
-                                    //td_chunk = parser.ParseNext(); 
+
                                     var tdChunk = _parser.ParseNext();
                                     var vacancyId = tdChunk.oHTML;
                                     _parser.ParseNext(); // td close
@@ -957,6 +801,24 @@ namespace DistantVacantGovUz
             }
 
             return vacs;
+        }
+
+        /// <summary>
+        /// Получение списка открытых (актуальных) вакансий
+        /// </summary>
+        /// <returns></returns>
+        public List<VacancyListItem> GetOpenVacancies()
+        {
+            return GetVacancies(VacantGovUzUrls.OpenVacanciesUrl);
+        }
+
+        /// <summary>
+        /// Получение списка закрытых (не актуальных) вакансий
+        /// </summary>
+        /// <returns></returns>
+        public List<VacancyListItem> GetClosedVacancies()
+        {
+            return GetVacancies(VacantGovUzUrls.ClosedVacanciesUrl);
         }
 
         /// <summary>
