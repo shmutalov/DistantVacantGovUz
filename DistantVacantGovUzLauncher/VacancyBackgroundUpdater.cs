@@ -1,57 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
-using System.Threading;
 using System.Net;
 using System.IO;
 using ICSharpCode.SharpZipLib.Zip;
 using ICSharpCode.SharpZipLib.Core;
-using System.Reflection;
 
 namespace DistantVacantGovUzLauncher
 {
     public class UpdateState
     {
-        public String info;
-        public int status;
+        public string Info;
+        public int Status;
 
-        public UpdateState(String info, int status)
+        public UpdateState(string info, int status)
         {
             SetUpdateState(info, status);
         }
 
-        public void SetUpdateState(String info, int status)
+        public void SetUpdateState(string info, int status)
         {
-            this.info = info;
-            this.status = status;
+            Info = info;
+            Status = status;
         }
     }
 
-    class VacancyBackgroundUpdater
+    public class VacancyBackgroundUpdater
     {
-        String version;
-        UpdateState state;
-        String urlUpdateSite = ""; //"http://192.168.7.85:8089/vacancy/importer/";
-        String urlUpdateVersionFileName = "update.ver";
-        String urlUpdatePackFileName = "update.pack";
+        private readonly string _version;
+        private readonly UpdateState _state;
+        private readonly string _urlUpdateSite; //"http://192.168.7.85:8089/vacancy/importer/";
+        private const string UrlUpdateVersionFileName = "update.ver";
+        private const string UrlUpdatePackFileName = "update.pack";
 
         public VacancyBackgroundUpdater(string currentVersion)
         {
-            this.version = currentVersion;
-            urlUpdateSite = Program.strUpdateServer + "/vacantgovuz/application/";
+            _version = currentVersion;
+            _urlUpdateSite = Program.UpdateServer + "/vacantgovuz/application/";
 
-            state = new UpdateState("", 0);
+            _state = new UpdateState("", 0);
         }
 
-        private bool UnpackUpdateFile(String updateFileName, String outputFolder)
+        private static bool UnpackUpdateFile(string updateFileName, string outputFolder)
         {
             ZipFile zf = null;
-            bool ret = false;
 
             try
             {
-                FileStream fs = File.OpenRead(updateFileName);
+                var fs = File.OpenRead(updateFileName);
                 zf = new ZipFile(fs);
 
                 foreach (ZipEntry ze in zf)
@@ -61,174 +57,159 @@ namespace DistantVacantGovUzLauncher
                         continue;
                     }
 
-                    String entryFileName = ze.Name;
+                    var entryFileName = ze.Name;
 
-                    byte[] buffer = new byte[4096];     // 4K is optimum
-                    Stream zipStream = zf.GetInputStream(ze);
+                    var buffer = new byte[4096];     // 4K is optimum
+                    var zipStream = zf.GetInputStream(ze);
 
-                    String fullZipToPath = Path.Combine(outputFolder, entryFileName);
-                    string directoryName = Path.GetDirectoryName(fullZipToPath);
+                    var fullZipToPath = Path.Combine(outputFolder, entryFileName);
+                    var directoryName = Path.GetDirectoryName(fullZipToPath);
 
-                    if (directoryName.Length > 0)
+                    if (!string.IsNullOrEmpty(directoryName))
                         Directory.CreateDirectory(directoryName);
 
-                    using (FileStream streamWriter = File.Create(fullZipToPath))
+                    using (var streamWriter = File.Create(fullZipToPath))
                     {
                         StreamUtils.Copy(zipStream, streamWriter, buffer);
                     }
                 }
-
-                ret = true;
             }
             finally
             {
-                if (zf != null)
-                {
-                    zf.Close();
-                }
+                zf?.Close();
             }
 
-            return ret;
+            return true;
         }
 
         public void DoWork(BackgroundWorker worker, DoWorkEventArgs e)
         {
-            Random random = new Random();
+            var random = new Random();
 
-            string appDir = Program.GetApplicationDirectory();
+            var appDir = Program.GetApplicationDirectory();
 
             TextWriter log;
 
             using (log = new StreamWriter(appDir + "\\update.log", false, Encoding.UTF8))
             {
-                state.SetUpdateState(language.strings.stateApplicationCurrentVersion + version, 0);
-                log.WriteLine(state.info);
-                worker.ReportProgress(5, state);
+                _state.SetUpdateState(language.strings.stateApplicationCurrentVersion + _version, 0);
+                log.WriteLine(_state.Info);
+                worker.ReportProgress(5, _state);
 
                 //Thread.Sleep(500);
 
-                state.SetUpdateState(language.strings.stateGettingVersionInfoDownloadingFile, 0);
-                log.WriteLine(state.info);
-                worker.ReportProgress(10, state);
+                _state.SetUpdateState(language.strings.stateGettingVersionInfoDownloadingFile, 0);
+                log.WriteLine(_state.Info);
+                worker.ReportProgress(10, _state);
 
                 //Thread.Sleep(1000);
 
-                using (WebClient web = new WebClient())
+                using (var web = new WebClient())
                 {
-                    state.SetUpdateState(language.strings.stateUpdateServer + urlUpdateSite, 0);
-                    log.WriteLine(state.info);
-                    worker.ReportProgress(15, state);
+                    _state.SetUpdateState(language.strings.stateUpdateServer + _urlUpdateSite, 0);
+                    log.WriteLine(_state.Info);
+                    worker.ReportProgress(15, _state);
 
-                    if (Program.proxyEnabled)
+                    if (Program.ProxyEnabled)
                     {
-                        web.Proxy = new WebProxy(Program.strProxyHost + ((Program.strProxyPort != "") ? ":" + Program.strProxyPort : ""));
-                        web.Proxy.Credentials = new NetworkCredential(Program.strProxyUser, Program.strProxyPassword);
+                        web.Proxy =
+                            new WebProxy(Program.ProxyHost +
+                                         ((Program.ProxyPort != "") ? ":" + Program.ProxyPort : ""))
+                            {
+                                Credentials =
+                                    new NetworkCredential(Program.ProxyUser, Program.ProxyPassword)
+                            };
 
-                        state.SetUpdateState(language.strings.stateProxyServer + Program.strProxyHost + ((Program.strProxyPort != "") ? ":" + Program.strProxyPort : ""), 0);
-                        log.WriteLine(state.info);
-                        worker.ReportProgress(15, state);
+                        _state.SetUpdateState(language.strings.stateProxyServer + Program.ProxyHost + ((Program.ProxyPort != "") ? ":" + Program.ProxyPort : ""), 0);
+                        log.WriteLine(_state.Info);
+                        worker.ReportProgress(15, _state);
                     }
 
                     try
                     {
-                        web.DownloadFile(urlUpdateSite + urlUpdateVersionFileName + "?random=" + random.Next().ToString(), appDir + "\\" + urlUpdateVersionFileName);
+                        web.DownloadFile(_urlUpdateSite + UrlUpdateVersionFileName + "?random=" + random.Next(), appDir + "\\" + UrlUpdateVersionFileName);
                     }
                     catch (Exception ex)
                     {
-                        state.SetUpdateState(language.strings.stateGettingVersionInfoDownloadFailed, -1);
-                        log.WriteLine(state.info);
+                        _state.SetUpdateState(language.strings.stateGettingVersionInfoDownloadFailed, -1);
+                        log.WriteLine(_state.Info);
                         log.WriteLine(ex.Message);
-                        worker.ReportProgress(100, state);
+                        worker.ReportProgress(100, _state);
                         return;
                     }
 
-                    state.SetUpdateState(language.strings.stateGettingVersionInfoFileDownloaded, 0);
-                    log.WriteLine(state.info);
-                    worker.ReportProgress(20, state);
+                    _state.SetUpdateState(language.strings.stateGettingVersionInfoFileDownloaded, 0);
+                    log.WriteLine(_state.Info);
+                    worker.ReportProgress(20, _state);
 
-                    //Thread.Sleep(500);
-
-                    TextReader txt;
-                    String newVer = version;
+                    string newVersion;
 
                     try
                     {
-                        txt = new StreamReader(appDir + "\\" + urlUpdateVersionFileName);
-                        newVer = txt.ReadLine();
+                        TextReader txt = new StreamReader(appDir + "\\" + UrlUpdateVersionFileName);
+                        newVersion = txt.ReadLine();
                         txt.Close();
                     }
                     catch (Exception ex)
                     {
-                        state.SetUpdateState(language.strings.stateGettingVersionInfoCannotReadFile, -1);
-                        log.WriteLine(state.info);
+                        _state.SetUpdateState(language.strings.stateGettingVersionInfoCannotReadFile, -1);
+                        log.WriteLine(_state.Info);
                         log.WriteLine(ex.Message);
-                        worker.ReportProgress(100, state);
+                        worker.ReportProgress(100, _state);
                         return;
                     }
 
-                    state.SetUpdateState(language.strings.stateGettingVersionInfoCheckingVersion, 0);
-                    log.WriteLine(state.info);
-                    worker.ReportProgress(30, state);
+                    _state.SetUpdateState(language.strings.stateGettingVersionInfoCheckingVersion, 0);
+                    log.WriteLine(_state.Info);
+                    worker.ReportProgress(30, _state);
 
-                    //Thread.Sleep(500);
+                    _state.SetUpdateState(language.strings.stateApplicationVersionOnServer + newVersion, 0);
+                    log.WriteLine(_state.Info);
+                    worker.ReportProgress(35, _state);
 
-                    state.SetUpdateState(language.strings.stateApplicationVersionOnServer + newVer, 0);
-                    log.WriteLine(state.info);
-                    worker.ReportProgress(35, state);
-
-                    //Thread.Sleep(500);
-
-                    if (version.CompareTo(newVer) == 0)
+                    if (string.Compare(_version, newVersion, StringComparison.InvariantCultureIgnoreCase) == 0)
                     {
-                        state.SetUpdateState(language.strings.stateThereAreNoUpdates, 1);
-                        log.WriteLine(state.info);
-                        worker.ReportProgress(100, state);
-
-                        //Thread.Sleep(500);
+                        _state.SetUpdateState(language.strings.stateThereAreNoUpdates, 1);
+                        log.WriteLine(_state.Info);
+                        worker.ReportProgress(100, _state);
 
                         return;
                     }
 
-                    state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionDownloading, 0);
-                    log.WriteLine(state.info);
-                    worker.ReportProgress(40, state);
-
-                    //Thread.Sleep(1000);
+                    _state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionDownloading, 0);
+                    log.WriteLine(_state.Info);
+                    worker.ReportProgress(40, _state);
 
                     try
                     {
-                        web.DownloadFile(urlUpdateSite + "updates/" + newVer + "/" + urlUpdatePackFileName + "?random=" + random.Next().ToString(), appDir + "\\" + urlUpdatePackFileName);
+                        web.DownloadFile(_urlUpdateSite + "updates/" + newVersion + "/" + UrlUpdatePackFileName + "?random=" + random.Next(), appDir + "\\" + UrlUpdatePackFileName);
                     }
                     catch (Exception ex)
                     {
-                        state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionDownloadFailed, -1);
-                        log.WriteLine(state.info);
+                        _state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionDownloadFailed, -1);
+                        log.WriteLine(_state.Info);
                         log.WriteLine(ex.Message);
-                        worker.ReportProgress(100, state);
+                        worker.ReportProgress(100, _state);
                         return;
                     }
                 }
 
-                state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionApplyingUpdates, 0);
-                log.WriteLine(state.info);
-                worker.ReportProgress(75, state);
+                _state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionApplyingUpdates, 0);
+                log.WriteLine(_state.Info);
+                worker.ReportProgress(75, _state);
 
-                //Thread.Sleep(1000);
-
-                if (UnpackUpdateFile(appDir + "\\" + urlUpdatePackFileName, appDir + "\\"))
+                if (UnpackUpdateFile(appDir + "\\" + UrlUpdatePackFileName, appDir + "\\"))
                 {
-                    state.SetUpdateState(language.strings.stateUpdatesSuccessfullyApplyed, 0);
-                    log.WriteLine(state.info);
-                    worker.ReportProgress(100, state);
+                    _state.SetUpdateState(language.strings.stateUpdatesSuccessfullyApplyed, 0);
+                    log.WriteLine(_state.Info);
+                    worker.ReportProgress(100, _state);
                 }
                 else
                 {
-                    state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionUnpackError, -1);
-                    log.WriteLine(state.info);
-                    worker.ReportProgress(100, state);
+                    _state.SetUpdateState(language.strings.stateThereIsNewApplicationVersionUnpackError, -1);
+                    log.WriteLine(_state.Info);
+                    worker.ReportProgress(100, _state);
                 }
-
-                //Thread.Sleep(1000);
             }
         }
     }

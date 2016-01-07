@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;toolBtnCheckAll.Name" xml:space="preserve">
+    <value>toolBtnCheckAll</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolBtnUncheckAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 28</value>
+  </data>
+  <data name="&gt;&gt;toolBtnChangeStatus.Name" xml:space="preserve">
+    <value>toolBtnChangeStatus</value>
+  </data>
+  <data name="&gt;&gt;clmnVacSequenceNumber.Name" xml:space="preserve">
+    <value>clmnVacSequenceNumber</value>
+  </data>
+  <data name="&gt;&gt;lstVacancies.Name" xml:space="preserve">
+    <value>lstVacancies</value>
+  </data>
+  <data name="&gt;&gt;clmnVacDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBtnUncheckAll.Name" xml:space="preserve">
+    <value>toolBtnUncheckAll</value>
+  </data>
+  <data name="toolBtnCheckAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 28</value>
+  </data>
+  <data name="&gt;&gt;toolBtnEditVacancy.Name" xml:space="preserve">
+    <value>toolBtnEditVacancy</value>
+  </data>
+  <data name="lstVacancies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 520</value>
+  </data>
+  <data name="toolBtnExportVacancies.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ClosedVacanciesWindow</value>
+  </data>
+  <data name="&gt;&gt;clmnCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolBtnExportVacancies.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;clmnVacPortalNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolBtnCheckAll.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>584, 551</value>
+  </data>
+  <data name="toolBtnChangeStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 28</value>
+  </data>
+  <data name="&gt;&gt;clmnVacPortalNumber.Name" xml:space="preserve">
+    <value>clmnVacPortalNumber</value>
+  </data>
+  <data name="clmnVacDescription.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="toolBtnChangeStatus.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolBtnRefreshVacancies.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;clmnVacSequenceNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lstVacancies.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="toolBtnChangeStatus.Text" xml:space="preserve">
+    <value>Change status</value>
+  </data>
+  <data name="&gt;&gt;lstVacancies.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="toolBtnExportVacancies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 28</value>
+  </data>
+  <data name="toolBtnCheckAll.Text" xml:space="preserve">
+    <value>Check All</value>
+  </data>
+  <data name="&gt;&gt;workerExportVacancies.Name" xml:space="preserve">
+    <value>workerExportVacancies</value>
+  </data>
+  <data name="lstVacancies.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;toolBtnChangeStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolbar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolBtnEditVacancy.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="toolBtnUncheckAll.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolbar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 31</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="toolBtnChangeStatus.ToolTipText" xml:space="preserve">
+    <value>Change checked vacancies status</value>
+  </data>
+  <data name="clmnCheckbox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;toolbar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="clmnVacPortalNumber.Width" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="toolBtnEditVacancy.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lstVacancies.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="toolBtnEditVacancy.ToolTipText" xml:space="preserve">
+    <value>Edit selected vacancy</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolBtnEditVacancy.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolBtnCheckAll.ToolTipText" xml:space="preserve">
+    <value>Check All Vacancies</value>
+  </data>
+  <data name="toolBtnRefreshVacancies.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="toolBtnUncheckAll.Text" xml:space="preserve">
+    <value>Uncheck All</value>
+  </data>
+  <data name="toolbar.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolBtnExportVacancies.Name" xml:space="preserve">
+    <value>toolBtnExportVacancies</value>
+  </data>
+  <data name="toolBtnEditVacancy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 28</value>
+  </data>
+  <data name="toolBtnRefreshVacancies.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="clmnCheckbox.Width" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="toolBtnCheckAll.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolBtnEditVacancy.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;toolBtnUncheckAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clmnVacSequenceNumber.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="toolBtnExportVacancies.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;toolBtnRefreshVacancies.Name" xml:space="preserve">
+    <value>toolBtnRefreshVacancies</value>
+  </data>
+  <data name="toolBtnRefreshVacancies.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 28</value>
+  </data>
+  <data name="toolBtnChangeStatus.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolBtnChangeStatus.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lstVacancies.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;toolBtnRefreshVacancies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolBtnEditVacancy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADFpTR5xaU0+MWlNPDFpTTwxaU08MWlNPDFpTTuxaU02sWlNNnFpTTZxaU02sWl
+        NNjFpTRwAAAAAAAAAADFpTRwxaU0NMWlNMjFpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU04AAAAAAAAAAAxaU0/8WlNL7FpTQpxaU0xMWlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNN0AAAAAAAAAAMWlNO3FpTT/xaU0ucWlNCnFpTTExaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTTfAAAAAAAAAADFpTToxaU0/8WlNP/FpTS6xaU0KsWlNMTFpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU04gAAAAAAAAAAxaU06cWlNP/FpTT/xaU0/8WlNLrFpTQqxaU0xMWl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNOIAAAAAAAAAAMWlNOjFpTT/xaU0/8WlNP/FpTT/xaU0usWl
+        NCrFpTTExaU0/8WlNP/FpTT/xaU0/8WlNP/FpTTiAAAAAAAAAADFpTTixaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTS6xaU0K8WlNMTFpTT/xaU0/8WlNP/FpTT/xaU06QAAAAAAAAAAxaU04sWlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNLrFpTQrxaU0xMWlNP/FpTT/xaU0/8WlNOkAAAAAAAAAAMWlNOLFpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0usWlNCvFpTTExaU0/8WlNP/FpTTpAAAAAAAAAADFpTTexaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTS6xaU0K8WlNMTFpTT/xaU07QAAAAAAAAAAxaU03cWl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNLvFpTQrxaU0yMWlNP8AAAAAAAAAAMWl
+        NN/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0wcWlNDbFpTR8AAAAAAAA
+        AADFpTRvxaU018WlNNrFpTTZxaU02cWlNNjFpTTgxaU08MWlNPDFpTTwxaU08MWlNPjFpTRxAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//8AAMABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIAB
+        AACAAwAA//8AAA==
+</value>
+  </data>
+  <data name="&gt;&gt;toolbar.Name" xml:space="preserve">
+    <value>toolbar</value>
+  </data>
+  <data name="toolbar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="toolBtnCheckAll.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="clmnVacPortalNumber.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="toolBtnRefreshVacancies.ToolTipText" xml:space="preserve">
+    <value>Refresh vacancies list</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolBtnExportVacancies.ToolTipText" xml:space="preserve">
+    <value>Export vacancies list to a file</value>
+  </data>
+  <data name="&gt;&gt;toolBtnCheckAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clmnVacSequenceNumber.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="toolBtnUncheckAll.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="clmnVacSequenceNumber.Width" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="toolBtnExportVacancies.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;clmnCheckbox.Name" xml:space="preserve">
+    <value>clmnCheckbox</value>
+  </data>
+  <data name="&gt;&gt;workerRefreshVacancyList.Name" xml:space="preserve">
+    <value>workerRefreshVacancyList</value>
+  </data>
+  <data name="&gt;&gt;toolBtnExportVacancies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clmnVacDescription.Width" type="System.Int32, mscorlib">
+    <value>400</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="toolBtnUncheckAll.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Closed vacancies</value>
+  </data>
+  <data name="lstVacancies.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="toolBtnUncheckAll.ToolTipText" xml:space="preserve">
+    <value>Uncheck all vacancies</value>
+  </data>
+  <data name="&gt;&gt;clmnVacDescription.Name" xml:space="preserve">
+    <value>clmnVacDescription</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lstVacancies.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="&gt;&gt;workerExportVacancies.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;workerRefreshVacancyList.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="workerRefreshVacancyList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>108, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ru</value>
+  </metadata>
+  <metadata name="toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="workerExportVacancies.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>300, 17</value>
+  </metadata>
+</root>

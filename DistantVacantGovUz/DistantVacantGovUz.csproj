@@ -54,15 +54,36 @@
   <PropertyGroup>
     <ApplicationIcon>distant.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HTMLparserLibDotNet20">
-      <HintPath>libraries\HTMLparserLibDotNet20.dll</HintPath>
+    <Reference Include="HTMLparserLibDotNet20, Version=3.1.4.30846, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Majestic12HtmlParser.3.1.4\lib\net20\HTMLparserLibDotNet20.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>libraries\ICSharpCode.SharpZipLib.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="itextsharp">
-      <HintPath>libraries\itextsharp.dll</HintPath>
+    <Reference Include="itextsharp, Version=5.5.8.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.8\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="LibCurlNet, Version=1.3.0.0, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
@@ -71,18 +92,21 @@
     <Reference Include="ListViewEx">
       <HintPath>libraries\ListViewEx.dll</HintPath>
     </Reference>
-    <Reference Include="NPOI">
-      <HintPath>libraries\NPOI.dll</HintPath>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="NPOI.OOXML">
-      <HintPath>libraries\NPOI.OOXML.dll</HintPath>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="NPOI.OpenXml4Net">
-      <HintPath>libraries\NPOI.OpenXml4Net.dll</HintPath>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>libraries\NPOI.OpenXmlFormats.dll</HintPath>
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -94,130 +118,143 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAddPortalVacancy.cs">
+    <Compile Include="Enums\HttpRequestsType.cs" />
+    <Compile Include="Enums\HttpRequestMethod.cs" />
+    <Compile Include="Http\HttpRequestsFactory.cs" />
+    <Compile Include="Enums\ReportType.cs" />
+    <Compile Include="Enums\VacancyFileVersion.cs" />
+    <Compile Include="Models\VacancyListItem.cs" />
+    <Compile Include="Constants\VacantGovUzUrls.cs" />
+    <Compile Include="Windows\AddPortalVacancyWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddPortalVacancy.Designer.cs">
-      <DependentUpon>frmAddPortalVacancy.cs</DependentUpon>
+    <Compile Include="Windows\AddPortalVacancyWindow.Designer.cs">
+      <DependentUpon>AddPortalVacancyWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="CReportVisaItem.cs" />
-    <Compile Include="CurlHttpRequests.cs" />
-    <Compile Include="CVacancy.cs" />
-    <Compile Include="CVacancyDocumentPreloader.cs" />
-    <Compile Include="CVacancyFileType.cs" />
-    <Compile Include="CVacancyItem.cs" />
-    <Compile Include="CVacancyPortalExporter.cs" />
-    <Compile Include="CVacancyPortalPreloader.cs" />
-    <Compile Include="CVacancyReports.cs" />
-    <Compile Include="CVacancyResume.cs" />
-    <Compile Include="CVacancyResumeItem.cs" />
-    <Compile Include="CVacancyUtil.cs" />
-    <Compile Include="CVacantGovUz.cs" />
-    <Compile Include="frmAbout.cs">
+    <Compile Include="Models\ReportVisaItem.cs" />
+    <Compile Include="Http\CurlHttpEngine.cs" />
+    <Compile Include="Models\Vacancy.cs" />
+    <Compile Include="Enums\Langugage.cs" />
+    <Compile Include="Enums\VacancyCategory.cs" />
+    <Compile Include="Utils\VacancyDocumentPreloader.cs" />
+    <Compile Include="Utils\VacancyFileUtil.cs" />
+    <Compile Include="Enums\VacancyEmployment.cs" />
+    <Compile Include="Enums\VacancyGender.cs" />
+    <Compile Include="Enums\VacancyEducationLevel.cs" />
+    <Compile Include="Enums\VacancyExperience.cs" />
+    <Compile Include="Models\VacancyItem.cs" />
+    <Compile Include="Utils\VacancyExporter.cs" />
+    <Compile Include="Utils\VacancyPreloader.cs" />
+    <Compile Include="Services\ReportService.cs" />
+    <Compile Include="Models\Resume.cs" />
+    <Compile Include="Models\ResumeItem.cs" />
+    <Compile Include="Enums\VacancyStatus.cs" />
+    <Compile Include="Utils\VacancyUtil.cs" />
+    <Compile Include="VacantGovUzApi.cs" />
+    <Compile Include="Windows\AboutWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAbout.Designer.cs">
-      <DependentUpon>frmAbout.cs</DependentUpon>
+    <Compile Include="Windows\AboutWindow.Designer.cs">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddLocalVacancy.cs">
+    <Compile Include="Windows\AddLocalVacancyWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddLocalVacancy.Designer.cs">
-      <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
+    <Compile Include="Windows\AddLocalVacancyWindow.Designer.cs">
+      <DependentUpon>AddLocalVacancyWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCaptcha.cs">
+    <Compile Include="Windows\CaptchaWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCaptcha.Designer.cs">
-      <DependentUpon>frmCaptcha.cs</DependentUpon>
+    <Compile Include="Windows\CaptchaWindow.Designer.cs">
+      <DependentUpon>CaptchaWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmClosedVacancies.cs">
+    <Compile Include="Windows\ClosedVacanciesWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClosedVacancies.Designer.cs">
-      <DependentUpon>frmClosedVacancies.cs</DependentUpon>
+    <Compile Include="Windows\ClosedVacanciesWindow.Designer.cs">
+      <DependentUpon>ClosedVacanciesWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditLocalVacancy.cs">
+    <Compile Include="Windows\EditLocalVacancyWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditLocalVacancy.Designer.cs">
-      <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
+    <Compile Include="Windows\EditLocalVacancyWindow.Designer.cs">
+      <DependentUpon>EditLocalVacancyWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditPortalVacancy.cs">
+    <Compile Include="Windows\EditPortalVacancyWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditPortalVacancy.Designer.cs">
-      <DependentUpon>frmEditPortalVacancy.cs</DependentUpon>
+    <Compile Include="Windows\EditPortalVacancyWindow.Designer.cs">
+      <DependentUpon>EditPortalVacancyWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmImportPortalVacancies.cs">
+    <Compile Include="Windows\ImportPortalVacanciesWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmImportPortalVacancies.Designer.cs">
-      <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
+    <Compile Include="Windows\ImportPortalVacanciesWindow.Designer.cs">
+      <DependentUpon>ImportPortalVacanciesWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoading.cs">
+    <Compile Include="Windows\LoadingWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoading.Designer.cs">
-      <DependentUpon>frmLoading.cs</DependentUpon>
+    <Compile Include="Windows\LoadingWindow.Designer.cs">
+      <DependentUpon>LoadingWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLocalDocument.cs">
+    <Compile Include="Windows\LocalDocumentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLocalDocument.Designer.cs">
-      <DependentUpon>frmLocalDocument.cs</DependentUpon>
+    <Compile Include="Windows\LocalDocumentWindow.Designer.cs">
+      <DependentUpon>LocalDocumentWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Windows\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="Windows\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOpenedVacancies.cs">
+    <Compile Include="Windows\OpenVacanciesWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOpenedVacancies.Designer.cs">
-      <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
+    <Compile Include="Windows\OpenVacanciesWindow.Designer.cs">
+      <DependentUpon>OpenVacanciesWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPortalLogin.cs">
+    <Compile Include="Windows\LoginToPortalWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPortalLogin.Designer.cs">
-      <DependentUpon>frmPortalLogin.cs</DependentUpon>
+    <Compile Include="Windows\LoginToPortalWindow.Designer.cs">
+      <DependentUpon>LoginToPortalWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPortalVacancies.cs">
+    <Compile Include="Windows\PortalVacanciesWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPortalVacancies.Designer.cs">
-      <DependentUpon>frmPortalVacancies.cs</DependentUpon>
+    <Compile Include="Windows\PortalVacanciesWindow.Designer.cs">
+      <DependentUpon>PortalVacanciesWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRptPrintVersionAddVisa.cs">
+    <Compile Include="Windows\ReportPrintVersionAddVisaWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRptPrintVersionAddVisa.Designer.cs">
-      <DependentUpon>frmRptPrintVersionAddVisa.cs</DependentUpon>
+    <Compile Include="Windows\ReportPrintVersionAddVisaWindow.Designer.cs">
+      <DependentUpon>ReportPrintVersionAddVisaWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRptPrintVersionEditVisa.cs">
+    <Compile Include="Windows\ReportPrintVersionEditVisaWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRptPrintVersionEditVisa.Designer.cs">
-      <DependentUpon>frmRptPrintVersionEditVisa.cs</DependentUpon>
+    <Compile Include="Windows\ReportPrintVersionEditVisaWindow.Designer.cs">
+      <DependentUpon>ReportPrintVersionEditVisaWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRptPrintVersionSettings.cs">
+    <Compile Include="Windows\ReportPrintVersionSettingsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRptPrintVersionSettings.Designer.cs">
-      <DependentUpon>frmRptPrintVersionSettings.cs</DependentUpon>
+    <Compile Include="Windows\ReportPrintVersionSettingsWindow.Designer.cs">
+      <DependentUpon>ReportPrintVersionSettingsWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSettings.cs">
+    <Compile Include="Windows\SettingsWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSettings.Designer.cs">
-      <DependentUpon>frmSettings.cs</DependentUpon>
+    <Compile Include="Windows\SettingsWindow.Designer.cs">
+      <DependentUpon>SettingsWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="HttpRequest.cs" />
-    <Compile Include="IHttpRequests.cs" />
-    <Compile Include="IVacancyApplicationService.cs" />
+    <Compile Include="Http\IHttpEngine.cs" />
+    <Compile Include="Services\IVacancyApplicationService.cs" />
     <Compile Include="language\strings.ru.Designer.cs">
       <DependentUpon>strings.ru.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -228,133 +265,133 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>strings.resx</DependentUpon>
     </Compile>
-    <Compile Include="NetHttpRequests.cs" />
+    <Compile Include="Http\NetHttpEngine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VacancySingleApplicationService.cs" />
-    <Compile Include="VacancyApplicationService.cs" />
-    <EmbeddedResource Include="frmAddPortalVacancy.resx">
-      <DependentUpon>frmAddPortalVacancy.cs</DependentUpon>
+    <Compile Include="Services\VacancySingleApplicationService.cs" />
+    <Compile Include="Services\VacancyApplicationService.cs" />
+    <EmbeddedResource Include="Windows\AddPortalVacancyWindow.resx">
+      <DependentUpon>AddPortalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddPortalVacancy.ru.resx">
-      <DependentUpon>frmAddPortalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\AddPortalVacancyWindow.ru.resx">
+      <DependentUpon>AddPortalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAbout.resx">
-      <DependentUpon>frmAbout.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\AboutWindow.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAbout.ru.resx">
-      <DependentUpon>frmAbout.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\AboutWindow.ru.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAbout.uz.resx">
-      <DependentUpon>frmAbout.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\AboutWindow.uz.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddLocalVacancy.resx">
-      <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\AddLocalVacancyWindow.resx">
+      <DependentUpon>AddLocalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddLocalVacancy.ru.resx">
-      <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\AddLocalVacancyWindow.ru.resx">
+      <DependentUpon>AddLocalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddLocalVacancy.uz.resx">
-      <DependentUpon>frmAddLocalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\AddLocalVacancyWindow.uz.resx">
+      <DependentUpon>AddLocalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCaptcha.resx">
-      <DependentUpon>frmCaptcha.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\CaptchaWindow.resx">
+      <DependentUpon>CaptchaWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCaptcha.ru.resx">
-      <DependentUpon>frmCaptcha.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\CaptchaWindow.ru.resx">
+      <DependentUpon>CaptchaWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClosedVacancies.resx">
-      <DependentUpon>frmClosedVacancies.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ClosedVacanciesWindow.resx">
+      <DependentUpon>ClosedVacanciesWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClosedVacancies.ru.resx">
-      <DependentUpon>frmClosedVacancies.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ClosedVacanciesWindow.ru.resx">
+      <DependentUpon>ClosedVacanciesWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditLocalVacancy.en.resx">
-      <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\EditLocalVacancyWindow.en.resx">
+      <DependentUpon>EditLocalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditLocalVacancy.resx">
-      <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\EditLocalVacancyWindow.resx">
+      <DependentUpon>EditLocalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditLocalVacancy.ru.resx">
-      <DependentUpon>frmEditLocalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\EditLocalVacancyWindow.ru.resx">
+      <DependentUpon>EditLocalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditPortalVacancy.resx">
-      <DependentUpon>frmEditPortalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\EditPortalVacancyWindow.resx">
+      <DependentUpon>EditPortalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditPortalVacancy.ru.resx">
-      <DependentUpon>frmEditPortalVacancy.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\EditPortalVacancyWindow.ru.resx">
+      <DependentUpon>EditPortalVacancyWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImportPortalVacancies.resx">
-      <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ImportPortalVacanciesWindow.resx">
+      <DependentUpon>ImportPortalVacanciesWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmImportPortalVacancies.ru.resx">
-      <DependentUpon>frmImportPortalVacancies.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ImportPortalVacanciesWindow.ru.resx">
+      <DependentUpon>ImportPortalVacanciesWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoading.resx">
-      <DependentUpon>frmLoading.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\LoadingWindow.resx">
+      <DependentUpon>LoadingWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoading.ru.resx">
-      <DependentUpon>frmLoading.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\LoadingWindow.ru.resx">
+      <DependentUpon>LoadingWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocalDocument.resx">
-      <DependentUpon>frmLocalDocument.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\LocalDocumentWindow.resx">
+      <DependentUpon>LocalDocumentWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocalDocument.ru.resx">
-      <DependentUpon>frmLocalDocument.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\LocalDocumentWindow.ru.resx">
+      <DependentUpon>LocalDocumentWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.en.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\MainWindow.en.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.ru.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\MainWindow.ru.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.uz.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\MainWindow.uz.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOpenedVacancies.resx">
-      <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\OpenVacanciesWindow.resx">
+      <DependentUpon>OpenVacanciesWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOpenedVacancies.ru.resx">
-      <DependentUpon>frmOpenedVacancies.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\OpenVacanciesWindow.ru.resx">
+      <DependentUpon>OpenVacanciesWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPortalLogin.resx">
-      <DependentUpon>frmPortalLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\LoginToPortalWindow.resx">
+      <DependentUpon>LoginToPortalWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPortalLogin.ru.resx">
-      <DependentUpon>frmPortalLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\LoginToPortalWindow.ru.resx">
+      <DependentUpon>LoginToPortalWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPortalVacancies.resx">
-      <DependentUpon>frmPortalVacancies.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\PortalVacanciesWindow.resx">
+      <DependentUpon>PortalVacanciesWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPortalVacancies.ru.resx">
-      <DependentUpon>frmPortalVacancies.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\PortalVacanciesWindow.ru.resx">
+      <DependentUpon>PortalVacanciesWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRptPrintVersionAddVisa.resx">
-      <DependentUpon>frmRptPrintVersionAddVisa.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ReportPrintVersionAddVisaWindow.resx">
+      <DependentUpon>ReportPrintVersionAddVisaWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRptPrintVersionAddVisa.ru.resx">
-      <DependentUpon>frmRptPrintVersionAddVisa.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ReportPrintVersionAddVisaWindow.ru.resx">
+      <DependentUpon>ReportPrintVersionAddVisaWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRptPrintVersionEditVisa.resx">
-      <DependentUpon>frmRptPrintVersionEditVisa.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ReportPrintVersionEditVisaWindow.resx">
+      <DependentUpon>ReportPrintVersionEditVisaWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRptPrintVersionEditVisa.ru.resx">
-      <DependentUpon>frmRptPrintVersionEditVisa.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ReportPrintVersionEditVisaWindow.ru.resx">
+      <DependentUpon>ReportPrintVersionEditVisaWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRptPrintVersionSettings.resx">
-      <DependentUpon>frmRptPrintVersionSettings.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ReportPrintVersionSettingsWindow.resx">
+      <DependentUpon>ReportPrintVersionSettingsWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRptPrintVersionSettings.ru.resx">
-      <DependentUpon>frmRptPrintVersionSettings.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ReportPrintVersionSettingsWindow.ru.resx">
+      <DependentUpon>ReportPrintVersionSettingsWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSettings.resx">
-      <DependentUpon>frmSettings.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\SettingsWindow.resx">
+      <DependentUpon>SettingsWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSettings.ru.resx">
-      <DependentUpon>frmSettings.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\SettingsWindow.ru.resx">
+      <DependentUpon>SettingsWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="language\strings.ru.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -375,6 +412,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

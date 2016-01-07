@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
@@ -10,40 +9,38 @@ using System.Net;
 using ICSharpCode.SharpZipLib.Zip;
 using ICSharpCode.SharpZipLib.Core;
 using System.Text;
-using System.ServiceModel;
+using DistantVacantGovUz.Services;
+using DistantVacantGovUz.Windows;
 
 namespace DistantVacantGovUz
 {
     static class Program
     {
-        public static CVacantGovUz vac;
+        public static VacantGovUzApi VacancyApi;
 
-        public static string strUserName = @"";
-        public static string strPassword = @"";
+        public static string ProxyHost = "http://192.168.0.1";
+        public static string ProxyPort = "3128";
+        public static string ProxyUser = string.Empty;
+        public static string ProxyPassword = string.Empty;
 
-        public static string strProxyHost = "http://192.168.0.1";
-        public static string strProxyPort = "3128";
-        public static string strProxyUser = "";
-        public static string strProxyPassword = "";
+        public static string UpdateServer = @"";
+        public static bool CheckForUpdates = true;
 
-        public static string strUpdateServer = @"";
-        public static bool bCheckForUpdates = true;
-
-        public static string strLanguage = "en";
+        public static string StrLanguage = "en";
 
         // включить использование прокси
         public static void EnableProxy()
         {
-            string strProxyAddress = strProxyHost + ":" + strProxyPort;
+            var strProxyAddress = ProxyHost + ":" + ProxyPort;
 
-            vac.SetHttpProxy(strProxyAddress, strProxyUser, strProxyPassword);
-            vac.UseHttpProxy = true;
+            VacancyApi.SetHttpProxy(strProxyAddress, ProxyUser, ProxyPassword);
+            VacancyApi.UseProxy = true;
         }
 
         // отключить использование прокси
         public static void DisableProxy()
         {
-            vac.UseHttpProxy = false;
+            VacancyApi.UseProxy = false;
         }
 
         /// <summary>
@@ -52,51 +49,49 @@ namespace DistantVacantGovUz
         /// </summary>
         public static void SaveSettings()
         {
-            XmlDocument xml = new XmlDocument();
+            var xml = new XmlDocument();
             
-            XmlElement root = xml.CreateElement("settings");
+            var root = xml.CreateElement("settings");
             xml.AppendChild(root);
             xml.InsertBefore(xml.CreateXmlDeclaration("1.0", "UTF-8", "yes"), root);
 
-            XmlElement el;
-
-            el = xml.CreateElement("UseProxy");
-            el.SetAttribute("value", (vac.UseHttpProxy) ? "True" : "False");
+            var el = xml.CreateElement("UseProxy");
+            el.SetAttribute("value", (VacancyApi.UseProxy) ? "True" : "False");
             
             root.AppendChild(el);
 
             el = xml.CreateElement("ProxyHost");
-            el.SetAttribute("value", strProxyHost);
+            el.SetAttribute("value", ProxyHost);
 
             root.AppendChild(el);
 
             el = xml.CreateElement("ProxyPort");
-            el.SetAttribute("value", strProxyPort);
+            el.SetAttribute("value", ProxyPort);
 
             root.AppendChild(el);
 
             el = xml.CreateElement("ProxyUserName");
-            el.SetAttribute("value", strProxyUser);
+            el.SetAttribute("value", ProxyUser);
 
             root.AppendChild(el);
 
             el = xml.CreateElement("ProxyPassword");
-            el.SetAttribute("value", strProxyPassword);
+            el.SetAttribute("value", ProxyPassword);
 
             root.AppendChild(el);
 
             el = xml.CreateElement("CheckForUpdates");
-            el.SetAttribute("value", (bCheckForUpdates) ? "True" : "False");
+            el.SetAttribute("value", (CheckForUpdates) ? "True" : "False");
 
             root.AppendChild(el);
 
             el = xml.CreateElement("UpdateServer");
-            el.SetAttribute("value", strUpdateServer);
+            el.SetAttribute("value", UpdateServer);
 
             root.AppendChild(el);
 
             el = xml.CreateElement("Language");
-            el.SetAttribute("value", strLanguage);
+            el.SetAttribute("value", StrLanguage);
 
             root.AppendChild(el);
 
@@ -104,8 +99,9 @@ namespace DistantVacantGovUz
             {
                 xml.Save(GetApplicationDirectory() + "\\" + "settings.xml");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+                // ignore
             }
         }
 
@@ -115,63 +111,46 @@ namespace DistantVacantGovUz
         /// </summary>
         public static void LoadSettings()
         {
-            XmlDocument xml = new XmlDocument();
-            bool bUseProxy = false;
+            var xml = new XmlDocument();
+            var bUseProxy = false;
 
             try
             {
                 xml.Load(GetApplicationDirectory() + "\\" + "settings.xml");
 
-                XmlElement root = xml.DocumentElement;
+                var root = xml.DocumentElement;
+
+                if (root == null)
+                    return;
 
                 foreach (XmlElement n in root.ChildNodes)
                 {
-                    if (n.Name == "UseProxy")
+                    switch (n.Name)
                     {
-                        bUseProxy = (n.GetAttribute("value") == "True") ? true : false;
-                        continue;
-                    }
-
-                    if (n.Name == "ProxyHost")
-                    {
-                        strProxyHost = n.GetAttribute("value");
-                        continue;
-                    }
-
-                    if (n.Name == "ProxyPort")
-                    {
-                        strProxyPort = n.GetAttribute("value");
-                        continue;
-                    }
-
-                    if (n.Name == "ProxyUserName")
-                    {
-                        strProxyUser = n.GetAttribute("value");;
-                        continue;
-                    }
-
-                    if (n.Name == "ProxyPassword")
-                    {
-                        strProxyPassword = n.GetAttribute("value");
-                        continue;
-                    }
-
-                    if (n.Name == "CheckForUpdates")
-                    {
-                        bCheckForUpdates = (n.GetAttribute("value") == "True") ? true : false;
-                        continue;
-                    }
-
-                    if (n.Name == "UpdateServer")
-                    {
-                        strUpdateServer = n.GetAttribute("value");
-                        continue;
-                    }
-
-                    if (n.Name == "Language")
-                    {
-                        strLanguage = n.GetAttribute("value");
-                        continue;
+                        case "UseProxy":
+                            bUseProxy = (n.GetAttribute("value") == "True");
+                            continue;
+                        case "ProxyHost":
+                            ProxyHost = n.GetAttribute("value");
+                            continue;
+                        case "ProxyPort":
+                            ProxyPort = n.GetAttribute("value");
+                            continue;
+                        case "ProxyUserName":
+                            ProxyUser = n.GetAttribute("value");
+                            continue;
+                        case "ProxyPassword":
+                            ProxyPassword = n.GetAttribute("value");
+                            continue;
+                        case "CheckForUpdates":
+                            CheckForUpdates = (n.GetAttribute("value") == "True");
+                            continue;
+                        case "UpdateServer":
+                            UpdateServer = n.GetAttribute("value");
+                            continue;
+                        case "Language":
+                            StrLanguage = n.GetAttribute("value");
+                            continue;
                     }
                 }
 
@@ -180,10 +159,11 @@ namespace DistantVacantGovUz
                     EnableProxy();
                 }
 
-                Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(strLanguage);
+                Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(StrLanguage);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+                // ignore
             }
         }
 
@@ -204,24 +184,23 @@ namespace DistantVacantGovUz
         {
             try
             {
-                FileVersionInfo fi = FileVersionInfo.GetVersionInfo(GetApplicationDirectory() + "\\" + "DistantVacantGovUzLauncher.exe");
+                var fi = FileVersionInfo.GetVersionInfo(GetApplicationDirectory() + "\\" + "DistantVacantGovUzLauncher.exe");
 
                 return fi.ProductVersion;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return "";
+                return string.Empty;
             }
         }
 
-        private static bool UnpackUpdateFile(String updateFileName, String outputFolder)
+        private static bool UnpackUpdateFile(string updateFileName, string outputFolder)
         {
             ZipFile zf = null;
-            bool ret = false;
 
             try
             {
-                FileStream fs = File.OpenRead(updateFileName);
+                var fs = File.OpenRead(updateFileName);
                 zf = new ZipFile(fs);
 
                 foreach (ZipEntry ze in zf)
@@ -231,34 +210,29 @@ namespace DistantVacantGovUz
                         continue;
                     }
 
-                    String entryFileName = ze.Name;
+                    var entryFileName = ze.Name;
 
-                    byte[] buffer = new byte[4096];     // 4K is optimum
-                    Stream zipStream = zf.GetInputStream(ze);
+                    var buffer = new byte[4096];     // 4K is optimum
+                    var zipStream = zf.GetInputStream(ze);
 
-                    String fullZipToPath = Path.Combine(outputFolder, entryFileName);
-                    string directoryName = Path.GetDirectoryName(fullZipToPath);
+                    var fullZipToPath = Path.Combine(outputFolder, entryFileName);
+                    var directoryName = Path.GetDirectoryName(fullZipToPath);
 
-                    if (directoryName.Length > 0)
+                    if (!string.IsNullOrEmpty(directoryName))
                         Directory.CreateDirectory(directoryName);
 
-                    using (FileStream streamWriter = File.Create(fullZipToPath))
+                    using (var streamWriter = File.Create(fullZipToPath))
                     {
                         StreamUtils.Copy(zipStream, streamWriter, buffer);
                     }
                 }
-
-                ret = true;
             }
             finally
             {
-                if (zf != null)
-                {
-                    zf.Close();
-                }
+                zf?.Close();
             }
 
-            return ret;
+            return true;
         }
 
         /// <summary>
@@ -266,17 +240,15 @@ namespace DistantVacantGovUz
         /// </summary>
         private static void LauncherUpdaterThreadEntryPoint()
         {
-            Random random = new Random();
+            var random = new Random();
 
             //string urlLauncherUpdateServer = "http://192.168.7.85:8089/vacancy/launcher/importer/";
-            string urlLauncherUpdateServer = strUpdateServer + "/vacantgovuz/launcher/";
-            string launcherVersionFileName = "launcher_update.ver";
-            string currentLauncherVersion = null;
-            string newestLauncherVersion = null;
+            var urlLauncherUpdateServer = UpdateServer + "/vacantgovuz/launcher/";
+            var launcherVersionFileName = "launcher_update.ver";
 
-            bool updateAvailable = false;
+            var updateAvailable = false;
 
-            string appDir = GetApplicationDirectory();
+            var appDir = GetApplicationDirectory();
 
             TextWriter log;
 
@@ -284,7 +256,7 @@ namespace DistantVacantGovUz
             {
                 log.WriteLine(language.strings.stateLauncherUpdateStart);
 
-                currentLauncherVersion = GetLauncherVersion();
+                var currentLauncherVersion = GetLauncherVersion();
 
                 if (currentLauncherVersion != "")
                 {
@@ -295,93 +267,88 @@ namespace DistantVacantGovUz
                     log.WriteLine(language.strings.stateErrorLauncherNotFound);
                 }
 
-                if (currentLauncherVersion != null && currentLauncherVersion != "")
+                if (string.IsNullOrEmpty(currentLauncherVersion))
+                    return;
+
+                using (var webClient = new WebClient())
                 {
-                    using (WebClient webClient = new WebClient())
+                    // Если используется прокси, нужно настроить прокски веб-клиента
+                    if (VacancyApi.UseProxy)
                     {
-                        // Если используется прокси, нужно настроить прокски веб-клиента
-                        if (vac.UseHttpProxy)
-                        {
-                            log.WriteLine(language.strings.stateUsingProxyServer);
-
-                            try
-                            {
-                                WebProxy proxy = new WebProxy(strProxyHost + ":" + strProxyPort);
-
-                                // если используется авторизация
-                                if (strProxyUser != null && strProxyUser.Trim() != "")
-                                    proxy.Credentials = new NetworkCredential(strProxyUser, strProxyPassword);
-
-                                webClient.Proxy = proxy;
-                            }
-                            catch (Exception ex)
-                            {
-                                log.WriteLine(language.strings.stateCannotInitializeProxy + strProxyHost + ":" + strProxyPort);
-                            }
-                        }
+                        log.WriteLine(language.strings.stateUsingProxyServer);
 
                         try
                         {
-                            log.WriteLine(language.strings.stateDownloadingUpdateVersionFile + urlLauncherUpdateServer + launcherVersionFileName);
-                            webClient.DownloadFile(urlLauncherUpdateServer + launcherVersionFileName + "?random=" + random.Next().ToString(), appDir + "\\" + launcherVersionFileName);
-                            log.WriteLine(language.strings.stateFileDownloaded);
-                        }
-                        catch (Exception ex)
-                        {
-                            log.WriteLine(language.strings.stateError + ex.Message);
-                            return;
-                        }
+                            var proxy = new WebProxy(ProxyHost + ":" + ProxyPort);
 
-                        TextReader txt;
+                            // если используется авторизация
+                            if (ProxyUser != null && ProxyUser.Trim() != "")
+                                proxy.Credentials = new NetworkCredential(ProxyUser, ProxyPassword);
 
-                        try
-                        {
-                            using (txt = new StreamReader(appDir + "\\" + launcherVersionFileName))
-                            {
-                                newestLauncherVersion = txt.ReadLine();
-                                log.WriteLine(language.strings.stateLauncherVersionOnServer + newestLauncherVersion);
-                            }
+                            webClient.Proxy = proxy;
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            log.WriteLine(language.strings.stateError + ex.Message);
-                            return;
-                        }
-
-                        if (newestLauncherVersion != null)
-                        {
-                            if (newestLauncherVersion.CompareTo(currentLauncherVersion) != 0)
-                            {
-                                log.WriteLine(language.strings.stateNewVersionIsAvailable);
-                                updateAvailable = true;
-                            }
-                        }
-
-                        if (updateAvailable)
-                        {
-                            try
-                            {
-                                log.WriteLine(language.strings.stateDownloadingUpdateFile + urlLauncherUpdateServer + "update/" + newestLauncherVersion + "/" + "launcher_update.pack");
-                                webClient.DownloadFile(urlLauncherUpdateServer + "update/" + newestLauncherVersion + "/" + "launcher_update.pack" + "?random=" + random.Next().ToString(), appDir + "\\" + "launcher_update.pack");
-                                log.WriteLine(language.strings.stateFileDownloaded);
-                            }
-                            catch (Exception ex)
-                            {
-                                log.WriteLine(language.strings.stateDownloadError + ex.Message);
-                                return;
-                            }
-
-                            if (UnpackUpdateFile(appDir + "\\" + "launcher_update.pack", appDir + "\\"))
-                            {
-                                log.WriteLine(language.strings.stateLauncherSuccessfullyUpdated);
-                            }
-                            else
-                            {
-                                log.WriteLine(language.strings.stateUnpackError);
-                                return;
-                            }
+                            log.WriteLine(language.strings.stateCannotInitializeProxy + ProxyHost + ":" + ProxyPort);
                         }
                     }
+
+                    try
+                    {
+                        log.WriteLine(language.strings.stateDownloadingUpdateVersionFile + urlLauncherUpdateServer + launcherVersionFileName);
+                        webClient.DownloadFile(urlLauncherUpdateServer + launcherVersionFileName + "?random=" + random.Next(), appDir + "\\" + launcherVersionFileName);
+                        log.WriteLine(language.strings.stateFileDownloaded);
+                    }
+                    catch (Exception ex)
+                    {
+                        log.WriteLine(language.strings.stateError + ex.Message);
+                        return;
+                    }
+
+                    string latestLauncherVersion;
+
+                    try
+                    {
+                        TextReader txt;
+                        using (txt = new StreamReader(appDir + "\\" + launcherVersionFileName))
+                        {
+                            latestLauncherVersion = txt.ReadLine();
+                            log.WriteLine(language.strings.stateLauncherVersionOnServer + latestLauncherVersion);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        log.WriteLine(language.strings.stateError + ex.Message);
+                        return;
+                    }
+
+                    if (latestLauncherVersion != null)
+                    {
+                        if (string.Compare(latestLauncherVersion, currentLauncherVersion, StringComparison.InvariantCultureIgnoreCase) != 0)
+                        {
+                            log.WriteLine(language.strings.stateNewVersionIsAvailable);
+                            updateAvailable = true;
+                        }
+                    }
+
+                    if (!updateAvailable)
+                        return;
+
+                    try
+                    {
+                        log.WriteLine(language.strings.stateDownloadingUpdateFile + urlLauncherUpdateServer + "update/" + latestLauncherVersion + "/" + "launcher_update.pack");
+                        webClient.DownloadFile(urlLauncherUpdateServer + "update/" + latestLauncherVersion + "/" + "launcher_update.pack" + "?random=" + random.Next(), appDir + "\\" + "launcher_update.pack");
+                        log.WriteLine(language.strings.stateFileDownloaded);
+                    }
+                    catch (Exception ex)
+                    {
+                        log.WriteLine(language.strings.stateDownloadError + ex.Message);
+                        return;
+                    }
+
+                    log.WriteLine(UnpackUpdateFile(appDir + "\\" + "launcher_update.pack", appDir + "\\")
+                        ? language.strings.stateLauncherSuccessfullyUpdated
+                        : language.strings.stateUnpackError);
                 }
             }
         }
@@ -391,7 +358,7 @@ namespace DistantVacantGovUz
         /// </summary>
         private static void UpdateLauncher()
         {
-            Thread t = new Thread(new ThreadStart(LauncherUpdaterThreadEntryPoint));
+            var t = new Thread(LauncherUpdaterThreadEntryPoint);
 
             t.Start();
         }
@@ -402,7 +369,7 @@ namespace DistantVacantGovUz
         [STAThread]
         static void Main(string [] args)
         {
-            VacancyApplicationService service = new VacancyApplicationService();
+            var service = new VacancyApplicationService();
             
             if (args.Length > 0)
             {
@@ -415,7 +382,7 @@ namespace DistantVacantGovUz
                     return;
             }
 
-            vac = new CVacantGovUz();
+            VacancyApi = new VacantGovUzApi();
             
             LoadSettings();
             UpdateLauncher();
@@ -423,16 +390,13 @@ namespace DistantVacantGovUz
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            frmMain fMain;
+            var mainWindow = args.Length > 0 
+                ? new MainWindow(args[0]) 
+                : new MainWindow();
 
-            if (args.Length > 0)
-                fMain = new frmMain(args[0]);
-            else
-                fMain = new frmMain();
-
-            VacancySingleApplicationService.StartService(service, "net.pipe://localhost/VacancyService", fMain);
+            VacancySingleApplicationService.StartService(service, "net.pipe://localhost/VacancyService", mainWindow);
             
-            Application.Run(fMain);
+            Application.Run(mainWindow);
         }
     }
 }

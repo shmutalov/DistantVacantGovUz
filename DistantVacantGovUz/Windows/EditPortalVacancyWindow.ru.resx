@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 486</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="cmbVacStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 306</value>
+  </data>
+  <data name="cmbVacStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="lblStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblStatus.Text" xml:space="preserve">
+    <value>Статус вакансии *</value>
+  </data>
+  <data name="dateVacExpire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 274</value>
+  </data>
+  <data name="dateVacExpire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 20</value>
+  </data>
+  <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblExpireDate.Text" xml:space="preserve">
+    <value>Действителен до *</value>
+  </data>
+  <data name="cmbVacEducation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 241</value>
+  </data>
+  <data name="cmbVacEducation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="lblEducation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblEducation.Text" xml:space="preserve">
+    <value>Образование</value>
+  </data>
+  <data name="cmbVacExperience.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 208</value>
+  </data>
+  <data name="cmbVacExperience.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="lblExperience.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblExperience.Text" xml:space="preserve">
+    <value>Необходимый стаж</value>
+  </data>
+  <data name="cmbVacGender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 175</value>
+  </data>
+  <data name="cmbVacGender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="lblGender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblGender.Text" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="cmbVacEmployment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 142</value>
+  </data>
+  <data name="cmbVacEmployment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="lblEmployment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblEmployment.Text" xml:space="preserve">
+    <value>Занятость</value>
+  </data>
+  <data name="txtVacSalary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 110</value>
+  </data>
+  <data name="txtVacSalary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 20</value>
+  </data>
+  <data name="lblSalary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblSalary.Text" xml:space="preserve">
+    <value>Заработная плата *</value>
+  </data>
+  <data name="cmbVacCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 76</value>
+  </data>
+  <data name="cmbVacCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 21</value>
+  </data>
+  <data name="lblCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblCategory.Text" xml:space="preserve">
+    <value>Категория *</value>
+  </data>
+  <data name="txtVacDescUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 44</value>
+  </data>
+  <data name="txtVacDescUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 20</value>
+  </data>
+  <data name="lblDescriptionUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblDescriptionUZ.Text" xml:space="preserve">
+    <value>Узбекское наименование (латиницой) *</value>
+  </data>
+  <data name="txtVacDescRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 12</value>
+  </data>
+  <data name="txtVacDescRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 20</value>
+  </data>
+  <data name="lblDescriptionRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
+  </data>
+  <data name="lblDescriptionRU.Text" xml:space="preserve">
+    <value>Русское наименование *</value>
+  </data>
+  <data name="tbGeneral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>567, 452</value>
+  </data>
+  <data name="tbGeneral.Text" xml:space="preserve">
+    <value>Общие данные</value>
+  </data>
+  <data name="txtVacInformationRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 372</value>
+  </data>
+  <data name="txtVacInformationRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 72</value>
+  </data>
+  <data name="lblInformationRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 372</value>
+  </data>
+  <data name="lblInformationRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 72</value>
+  </data>
+  <data name="lblInformationRU.Text" xml:space="preserve">
+    <value>Дополнительная
+информация</value>
+  </data>
+  <data name="lblInformationRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="txtVacRequirementsRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 219</value>
+  </data>
+  <data name="txtVacRequirementsRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 145</value>
+  </data>
+  <data name="lblRequirementsRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 219</value>
+  </data>
+  <data name="lblRequirementsRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 145</value>
+  </data>
+  <data name="lblRequirementsRU.Text" xml:space="preserve">
+    <value>Требования *</value>
+  </data>
+  <data name="lblRequirementsRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="txtVacSpecializationRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 50</value>
+  </data>
+  <data name="txtVacSpecializationRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 161</value>
+  </data>
+  <data name="lblSpecializationRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 50</value>
+  </data>
+  <data name="lblSpecializationRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 161</value>
+  </data>
+  <data name="lblSpecializationRU.Text" xml:space="preserve">
+    <value>Функциональность *</value>
+  </data>
+  <data name="lblSpecializationRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="txtVacDepartmentRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 11</value>
+  </data>
+  <data name="txtVacDepartmentRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 20</value>
+  </data>
+  <data name="lblDepartmentRU.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 11</value>
+  </data>
+  <data name="lblDepartmentRU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 31</value>
+  </data>
+  <data name="lblDepartmentRU.Text" xml:space="preserve">
+    <value>Отдел / Подразделение *</value>
+  </data>
+  <data name="lblDepartmentRU.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="tbRussian.Size" type="System.Drawing.Size, System.Drawing">
+    <value>567, 452</value>
+  </data>
+  <data name="tbRussian.Text" xml:space="preserve">
+    <value>Дополнительные данные на русском</value>
+  </data>
+  <data name="txtVacInformationUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 372</value>
+  </data>
+  <data name="txtVacInformationUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 72</value>
+  </data>
+  <data name="lblInformationUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 372</value>
+  </data>
+  <data name="lblInformationUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 72</value>
+  </data>
+  <data name="lblInformationUZ.Text" xml:space="preserve">
+    <value>Дополнительная
+информация</value>
+  </data>
+  <data name="lblInformationUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="txtVacRequirementsUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 219</value>
+  </data>
+  <data name="txtVacRequirementsUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 145</value>
+  </data>
+  <data name="lblRequirementsUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 219</value>
+  </data>
+  <data name="lblRequirementsUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 145</value>
+  </data>
+  <data name="lblRequirementsUZ.Text" xml:space="preserve">
+    <value>Требования *</value>
+  </data>
+  <data name="lblRequirementsUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="txtVacSpecializationUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 50</value>
+  </data>
+  <data name="txtVacSpecializationUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 161</value>
+  </data>
+  <data name="lblSpecializationUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 50</value>
+  </data>
+  <data name="lblSpecializationUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 161</value>
+  </data>
+  <data name="lblSpecializationUZ.Text" xml:space="preserve">
+    <value>Функциональность *</value>
+  </data>
+  <data name="lblSpecializationUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="txtVacDepartmentUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 11</value>
+  </data>
+  <data name="txtVacDepartmentUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 20</value>
+  </data>
+  <data name="lblDepartmentUZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 11</value>
+  </data>
+  <data name="lblDepartmentUZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 31</value>
+  </data>
+  <data name="lblDepartmentUZ.Text" xml:space="preserve">
+    <value>Отдел / Подразделение *</value>
+  </data>
+  <data name="lblDepartmentUZ.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="tbUzbek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>567, 452</value>
+  </data>
+  <data name="tbUzbek.Text" xml:space="preserve">
+    <value>Дополнительные данные на узбекском</value>
+  </data>
+  <data name="tabAddVacancy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>575, 478</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>584, 521</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADFpTR5xaU0+MWlNPDFpTTwxaU08MWlNPDFpTTuxaU02sWlNNnFpTTZxaU02sWl
+        NNjFpTRwAAAAAAAAAADFpTRwxaU0NMWlNMjFpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU04AAAAAAAAAAAxaU0/8WlNL7FpTQpxaU0xMWlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNN0AAAAAAAAAAMWlNO3FpTT/xaU0ucWlNCnFpTTExaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTTfAAAAAAAAAADFpTToxaU0/8WlNP/FpTS6xaU0KsWlNMTFpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU04gAAAAAAAAAAxaU06cWlNP/FpTT/xaU0/8WlNLrFpTQqxaU0xMWl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNOIAAAAAAAAAAMWlNOjFpTT/xaU0/8WlNP/FpTT/xaU0usWl
+        NCrFpTTExaU0/8WlNP/FpTT/xaU0/8WlNP/FpTTiAAAAAAAAAADFpTTixaU0/8WlNP/FpTT/xaU0/8Wl
+        NP/FpTS6xaU0K8WlNMTFpTT/xaU0/8WlNP/FpTT/xaU06QAAAAAAAAAAxaU04sWlNP/FpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNLrFpTQrxaU0xMWlNP/FpTT/xaU0/8WlNOkAAAAAAAAAAMWlNOLFpTT/xaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0usWlNCvFpTTExaU0/8WlNP/FpTTpAAAAAAAAAADFpTTexaU0/8Wl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTS6xaU0K8WlNMTFpTT/xaU07QAAAAAAAAAAxaU03cWl
+        NP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNLvFpTQrxaU0yMWlNP8AAAAAAAAAAMWl
+        NN/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0/8WlNP/FpTT/xaU0wcWlNDbFpTR8AAAAAAAA
+        AADFpTRvxaU018WlNNrFpTTZxaU02cWlNNjFpTTgxaU08MWlNPDFpTTwxaU08MWlNPjFpTRxAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//8AAMABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIAB
+        AACAAwAA//8AAA==
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Редактирование вакансии Портала</value>
+  </data>
+</root>

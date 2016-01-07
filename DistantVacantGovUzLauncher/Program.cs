@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Security.Principal;
-using System.Diagnostics;
 using System.Reflection;
-using System.ComponentModel;
 using System.Threading;
 using System.Xml;
 using System.IO;
@@ -13,93 +9,72 @@ namespace DistantVacantGovUzLauncher
 {
     static class Program
     {
-        public static String[] argv;
-        public static bool isAdmin = false;
+        public static string[] Argv;
 
-        public static bool proxyEnabled = false;
+        public static bool ProxyEnabled;
 
-        public static string strProxyHost = "http://192.168.0.1";
-        public static string strProxyPort = "3128";
-        public static string strProxyUser = "";
-        public static string strProxyPassword = "";
+        public static string ProxyHost = "http://192.168.0.1";
+        public static string ProxyPort = "3128";
+        public static string ProxyUser = string.Empty;
+        public static string ProxyPassword = string.Empty;
 
-        public static string strUpdateServer = @"";
-        public static bool checkForUpdates = true;
+        public static string UpdateServer = @"";
 
-        public static string strLanguage = "en";
+        private static string _strLanguage = "en";
 
         /// <summary>
         /// Метод для получение настроек программы
         /// из файла settings.xml
         /// </summary>
-        public static void LoadSettings()
+        private static void LoadSettings()
         {
-            XmlDocument xml = new XmlDocument();
-            bool bUseProxy = false;
+            var document = new XmlDocument();
+            var useProxy = false;
 
             try
             {
-                xml.Load(GetApplicationDirectory() + "\\" + "settings.xml");
+                document.Load(GetApplicationDirectory() + "\\" + "settings.xml");
 
-                XmlElement root = xml.DocumentElement;
+                var root = document.DocumentElement;
 
-                foreach (XmlElement n in root.ChildNodes)
+                if (root == null)
+                    return;
+
+                foreach (XmlElement element in root.ChildNodes)
                 {
-                    if (n.Name == "UseProxy")
+                    switch (element.Name)
                     {
-                        bUseProxy = (n.GetAttribute("value") == "True") ? true : false;
-                        continue;
-                    }
-
-                    if (n.Name == "ProxyHost")
-                    {
-                        strProxyHost = n.GetAttribute("value");
-                        continue;
-                    }
-
-                    if (n.Name == "ProxyPort")
-                    {
-                        strProxyPort = n.GetAttribute("value");
-                        continue;
-                    }
-
-                    if (n.Name == "ProxyUserName")
-                    {
-                        strProxyUser = n.GetAttribute("value"); ;
-                        continue;
-                    }
-
-                    if (n.Name == "ProxyPassword")
-                    {
-                        strProxyPassword = n.GetAttribute("value");
-                        continue;
-                    }
-
-                    if (n.Name == "CheckForUpdates")
-                    {
-                        checkForUpdates = (n.GetAttribute("value") == "True") ? true : false;
-                        continue;
-                    }
-
-                    if (n.Name == "UpdateServer")
-                    {
-                        strUpdateServer = n.GetAttribute("value");
-                        continue;
-                    }
-
-                    if (n.Name == "Language")
-                    {
-                        strLanguage = n.GetAttribute("value");
-                        continue;
+                        case "UseProxy":
+                            useProxy = (element.GetAttribute("value") == "True");
+                            continue;
+                        case "ProxyHost":
+                            ProxyHost = element.GetAttribute("value");
+                            continue;
+                        case "ProxyPort":
+                            ProxyPort = element.GetAttribute("value");
+                            continue;
+                        case "ProxyUserName":
+                            ProxyUser = element.GetAttribute("value");
+                            continue;
+                        case "ProxyPassword":
+                            ProxyPassword = element.GetAttribute("value");
+                            continue;
+                        case "UpdateServer":
+                            UpdateServer = element.GetAttribute("value");
+                            continue;
+                        case "Language":
+                            _strLanguage = element.GetAttribute("value");
+                            break;
                     }
                 }
                     
-                proxyEnabled = bUseProxy;
+                ProxyEnabled = useProxy;
 
-                Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(strLanguage);
+                Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(_strLanguage);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+                // ignore
             }
         }
 
@@ -116,15 +91,15 @@ namespace DistantVacantGovUzLauncher
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main(String [] args)
+        static void Main(string[] args)
         {
-            argv = args;
+            Argv = args;
 
             LoadSettings();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new MainWindow());
         }
     }
 }
