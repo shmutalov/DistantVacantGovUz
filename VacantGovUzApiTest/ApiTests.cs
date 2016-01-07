@@ -7,8 +7,8 @@ namespace VacantGovUzApiTest
     [TestFixture]
     public class ApiTests
     {
-        private const string TestUserName = "okboss";
-        private const string TestUserPassowrd = "man2011";
+        private const string TestUserName = "user";
+        private const string TestUserPassowrd = "password";
 
         [Test]
         public void TestLogin()
