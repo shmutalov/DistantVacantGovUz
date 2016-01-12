@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutWindow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutWindow));
             this.lblProgramName = new System.Windows.Forms.Label();
             this.linkProgramWebSite = new System.Windows.Forms.LinkLabel();
             this.lblAppVersion = new System.Windows.Forms.Label();
@@ -72,12 +72,12 @@
             // 
             // imgLogo
             // 
-            resources.ApplyResources(this.imgLogo, "imgLogo");
             this.imgLogo.Image = global::DistantVacantGovUz.Properties.Resources.logo_144;
+            resources.ApplyResources(this.imgLogo, "imgLogo");
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.TabStop = false;
             // 
-            // frmAbout
+            // AboutWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

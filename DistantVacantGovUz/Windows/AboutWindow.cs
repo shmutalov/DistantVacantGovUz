@@ -15,7 +15,7 @@ namespace DistantVacantGovUz.Windows
         {
             try
             {
-                Process.Start("http://www.distant.uz/vacantgovuz");
+                Process.Start("https://github.com/shmutalov/DistantVacantGovUz");
             }
             catch (Exception)
             {
